@@ -1,0 +1,60 @@
+.how-it-works-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(151px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.how-it-works
+  margin: 0 auto
+  max-width: px-to-rem(900px)
+
+  &__content
+    line-height: 1.67
+    padding-top: px-to-rem(97px)
+    @media(max-width: 767px)
+      padding-top: 40px
+
+
+    h4
+      font-weight: normal
+      margin: 0
+      text-transform: uppercase
+      @media(max-width: 767px)
+        text-align: center
+
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+    li
+      position: relative
+
+      &::before
+        content: '• '
+        margin-left: px-to-rem(30px)
+
+    h4,
+    p,
+    ul
+      margin: px-to-rem(30px) 0
+
+      &:first-child
+        margin-top: 0
+
+      &:last-child
+        margin-bottom: 0
+
+    .border-text
+      margin-bottom: px-to-rem(60px)
+
+.border-text
+  border: 1px dashed
+  border-radius: px-to-rem(20px)
+  letter-spacing: px-to-rem(1px)
+  padding: px-to-rem(19px) px-to-rem(50px)
+  text-align: center
+  @media(max-width: 767px)
+    padding: 15px
+

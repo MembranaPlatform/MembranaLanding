@@ -1,0 +1,96 @@
+.layers-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(165px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.layers
+  margin: 0 auto
+  max-width: px-to-rem(1150px)
+
+  &__content
+    display: flex
+    @media(max-width: 767px)
+      align-items: center
+      flex-direction: column
+
+
+  &__image
+    flex-shrink: 0
+    margin-right: 75px
+    width: px-to-rem(349px)
+    @media(max-width: 1023px)
+      margin-right: 40px
+      margin-top: 20px
+    @media(max-width: 767px)
+      margin: 40px auto 0
+      width: auto
+
+
+  &__items
+    padding-top: px-to-rem(92px)
+    @media(max-width: 767px)
+      padding-top: 25px
+
+
+.layers-item
+  padding: 0 px-to-rem(25px)
+  @media(max-width: 767px)
+    padding: 15px 0 0
+    text-align: center
+
+
+  &__title
+    font-size: px-to-rem(30px)
+    font-weight: normal
+    margin: 0
+    padding: 2px 0 8px
+    position: relative
+    text-transform: uppercase
+    @media(max-width: 767px)
+      font-size: 18px
+
+
+    &::before
+      background: rgba(#8e91b7, .36)
+      bottom: 4px
+      content: ''
+      height: 1px
+      left: px-to-rem(-24px)
+      position: absolute
+      right: px-to-rem(-24px)
+      @media(max-width: 767px)
+        left: 0
+        right: 0
+
+
+    &::after
+      background: currentColor
+      border-radius: 50%
+      bottom: 0
+      content: ''
+      height: 9px
+      left: px-to-rem(-32px)
+      position: absolute
+      width: 9px
+      @media(max-width: 767px)
+        display: none
+
+
+
+  &__description
+    color: $steel
+    line-height: 1.33
+
+
+  &:nth-child(1)
+    .layers-item__title
+      color: #33bb95
+
+  &:nth-child(2)
+    .layers-item__title
+      color: #5bc8a9
+
+  &:nth-child(3)
+    .layers-item__title
+      color: #84d6bf

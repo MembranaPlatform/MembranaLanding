@@ -1,0 +1,91 @@
+.join-us-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(135px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.join-us
+  background: $deep
+  border-radius: px-to-rem(25px)
+  margin: 0 auto
+  max-width: px-to-rem(900px)
+  padding: px-to-rem(64px) px-to-rem(110px) px-to-rem(90px)
+  position: relative
+  z-index: 2
+  @media(max-width: 767px)
+    padding: 40px 25px 50px
+
+
+  &__description
+    color: $bluey-grey
+    letter-spacing: px-to-rem(.5px)
+    line-height: 1.67
+    margin: px-to-rem(34px) 0 px-to-rem(52px)
+    text-align: center
+
+.subscribe-form
+  display: flex
+  height: px-to-rem(50px)
+  margin: 0 auto
+  max-width: px-to-rem(531px)
+  transition: .2s ease
+  @media(max-width: 767px)
+    display: block
+    height: auto
+
+
+  &.has-error
+    border-radius: 50px
+    box-shadow: 0 0 0 2px $error-color, inset 0 0 1px $error-color
+    overflow: hidden
+
+  &__email,
+  &__submit
+    -webkit-appearance: none // sass-lint:disable-line no-vendor-prefixes
+    border: 0
+    height: 100%
+    outline: 0
+    @media(max-width: 767px)
+      height: 50px
+
+
+  &__email
+    border-radius: 50px 0 0 50px
+    padding: 0 px-to-rem(30px)
+    width: 100%
+    @media(max-width: 767px)
+      border-radius: 50px
+
+
+    &:placeholder
+      color: $steel
+      opacity: 1
+
+  &__submit
+    background: linear-gradient(74deg, $greenish-cyan 0%, $sky-blue 100%)
+    border-radius: 0 50px 50px 0
+    box-shadow: inset 200px 0 200px transparent
+    color: $dark
+    cursor: pointer
+    flex-shrink: 0
+    font-size: px-to-rem(22px)
+    letter-spacing: px-to-rem(1.22px)
+    text-transform: uppercase
+    transition: .35s ease
+    width: px-to-rem(210px)
+    @media(max-width: 767px)
+      border-radius: 50px
+      margin-top: 10px
+      width: 100%
+
+
+    &:hover
+      box-shadow: inset 200px 0 200px $greenish-cyan
+
+  & + .error
+    color: $error-color
+    left: 0
+    margin-top: 2rem
+    position: absolute
+    right: 0
+    text-align: center

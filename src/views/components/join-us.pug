@@ -1,0 +1,10 @@
+include ../variables
+
+  .join-us-wrapper.js-section
+    .join-us
+      h2.join-us__title.title.h-text-gradient!=app.join_us.title
+      .join-us__description!=app.join_us.description
+      .join-us__subscribe
+        form.subscribe-form.js-subscribe-form
+          input.subscribe-form__email(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+          input.subscribe-form__submit(type="submit" value=app.join_us.subscribe)

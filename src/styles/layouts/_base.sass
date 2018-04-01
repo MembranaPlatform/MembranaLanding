@@ -1,0 +1,250 @@
+.app
+  overflow: hidden
+
+
+.header-wrapper
+  background: transparent
+  left: 0
+  padding: px-to-rem(47px) px-to-rem(30px)
+  position: fixed
+  right: 0
+  top: 0
+  transition: .25s ease
+  z-index: 10
+  @media(max-width: 1023px)
+    background: $dark
+    padding-bottom: px-to-rem(17px)
+    padding-top: px-to-rem(17px)
+
+
+  &.fixed
+    background: $dark
+    padding-bottom: px-to-rem(17px)
+    padding-top: px-to-rem(17px)
+
+
+.header
+  align-items: center
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  max-width: 1500px
+
+
+.nav
+  display: flex
+  font-size: px-to-rem(14px)
+  letter-spacing: px-to-rem(1.4px)
+  text-transform: uppercase
+  @media(max-width: 1023px)
+    bottom: 0
+    flex-direction: column
+    font-size: 14px
+    overflow: auto
+    position: fixed
+    right: -320px
+    top: 0
+    transition: .5s ease
+    width: 320px
+
+    &::before
+      background: rgba($black, .5)
+      bottom: 0
+      content: ''
+      left: 0
+      opacity: 0
+      position: fixed
+      right: 0
+      top: 0
+      transition: inherit
+      visibility: hidden
+
+    &.opened
+      right: 0
+
+      &::before
+        opacity: 1
+        visibility: visible
+
+
+  &__list
+    align-items: center
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+    @media(max-width: 1023px)
+      align-items: flex-start
+      background: $deep
+      flex-direction: column
+      height: 100%
+      overflow: auto
+      padding: 60px 20px 20px
+      position: relative
+
+
+  &__item
+    color: $greenish-teal
+    margin: 0 px-to-rem(20px)
+    @media(max-width: 1023px)
+      margin: 10px auto
+      text-align: center
+
+
+    &:last-child
+      margin-right: 0
+      @media(max-width: 1023px)
+        margin-right: auto
+
+
+    &.active
+      color: $bluey-grey
+      pointer-events: none
+
+  &__link
+    display: block
+    text-decoration: none
+
+    &.gradient-btn
+      margin-right: px-to-rem(5px)
+      @media(max-width: 1023px)
+        margin-right: 0
+
+
+    &:not(.gradient-btn)
+      color: inherit
+      padding: px-to-rem(9.5px) 0
+      position: relative
+
+      &::before,
+      &::after
+        background: currentColor
+        content: ''
+        height: 1px
+        left: 50%
+        position: absolute
+        right: 50%
+        transition: .25s ease
+        visibility: hidden
+
+
+      &::before
+        top: 0
+
+      &::after
+        bottom: 0
+
+      &:hover,
+      &:active
+        &::before,
+        &::after
+          left: 0
+          right: 0
+          visibility: visible
+
+
+.hamburger
+  display: none
+  margin-left: auto
+  position: relative
+  width: 30px
+  z-index: 2
+  @media(max-width: 1023px)
+    display: block
+
+
+  &__line
+    background: $light
+    border-radius: 3px
+    display: block
+    height: 3px
+    margin: 6px 0
+    transition: .5s ease
+
+  &.opened
+    .hamburger__line
+      &:first-child
+        transform: rotate(45deg) translate(6px, 6px)
+        transform-origin: center
+
+      &:nth-child(2)
+        opacity: 0
+        transform: translateX(200%)
+
+      &:last-child
+        transform: rotate(-45deg) translate(6px, -6px)
+        transform-origin: center
+
+
+.logo
+  width: px-to-rem(263px)
+
+  &__link
+    display: table
+
+
+.footer
+  color: $bluey-grey
+
+  &__copyright
+    background: $deep
+    padding: px-to-rem(36px) 0
+    position: relative
+    text-align: center
+
+    &::before,
+    &::after
+      border-style: solid
+      bottom: 100%
+      content: ''
+      height: 0
+      position: absolute
+      right: 0
+      width: 0
+
+    &::before
+      border-color: transparent transparent transparent $deep
+      border-width: 200px 0 0 1600px
+      right: 50%
+
+    &::after
+      border-color: transparent $deep transparent transparent
+      border-width: 200px 1600px 0 0
+      left: 50%
+
+  &__socials,
+  &__email
+    position: relative
+    z-index: 2
+
+  &__socials
+    margin-bottom: px-to-rem(50px)
+    padding: 0 px-to-rem(30px)
+    @media(max-width: 767px)
+      margin-top: 60px
+
+      .socials__link
+        margin: 5px 0
+        text-align: center
+        width: 20%
+
+      svg
+        margin: 0 auto
+
+
+  &__email
+    font-size: px-to-rem(16px)
+    letter-spacing: px-to-rem(1.6px)
+    margin-bottom: px-to-rem(115px)
+    text-align: center
+    @media(max-width: 767px)
+      margin-bottom: 60px
+
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: .15s ease
+
+      &:hover
+        color: $lighter

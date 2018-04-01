@@ -1,0 +1,12 @@
+include ../variables
+
+	mixin socials(position)
+		.socials
+			each item in app.socials
+				if position === 'top'
+					if item.showInTop
+						a.socials__link(href=item.link)
+							img.socials__icon(src=item.icon alt="")
+				else
+					a.socials__link(href=item.link)
+						img.socials__icon(src=item.icon alt="")

@@ -1,0 +1,226 @@
+html
+  background: $dark url('/static/img/patterns/diagonals.svg') no-repeat 0 px-to-rem(740px)
+  background-size: 100% auto
+
+
+.patterns
+  .pattern
+    pointer-events: none
+    position: absolute
+    user-select: none
+
+
+.dot-pattern-wrapper
+  background: url('/static/img/patterns/dots.svg') bottom
+
+
+.team-wrapper
+  background: url('/static/img/patterns/space.jpg') no-repeat center center #27283c
+  background-size: cover
+  box-shadow: inset 0 300px 400px -100px $dark, inset 0 -300px 400px -100px $dark
+  position: relative
+  @media(max-width: 479px)
+    background-attachment: fixed
+    background-position: center
+    background-size: 1000px auto
+
+
+  &::before
+    background: url('/static/img/patterns/dots.svg') top
+    content: ''
+    height: 150px
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+
+.join-us-wrapper
+  background: url('/static/img/patterns/footer-ornament.svg') center center repeat-x $dark
+  background-size: auto 33rem
+  @media(max-width: 1023px)
+    background: transparent
+
+
+.vision-wrapper
+  position: relative
+
+  .vision
+    position: relative
+
+  .net
+    left: calc(50vw + #{px-to-rem(100px)})
+    top: calc(0 + #{px-to-rem(35px)})
+
+  .line
+    left: calc(50vw + #{px-to-rem(-535px)})
+    top: calc(0 + #{px-to-rem(215px)})
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(380px)})
+    top: calc(0 + #{px-to-rem(-15px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(390px)})
+    top: calc(0 + #{px-to-rem(3px)})
+
+  .triangle3
+    left: calc(50vw + #{px-to-rem(-800px)})
+    top: calc(0 + #{px-to-rem(200px)})
+
+  .triangle4
+    left: calc(50vw + #{px-to-rem(-520px)})
+    top: calc(0 + #{px-to-rem(640px)})
+
+  .triangle5
+    left: calc(50vw + #{px-to-rem(740px)})
+    top: calc(0 + #{px-to-rem(655px)})
+
+  .triangle6
+    left: calc(50vw + #{px-to-rem(650px)})
+    top: calc(0 + #{px-to-rem(680px)})
+
+
+.components-wrapper
+  position: relative
+
+  .components
+    position: relative
+
+  .net
+    left: calc(50vw + #{px-to-rem(-970px)})
+    top: calc(0 + #{px-to-rem(-120px)})
+
+  .line
+    left: calc(50vw + #{px-to-rem(410px)})
+    top: calc(0 + #{px-to-rem(20px)})
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(675px)})
+    top: calc(0 + #{px-to-rem(330px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(-805px)})
+    top: calc(0 + #{px-to-rem(800px)})
+
+
+.layers-wrapper
+  position: relative
+
+  .layers
+    position: relative
+
+  .radial
+    left: calc(50vw + #{px-to-rem(-960px)})
+    top: calc(0 + #{px-to-rem(-5px)})
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(885px)})
+    top: calc(0 + #{px-to-rem(90px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(-820px)})
+    top: calc(0 + #{px-to-rem(310px)})
+
+
+.how-it-works-wrapper
+  position: relative
+
+  .how-it-works
+    position: relative
+
+  .net
+    left: calc(50vw + #{px-to-rem(-970px)})
+    top: calc(0 + #{px-to-rem(25px)})
+
+  .line
+    left: calc(50vw + #{px-to-rem(-535px)})
+    top: calc(0 + #{px-to-rem(550px)})
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(600px)})
+    top: calc(0 + #{px-to-rem(145px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(603px)})
+    top: calc(0 + #{px-to-rem(185px)})
+
+  .triangle3
+    left: calc(50vw + #{px-to-rem(850px)})
+    top: calc(0 + #{px-to-rem(490px)})
+
+  .triangle4
+    left: calc(50vw + #{px-to-rem(810px)})
+    top: calc(0 + #{px-to-rem(600px)})
+
+  .triangle5
+    left: calc(50vw + #{px-to-rem(-560px)})
+    top: calc(0 + #{px-to-rem(590px)})
+
+  .triangle6
+    left: calc(50vw + #{px-to-rem(-600px)})
+    top: calc(0 + #{px-to-rem(625px)})
+
+
+.tech-wrapper
+  position: relative
+
+  .tech
+    position: relative
+
+  .net
+    left: calc(50vw + #{px-to-rem(110px)})
+    top: calc(0 + #{px-to-rem(-170px)})
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(-770px)})
+    top: calc(0 + #{px-to-rem(20px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(-785px)})
+    top: calc(0 + #{px-to-rem(45px)})
+
+  .triangle3
+    left: calc(50vw + #{px-to-rem(670px)})
+    top: calc(0 + #{px-to-rem(635px)})
+
+
+.partners-wrapper
+  position: relative
+
+  .tech
+    position: relative
+
+  .triangle1
+    left: calc(50vw + #{px-to-rem(-715px)})
+    top: calc(0 + #{px-to-rem(87px)})
+
+  .triangle2
+    left: calc(50vw + #{px-to-rem(-750px)})
+    top: calc(0 + #{px-to-rem(145px)})
+
+  .triangle3
+    left: calc(50vw + #{px-to-rem(-970px)})
+    top: calc(0 + #{px-to-rem(405px)})
+
+  .triangle4
+    left: calc(50vw + #{px-to-rem(-683px)})
+    top: calc(0 + #{px-to-rem(655px)})
+
+  .triangle5
+    left: calc(50vw + #{px-to-rem(443px)})
+    top: calc(0 + #{px-to-rem(337px)})
+
+  .triangle6
+    left: calc(50vw + #{px-to-rem(450px)})
+    top: calc(0 + #{px-to-rem(353)})
+
+  .triangle7
+    left: calc(50vw + #{px-to-rem(850px)})
+    top: calc(0 + #{px-to-rem(710px)})
+    z-index: 2
+
+  .triangle8
+    left: calc(50vw + #{px-to-rem(770px)})
+    top: calc(0 + #{px-to-rem(827px)})
+    z-index: 2

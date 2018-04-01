@@ -1,0 +1,64 @@
+.vision-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(146px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.vision
+  margin: 0 auto
+  max-width: px-to-rem(1500px)
+
+  &__title
+    margin: 0 auto
+    max-width: px-to-rem(600px)
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin: px-to-rem(50px) px-to-rem(-50px) px-to-rem(-40px)
+    @media(max-width: 1023px)
+      margin: px-to-rem(20px) px-to-rem(-20px) px-to-rem(-20px)
+    @media(max-width: 767px)
+      flex-direction: column
+
+
+.vision-item
+  align-items: flex-start
+  display: flex
+  padding: px-to-rem(40px) px-to-rem(50px)
+  width: 50%
+  @media(max-width: 1023px)
+    padding: px-to-rem(20px)
+
+
+  @media(max-width: 767px)
+    align-items: center
+    flex-direction: column
+    text-align: center
+    width: 100%
+
+
+  &__icon
+    align-items: center
+    display: flex
+    flex-shrink: 0
+    height: px-to-rem(73px)
+    justify-content: center
+    margin-right: px-to-rem(30px)
+    width: px-to-rem(71px)
+    @media(max-width: 767px)
+      margin: 20px 0
+
+
+  &__title
+    color: $greenish-teal
+    font-size: px-to-rem(30px)
+    font-weight: 400
+    letter-spacing: px-to-rem(3px)
+    margin: 0 0 px-to-rem(20px)
+    text-transform: uppercase
+
+  &__description
+    color: $steel
+    line-height: 1.28
+

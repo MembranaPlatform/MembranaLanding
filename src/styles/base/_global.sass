@@ -1,0 +1,240 @@
+*
+  box-sizing: border-box
+
+html
+  font-size: 10px
+  height: 100%
+
+  @media(max-width: 1279px)
+    font-size: 8px
+
+
+body
+  color: $light
+  font-family: $default-font-family
+  font-size: $default-font-size
+  font-weight: $default-font-weight
+  line-height: $default-line-height
+  min-height: 100%
+
+.no-overflow
+  overflow: hidden
+
+[hidden]
+  display: none
+
+img
+  height: auto
+  max-width: 100%
+
+b
+  font-weight: bold
+
+.js-inlined-svg,
+[src$='svg']
+  display: block
+
+.title-lg,
+.title
+  margin: 0
+  text-align: center
+  text-transform: uppercase
+
+.title-lg
+  font-size: px-to-rem(65px)
+  font-weight: 400
+  letter-spacing: px-to-rem(8px)
+  @media(max-width: 767px)
+    font-size: 32px
+
+
+.title
+  font-size: px-to-rem(43px)
+  font-weight: 400
+  letter-spacing: px-to-rem(4px)
+  line-height: 1.4
+  @media(max-width: 767px)
+    font-size: 24px
+
+
+.gradient-btn
+  background-image: linear-gradient(78deg, $greenish-cyan, $sky-blue);
+  border-radius: 4px;
+  box-shadow: 0 0 0 transparent
+  color: $dark
+  font-weight: bold
+  padding: px-to-rem(9.5px) px-to-rem(15.5px)
+  transition: .25s ease
+
+  &:hover
+    box-shadow: 0 0 px-to-rem(40px) rgba($greenish-cyan, .4) // sass-lint:disable-line no-color-literals
+
+
+.border-btn
+  border: 1px solid
+  border-radius: px-to-rem(22.5px)
+  box-shadow: 0 0 0 0
+  color: $greenish-teal
+  display: inline-block
+  font-size: px-to-rem(18px)
+  letter-spacing: px-to-rem(1.5px)
+  padding: px-to-rem(12px) px-to-rem(54px)
+  position: relative
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  transition: .25s ease
+
+  &:hover
+    box-shadow: 0 0 px-to-rem(30px) 0
+
+  &.active
+    pointer-events: none
+
+  &.active,
+  &:active
+    box-shadow: 0 0 px-to-rem(30px) 0
+    color: $bluey-grey
+
+
+.play-btn
+  align-items: center
+  display: flex
+  flex-direction: column
+
+  &__icon
+    filter: drop-shadow(0 0 0 transparent) // sass-lint:disable-line no-color-literals
+    transition: .25s ease
+
+  &__text
+    margin-top: px-to-rem(25px)
+
+  &:hover
+    .play-btn__icon
+      filter: drop-shadow(0 0 15px rgba($greenish-cyan, 1)) // sass-lint:disable-line no-color-literals
+
+
+@keyframes scroll-btn-animation
+  0%
+    stroke: $scroll-btn-light
+
+  25%
+    stroke: $scroll-btn-lighter
+
+  50%
+    stroke: $scroll-btn-lightest
+
+  75%
+    stroke: $scroll-btn-light
+
+  100%
+    stroke: $scroll-btn-light
+
+
+.scroll-btn
+  display: block
+
+  &--fixed
+    left: 50%
+    margin-left: px-to-rem(-16px)
+    margin-top: px-to-rem(-80px)
+    opacity: 0
+    position: fixed
+    top: px-to-rem(100px)
+    transform: rotate(180deg)
+    transition: top 1s ease, opacity 1s ease
+    z-index: 8
+    @media(max-width: 767px)
+      margin-top: -6rem
+
+
+    &.visible
+      opacity: 1
+      top: 100%
+      transform: none
+
+    &.disabled
+      opacity: 0
+      visibility: hidden
+
+  #arrow > g // sass-lint:disable-line no-ids
+    animation: 1s ease-in scroll-btn-animation infinite
+    transition: .33s ease-in
+
+    &:first-child
+      animation-delay: 0
+
+    &:nth-child(2)
+      animation-delay: -.2s
+
+    &:last-child
+      animation-delay: -.4s
+
+
+.socials
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  &__link
+    color: $social-icon-color
+    margin: 0 px-to-rem(22px)
+    transition: .2s ease
+
+
+    &:hover
+      color: $social-icon-color-hover
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+    svg
+      transform: scale(.9)
+
+    g,
+    path
+      fill: currentColor
+
+.youtube-modal
+  background: $modal-overlay-color
+  bottom: 0
+  left: 0
+  padding: px-to-rem(60px)
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 20
+  @media(max-width: 1023px)
+    background: $black
+
+
+  &__close
+    border-radius: 50%
+    height: px-to-rem(40px)
+    position: absolute
+    right: px-to-rem(15px)
+    top: px-to-rem(15px)
+    width: px-to-rem(40px)
+    z-index: 3
+
+    &::before,
+    &::after
+      background: $modal-close-color
+      border-radius: 5px
+      content: ''
+      height: 2px
+      left: 0
+      margin-top: -1px
+      position: absolute
+      top: 50%
+      width: 100%
+
+    &::before
+      transform: rotate(45deg)
+
+    &::after
+      transform: rotate(-45deg)

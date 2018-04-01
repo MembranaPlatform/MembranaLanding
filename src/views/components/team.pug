@@ -1,0 +1,19 @@
+include ../variables
+
+  .team-wrapper
+    .team
+      each group in app.team
+        .team__group.js-section
+          h2.team__title.title.h-text-gradient!=group.title
+          .team__items
+            each member in group.items
+              .member
+                .member__avatar(style=`background-image: url(${member.avatar})`)
+                .member__occupation!=member.occupation
+                .member__name!=member.full_name
+                .member__description!=member.description
+                .member__socials
+                    if member.github
+                      a(href=member.github target="_blank"): img(src="/static/img/icons/socials/small-github.svg" alt="")
+                    if member.linkedin
+                      a(href=member.linkedin target="_blank"): img(src="/static/img/icons/socials/small-linkedin.svg" alt="")

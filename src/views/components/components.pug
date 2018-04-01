@@ -1,0 +1,42 @@
+include ../variables
+
+  .components-wrapper.js-section
+    .patterns
+      - 
+        var path = "/static/img/patterns/components/"
+        var list = [
+          "net.png",
+          "line.svg",
+          "triangle1.png",
+          "triangle2.png"
+        ]
+      each pattern in list
+        img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
+
+    .components
+      h2.components__title.title.h-text-gradient!=app.components.title
+      .components__inner
+        .components__items
+          each tab, key in app.components.items
+            .component.js-tab(class={'active': key === 0} id='tab'+key)
+              .component__content
+                each field in tab.content
+                  if field.title
+                    h4.h-uppercase!=field.title
+                  if field.text
+                    p!=field.text
+                  if field.light_text
+                    p.h-text-lighter!=field.light_text
+                  if field.list
+                    ul.list
+                      each item in field.list
+                        li.list__item
+                          span.list__item-icon: img(src=item.icon alt="")
+                          span.list__item-text!=item.text
+              .component__image
+                img(src=tab.image alt="")
+        
+        .components__nav
+          nav.tabs-nav
+            each tab, key in app.components.items
+              a.tabs-nav__link.border-btn.js-tab-link(class={'active': key === 0} href='#tab'+key)!=tab.title

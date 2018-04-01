@@ -1,0 +1,23 @@
+include ../variables
+
+  .layers-wrapper.js-section
+    .patterns
+      - 
+        var path = "/static/img/patterns/layers/"
+        var list = [
+          "radial.svg",
+          "triangle1.png",
+          "triangle2.png"
+        ]
+      each pattern in list
+        img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
+  
+    .layers
+      h2.layers__title.title.h-text-gradient!=app.layers.title
+      .layers__content
+        .layers__image: img(src="/static/img/pictures/layers/bg.png" alt="")
+        .layers__items
+          each item, key in app.layers.items
+            .layers-item
+              h4.layers-item__title!=item.title
+              .layers-item__description!=item.description

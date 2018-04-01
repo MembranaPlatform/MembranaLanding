@@ -1,0 +1,28 @@
+extends ../layouts/base
+
+block page
+	- var page_class = 'index';
+	- var page_active = 'Team'; // example: apply active class to nav item
+
+block append head
+	block title
+		- var title = app.titles.index;
+
+block content
+	.dot-pattern-wrapper
+		include ../components/top
+		include ../components/vision
+		include ../components/components
+		include ../components/layers
+		include ../components/how-it-works
+		include ../components/technology
+		include ../components/partners
+	include ../components/team
+	include ../components/join-us
+
+	a.scroll-btn.scroll-btn--fixed(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/icons/scroll-arrow.svg" alt="")
+
+
+	.youtube-modal(data-modal="video" style="display:none")
+		a.youtube-modal__close(href='javascript:void(0)', data-close-modal='')
+		iframe.youtube-modal__iframe(width="100%", height="100%", src=app.youtube_video, frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)

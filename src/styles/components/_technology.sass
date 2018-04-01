@@ -1,0 +1,75 @@
+.tech-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(121px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.tech
+  margin: 0 auto
+  max-width: px-to-rem(1460px)
+
+  &__items
+    display: flex
+    margin: px-to-rem(30px) px-to-rem(-80px) px-to-rem(-50px)
+    @media(max-width: 1599px)
+      margin-left: px-to-rem(-50px)
+      margin-right: px-to-rem(-50px)
+    @media(max-width: 1023px)
+      margin-left: -25px
+      margin-right: -25px
+    @media(max-width: 767px)
+      flex-direction: column
+
+
+
+.tech-item
+  align-items: center
+  color: $lighter
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  padding: px-to-rem(50px)
+  width: 50%
+  @media(max-width: 1023px)
+    padding: 25px
+  @media(max-width: 767px)
+    text-align: center
+    width: 100%
+
+
+  &__header
+    align-items: center
+    display: flex
+    height: px-to-rem(100px)
+    margin: 0 0 px-to-rem(35px)
+    @media(max-width: 767px)
+      flex-direction: column
+      height: auto
+      margin: 0
+
+
+  &__icon
+    margin-right: px-to-rem(28px)
+    @media(max-width: 767px)
+      margin: 0
+
+
+  &__title
+    font-size: px-to-rem(40px)
+    font-weight: normal
+    letter-spacing: px-to-rem(1.9px)
+    @media(max-width: 1023px)
+      font-size: 24px
+      margin: 20px 0 40px
+
+
+  &__content
+    font-size: px-to-rem(20px)
+    line-height: 1.5
+    margin-bottom: px-to-rem(55px)
+
+  &__read-more
+    margin-bottom: px-to-rem(30px)
+    margin-top: auto
+    text-align: center
