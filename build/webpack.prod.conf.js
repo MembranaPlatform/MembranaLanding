@@ -63,7 +63,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // optimize all the images
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
+    // new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
   ]
 })
 

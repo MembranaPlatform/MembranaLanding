@@ -30,6 +30,9 @@ img
 b
   font-weight: bold
 
+.nobr
+  white-space: nowrap
+
 .js-inlined-svg,
 [src$='svg']
   display: block
@@ -62,7 +65,7 @@ b
   border-radius: 4px;
   box-shadow: 0 0 0 transparent
   color: $dark
-  font-weight: bold
+  font-weight: 500
   padding: px-to-rem(9.5px) px-to-rem(15.5px)
   transition: .25s ease
 
@@ -211,6 +214,11 @@ b
   @media(max-width: 1023px)
     background: $black
 
+
+  &__iframe
+    border: none
+    height: 100%
+    width: 100px
 
   &__close
     border-radius: 50%

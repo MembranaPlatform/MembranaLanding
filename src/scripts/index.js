@@ -17,13 +17,13 @@ app.svgToInline = ($ctx = $('body')) => {
 
         $svg.find('title', 'desc').remove()
 
-        $svg.attr('width', (
+        $svg.attr('width') && $svg.attr('width', (
           (parseInt(
             $svg.attr('width').replace('px', '')) / 10
           ) + 'rem')
         )
 
-        $svg.attr('height', (
+        $svg.attr('height') && $svg.attr('height', (
           (parseInt(
             $svg.attr('height').replace('px', '')) / 10
           ) + 'rem')

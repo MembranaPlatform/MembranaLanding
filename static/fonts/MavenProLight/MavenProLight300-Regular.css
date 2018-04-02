@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Maven Pro';
+  src: url('MavenProLight300-Regular.eot?#iefix') format('embedded-opentype'),  url('MavenProLight300-Regular.otf')  format('opentype'),
+	     url('MavenProLight300-Regular.woff') format('woff'), url('MavenProLight300-Regular.ttf')  format('truetype'), url('MavenProLight300-Regular.svg#MavenProLight300-Regular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
