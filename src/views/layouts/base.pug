@@ -19,7 +19,7 @@ include ../variables
               ul.nav__list
                 each item in app.nav
                   li.nav__item(class={"active": item.title.toLowerCase() === page_active.toLowerCase() })
-                    a.nav__link(href=item.link class={"gradient-btn": item.isAlpha})!=item.title
+                    a.nav__link(href=item.link target=item.target class={"gradient-btn": item.isAlpha})!=item.title
             a.hamburger.js-hamburger(href="javascript:void(0)")
               span.hamburger__line
               span.hamburger__line
