@@ -2,6 +2,8 @@ import $ from 'jquery'
 
 const app = window.app = {}
 
+window.$ = $
+
 /**
  * Replace svg images with inline svg
  */
@@ -153,30 +155,42 @@ $(() => {
 })
 
 /**
- * Subscription validate
+ * Subscription
  */
 $(() => {
   const $form = $('.js-subscribe-form')
   const $email = $form.find('.subscribe-form__email')
   const $submit = $form.find('.subscribe-form__submit')
-  const $error = $('<div class="error"></div>')
+  const $message = $('<div class="message"></div>')
   const error = $email.attr('data-error')
 
   $form.attr('novalidate', true)
-  $form.after($error.hide())
+  $form.after($message.hide())
 
   $email.on('keydown', (e) => {
     $form.removeClass('has-error')
-    $error.fadeOut(200)
+    $message.fadeOut(200)
   })
 
   $submit.on('click', (e) => {
     if (!$form[0].checkValidity()) {
       $form.addClass('has-error')
-      $error.text(error).fadeIn(200)
+      $message.html(`<span class="error">${error}</span>`).fadeIn(200)
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: '/static/php/subscribe.php',
+        data: {
+          email: $email.val()
+        },
+        success (data) {
+          $message.html(`<span class="success">${data}</span>`).fadeIn(200)
 
-      e.preventDefault()
+          location.hash = '#success'
+        }
+      })
     }
+    e.preventDefault()
   })
 })
 
@@ -210,4 +224,42 @@ $('[data-close-modal]').on('click', function () {
  */
 $(window).on('load', () => {
   $('.app-preloader, .app-preloader__circle').fadeOut(500)
+})
+
+/**
+ * Layers animation
+ */
+$(() => {
+  const $layers = $('.layers')
+
+  if (!$layers) return false
+
+  const $imageGroup = $layers.find('.layers__image g')
+  const $item = $layers.find('.layers-item')
+
+  $imageGroup.hover(function () {
+    $item.eq(3 - $(this).index()).addClass('is-active')
+    $(this).addClass('is-active')
+    $layers.addClass('is-hovered')
+  }, function () {
+    $item.eq(3 - $(this).index()).removeClass('is-active')
+    $(this).removeClass('is-active')
+    $layers.removeClass('is-hovered')
+  })
+
+  $item.hover(function () {
+    $imageGroup.eq(2 - $(this).index()).addClass('is-active')
+    $(this).addClass('is-active')
+    $layers.addClass('is-hovered')
+  }, function () {
+    $imageGroup.eq(2 - $(this).index()).removeClass('is-active')
+    $(this).removeClass('is-active')
+    $layers.removeClass('is-hovered')
+  })
+
+  $(window).on('load scroll', () => {
+    if ($(window).scrollTop() >= $layers.offset().top - $layers.height()) {
+      $layers.addClass('loaded')
+    }
+  })
 })

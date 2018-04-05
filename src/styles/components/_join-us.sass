@@ -18,8 +18,7 @@
 
   &__description
     color: $bluey-grey
-    font-family: $secondary-font-family
-    font-weight: 300
+    font-weight: 400
     letter-spacing: px-to-rem(.5px)
     line-height: 1.67
     margin: px-to-rem(34px) 0 px-to-rem(52px)
@@ -40,6 +39,15 @@
     border-radius: 50px
     box-shadow: 0 0 0 2px $error-color, inset 0 0 1px $error-color
     overflow: hidden
+    @media(max-width: 767px)
+      border-radius: 0
+      box-shadow: none
+      overflow: inherit
+
+
+      .subscribe-form__email
+          box-shadow: 0 0 0 2px $error-color, inset 0 0 1px $error-color
+
 
   &__email,
   &__submit
@@ -84,10 +92,15 @@
     &:hover
       box-shadow: inset 200px 0 200px $greenish-cyan
 
-  & + .error
-    color: $error-color
+  & + .message
     left: 0
     margin-top: 2rem
     position: absolute
     right: 0
     text-align: center
+
+    .error
+      color: $error-color
+
+    .success
+      color: $greenish-cyan

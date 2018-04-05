@@ -6,7 +6,7 @@
 
 .tech
   margin: 0 auto
-  max-width: px-to-rem(1460px)
+  max-width: px-to-rem(1270px)
 
   &__items
     display: flex
@@ -28,12 +28,12 @@
   display: flex
   flex-direction: column
   flex-wrap: wrap
-  justify-content: center
   padding: px-to-rem(50px)
   width: 50%
   @media(max-width: 1023px)
     padding: 25px
   @media(max-width: 767px)
+    justify-content: center
     text-align: center
     width: 100%
 
@@ -67,13 +67,19 @@
   &__content
     font-size: px-to-rem(20px)
     font-weight: 300
+    letter-spacing: px-to-rem(.5px)
     line-height: 1.5
     margin-bottom: px-to-rem(55px)
 
     &:last-child
       margin-bottom: px-to-rem(30px)
 
+
   &__read-more
     margin-bottom: px-to-rem(30px)
     margin-top: auto
     text-align: center
+    .border-btn
+      line-height: 1
+      min-width: px-to-rem(250px)
+      padding: px-to-rem(10px) px-to-rem(54px)

@@ -1,12 +1,59 @@
 .layers-wrapper
-  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(165px)
+  padding: px-to-rem(113px) px-to-rem(30px)
   @media(max-width: 767px)
     padding-bottom: 0
+
+@keyframes slideFromRight
+  0%
+    opacity: 0
+    pointer-events: none
+    transform: translateX(100vw)
+
+  100%
+    opacity: 1
+    pointer-events: none
+    transform: translateX(0)
 
 
 .layers
   margin: 0 auto
-  max-width: px-to-rem(1150px)
+  max-width: px-to-rem(1160px)
+  @media(min-width: 768px)
+    &:not(.loaded)
+      .layers-item,
+      .layers__image g
+        opacity: 0
+        transform: translateX(100vw)
+
+    &.loaded
+      .layers-item,
+      .layers__image g
+        animation: ease slideFromRight
+        opacity: 1
+        position: relative
+
+      .layers-item:nth-child(1),
+      .layers__image g:nth-of-type(3)
+        animation-duration: .9s
+
+      .layers-item:nth-child(2),
+      .layers__image g:nth-of-type(2)
+        animation-duration: 1.3s
+
+      .layers-item:nth-child(3),
+      .layers__image g:nth-of-type(1)
+        animation-duration: 1.7s
+
+    &.is-hovered
+      .layers-item,
+      .layers__image g
+        &:not(.is-active)
+          opacity: .3
+
+      .layers__image g
+        &.is-active
+          transform: scale(1.1)
+
 
   &__content
     display: flex
@@ -27,6 +74,14 @@
       width: auto
 
 
+    svg
+      overflow: initial
+
+    g
+      transform-origin: center
+      transition: .4s ease
+
+
   &__items
     padding-top: px-to-rem(92px)
     @media(max-width: 767px)
@@ -35,9 +90,23 @@
 
 .layers-item
   padding: 0 px-to-rem(25px)
+  transition: .4s ease
   @media(max-width: 767px)
     padding: 15px 0 0
     text-align: center
+
+
+  &:nth-child(1)
+    .layers-item__title
+      color: #33bb95
+
+  &:nth-child(2)
+    .layers-item__title
+      color: #5bc8a9
+
+  &:nth-child(3)
+    .layers-item__title
+      color: #84d6bf
 
 
   &__title
@@ -81,17 +150,5 @@
   &__description
     color: $steel
     font-weight: 300
+    letter-spacing: px-to-rem(.5px)
     line-height: 1.33
-
-
-  &:nth-child(1)
-    .layers-item__title
-      color: #33bb95
-
-  &:nth-child(2)
-    .layers-item__title
-      color: #5bc8a9
-
-  &:nth-child(3)
-    .layers-item__title
-      color: #84d6bf

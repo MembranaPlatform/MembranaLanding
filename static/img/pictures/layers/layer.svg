@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="344px" height="465" viewBox="0 0 344 465" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="-2.22044605e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2484C6" offset="0%"></stop>
+            <stop stop-color="#2484C6" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#2484C6" offset="0%"></stop>
+            <stop stop-color="#2484C6" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-2.22044605e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#2484C6" offset="0%"></stop>
+            <stop stop-color="#2484C6" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-2.22044605e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#2484C6" offset="0%"></stop>
+            <stop stop-color="#2484C6" stop-opacity="0.3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g>
+        <polygon transform="translate(0, 180)" fill="url(#linearGradient-3)" opacity="0.16" points="86 218 86 156.019932 172.000493 104 258 156.019932 258 218 172.000493 165.980068"></polygon>
+        <polygon transform="translate(0, 180)" fill="url(#linearGradient-4)" opacity="0.16" points="344 103.999018 258 156 172.000986 103.999018 86 156 0 103.999018 172.000986 0"></polygon>
+        <polygon transform="translate(0, 180)" fill="#64B49B" points="0 165.98105 86 218 86 156.019932 0 104"></polygon>
+        <polygon transform="translate(0, 180)" fill="#70CFB4" points="258 156.019398 258 218 344 165.980602 344 104"></polygon>
+    </g>
+    <g>
+        <polygon transform="translate(0, 90)" fill="url(#linearGradient-2)" opacity="0.16" points="171.00049 0 342 104.5 171.00049 209 0 104.5"></polygon>
+        <polygon transform="translate(0, 90)" fill="#4DA98D" points="0 166.973975 172 271 172 209.027007 0 105"></polygon>
+        <polygon transform="translate(0, 90)" fill="#5BC8A9" points="172 209.02664 172 271 344 166.97336 344 105"></polygon>
+    </g>
+    <g>
+        <polygon fill="url(#linearGradient-1)" opacity="0.16" points="344 104.5 172.000986 209 0 104.5 172.000986 0"></polygon>
+        <polygon fill="#219370" points="0 166.346693 172 271 172 208.653307 0 104"></polygon>
+        <polygon fill="#32BA94" points="172 208.652938 172 271 344 166.346074 344 104"></polygon>
+    </g>
+</svg>

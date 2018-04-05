@@ -18,7 +18,7 @@
 
     h4
       font-weight: normal
-      margin: 0
+      margin: 0 0 0 px-to-rem(30px)
       text-transform: uppercase
       @media(max-width: 767px)
         text-align: center
@@ -34,12 +34,12 @@
 
       &::before
         content: '• '
-        margin-left: px-to-rem(30px)
+        margin-left: px-to-rem(-12px)
 
     h4,
     p,
     ul
-      margin: px-to-rem(30px) 0
+      margin: px-to-rem(30px)
 
       &:first-child
         margin-top: 0
@@ -48,12 +48,12 @@
         margin-bottom: 0
 
     .border-text
-      margin-bottom: px-to-rem(60px)
+      margin: 0 0 px-to-rem(60px)
 
 .border-text
   border: 1px dashed
   border-radius: px-to-rem(20px)
-  font-weight: 400
+  font-weight: 300
   letter-spacing: px-to-rem(1px)
   padding: px-to-rem(19px) px-to-rem(50px)
   text-align: center
