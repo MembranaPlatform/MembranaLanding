@@ -229,14 +229,18 @@ $(window).on('load', () => {
 /**
  * Layers animation
  */
-$(() => {
+$(window).on('load', () => {
   const $layers = $('.layers')
 
   if (!$layers) return false
 
   const $imageGroup = $layers.find('.layers__image g')
   const $item = $layers.find('.layers-item')
-
+  $(window).on('load scroll', () => {
+    if ($(window).scrollTop() >= $layers.offset().top - $layers.height()) {
+      $layers.addClass('loaded')
+    }
+  })
   $imageGroup.hover(function () {
     $item.eq(3 - $(this).index()).addClass('is-active')
     $(this).addClass('is-active')
@@ -246,7 +250,6 @@ $(() => {
     $(this).removeClass('is-active')
     $layers.removeClass('is-hovered')
   })
-
   $item.hover(function () {
     $imageGroup.eq(2 - $(this).index()).addClass('is-active')
     $(this).addClass('is-active')
@@ -255,11 +258,5 @@ $(() => {
     $imageGroup.eq(2 - $(this).index()).removeClass('is-active')
     $(this).removeClass('is-active')
     $layers.removeClass('is-hovered')
-  })
-
-  $(window).on('load scroll', () => {
-    if ($(window).scrollTop() >= $layers.offset().top - $layers.height()) {
-      $layers.addClass('loaded')
-    }
   })
 })
