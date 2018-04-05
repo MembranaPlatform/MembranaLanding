@@ -5,8 +5,9 @@ block page
 	- var page_active = 'Team'; // example: apply active class to nav item
 
 block append head
-	block title
-		- var title = app.titles.index;
+	block head_variables
+		- var title = app.head.index.title;
+		- var description = app.head.index.description;
 
 block content
 	.dot-pattern-wrapper

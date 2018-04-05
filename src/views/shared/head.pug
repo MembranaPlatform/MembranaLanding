@@ -1,12 +1,53 @@
 include ../variables
 
 	head
-		block title
-		title #{title ? title + ' | ' : ''}#{app.titles.base}
+		block head_variables
+		title #{title ? title + ' | ' : ''}#{app.head.title}
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		
+
+		meta(property='og:title', content=title ? title + ' | ' : '' + app.head.title)
+		meta(property='og:type', content='websites')
+		meta(property='og:url', content='http://membrana.io')
+		meta(property='og:description', content=description ? description : app.head.description)
+		meta(property='og:email', content='info@membrana.io')
+		meta(property='og:site_name', content=app.head.title)
+		meta(property='og:image', content='/static/img/pictures/components/investors.jpg')
+
+		meta(name='description', content=description ? description : app.head.description)
+		meta(name='yandex-verification', content='4ebdfc97a2b8fa91')
+		link(href='/static/img/favicon.ico', rel='icon', type='image/x-icon')
+
+		script(type='text/javascript' async defer).
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter47624572 = new Ya.Metrika({
+							id:47624572,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true,
+							webvisor:true,
+							trackHash:true
+						});
+					} catch(e) { }
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		noscript: div: img(src='https://mc.yandex.ru/watch/47624572', style='position:absolute; left:-9999px;', alt='')
+
+
 		
 		style.
 			.app-preloader {

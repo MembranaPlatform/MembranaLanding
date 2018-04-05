@@ -2,9 +2,13 @@
   var app = { 
     lang: 'en',
 
-    titles: {
-      base: 'Membrana - trust management of digital assets',
-      index: ''
+    head: {
+      title: 'Membrana - trust management of digital assets', // default
+      description: 'The first trust management platform fully based on Ethereum smart contracts.', // default
+      index: {
+        title: '', // inserts before default
+        description: '' // overides default
+      }
     },
 
     nav: [{
@@ -14,16 +18,16 @@
       target: "_blank"
     },{
       title: 'Whitepaper',
-      link: 'https://membrana.io/whitepaper_language/'
+      link: '/whitepaper_language/'
     },{
       title: 'Business overview',
-      link: 'https://membrana.io/business_overview_language/'
+      link: '/business_overview_language/'
     },{
       title: 'Roadmap',
-      link: 'https://membrana.io/roadmap/'
+      link: '/roadmap/'
     },{
       title: 'Contacts',
-      link: 'https://membrana.io/contacts/'
+      link: '/contacts/'
     }],
 
     socials: [{

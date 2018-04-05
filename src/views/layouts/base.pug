@@ -14,7 +14,11 @@ include ../variables
       .app(class=page_class)
         .header-wrapper
           header.header
-            .logo: a.logo__link(href="/"): img.logo__image(src="/static/img/logo.svg" alt=app.titles.base)
+            .logo
+              if page_class === 'index' 
+                a.logo__link(href="/"): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+              else
+                .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
             nav.nav
               ul.nav__list
                 each item in app.nav
@@ -36,5 +40,7 @@ include ../variables
               +socials
             .footer__email: a(href="mailto:info@membrana.io") info@membrana.io
             .footer__copyright Membrana © 2018
+
+        a.telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
 
         //- script(defer async src="some metric uri")
