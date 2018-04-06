@@ -12,9 +12,15 @@
   transition: .25s ease
   z-index: 10
   @media(max-width: 1023px)
-    background: $dark
-    padding-bottom: px-to-rem(17px)
-    padding-top: px-to-rem(17px)
+    background: transparent !important
+    padding-bottom: px-to-rem(15px)
+    padding-top: px-to-rem(25px)
+    position: absolute
+
+    .hamburger
+      position: fixed
+      right: px-to-rem(30px)
+      top: px-to-rem(17px)
 
 
   &.fixed
@@ -249,6 +255,7 @@
   position: fixed
   right: px-to-rem(20px)
   width: px-to-rem(60px)
+  z-index: 9
   
   svg
     width: 50%!important

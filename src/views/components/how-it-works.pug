@@ -19,7 +19,7 @@ include ../variables
 
     .how-it-works
       h2.how-it-works__title.title.h-text-gradient!=app.how_it_works.title
-      .how-it-works__content.h-lighter
+      .how-it-works__content
         each field in app.how_it_works.content
           if field.border_text
             p.border-text.h-uppercase!=field.border_text
