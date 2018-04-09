@@ -10,6 +10,8 @@ html
 
 
 body
+  -moz-osx-font-smoothing: grayscale // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased // sass-lint:disable-line no-vendor-prefixes
   color: $light
   font-family: $default-font-family
   font-size: $default-font-size
@@ -112,10 +114,10 @@ b
     transition: .25s ease
 
   &__text
-    font-weight: 700
-    font-size: px-to-rem(19px)
-    margin-top: px-to-rem(20px)
     color: #4df2d4
+    font-size: px-to-rem(19px)
+    font-weight: 700
+    margin-top: px-to-rem(19px)
 
   &:hover
     .play-btn__icon

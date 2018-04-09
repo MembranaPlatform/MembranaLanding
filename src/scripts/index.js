@@ -108,7 +108,7 @@ $(() => {
   const $header = $('.header-wrapper')
 
   $win.on('load scroll', () => {
-    if ($win.scrollTop() > 32) {
+    if ($win.scrollTop() > $('.js-section:nth-child(2)').offset().top - $('.header').height()) {
       $header.addClass('fixed')
     } else {
       $header.removeClass('fixed')

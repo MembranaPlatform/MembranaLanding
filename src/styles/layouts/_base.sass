@@ -2,14 +2,22 @@
   overflow: hidden
 
 
+@keyframes slideDown
+  from
+    transform: translateY(-100%)
+
+  to
+    transform: translateY(0%)
+
+
 .header-wrapper
   background: transparent
   left: 0
-  padding: px-to-rem(47px) px-to-rem(30px)
-  position: fixed
+  padding: px-to-rem(28px) px-to-rem(30px)
+  position: absolute
   right: 0
   top: 0
-  transition: .25s ease
+  transition: background .25s ease
   z-index: 10
   @media(max-width: 1023px)
     background: transparent !important
@@ -24,11 +32,15 @@
 
 
   &.fixed
+    animation: slideDown .6s ease
     background: $dark
     padding-bottom: px-to-rem(17px)
     padding-top: px-to-rem(17px)
+    position: fixed
     @media(max-width: 1023px)
+      animation: none
       padding-top: px-to-rem(25px)
+      position: absolute
 
 
 .header
@@ -255,8 +267,8 @@
   z-index: 9
   
   svg
-    width: 50%!important
-    height: 50%!important
+    width: 48.35%!important
+    height: 48.35%!important
     
     g
       fill: #fff
