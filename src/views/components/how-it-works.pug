@@ -1,31 +1,29 @@
-include ../variables
+.how-it-works-wrapper.js-section
+  .patterns
+    - 
+      var path = "/static/img/patterns/how-it-works/"
+      var list = [
+        "net.png",
+        "line.svg",
+        "triangle1.png",
+        "triangle2.png",
+        "triangle3.png",
+        "triangle4.png",
+        "triangle5.png",
+        "triangle6.png"
+      ]
+    each pattern in list
+      img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
 
-  .how-it-works-wrapper.js-section
-    .patterns
-      - 
-        var path = "/static/img/patterns/how-it-works/"
-        var list = [
-          "net.png",
-          "line.svg",
-          "triangle1.png",
-          "triangle2.png",
-          "triangle3.png",
-          "triangle4.png",
-          "triangle5.png",
-          "triangle6.png"
-        ]
-      each pattern in list
-        img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
-
-    .how-it-works
-      h2.how-it-works__title.title.h-text-gradient!=app.how_it_works.title
-      .how-it-works__content
-        each field in app.how_it_works.content
-          if field.border_text
-            p.border-text.h-uppercase!=field.border_text
-          if field.title
-            h4!=field.title
-          if field.list
-            ul
-              each item in field.list
-                li!=item
+  .how-it-works
+    h2.how-it-works__title.title.h-text-gradient!=app.how_it_works.title
+    .how-it-works__content
+      each field in app.how_it_works.content
+        if field.border_text
+          p.border-text.h-uppercase!=field.border_text
+        if field.title
+          h4!=field.title
+        if field.list
+          ul
+            each item in field.list
+              li!=item

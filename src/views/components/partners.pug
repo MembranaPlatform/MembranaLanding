@@ -1,31 +1,29 @@
-include ../variables
+.partners-wrapper.js-section
+  .patterns
+    - 
+      var path = "/static/img/patterns/partners/"
+      var list = [
+        "triangle1.png",
+        "triangle2.png",
+        "triangle3.png",
+        "triangle4.png",
+        "triangle5.png",
+        "triangle6.png",
+        "triangle7.png",
+        "triangle8.png"
+      ]
+    each pattern in list
+      img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
 
-  .partners-wrapper.js-section
-    .patterns
-      - 
-        var path = "/static/img/patterns/partners/"
-        var list = [
-          "triangle1.png",
-          "triangle2.png",
-          "triangle3.png",
-          "triangle4.png",
-          "triangle5.png",
-          "triangle6.png",
-          "triangle7.png",
-          "triangle8.png"
-        ]
-      each pattern in list
-        img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
-  
-    .tech
-      h2.tech__title.title.h-text-gradient!=app.partners.title
-      .tech__items
-        each item in app.partners.items
-          .tech-item
-            .tech-item__header
-              .tech-item__icon: img(src=item.icon alt=item.title)
-              h4.tech-item__title!=item.title
-            .tech-item__content
-              .tech-item__description!=item.description
-            .tech-item__read-more
-              a.btn.border-btn(href=item.link target="_blank")!=app.read_more
+  .tech
+    h2.tech__title.title.h-text-gradient!=app.partners.title
+    .tech__items
+      each item in app.partners.items
+        .tech-item
+          .tech-item__header
+            .tech-item__icon: img(src=item.icon alt=item.title)
+            h4.tech-item__title!=item.title
+          .tech-item__content
+            .tech-item__description!=item.description
+          .tech-item__read-more
+            a.btn.border-btn(href=item.link target="_blank")!=app.read_more

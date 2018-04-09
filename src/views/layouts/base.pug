@@ -1,46 +1,46 @@
+include ../en
 block page
-include ../variables
 
-  doctype html
-  html(lang=app.lang)
-    include ../shared/head
-    block head
+doctype html
+html(lang=app.lang)
+  include ../shared/head
+  block head
 
-    body
-      .app-preloader
-        .app-preloader__circle
-          .app-preloader__circle-inner
+  body
+    .app-preloader
+      .app-preloader__circle
+        .app-preloader__circle-inner
 
-      .app(class=page_class)
-        .header-wrapper
-          header.header
-            .logo
-              if page_class === 'index' 
-                .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
-              else
-                a.logo__link(href="/"): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
-            nav.nav
-              ul.nav__list
-                each item in app.nav
-                  li.nav__item(class={"active": item.title.toLowerCase() === page_active.toLowerCase() })
-                    a.nav__link(href=item.link target=item.target class={"gradient-btn": item.isAlpha})!=item.title
-            a.hamburger.js-hamburger(href="javascript:void(0)")
-              span.hamburger__line
-              span.hamburger__line
-              span.hamburger__line
+    .app(class=page_class)
+      .header-wrapper
+        header.header
+          .logo
+            if page_class === 'index' 
+              .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+            else
+              a.logo__link(href="/"): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+          nav.nav
+            ul.nav__list
+              each item in app.nav
+                li.nav__item(class={"active": item.title.toLowerCase() === page_active.toLowerCase() })
+                  a.nav__link(href=item.link target=item.target class={"gradient-btn": item.isAlpha})!=item.title
+          a.hamburger.js-hamburger(href="javascript:void(0)")
+            span.hamburger__line
+            span.hamburger__line
+            span.hamburger__line
 
-        .main-wrapper
-          main.main 
-            block content
+      .main-wrapper
+        main.main 
+          block content
 
-        .footer-wrapper
-          footer.footer
-            .footer__socials
-              include ../shared/socials
-              +socials
-            .footer__email: a(href="mailto:info@membrana.io") info@membrana.io
-            .footer__copyright Membrana © 2018
+      .footer-wrapper
+        footer.footer
+          .footer__socials
+            include ../shared/socials
+            +socials
+          .footer__email: a(href="mailto:info@membrana.io") info@membrana.io
+          .footer__copyright Membrana © 2018
 
-        a(href="https://t.me/membrana_io" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
+      a(href="https://t.me/membrana_io" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
 
-        //- script(defer async src="some metric uri")
+      //- script(defer async src="some metric uri")
