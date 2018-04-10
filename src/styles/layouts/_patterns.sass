@@ -1,6 +1,7 @@
 html
-  background: $dark url('/static/img/patterns/diagonals.svg') no-repeat 0 px-to-rem(740px)
-  background-size: 100% auto
+  background: $dark url('/static/img/patterns/diagonals.svg') no-repeat center 760px
+  background-size: 2560px auto
+  height: auto
 
 
 .patterns
@@ -13,11 +14,14 @@ html
 .dot-pattern-wrapper
   background: url('/static/img/patterns/dots.svg') bottom
 
+.cylinder-gradient-pattern-wrapper
+  background: url('/static/img/patterns/cylinder-gradient.svg') center top
+
 
 .team-wrapper
-  background: url('/static/img/patterns/space.jpg') no-repeat center center #27283c
+  background: url('/static/img/patterns/radial-gradient.svg') no-repeat center
+  box-shadow: inset 0 300px 400px -100px #27283a, inset 0 -300px 400px -100px #27283a, 0 300px 400px 100px #27283a, 0 -300px 400px 100px #27283a
   background-size: cover
-  box-shadow: inset 0 300px 400px -100px $dark, inset 0 -300px 400px -100px $dark
   position: relative
   @media(max-width: 479px)
     background-attachment: fixed
@@ -25,14 +29,11 @@ html
     background-size: 1000px auto
 
 
-  &::before
-    background: url('/static/img/patterns/dots.svg') top
-    content: ''
-    height: 150px
-    left: 0
-    position: absolute
-    right: 0
-    top: 0
+// Layer up the team-wrapper shadow 
+.partners-wrapper,
+.join-us-wrapper
+  position: relative
+  z-index: 2
 
 
 .join-us-wrapper
@@ -88,8 +89,8 @@ html
     position: relative
 
   .net
-    left: calc(50vw + #{px-to-rem(-970px)})
-    top: calc(0 + #{px-to-rem(-120px)})
+    left: calc(50vw + #{px-to-rem(-1290px)})
+    top: calc(0 + #{px-to-rem(-165px)})
 
   .line
     left: calc(50vw + #{px-to-rem(410px)})
@@ -115,8 +116,8 @@ html
     top: calc(0 + #{px-to-rem(-5px)})
 
   .triangle1
-    left: calc(50vw + #{px-to-rem(885px)})
-    top: calc(0 + #{px-to-rem(90px)})
+    left: calc(50vw + #{px-to-rem(879px)})
+    top: calc(0 + #{px-to-rem(65px)})
 
   .triangle2
     left: calc(50vw + #{px-to-rem(-820px)})
@@ -138,12 +139,12 @@ html
     top: calc(0 + #{px-to-rem(550px)})
 
   .triangle1
-    left: calc(50vw + #{px-to-rem(600px)})
-    top: calc(0 + #{px-to-rem(145px)})
+    left: calc(50vw + #{px-to-rem(595px)})
+    top: calc(0 + #{px-to-rem(100px)})
 
   .triangle2
-    left: calc(50vw + #{px-to-rem(603px)})
-    top: calc(0 + #{px-to-rem(185px)})
+    left: calc(50vw + #{px-to-rem(601px)})
+    top: calc(0 + #{px-to-rem(145px)})
 
   .triangle3
     left: calc(50vw + #{px-to-rem(850px)})
@@ -170,15 +171,15 @@ html
 
   .net
     left: calc(50vw + #{px-to-rem(110px)})
-    top: calc(0 + #{px-to-rem(-170px)})
+    top: calc(0 + #{px-to-rem(-325px)})
 
   .triangle1
-    left: calc(50vw + #{px-to-rem(-770px)})
-    top: calc(0 + #{px-to-rem(20px)})
+    left: calc(50vw + #{px-to-rem(-775px)})
+    top: calc(0 + #{px-to-rem(-25px)})
 
   .triangle2
-    left: calc(50vw + #{px-to-rem(-785px)})
-    top: calc(0 + #{px-to-rem(45px)})
+    left: calc(50vw + #{px-to-rem(-790px)})
+    top: calc(0 + #{px-to-rem(5px)})
 
   .triangle3
     left: calc(50vw + #{px-to-rem(670px)})

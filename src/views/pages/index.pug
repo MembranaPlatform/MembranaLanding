@@ -1,6 +1,6 @@
 extends ../layouts/base
 
-block page
+block page_variables
 	- var page_class = 'index';
 	- var page_active = 'Team'; // example: apply active class to nav item
 
@@ -14,12 +14,13 @@ block content
 		include ../components/top
 		include ../components/vision
 		include ../components/components
-		include ../components/layers
-		include ../components/how-it-works
-		include ../components/technology
-		include ../components/partners
-	include ../components/team
-	include ../components/join-us
+		.cylinder-gradient-pattern-wrapper
+			include ../components/layers
+			include ../components/how-it-works
+			include ../components/technology
+			include ../components/partners
+			include ../components/team
+			include ../components/join-us
 
 	a.scroll-btn.scroll-btn--fixed(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/icons/scroll-arrow.svg" alt="")
 

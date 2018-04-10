@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2376px" height="5385px" viewBox="0 0 2376 5385" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Effect</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="57.1397803%" fx="50%" fy="57.1397803%" r="105.805311%" gradientTransform="translate(0.500000,0.571398),scale(1.000000,0.385078),rotate(90.000000),scale(1.000000,0.438659),translate(-0.500000,-0.571398)" id="radialGradient-1">
+            <stop stop-color="#00A0FF" offset="0%"></stop>
+            <stop stop-color="#00A0FF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.800000012" opacity="0.30243433">
+        <g id="Landing-page" transform="translate(-92.000000, -4775.000000)" fill="url(#radialGradient-1)">
+            <g id="background">
+                <rect id="Effect" x="0" y="3685" width="2560" height="6648"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

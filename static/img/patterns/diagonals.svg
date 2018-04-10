@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1920px" height="4938px" viewBox="0 0 1920 4938" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 37</title>
+<svg width="2560px" height="6960px" viewBox="0 0 2560 6960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 43</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="63.1157083%" id="linearGradient-1">
@@ -18,15 +18,19 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.232830616">
-        <g id="Landing-page" transform="translate(0.000000, -1140.000000)">
-            <g id="background" transform="translate(-1054.000000, -474.000000)">
-                <g id="Group-37">
+        <g id="Landing-page" transform="translate(0.000000, -1351.000000)">
+            <g id="background" transform="translate(-1595.000000, -474.000000)">
+                <g id="Group-43" transform="translate(855.000000, 0.000000)">
                     <g id="Group-3">
-                        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(1810.546913, 3621.546913) rotate(-45.000000) translate(-1810.546913, -3621.546913) " x="1394.04691" y="1477.54691" width="833" height="4288"></rect>
-                        <rect id="Rectangle" fill="url(#linearGradient-2)" transform="translate(2205.500000, 1811.000000) rotate(-135.000000) translate(-2205.500000, -1811.000000) " x="1789" y="-333" width="833" height="4288"></rect>
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(1816.546913, 3621.546913) rotate(-45.000000) translate(-1816.546913, -3621.546913) " x="1400.04691" y="1477.54691" width="833" height="4288"></rect>
+                        <rect id="Rectangle" fill="url(#linearGradient-2)" transform="translate(2011.500000, 2011.000000) rotate(-135.000000) translate(-2011.500000, -2011.000000) " x="1595" y="-416" width="833" height="4854"></rect>
                     </g>
-                    <g id="Group-3-Copy" transform="translate(2167.500000, 5698.500000) scale(-1, -1) translate(-2167.500000, -5698.500000) translate(348.000000, 3465.000000)">
-                        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(1454.886071, 3271.210616) rotate(-45.000000) translate(-1454.886071, -3271.210616) " x="1030.09809" y="2005.05068" width="849.575953" height="2532.31986"></rect>
+                    <g id="Group-3" transform="translate(0.000000, 4473.000000)">
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(1816.546913, 3621.546913) rotate(-45.000000) translate(-1816.546913, -3621.546913) " x="1400.04691" y="1477.54691" width="833" height="4288"></rect>
+                        <rect id="Rectangle" fill="url(#linearGradient-2)" transform="translate(2011.500000, 2011.000000) rotate(-135.000000) translate(-2011.500000, -2011.000000) " x="1595" y="-416" width="833" height="4854"></rect>
+                    </g>
+                    <g id="Group-3-Copy" transform="translate(2173.500000, 5698.500000) scale(-1, -1) translate(-2173.500000, -5698.500000) translate(354.000000, 3465.000000)">
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(1348.017036, 3164.341581) rotate(-45.000000) translate(-1348.017036, -3164.341581) " x="923.229059" y="1747.04601" width="849.575953" height="2834.59114"></rect>
                         <rect id="Rectangle" fill="url(#linearGradient-3)" transform="translate(1819.249833, 1819.684660) rotate(-135.000000) translate(-1819.249833, -1819.684660) " x="1394.46186" y="-328.259142" width="849.575953" height="4295.8876"></rect>
                     </g>
                 </g>
