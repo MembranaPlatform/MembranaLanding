@@ -53,7 +53,15 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
-    }),
+    }),,
+    // move files to the root folder
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../root'),
+        to: config.build.assetsRoot,
+        ignore: ['.*']
+      }
+    ]),
     // copy custom static assets
     new CopyWebpackPlugin([
       {
@@ -61,7 +69,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ]),
+    ])
     // optimize all the images
     // new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
   ]

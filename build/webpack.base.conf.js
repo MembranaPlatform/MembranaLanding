@@ -5,6 +5,7 @@ var config = require('../config')
 var utils = require('./utils')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -86,6 +87,14 @@ module.exports = {
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
+    // move files to the root folder
+    new CopyWebpackPlugin([
+      {
+        from: utils.assetsPath('../root'),
+        to: config.build.assetsRoot,
+        ignore: ['.*']
+      }
+    ]),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
