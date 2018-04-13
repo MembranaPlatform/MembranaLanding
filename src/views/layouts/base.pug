@@ -23,7 +23,7 @@ html(lang=app.lang)
           nav.nav
             ul.nav__list
               each item in app.nav
-                li.nav__item(class={"active": item.title.toLowerCase() === page_active.toLowerCase() })
+                li.nav__item(class={"active": page_active && item.link.match(page_active) })
                   a.nav__link(href=item.link target=item.target class={"gradient-btn": item.isAlpha})!=item.title
           a.hamburger.js-hamburger(href="javascript:void(0)")
             span.hamburger__line

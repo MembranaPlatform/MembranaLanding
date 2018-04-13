@@ -253,3 +253,44 @@ b
 
     &::after
       transform: rotate(-45deg)
+
+
+.page-content
+  margin: 0 auto
+  max-width: px-to-rem(1240px)
+  padding: px-to-rem(170px) px-to-rem(30px) 0
+  @media(max-width: 767px)
+    padding-top: px-to-rem(140px)
+
+
+  &__title,
+  &__subtitle
+    color: $greenish-teal
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+
+  &__title
+    font-size: px-to-rem(43px)
+    margin: 0 0 px-to-rem(70px)
+    @media(max-width: 767px)
+      font-size: 24px
+      margin-bottom: px-to-rem(40px)
+
+
+  &__subtitle
+    font-size: px-to-rem(30px)
+    margin: 0 0 px-to-rem(40px)
+    @media(max-width: 767px)
+      font-size: 18px
+
+
+  &__text
+    font-size: px-to-rem(17px)
+    text-align: center
+
+    a
+      color: $greenish-teal
+      text-decoration: none
+
+

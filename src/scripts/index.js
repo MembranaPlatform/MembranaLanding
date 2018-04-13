@@ -8,7 +8,7 @@ window.$ = $
  * Replace svg images with inline svg
  */
 app.svgToInline = ($ctx = $('body')) => {
-  $ctx.find('img[src$=".svg"]').each(function () {
+  $ctx.find('img[src$=".svg"]:not(.js-prevent-inline)').each(function () {
     const $img = $(this)
     const src = $img.attr('src')
     const className = ($img.attr('class') || '') + ' js-inlined-svg'
@@ -107,19 +107,21 @@ $(() => {
   const $win = $(window)
   const $header = $('.header-wrapper')
 
+  $('.js-hamburger').on('click', function () {
+    $('body').toggleClass('no-overflow')
+
+    $(this).toggleClass('opened')
+    $header.find('.nav').toggleClass('opened')
+  })
+
+  if (!$('.app').is('.index')) return false
+
   $win.on('load scroll', () => {
     if ($win.scrollTop() > $('.js-section:nth-child(2)').offset().top - $('.header').height()) {
       $header.addClass('fixed')
     } else {
       $header.removeClass('fixed')
     }
-  })
-
-  $('.js-hamburger').on('click', function () {
-    $('body').toggleClass('no-overflow')
-
-    $(this).toggleClass('opened')
-    $header.find('.nav').toggleClass('opened')
   })
 })
 
@@ -132,6 +134,8 @@ $(() => {
   const $sections = $('.js-section')
   const sections = $sections.length
   let $nextSection = null
+
+  if (!$btn.length) return false
 
   $win.on('load scroll', () => {
     $win.scrollTop() >= $sections.eq(1).offset().top - 20 ? $btn.addClass('visible') : $btn.removeClass('visible')
@@ -223,7 +227,9 @@ $('[data-close-modal]').on('click', function () {
  * Preloader
  */
 $(window).on('load', () => {
-  $('.app-preloader, .app-preloader__circle').fadeOut(500)
+  $('.app-preloader, .app-preloader__circle').fadeOut(500, function () {
+    $(window).trigger('preloaded')
+  })
 })
 
 /**
@@ -232,7 +238,7 @@ $(window).on('load', () => {
 $(window).on('load', () => {
   const $layers = $('.layers')
 
-  if (!$layers) return false
+  if (!$layers.length) return false
 
   const $imageGroup = $layers.find('.layers__image g')
   const $item = $layers.find('.layers-item')
@@ -259,4 +265,54 @@ $(window).on('load', () => {
     $(this).removeClass('is-active')
     $layers.removeClass('is-hovered')
   })
+})
+
+/**
+ * Roadmap page animation
+ */
+// Appear animation
+$(() => {
+  const $item = $('.roadmap-item')
+
+  if (!$item.length) return false
+
+  const $line = $('.roadmap-block__line')
+  let $animating = $item.first()
+  const duration = 1200
+  const animate = () => {
+    $animating.slideDown(duration, function () {
+      $(this).height('auto')
+    })
+    $animating.children().fadeIn(duration * 1.5)
+    setTimeout(animate, duration / 1.5)
+    $animating = $animating.next()
+  }
+
+  $item.each(function () {
+    $(this).height($(this).height())
+  }).hide().children().hide()
+
+  $line.hide()
+
+  $(window).on('preloaded', () => {
+    $line.fadeIn(duration)
+    animate()
+  })
+})
+
+// Read more
+$('.roadmap-item__read-more').on('click', function () {
+  const $item = $(this).parents('.roadmap-item')
+  const itemPositionTop = $item.offset().top
+  const toggleHiddenText = () => {
+    $(this)
+      .toggleClass('active')
+      .prev('.roadmap-item__text-hidden').slideToggle(400)
+  }
+
+  toggleHiddenText()
+
+  if ($(window).scrollTop() >= itemPositionTop - 30) {
+    $('html').animate({scrollTop: itemPositionTop - 30}, 400)
+  }
 })

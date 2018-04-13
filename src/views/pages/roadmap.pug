@@ -1,0 +1,41 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'roadmap';
+  - var page_active = '/roadmap/';
+
+block append head
+  block head_variables
+    - var title = app.head.roadmap.title;
+    - var description = app.head.roadmap.description;
+
+block content
+  .page-content
+    h1.page-content__title!=app.roadmap_page.title
+
+    .roadmap-block
+      .roadmap-block__line
+      .roadmap-block__list
+        for item in app.roadmap_page.items
+          .roadmap-item
+            .roadmap-item__date!=item.date
+            .roadmap-item__body
+              .roadmap-item__icon: img.js-prevent-inline(src=item.icon alt="")
+              .roadmap-item__content
+                .roadmap-item__title!=item.title
+                .roadmap-item__text
+                  for content, index in item.content
+                    if content.text && index === 0
+                      p!=content.text
+                  .roadmap-item__text-hidden
+                    for content, index in item.content
+                      if content.text && index > 0
+                        p!=content.text
+                      if content.list
+                        ul
+                          for item in content.list
+                            li!=item
+
+                  a.roadmap-item__read-more(href="javascript:void(0)")!=app.read_more
+    
+  include ../components/join-us

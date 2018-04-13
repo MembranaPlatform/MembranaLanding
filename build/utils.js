@@ -74,13 +74,13 @@ exports.pageFile = function (dev = true) {
   var list = []
   
   read(pagesFolder).forEach(fileItem => {
-
     var file = path.resolve(__dirname, `${pagesFolder}/${fileItem}`)
-    var distfile = fileItem.replace('.pug', '.html')
+    var fileName = fileItem.replace('.pug', '');
+    var distFolder = fileName === 'index' ? '' : fileName
 
     // https://github.com/ampedandwired/html-webpack-plugin
     var options = {
-      filename: path.resolve(__dirname, `../dist/${distfile}`),
+      filename: path.resolve(__dirname, `../dist/${distFolder}/index.html`),
       template: file,
       inject: true
     }

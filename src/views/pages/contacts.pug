@@ -1,0 +1,25 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'contacts';
+	- var page_active = '/contacts/';
+
+block append head
+	block head_variables
+		- var title = app.head.contacts.title;
+		- var description = app.head.contacts.description;
+
+block content
+	.page-content-pattern
+		.page-content
+			h1.page-content__title!=app.contacts_page.title
+			.page-content__text
+				p!=app.contacts_page.text_fragment1
+				p!=app.contacts_page.text_fragment2
+					a(href="mailto:info@membrana.io") info@membrana.io
+					br
+					| !{app.contacts_page.text_fragment3}
+
+			include ../components/get-in-touch
+
+	include ../components/join-us

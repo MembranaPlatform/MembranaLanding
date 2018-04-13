@@ -53,7 +53,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
-    }),,
+    }),
     // move files to the root folder
     new CopyWebpackPlugin([
       {

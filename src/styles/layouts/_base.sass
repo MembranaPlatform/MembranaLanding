@@ -176,6 +176,10 @@
     display: table
 
 
+.main
+  min-height: 100vh
+
+
 .footer
   color: $bluey-grey
 
@@ -272,3 +276,248 @@
     
     g
       fill: #fff
+
+
+.languages-list
+  display: flex
+  justify-content: space-around
+  margin: 0 -10px
+
+.languages-list-item
+  display: block
+  padding: 0 10px
+  text-align: center
+  text-decoration: none
+  width: px-to-rem(255px)
+
+  &__title
+    color: $greenish-teal
+    font-size: px-to-rem(30px)
+    font-weight: normal
+    margin: 0 0 px-to-rem(15px)
+    text-align: center
+    text-transform: uppercase
+    @media(max-width: 767px)
+      font-size: 18px
+
+
+.roadmap-block
+  margin-top: px-to-rem(155px)
+  position: relative
+  @media(max-width: 767px)
+    margin-top: px-to-rem(100px)
+
+
+  &__line
+    background: $greenish-teal
+    bottom: 0
+    left: 50%
+    position: absolute
+    top: 0
+    width: 1px
+    z-index: 3
+    @media(max-width: 767px)
+      left: 15px
+
+
+    &::before,
+    &::after
+      background: $greenish-teal
+      border-radius: 50%
+      box-shadow: 0 0 px-to-rem(55px) px-to-rem(9px) rgba($greenish-teal, .83)
+      content: ''
+      height: px-to-rem(40px)
+      left: 50%
+      margin-left: px-to-rem(-20px)
+      position: absolute
+      width: px-to-rem(40px)
+
+    &::before
+      top: px-to-rem(-40px)
+
+    &::after
+      bottom: px-to-rem(-40px)
+
+  &__list
+    padding: px-to-rem(30px) 0
+    @media(max-width: 767px)
+      padding: 0
+
+
+.roadmap-item
+  align-items: flex-start
+  display: flex
+  padding: px-to-rem(20px) 0
+  @media (min-width: 768px)
+    &:nth-child(odd)
+      .roadmap-item__date
+        text-align: right
+
+        &::after
+          right: 0
+          transform: translateX(50%)
+
+    &:nth-child(even)
+      flex-direction: row-reverse
+
+      .roadmap-item__date
+        &::after
+          left: 0
+          transform: translateX(-50%)
+
+      .roadmap-item__body
+        flex-direction: row-reverse
+        text-align: right
+
+      .roadmap-item__text
+        ul
+          padding-left: 100px
+          text-align: left
+
+  @media(max-width: 767px)
+    flex-direction: column
+
+
+  &__date,
+  &__body
+    flex-shrink: 0
+    width: 50%
+    @media(max-width: 767px)
+      width: 100%
+
+
+  &__date
+    padding: px-to-rem(30px) px-to-rem(50px)
+    position: relative
+    @media(max-width: 767px)
+      padding: px-to-rem(20px) 0 px-to-rem(20px) px-to-rem(50px)
+
+
+    &::after
+      background: $greenish-teal
+      border: 3px solid #2a5153
+      border-radius: 50%
+      box-shadow: inset 0 0 .1px 3px #2e3049
+      box-sizing: border-box
+      content: ''
+      height: 24px
+      margin-top: -12px
+      position: absolute
+      top: 50%
+      width: 24px
+      z-index: 3
+      @media(max-width: 767px)
+        left: 4px
+
+
+  &__body
+    align-items: flex-start
+    display: flex
+    @media(max-width: 767px)
+      padding-left: px-to-rem(60px)
+
+
+  &__icon
+    align-items: center
+    display: flex
+    flex-shrink: 0
+    height: px-to-rem(87px)
+    justify-content: center
+    margin: 0 px-to-rem(40px)
+    width: 53px
+    @media(max-width: 1023px)
+      margin: 0 25px
+      transform: scale(.8)
+    @media(max-width: 767px)
+      display: none
+
+
+  &__date,
+  &__title
+    color: $greenish-teal
+    font-size: px-to-rem(24px)
+    margin: 0
+    text-transform: uppercase
+    @media(max-width: 767px)
+      font-size: 16px
+
+
+  &__text
+    color: #8f92b7
+    font-weight: 300
+
+    ul
+      margin: 1em 0
+
+  &__read-more
+    color: #b1b5e5
+    cursor: pointer
+    display: table
+    font-size: 14px
+    margin-top: px-to-rem(5px)
+    padding-right: 20px
+    position: relative
+    text-align: right
+    text-decoration: none
+    text-transform: uppercase
+    @media(max-width: 767px)
+      margin-left: auto
+
+
+    &.active
+      &::after
+        transform: scaleY(-1)
+
+    &::after
+      background: url('/static/img/icons/read-more-arrow-top.png')
+      content: ''
+      height: 5px
+      margin-top: -2px
+      position: absolute
+      right: 0
+      top: 50%
+      width: 9px
+
+  &__text-hidden
+    display: none
+    padding-bottom: 1em
+
+    p,
+    ul
+      &:first-child
+        margin-top: 0
+
+      &:last-child
+        margin-bottom: 0
+
+
+.get-in-touch
+  &__title
+    color: #32ba94
+    font-size: px-to-rem(30px)
+    font-weight: 400
+    margin: px-to-rem(80px) 0 px-to-rem(60px)
+    text-align: center
+    text-transform: uppercase
+    @media(max-width: 767px)
+      font-size: 24px
+      margin: px-to-rem(60px) 0 px-to-rem(30px)
+
+
+  .socials
+    @media(max-width: 767px)
+      width: 100%
+
+
+    &__link
+      color: #8386a8
+      @media(max-width: 767px)
+        margin: 0
+        width: 20%
+
+        svg
+          margin: 0 auto
+
+
+      &:hover
+        color: #c9cdff

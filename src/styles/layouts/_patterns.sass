@@ -1,7 +1,22 @@
 html
-  background: $dark url('/static/img/patterns/diagonals.svg') no-repeat center 760px
-  background-size: 2560px auto
-  height: auto
+  background: $dark
+
+
+.app
+  &.index
+    background: url('/static/img/patterns/diagonals.svg') no-repeat center 760px
+    background-size: 2560px auto
+    height: auto
+
+  &.roadmap
+    background: url('/static/img/patterns/roadmap-pattern.png') no-repeat center 0
+    background-size: 100% auto
+    height: auto
+
+    .page-content
+      padding-bottom: px-to-rem(200px)
+      @media(max-width: 767px)
+        padding-bottom: px-to-rem(60px)
 
 
 .patterns
@@ -27,6 +42,32 @@ html
     background-attachment: fixed
     background-position: center
     background-size: 1000px auto
+
+
+.page-content-pattern
+  position: relative
+
+  &::before,
+  &::after
+    background: url('/static/img/patterns/page-pattern-radical-gradient.svg') no-repeat center center
+    background-size: cover
+    content: ''
+    width: px-to-rem(720px)
+    height: px-to-rem(720px)
+    position: absolute
+    z-index: 3
+
+  &::before
+    top: -130px
+    left: -200px
+
+  &::after
+    bottom: -190px
+    right: -230px
+
+.page-content
+  position: relative
+  z-index: 4
 
 
 // Layer up the team-wrapper shadow 
@@ -131,8 +172,8 @@ html
     position: relative
 
   .net
-    left: calc(50vw + #{px-to-rem(-970px)})
-    top: calc(0 + #{px-to-rem(25px)})
+    left: calc(50vw + #{px-to-rem(-1295px)})
+    top: calc(0 + #{px-to-rem(15px)})
 
   .line
     left: calc(50vw + #{px-to-rem(-535px)})
