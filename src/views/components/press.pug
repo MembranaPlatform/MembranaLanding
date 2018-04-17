@@ -1,0 +1,6 @@
+.press-wrapper.js-section
+  .press
+    h2.press__title.title.h-text-gradient!=app.press.title
+    .press__list
+      for item in app.press.items
+        a.press__item(href=item.link target="_blank"): img.press__image(src=item.image alt="")

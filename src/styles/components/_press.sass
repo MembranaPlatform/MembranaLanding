@@ -1,0 +1,29 @@
+.press-wrapper
+  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(115px)
+  @media(max-width: 767px)
+    padding-bottom: 0
+
+
+.press
+  margin: 0 auto
+  max-width: 127rem
+
+  &__title
+    margin-bottom: px-to-rem(40px)
+
+  &__list
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__item
+    margin: px-to-rem(40px) px-to-rem(50px)
+    @media(max-width: 1279px)
+      margin: px-to-rem(25px) px-to-rem(30px)
+      transform: scale(.75)
+
+
+  &__image
+    display: block
+    image-rendering: -webkit-optimize-contrast
