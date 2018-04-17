@@ -227,9 +227,17 @@ $('[data-close-modal]').on('click', function () {
  * Preloader
  */
 $(window).on('load', () => {
-  $('.app-preloader, .app-preloader__circle').fadeOut(500, function () {
-    $(window).trigger('preloaded')
-  })
+  const topImage = new Image()
+  topImage.src = '/static/img/pictures/top/bg.svg'
+
+  const hidePreloader = () => {
+    $('.app-preloader, .app-preloader__circle').fadeOut(500, function () {
+      $(window).trigger('preloaded')
+    })
+  }
+
+  topImage.onload = hidePreloader
+  topImage.onerror = hidePreloader
 })
 
 /**
