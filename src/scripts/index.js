@@ -105,22 +105,23 @@ app.setPatternsSize()
  */
 $(() => {
   const $win = $(window)
-  const $header = $('.header-wrapper')
+  const $headerWrapper = $('.header-wrapper')
+  const $header = $('.header-wrapper').find('.header')
 
   $('.js-hamburger').on('click', function () {
     $('body').toggleClass('no-overflow')
 
     $(this).toggleClass('opened')
-    $header.find('.nav').toggleClass('opened')
+    $headerWrapper.find('.nav').toggleClass('opened')
   })
 
   if (!$('.app').is('.index')) return false
 
   $win.on('load scroll', () => {
-    if ($win.scrollTop() > $('.js-section:nth-child(2)').offset().top - $('.header').height()) {
-      $header.addClass('fixed')
+    if ($win.scrollTop() > $('.js-section:nth-child(2)').offset().top - $header.height()) {
+      $headerWrapper.addClass('fixed')
     } else {
-      $header.removeClass('fixed')
+      $headerWrapper.removeClass('fixed')
     }
   })
 })
@@ -138,8 +139,9 @@ $(() => {
   if (!$btn.length) return false
 
   $win.on('load scroll', () => {
-    $win.scrollTop() >= $sections.eq(1).offset().top - 20 ? $btn.addClass('visible') : $btn.removeClass('visible')
-    $win.scrollTop() > $sections.eq(sections - 2).offset().top ? $btn.addClass('disabled') : $btn.removeClass('disabled')
+    const scrollTop = $win.scrollTop()
+    scrollTop > $sections.eq(1).offset().top - 20 ? $btn.addClass('visible') : $btn.removeClass('visible')
+    scrollTop > $sections.eq(sections - 2).offset().top ? $btn.addClass('disabled') : $btn.removeClass('disabled')
   })
 
   $btn.on('click', () => {
