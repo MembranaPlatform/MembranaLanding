@@ -1,15 +1,1 @@
-<svg width="660px" height="730px" viewBox="0 0 660 730" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <desc>Created with Sketch.</desc>
-   <defs>
-      <filter x="-30.2%" y="-30.2%" width="160.5%" height="160.5%" filterUnits="objectBoundingBox" id="filter-1">
-         <feGaussianBlur stdDeviation="50" in="SourceAlpha"></feGaussianBlur>
-      </filter>
-   </defs>
-   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.15">
-      <g id="Landing-page" transform="translate(0.000000, -2869.000000)" fill="#27283A">
-         <g id="platform-layers" transform="translate(47.000000, 2986.000000)">
-            <circle id="Oval-2" filter="url(#filter-1)" cx="248" cy="248" r="248"></circle>
-         </g>
-      </g>
-   </g>
-</svg>
+<svg width="660" height="730" xmlns="http://www.w3.org/2000/svg"><defs><filter x="-30.2%" y="-30.2%" width="160.5%" height="160.5%" filterUnits="objectBoundingBox" id="a"><feGaussianBlur stdDeviation="50" in="SourceAlpha"/></filter></defs><circle filter="url(#a)" cx="248" cy="248" r="248" transform="translate(47 117)" fill="#27283A" fill-rule="evenodd" fill-opacity=".15"/></svg>

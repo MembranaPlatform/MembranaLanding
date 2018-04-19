@@ -31,6 +31,12 @@ app.svgToInline = ($ctx = $('body')) => {
           ) + 'rem')
         )
 
+        !$svg.attr('viewBox') &&
+        $svg.attr('height') &&
+        $svg.attr('width') &&
+        $svg.attr('viewBox', `0 0 ${$svg.attr('width')} ${$svg.attr('height')}`) &&
+        $svg.attr('preserveAspectRatio', 'xMinYMin meet')
+
         $svg.find('*').each(function () {
           const $el = $(this)
           const urlRE = /^url\((.*)\)/g
@@ -135,13 +141,15 @@ $(() => {
   const $sections = $('.js-section')
   const sections = $sections.length
   let $nextSection = null
+  const $secondSection = $sections.eq(1)
+  const $beforeLastSection = $sections.eq(sections - 2)
 
   if (!$btn.length) return false
 
   $win.on('load scroll', () => {
     const scrollTop = $win.scrollTop()
-    scrollTop > $sections.eq(1).offset().top - 20 ? $btn.addClass('visible') : $btn.removeClass('visible')
-    scrollTop > $sections.eq(sections - 2).offset().top ? $btn.addClass('disabled') : $btn.removeClass('disabled')
+    scrollTop > $secondSection.offset().top - 20 ? $btn.addClass('visible') : $btn.removeClass('visible')
+    scrollTop > $beforeLastSection.offset().top ? $btn.addClass('disabled') : $btn.removeClass('disabled')
   })
 
   $btn.on('click', () => {
