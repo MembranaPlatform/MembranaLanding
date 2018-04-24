@@ -334,3 +334,13 @@ $('.roadmap-item__read-more').on('click', function () {
     $('html').animate({scrollTop: itemPositionTop - 30}, 400)
   }
 })
+
+/**
+ * FAQ page animation
+ */
+$('.faq-item').on('click', function () {
+  const $item = $(this)
+  $item.toggleClass('active')
+  $item.find('.faq-item__answer').slideToggle()
+})
+$('.faq-item__answer').on('click', (e) => e.stopPropagation())

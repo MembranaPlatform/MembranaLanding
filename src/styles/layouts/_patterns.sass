@@ -19,6 +19,13 @@ html
         padding-bottom: px-to-rem(60px)
 
 
+  &.faq
+    .page-content-pattern
+      &::after
+        bottom: inherit
+        top: 115px
+
+
 .patterns
   .pattern
     pointer-events: none
@@ -29,16 +36,20 @@ html
 .dot-pattern-wrapper
   background: url('/static/img/patterns/dots.svg') bottom
 
-// .cylinder-gradient-pattern-wrapper
-//   background: url('/static/img/patterns/cylinder-gradient.svg') center top
-
 
 .team-wrapper
   background: url('/static/img/patterns/radial-gradient.svg') no-repeat center
   background-size: auto 100%
-  box-shadow: inset 0 -100px 200px -50px #27283a, 0 100px 200px -50px #27283a
   position: relative
 
+  &::after
+    bottom: -20rem
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,$dark 50%,rgba(0,0,0,0) 100%)
+    content: ''
+    height: 40rem
+    left: 0
+    position: absolute
+    right: 0
 
 .page-content-pattern
   position: relative

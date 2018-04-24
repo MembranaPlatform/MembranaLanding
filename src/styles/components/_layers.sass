@@ -19,17 +19,14 @@
   margin: 0 auto
   max-width: px-to-rem(1160px)
   @media(min-width: 768px)
-    &:not(.loaded)
-      .layers-item,
-      .layers__image g
-        opacity: 0
-        transform: translateX(100vw)
+    .layers-item,
+    .layers__image g
+      transform: translateX(100vw)
 
     &.loaded
       .layers-item,
       .layers__image g
         animation: ease slideFromRight
-        opacity: 1
         position: relative
 
       .layers-item:nth-child(1),

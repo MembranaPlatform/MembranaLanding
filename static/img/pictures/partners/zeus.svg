@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="243px" height="43px" viewBox="0 0 243 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_zeus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0284511278 0 40.1962706 38.7399552 40.1962706 38.7399552 0.0284511278"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page" transform="translate(-674.000000, -5594.000000)">
+            <g id="partners" transform="translate(600.000000, 5404.000000)">
+                <g id="Group-39" transform="translate(0.000000, 190.000000)">
+                    <g id="logo_zeus" transform="translate(74.000000, 0.000000)">
+                        <polygon id="Fill-1" fill="#8386A8" fill-rule="nonzero" points="17.2892877 33 7 41 39 41 39 33"></polygon>
+                        <polygon id="Fill-2" fill="#8386A8" fill-rule="nonzero" points="67 11 106 11 106 2 67 2"></polygon>
+                        <polygon id="Fill-3" fill="#8386A8" fill-rule="nonzero" points="67 26 106 26 106 17 67 17"></polygon>
+                        <polygon id="Fill-4" fill="#8386A8" fill-rule="nonzero" points="67 42 106 42 106 32 67 32"></polygon>
+                        <g id="Group-14">
+                            <path d="M167.900211,0.86877551 L167.900211,22.522116 C167.900211,28.3259613 163.230226,33.0481096 157.489579,33.0481096 C151.750759,33.0481096 147.081688,28.3259613 147.081688,22.522116 L147.081688,0.86877551 L137.741718,0.86877551 L137.741718,22.522116 C137.741718,33.5339957 146.601169,42.4914822 157.489579,42.4914822 C168.379816,42.4914822 177.239267,33.5339957 177.239267,22.522116 L177.239267,0.86877551 L167.900211,0.86877551 Z" id="Fill-5" fill="#8386A8" fill-rule="nonzero"></path>
+                            <g id="Group-9" transform="translate(0.000000, 1.847475)">
+                                <g id="Fill-7-Clipped">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="path-1"></g>
+                                    <polygon id="Fill-7" fill="#8386A8" fill-rule="nonzero" mask="url(#mask-2)" points="38.7399552 0.0284511278 -0.000274060151 0.0284511278 -0.000274060151 9.35543287 22.6864252 9.35543287 -0.000274060151 28.1414909 -0.000274060151 40.1962706 38.7399552 8.11762406"></polygon>
+                                </g>
+                            </g>
+                            <polygon id="Fill-10" fill="#8386A8" fill-rule="nonzero" points="225.666974 33.2126272 204.260136 33.2126272 204.260136 41.5244211 235.812681 41.5244211"></polygon>
+                            <polygon id="Fill-12" fill="#8386A8" fill-rule="nonzero" points="204.26041 1.49119012 242.999725 1.49119012 242.999725 10.8181719 220.313027 10.8181719 242.999725 29.6042299 242.999725 41.6599334 204.26041 9.57943932"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

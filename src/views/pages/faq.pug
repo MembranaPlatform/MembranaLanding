@@ -1,0 +1,25 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'faq';
+  - var page_active = '/faq/';
+
+block append head
+  block head_variables
+    - var title = app.head.faq.title;
+    - var description = app.head.faq.description;
+
+block content
+  .page-content-pattern
+    .page-content
+      h1.page-content__title!=app.faq_page.title
+      .page-content__description!=app.faq_page.description
+
+      .faq-block
+        .faq-block__list
+          for item in app.faq_page.items
+            .faq-item
+              .faq-item__question!=item.question
+              .faq-item__answer!=item.answer
+      
+  include ../components/join-us

@@ -22,7 +22,8 @@
         .tech-item
           .tech-item__header
             .tech-item__icon: img(src=item.icon alt=item.title)
-            h4.tech-item__title!=item.title
+            if item.title
+              h4.tech-item__title!=item.title
           .tech-item__content
             .tech-item__description!=item.description
           .tech-item__read-more

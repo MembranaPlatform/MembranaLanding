@@ -63,8 +63,8 @@ b
 
 
 .gradient-btn
-  background-image: linear-gradient(78deg, $greenish-cyan, $sky-blue);
-  border-radius: 4px;
+  background-image: linear-gradient(78deg, $greenish-cyan, $sky-blue)
+  border-radius: 4px
   box-shadow: 0 0 px-to-rem(40px) rgba($greenish-cyan, .4) // sass-lint:disable-line no-color-literals
   color: $dark
   display: inline-block
@@ -263,6 +263,17 @@ b
     padding-top: px-to-rem(140px)
 
 
+  a:not([class])
+    color: inherit
+    display: inline-block
+    font: inherit
+    max-width: 100%
+    overflow: hidden
+    text-decoration: inherit
+    text-overflow: ellipsis
+    vertical-align: top
+    white-space: nowrap
+
   &__title,
   &__subtitle
     color: $greenish-teal
@@ -283,6 +294,12 @@ b
     margin: 0 0 px-to-rem(40px)
     @media(max-width: 767px)
       font-size: 18px
+
+
+  &__description
+    font-size: px-to-rem(18px)
+    margin-bottom: px-to-rem(40px)
+    text-align: center
 
 
   &__text
