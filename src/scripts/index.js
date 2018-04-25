@@ -260,7 +260,7 @@ $(() => {
 
   const $imageGroup = $layers.find('.layers__image g')
   const $item = $layers.find('.layers-item')
-  $(window).on('load scroll', () => {
+  $(window).on('preloaded scroll', () => {
     if ($(window).scrollTop() >= $layers.offset().top - $layers.height()) {
       $layers.addClass('loaded')
     }
