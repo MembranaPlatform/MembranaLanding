@@ -253,7 +253,7 @@ $(window).on('load', () => {
 /**
  * Layers animation
  */
-$(window).on('load', () => {
+$(() => {
   const $layers = $('.layers')
 
   if (!$layers.length) return false
