@@ -344,3 +344,31 @@ $('.faq-item').on('click', function () {
   $item.find('.faq-item__answer').slideToggle()
 })
 $('.faq-item__answer').on('click', (e) => e.stopPropagation())
+
+/**
+ * Select language
+ */
+$(() => {
+  const $select = $('.js-select-language')
+  const $current = $select.find('.select-language__current')
+  const $item = $select.find('.select-language__item')
+
+  $select.on('click', function (e) {
+    $(this).addClass('active')
+    e.stopPropagation()
+  })
+
+  $item.on('click', function (e) {
+    $select.removeClass('active')
+    e.stopPropagation()
+  })
+
+  $(document).on('click', function () {
+    $select.removeClass('active')
+  })
+
+  $item.on('click', function () {
+    $current.html($(this).html())
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+})

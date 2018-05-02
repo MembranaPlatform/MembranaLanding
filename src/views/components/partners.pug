@@ -20,10 +20,11 @@
     .tech__items
       each item in app.partners.items
         .tech-item
-          .tech-item__header
+          a.tech-item__header(href=item.link)
             .tech-item__icon: img(src=item.icon alt=item.title)
             if item.title
               h4.tech-item__title!=item.title
-          .tech-item__content
+          a.tech-item__content(href=item.link)
             .tech-item__description!=item.description
-              a.tech-item__read-more(href=item.link target="_blank")!=app.read_more
+              .tech-item__read-more
+                img(src="/static/img/icons/arrow.svg" alt="")

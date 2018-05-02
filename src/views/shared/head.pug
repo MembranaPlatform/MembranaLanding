@@ -13,6 +13,9 @@ head
 	meta(property='og:site_name', content=app.head.title)
 	meta(property='og:image', content='/static/img/pictures/components/investors.jpg')
 
+	if app.lang === 'ru'
+		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=cyrillic" rel="stylesheet")
+
 	meta(name='description', content=description ? description : app.head.description)
 	meta(name='yandex-verification', content='4ebdfc97a2b8fa91')
 	link(href='/static/img/favicon.ico', rel='icon', type='image/x-icon')

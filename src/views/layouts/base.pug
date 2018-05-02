@@ -1,5 +1,5 @@
 
-include ../i18n/ru
+include ../i18n/en
 block page_variables
 
 doctype html
@@ -25,11 +25,17 @@ html(lang=app.lang)
               each item in app.nav
                 li.nav__item(class={"active": page_active && item.link && item.link.match(page_active) })
                   if item.isQuickGuide === true
-                    a.nav__link.quick-guide-btn(href="javascript:void(0)" data-open-modal="video")
-                      img.quick-guide-btn__icon(src="/static/img/icons/play.svg" alt="") 
-                      span.quick-guide-btn__text!=item.title
+                    a.nav__link.gradient-btn(href="javascript:void(0)" data-open-modal="video")!=item.title
                   else
                     a.nav__link(href=item.link)!=item.title
+          nav.select-language.js-select-language
+            a.select-language__current(href="javascript:void(0)")
+              img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+            .select-language__list
+              a.select-language__item.active(href="javascript:void(0)")
+                img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+              a.select-language__item(href="javascript:void(0)")
+                img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
           a.hamburger.js-hamburger(href="javascript:void(0)")
             span.hamburger__line
             span.hamburger__line
