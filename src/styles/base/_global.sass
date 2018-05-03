@@ -114,7 +114,7 @@ b
   text-decoration: none
 
   &__icon
-    filter: drop-shadow(0 0 15px rgba(#30e0de, .75)) // sass-lint:disable-line no-color-literals
+    filter: drop-shadow(0 0 0 transparent) // sass-lint:disable-line no-color-literals
     height: px-to-rem(118.5px)
     transition: .5s ease
     width: px-to-rem(118.5px)
@@ -128,27 +128,21 @@ b
 
   &:hover
     .alpha-btn__icon
-      filter: drop-shadow(0 0 0 transparent) // sass-lint:disable-line no-color-literals
+      filter: drop-shadow(0 0 15px rgba(#30e0de, .75)) // sass-lint:disable-line no-color-literals
 
 
 .quick-guide-btn
   align-items: center
-  border: 1px solid $greenish-teal
-  border-radius: 50px
-  color: #c7cbfd
   display: inline-flex
   font-weight: 400
-  padding: 8px 22px
-  transition: .25s ease
-
-  &:hover
-    box-shadow: 0 0 12px 5px rgba($greenish-teal, .25), inset 0 0 7px 2px rgba($greenish-teal, .25) // sass-lint:disable-line no-color-literals
 
   &__icon
-    filter: drop-shadow(0 0 7px rgba($greenish-teal, 1)) // sass-lint:disable-line no-color-literals
     height: 14px
-    margin-right: 12px
+    margin-right: 11px
     width: 14px
+
+    g
+      fill: currentColor
 
   &__text
     position: relative
