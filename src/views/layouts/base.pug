@@ -30,14 +30,14 @@ html(lang=app.lang)
                       span.quick-guide-btn__text!=item.title
                   else
                     a.nav__link(href=item.link)!=item.title
-          nav.select-language.js-select-language
-            a.select-language__current(href="javascript:void(0)")
-              img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
-            .select-language__list
-              a.select-language__item.active(href="javascript:void(0)")
-                img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
-              a.select-language__item(href="javascript:void(0)")
-                img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
+          //- nav.select-language.js-select-language
+          //-   a.select-language__current(href="javascript:void(0)")
+          //-     img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+          //-   .select-language__list
+          //-     a.select-language__item.active(href="javascript:void(0)")
+          //-       img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+          //-     a.select-language__item(href="javascript:void(0)")
+          //-       img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
           a.hamburger.js-hamburger(href="javascript:void(0)")
             span.hamburger__line
             span.hamburger__line
@@ -55,6 +55,6 @@ html(lang=app.lang)
           .footer__email: a(href="mailto:info@membrana.io") info@membrana.io
           .footer__copyright Membrana © 2018
 
-      a(href="https://t.me/membrana_io" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
+      a(href="https://t.me/membrana_platform" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
 
       //- script(defer async src="some metric uri")
