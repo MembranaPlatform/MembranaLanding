@@ -120,10 +120,13 @@ b
     width: px-to-rem(118.5px)
 
   &__text
-    color: #4df2d4
-    font-size: px-to-rem(19px)
-    font-weight: 700
-    margin-top: px-to-rem(19px)
+    background-image: linear-gradient(90deg, #4ee9d6, #56c4eb)
+    color: $greenish-cyan
+    font-size: px-to-rem(23px)
+    font-weight: 500
+    margin-top: px-to-rem(17px)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
   &:hover
     .alpha-btn__icon
@@ -135,15 +138,19 @@ b
   display: inline-flex
   font-weight: 400
 
-  &__icon
-    height: 14px
-    margin-right: 11px
-    width: 14px
+  &:hover
+    .quick-guide-btn__icon
+      filter: drop-shadow(0 0 8px #30e0de) // sass-lint:disable-line no-color-literals
 
-    g
-      fill: currentColor
+  &__icon
+    filter: drop-shadow(0 0 0 transparent) // sass-lint:disable-line no-color-literals
+    height: 17px
+    margin-right: 11px
+    transition: .25s ease
+    width: 17px
 
   &__text
+    color: $greenish-teal
     position: relative
     top: 1px
 

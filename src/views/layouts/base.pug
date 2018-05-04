@@ -26,7 +26,7 @@ html(lang=app.lang)
                 li.nav__item(class={"active": page_active && item.link && item.link.match(page_active) })
                   if item.isQuickGuide === true
                     a.nav__link.quick-guide-btn(href="javascript:void(0)" data-open-modal="video")
-                      img.quick-guide-btn__icon(src="/static/img/icons/play.svg" alt="") 
+                      img.quick-guide-btn__icon.js-prevent-inline(src="/static/img/icons/play.svg" alt="") 
                       span.quick-guide-btn__text!=item.title
                   else
                     a.nav__link(href=item.link)!=item.title
