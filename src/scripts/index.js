@@ -8,7 +8,11 @@ window.$ = $
  * Replace svg images with inline svg
  */
 app.svgToInline = ($ctx = $('body')) => {
-  $ctx.find('img[src$=".svg"]:not(.js-prevent-inline)').each(function () {
+  const $images = $ctx.find('img[src$=".svg"]:not(.js-prevent-inline)')
+
+  let imagesToLoad = $images.length
+
+  $images.each(function () {
     const $img = $(this)
     const src = $img.attr('src')
     const className = ($img.attr('class') || '') + ' js-inlined-svg'
@@ -67,6 +71,11 @@ app.svgToInline = ($ctx = $('body')) => {
 
         $img.replaceWith($svg)
       }
+
+      imagesToLoad--
+      if (imagesToLoad === 0) {
+        $(window).trigger('imagesReady')
+      }
     })
   })
 }
@@ -109,7 +118,7 @@ app.setPatternsSize()
 /**
  * Main navigation
  */
-$(() => {
+;(() => {
   const $win = $(window)
   const $headerWrapper = $('.header-wrapper')
   const $header = $('.header-wrapper').find('.header')
@@ -130,12 +139,12 @@ $(() => {
       $headerWrapper.removeClass('fixed')
     }
   })
-})
+})()
 
 /**
  * Scroll btn
  */
-$(() => {
+;(() => {
   const $win = $(window)
   const $btn = $('.scroll-btn')
   const $sections = $('.js-section')
@@ -166,12 +175,12 @@ $(() => {
 
     $('html, body').animate({scrollTop: $nextSection.offset().top})
   })
-})
+})()
 
 /**
  * Subscription
  */
-$(() => {
+;(() => {
   const $form = $('.js-subscribe-form')
   const $email = $form.find('.subscribe-form__email')
   const $submit = $form.find('.subscribe-form__submit')
@@ -206,7 +215,7 @@ $(() => {
     }
     e.preventDefault()
   })
-})
+})()
 
 /**
  * Modals
@@ -236,15 +245,15 @@ $('[data-close-modal]').on('click', function () {
 /**
  * Preloader
  */
-$(window).on('load', () => {
+$(window).on('imagesReady', () => {
   const topImage = new Image()
   topImage.src = '/static/img/pictures/top/bg.svg'
 
-  const hidePreloader = () => {
+  const hidePreloader = setTimeout(() => {
     $('.app-preloader, .app-preloader__circle').fadeOut(500, function () {
       $(window).trigger('preloaded')
     })
-  }
+  }, 500)
 
   topImage.onload = hidePreloader
   topImage.onerror = hidePreloader
@@ -253,7 +262,7 @@ $(window).on('load', () => {
 /**
  * Layers animation
  */
-$(() => {
+$(window).on('imagesReady', () => {
   const $layers = $('.layers')
 
   if (!$layers.length) return false
@@ -289,7 +298,7 @@ $(() => {
  * Roadmap page animation
  */
 // Appear animation
-$(() => {
+;(() => {
   const $item = $('.roadmap-item')
 
   if (!$item.length) return false
@@ -312,11 +321,11 @@ $(() => {
 
   $line.hide()
 
-  $(window).one('preloaded', () => {
+  $(window).on('preloaded', () => {
     $line.fadeIn(duration)
     animate()
   })
-})
+})()
 
 // Read more
 $('.roadmap-item__read-more').on('click', function () {
@@ -348,7 +357,7 @@ $('.faq-item__answer').on('click', (e) => e.stopPropagation())
 /**
  * Select language
  */
-$(() => {
+;(() => {
   const $select = $('.js-select-language')
   const $current = $select.find('.select-language__current')
   const $item = $select.find('.select-language__item')
@@ -371,10 +380,10 @@ $(() => {
     $current.html($(this).html())
     $(this).addClass('active').siblings().removeClass('active')
   })
-})
+})()
 
 // Load youtube video
-$(window).one('preloaded', () => {
+$(window).on('preloaded', () => {
   $('.js-youtube-iframe').each(function () {
     const $item = $(this)
     const dataSet = $item.data()
