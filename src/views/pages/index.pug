@@ -28,4 +28,4 @@ block content
 
 	.youtube-modal(data-modal="video" style="display:none")
 		a.youtube-modal__close(href='javascript:void(0)', data-close-modal='')
-		iframe.youtube-modal__iframe(src=app.youtube_video, allow="autoplay; encrypted-media", allowfullscreen)
+		.youtube-modal__iframe.js-youtube-iframe(data-src=app.youtube_video, data-allow="autoplay; encrypted-media", data-allowfullscreen)

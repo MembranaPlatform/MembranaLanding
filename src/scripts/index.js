@@ -312,7 +312,7 @@ $(() => {
 
   $line.hide()
 
-  $(window).on('preloaded', () => {
+  $(window).one('preloaded', () => {
     $line.fadeIn(duration)
     animate()
   })
@@ -370,5 +370,22 @@ $(() => {
   $item.on('click', function () {
     $current.html($(this).html())
     $(this).addClass('active').siblings().removeClass('active')
+  })
+})
+
+// Load youtube video
+$(window).one('preloaded', () => {
+  $('.js-youtube-iframe').each(function () {
+    const $item = $(this)
+    const dataSet = $item.data()
+    const $iframe = $('<iframe></iframe>')
+
+    $iframe.attr('class', $item.attr('class'))
+
+    for (let attr in dataSet) {
+      $iframe.attr(attr, dataSet[attr])
+    }
+
+    $item.replaceWith($iframe)
   })
 })
