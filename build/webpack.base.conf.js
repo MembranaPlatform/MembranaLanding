@@ -76,7 +76,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+          name: utils.assetsPath('fonts/[name].[ext]?[hash:7]')
         }
       }
     ]
@@ -85,7 +85,7 @@ module.exports = {
     ...utils.pageFile(isDev),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css')
+      filename: utils.assetsPath('css/[name].css?[contenthash]')
     }),
     // move files to the root folder
     new CopyWebpackPlugin([

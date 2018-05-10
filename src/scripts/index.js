@@ -383,7 +383,7 @@ $('.faq-item__answer').on('click', (e) => e.stopPropagation())
 })()
 
 // Load youtube video
-$(window).on('preloaded', () => {
+$(window).one('preloaded', () => {
   $('.js-youtube-iframe').each(function () {
     const $item = $(this)
     const dataSet = $item.data()

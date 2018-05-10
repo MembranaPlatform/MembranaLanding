@@ -70,7 +70,9 @@ exports.pageFile = function (dev = true) {
   const fs = require('fs')
   const path = require('path')
   const pagesFolder = path.resolve(__dirname, '../src/views/pages')
-  
+
+  let lang = global.process.argv[2] === 'ru' ? 'ru' : ''; 
+
   var list = []
   
   read(pagesFolder).forEach(fileItem => {
@@ -80,7 +82,7 @@ exports.pageFile = function (dev = true) {
 
     // https://github.com/ampedandwired/html-webpack-plugin
     var options = {
-      filename: path.resolve(__dirname, `../dist/${distFolder}/index.html`),
+      filename: path.resolve(__dirname, `../dist/${lang}/${distFolder}/index.html`),
       template: file,
       inject: true
     }

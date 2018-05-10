@@ -1,6 +1,17 @@
 
 include ../i18n/en
+
+//- Applies while the build task is running
+if global.process.argv[2] === 'en'
+  //- npm run build
+  include ../i18n/en
+if global.process.argv[2] === 'ru'
+  //- npm run build-ru
+  include ../i18n/ru
+
+//- 
 block page_variables
+
 
 doctype html
 html(lang=app.lang)
@@ -19,7 +30,7 @@ html(lang=app.lang)
             if page_class === 'index' 
               .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
             else
-              a.logo__link(href="/"): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+              a.logo__link(href=`${app.lang === "ru" ? "ru" : "/"}`): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
           nav.nav
             ul.nav__list
               each item in app.nav
@@ -30,15 +41,18 @@ html(lang=app.lang)
                       span.quick-guide-btn__text!=item.title
                   else
                     a.nav__link(href=item.link)!=item.title
-          //- nav.select-language.js-select-language
-          //-   a.select-language__current(href="javascript:void(0)")
-          //-     img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
-          //-   .select-language__list
-          //-     a.select-language__item.active(href="javascript:void(0)")
-          //-       img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
-          //-     a.select-language__item(href="javascript:void(0)")
-          //-       img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
-          a.hamburger.js-hamburger(href="javascript:void(0)")
+          nav.select-language.js-select-language
+            a.select-language__current(href="javascript:void(0)")
+              if app.lang === 'en'
+                img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+              if app.lang === 'ru'
+                img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
+            .select-language__list
+              a.select-language__item(href="/" class={'active': app.lang === 'en'})
+                img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
+              a.select-language__item(href="/ru/" class={'active': app.lang === 'ru'})
+                img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
+          a.hamburger.js-hamburger(href="javascript:void(0)") 
             span.hamburger__line
             span.hamburger__line
             span.hamburger__line
