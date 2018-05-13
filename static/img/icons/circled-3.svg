@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #f06d09;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #f06d09;
+        font-size: 14px;
+        font-family: MavenProRegular, Maven Pro;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_19" data-name="Group 19" transform="translate(-983 -1294)">
+    <g id="Ellipse_18" data-name="Ellipse 18" class="cls-1" transform="translate(983 1294)">
+      <circle class="cls-3" cx="15" cy="15" r="15"/>
+      <circle class="cls-4" cx="15" cy="15" r="14"/>
+    </g>
+    <text id="_3" data-name="3" class="cls-2" transform="translate(994 1313)"><tspan x="0" y="0">3</tspan></text>
+  </g>
+</svg>

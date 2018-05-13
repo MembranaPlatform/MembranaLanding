@@ -131,6 +131,34 @@ html
     top: calc(0 + #{px-to-rem(680px)})
 
 
+.competition-wrapper
+  position: relative
+
+  .competition
+    position: relative
+
+  .patterns
+    display: flex
+
+  .bg
+    display: flex
+    justify-content: center
+    left: 0
+    margin: 0 auto
+    right: 0
+    top: px-to-rem(-110px)
+    z-index: -1
+    @media(max-width: 1179px)
+      top: px-to-rem(-180px)
+    @media(max-width: 767px)
+      display: none
+
+
+    img
+      max-width: initial
+
+
+
 .components-wrapper
   position: relative
 

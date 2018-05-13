@@ -68,6 +68,25 @@ b
     font-size: 24px
 
 
+.icon-link
+  align-items: center
+  color: #c7cbfd
+  display: inline-flex
+  text-decoration: none
+
+  &:hover
+    .icon-link__icon
+      filter: drop-shadow(0 0 4px rgba(#f06d09, .6))
+
+  &__icon
+    margin-right: px-to-rem(28px)
+    transition: .25s ease
+    width: px-to-rem(30px)
+
+  &__text
+    font-size: px-to-rem(17px)
+
+
 .gradient-btn
   background-image: linear-gradient(78deg, $greenish-cyan, $sky-blue)
   border-radius: 4px
