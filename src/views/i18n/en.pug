@@ -9,6 +9,10 @@
         title: '', // inserts before default
         description: '' // overides default
       },
+      competition: {
+        title: 'Join Global Traders Competition and trade by real money', // inserts before default
+        description: '' // overides default
+      },
       whitepaper: {
         title: 'Whitepaper', // inserts before default
         description: 'Whitepaper of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
@@ -128,12 +132,6 @@
             launch a start-up, created for the sake of this noble idea. We are not another broker – because we have completely changed 
             the system. How long have you been searching for an aspiring project like this that change the world for the better?`.replace(/\n/g, '')
       }]
-    },
-
-    competition: {
-      title: 'Join <b>Global Traders Competition</b> and trade by real money.',
-      text: 'Withdraw profit and earn tokens',
-      link_text: 'Learn More & Join'
     },
 
     components: {
@@ -470,7 +468,10 @@
       description: 'To learn more about trust management of digital assets, how to use Membrana, and to meet the team!',
       email: 'Type your e-mail here…',
       email_error: '*Type correct mail to subscribe',
-      subscribe: 'Subscribe'
+      subscribe: 'Subscribe',
+      title_check: 'Please, check you are subscribe',
+      subscription_check: 'Don\'t miss any detail of Global Traders Competition',
+      join: 'Join'
     },
 
     choose_language: 'Choose language:',
@@ -762,17 +763,60 @@
       title: 'In the press',
       items: [{
         image: '/static/img/pictures/press/1.png',
-        link: 'https://bitcoingarden.org/blockchain-venture-summit-in-istanbul-dialogue-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+        link: 'https://www.cryptoninjas.net/2018/04/19/zeus-exchange-connects-with-trust-management-app-membrana/'
       },{
         image: '/static/img/pictures/press/2.png',
-        link: 'https://coinidol.com/blockchain-venture-summit-in-istanbul/'
+        link: 'https://coinspectator.com/news/379298/zeus-exchange-connects-with-trust-management-app-membrana'
       },{
         image: '/static/img/pictures/press/3.png',
-        link: 'https://techmoran.com/blockchain-venture-summit-in-istanbul-pushes-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+        link: 'https://bitcoingarden.org/blockchain-venture-summit-in-istanbul-dialogue-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
       },{
         image: '/static/img/pictures/press/4.png',
+        link: 'https://coinidol.com/blockchain-venture-summit-in-istanbul/'
+      },{
+        image: '/static/img/pictures/press/5.png',
+        link: 'https://techmoran.com/blockchain-venture-summit-in-istanbul-pushes-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+      },{
+        image: '/static/img/pictures/press/6.png',
         link: 'https://chaining.ru/2018/03/31/blockchain-venture-summit-in-istanbul-dialogue-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
       }]
-    }
+    },
+
+    competition: {
+      title: 'Join <b>Global Traders Competition</b> and trade by real money.',
+      text: 'Withdraw profit and earn tokens',
+      link_text: 'Learn More & Join',
+      join_text: 'Fill out the form and click "Join"',
+      email_label: 'Your Email:',
+      wallet_label: 'Your Ethereum Wallet:',
+      wallet_placeholder: 'Type Your Etherium Wallet Number Here...',
+      email_error: '*Type correct mail',
+      wallet_error: '*Type correct wallet',
+      policy: 'By clicking "Join" you agree with <a href="javascript:void(0)" target="_blank">Terms Of Use</a>',
+      info_text: `Last preparations for 
+          <br><br>
+          <b>Global Traders Competition!</b>
+          <br><br>
+          Every week from the start of the competition, traders will receive money for trading on 
+          <span>Membrana platform</span> 
+          to compete with each other. This is real trading with real money! 
+          <br><br>
+          All trading will be done on <span>Binance exchange</span> through Membrana unique interface.`.replace(/\n/g, ''),
+      prizes: {
+        intro: 'At the end of each competitive week, 5 best traders will receive:',
+        list: [
+          'All of their winnings on Ethereum wallet',
+          'Tournament points, depending on their rank position',
+          'Official Membana hoodie',
+          'Entry ticket for Membrana Platform Event, which will take place in autumn 2018'
+        ]
+      },
+      important_text: `After every round of competition we will calculate all the Tournament points achieved by each trader. 
+          Later this year, we are giving all participants Membrana Tokens, depending on their results. 
+          Everyone will receive prizes for participation, thats why we encourage you to join and to compete!`.replace(/\n/g, ''),
+      important_text_smaller: `For the record, Membrana tokens wont be sold through any crowdsale, so their availability 
+          is strongly limited.`.replace(/\n/g, ''),
+      invite_text: `We invite all traders to participate in this competition! Pass the KYC and follow the updates!`.replace(/\n/g, '')
+    },
     
   }

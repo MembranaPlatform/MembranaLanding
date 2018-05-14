@@ -80,11 +80,36 @@ b
 
   &__icon
     margin-right: px-to-rem(28px)
-    transition: .25s ease
+    transition: .3s ease
     width: px-to-rem(30px)
 
   &__text
     font-size: px-to-rem(17px)
+
+
+.icon-item
+  align-items: flex-start
+  display: inline-flex
+  text-decoration: none
+
+  &:hover
+    .icon-item__icon
+      filter: drop-shadow(0 0 4px rgba(#f06d09, .6))
+
+  &__icon
+    margin-right: px-to-rem(28px)
+    transform: translateZ(0)
+    transition: .3s ease
+    width: px-to-rem(30px)
+
+  &__text
+    font-size: px-to-rem(20px)
+    padding-top: px-to-rem(4px)
+
+  &__smaller-text
+    color: #8f8f8f
+    display: block
+    font-size: px-to-rem(16px)
 
 
 .gradient-btn
@@ -363,3 +388,99 @@ b
       text-decoration: none
 
 
+.sm-form
+  border-bottom: 1px solid rgba(#fff, .05)
+  margin-bottom: 48px
+  padding-bottom: 45px
+  text-align: left
+
+  .message
+    display: flex
+    flex-direction: column
+    margin-bottom: px-to-rem(26px)
+    .error
+      color: #db3c3d
+    .success
+      color: #4afdcb
+
+  &__body
+    background: rgba(#fff, .01)
+    border-radius: px-to-rem(17px)
+    padding: px-to-rem(26px) px-to-rem(12px)
+  
+  &__submit_policy
+    align-items: center
+    display: flex
+    margin-top: px-to-rem(28px)
+  
+  &__policy
+    color: #c7cbfd
+    font-size: 13px
+    margin-left: px-to-rem(20px)
+    max-width: 165px
+
+    a
+      color: inherit
+      text-decoration: underline
+
+
+.sm-form-btn
+  align-items: center
+  background: rgba(#1a1b27, .3)
+  border: none
+  border-radius: px-to-rem(17px)
+  color: #c7cbfd
+  cursor: pointer
+  font-size: px-to-rem(17px)
+  display: inline-flex
+  height: px-to-rem(67px)
+  outline: none
+  padding: 0 px-to-rem(28px)
+
+  &:hover
+    .sm-form-btn__icon
+      filter: drop-shadow(0 0 6px rgb(240, 109, 9))
+
+  &__icon
+    height: px-to-rem(14px)
+    margin-right: px-to-rem(14px)
+    transition: .3s ease
+    width: px-to-rem(14px)
+
+.label
+  display: flex
+  flex-direction: column
+  padding: 0 px-to-rem(7px)
+  @media(max-width: 767px)
+    text-align: center
+
+
+  &__title
+    color: #c7cbfd
+    font-size: px-to-rem(17px)
+    margin-bottom: px-to-rem(11px)
+  
+  & + .label
+    border-top: 1px solid rgba(#707070, .1)
+    margin-top: px-to-rem(26px)
+    padding-top: px-to-rem(22px)
+
+.input
+  width: 100%
+  border: none
+  outline: none
+  height: px-to-rem(48px)
+  padding: 0 px-to-rem(18px)
+  background: rgba(#fff, .05)
+  border-radius: px-to-rem(10px)
+  padding: 0 px-to-rem(18px)
+  font-size: 13px
+  color: #fff
+  @media(max-width: 767px)
+    text-align: center
+  
+
+  &::placeholder
+    font: inherit
+    color: inherit
+    opacity: 0.2

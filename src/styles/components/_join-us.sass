@@ -92,15 +92,109 @@
     &:hover
       box-shadow: inset 200px 0 200px $greenish-cyan
 
-  & + .message
-    left: 0
-    margin-top: 2rem
-    position: absolute
-    right: 0
-    text-align: center
+.js-subscribe-form + .message
+  left: 0
+  margin-top: 2rem
+  position: absolute
+  right: 0
+  text-align: center
 
-    .error
-      color: $error-color
+  .error
+    color: $error-color
 
-    .success
-      color: $greenish-cyan
+  .success
+    color: $greenish-cyan
+
+.subscribe-check
+  margin: px-to-rem(-10px) auto px-to-rem(-20px)
+  max-width: 626px
+  text-align: center
+  @media(max-width: 767px)
+    margin: 0
+
+
+  &__title
+    color: #53d3e2
+    font-size: px-to-rem(29px)
+    font-weight: normal
+    line-height: 1.17
+    margin: 0 0 px-to-rem(12px)
+
+  &__description
+    color: #e9e9e9
+    font-size: px-to-rem(16px)
+    line-height: 1.13
+    opacity: 0.8
+
+  &__join-telegram
+    align-items: center
+    border-bottom: 1px solid rgba(#fff, .05)
+    border-top: 1px solid rgba(#fff, .05)
+    display: flex
+    justify-content: center
+    margin: px-to-rem(42px) 0 0
+    padding: px-to-rem(32px) 0 px-to-rem(42px)
+    @media(max-width: 767px)
+      margin: 30px 0
+      padding: 30px 0
+
+
+  &__btn
+    align-items: center
+    background: transparent
+    border: none
+    color: #53d3e2
+    cursor: pointer
+    display: inline-flex
+    font-size: px-to-rem(17px)
+    outline: none
+    padding: 0
+    text-decoration: none
+
+    &:hover
+      &::before
+        filter: drop-shadow(0 0 6px #53d3e2)
+
+    &::before
+      background: url('/static/img/icons/circled-right-arrow.svg') center no-repeat
+      content: ''
+      height: 19px
+      margin-right: 10px
+      transition: .3s ease
+      width: 19px
+
+  &__telegram
+    align-items: center
+    display: inline-flex
+    margin-left: 10px
+    
+    &-icon
+      align-items: center
+      background: #1e96c8
+      border-radius: 50%
+      display: inline-flex
+      justify-content: center
+      height: 22px
+      margin-right: 14px
+      width: 22px
+
+    svg
+      max-height: 12px
+      max-width: 15px
+
+      path
+        fill: #fff
+
+
+.subscribe-check-form
+  display: flex
+  max-width: px-to-rem(425px)
+  margin: px-to-rem(36px) auto 0
+  @media(max-width: 767px)
+    flex-direction: column
+
+
+  &__submit
+    margin-left: px-to-rem(27px)
+    @media(max-width: 767px)
+      margin: 20px auto 0

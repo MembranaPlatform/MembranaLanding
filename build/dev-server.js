@@ -56,7 +56,8 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/business_overview_language\/$/, to: '/business_overview_language/index.html'},
     { from: /\/roadmap\/$/, to: '/roadmap/index.html'},
     { from: /\/contacts\/$/, to: '/contacts/index.html'},
-    { from: /\/faq\/$/, to: '/faq/index.html'}
+    { from: /\/faq\/$/, to: '/faq/index.html'},
+    { from: /\/competition\/$/, to: '/competition/index.html'}
   ]
 }))
 

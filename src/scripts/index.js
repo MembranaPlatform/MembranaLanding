@@ -178,12 +178,12 @@ app.setPatternsSize()
 })()
 
 /**
- * Subscription
+ * Subscription form
  */
 ;(() => {
   const $form = $('.js-subscribe-form')
-  const $email = $form.find('.subscribe-form__email')
-  const $submit = $form.find('.subscribe-form__submit')
+  const $email = $form.find('[type="email"]')
+  const $submit = $form.find('[type="submit"]')
   const $message = $('<div class="message"></div>')
   const error = $email.attr('data-error')
 
@@ -210,6 +210,65 @@ app.setPatternsSize()
           $message.html(`<span class="success">${data}</span>`).fadeIn(200)
 
           location.hash = '#success'
+        }
+      })
+    }
+    e.preventDefault()
+  })
+})()
+
+/**
+ * Join form
+ */
+;(() => {
+  const $form = $('.js-join-form')
+  const $email = $form.find('[type="email"]')
+  const $wallet = $form.find('[type="text"]')
+  const $submit = $form.find('[type="submit"]')
+  const $message = $('<div class="message"></div>')
+  const emailError = $email.attr('data-error')
+  const walletError = $wallet.attr('data-error')
+
+  $form.attr('novalidate', true)
+  $form.prepend($message.hide())
+
+  $email.on('keydown', (e) => {
+    if ($wallet[0].checkValidity()) {
+      $form.removeClass('has-error')
+      $message.fadeOut(200)
+    }
+  })
+
+  $wallet.on('keydown', (e) => {
+    if ($email[0].checkValidity()) {
+      $form.removeClass('has-error')
+      $message.fadeOut(200)
+    }
+  })
+
+  $submit.on('click', (e) => {
+    if (!$form[0].checkValidity()) {
+      $form.addClass('has-error')
+      let errors = ''
+      if (!$email[0].checkValidity()) {
+        errors += `<span class="error">${emailError}</span>`
+      }
+      if (!$wallet[0].checkValidity()) {
+        errors += `<span class="error">${walletError}</span>`
+      }
+      $message.html(errors).fadeIn(200)
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: '/static/php/auth.php',
+        data: {
+          email: $email.val(),
+          wallet: $wallet.val()
+        },
+        success (data) {
+          $message.html(`<span class="success">${data}</span>`).fadeIn(200)
+
+          // ...
         }
       })
     }

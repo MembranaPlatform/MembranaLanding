@@ -1,0 +1,92 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'competition-page';
+  - var page_active = '/competition/';
+
+block append head
+  block head_variables
+    - var title = app.head.competition.title;
+    - var description = app.head.competition.description;
+
+block content
+  .page-content-pattern
+
+    .competition-wrapper
+      .patterns
+        div.pattern.bg
+          img.js-prevent-inline(src="/static/img/patterns/competition/bg-page.svg" alt="")
+
+      .competition
+        .competition__container
+          .competition__left
+            h2.competition__title!=app.competition.title
+            .competition__text!=app.competition.text
+
+            .competition__join_sm-form
+              div.competition__join.icon-link
+                img.icon-link__icon.js-prevent-inline(src="/static/img/icons/circled-down-arrow.svg" alt="")
+                span.icon-link__text!=app.competition.join_text
+
+              .competition__sm-form
+                form.sm-form.js-join-form
+                  .sm-form__body
+                    .label
+                      span.label__title!=app.competition.email_label
+                      input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error required)
+                    .label
+                      span.label__title!=app.competition.wallet_label
+                      input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error pattern="/^0x[0-9A-Fa-f]{40}$/" required)
+                  .sm-form__submit_policy
+                    .sm-form__submit
+                      button.sm-form-btn(type="submit")
+                        img.sm-form-btn__icon(src="/static/img/icons/plus.svg" alt="")
+                        span.sm-form-btn__text!=app.join_us.join
+                    .sm-form__policy!=app.competition.policy
+            
+              .competition__info-text!=app.competition.info_text
+
+          .competition__right
+            img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")
+
+            .competition__prizes
+              .competition-prizes
+                .competition-prizes__intro!=app.competition.prizes.intro
+
+                for item, index in app.competition.prizes.list
+                  .competition-prizes__list
+                    .competition-prizes__item.icon-item
+                      img.icon-item__icon.js-prevent-inline(src="/static/img/icons/circled-" + (index + 1) + ".svg" alt="")
+                      span.icon-item__text!=item
+
+
+        .competition__important-text
+          .icon-item
+            img.icon-item__icon.js-prevent-inline(src="/static/img/icons/circled-important.svg" alt="")
+            span.icon-item__text!=app.competition.important_text
+              br
+              br
+              span.icon-item__smaller-text!=app.competition.important_text_smaller
+
+
+        .competition__invite-text!=app.competition.invite_text
+
+          
+  
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
+
