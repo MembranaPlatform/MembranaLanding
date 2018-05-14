@@ -1,0 +1,43 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'competition-page';
+  - var page_active = '/competition/';
+
+block append head
+  block head_variables
+    - var title = app.head.competition.title;
+    - var description = app.head.competition.description;
+
+block content
+  .page-content-pattern
+
+    .competition-wrapper
+      .patterns
+        div.pattern.bg
+          img.js-prevent-inline(src="/static/img/patterns/competition/bg-page.svg" alt="")
+
+      .competition
+        .competition__container
+          .competition__left
+            h2.competition__title!=app.competition.success_title
+
+          .competition__right
+            img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")
+
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe

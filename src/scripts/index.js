@@ -223,28 +223,14 @@ app.setPatternsSize()
 ;(() => {
   const $form = $('.js-join-form')
   const $email = $form.find('[type="email"]')
-  const $wallet = $form.find('[type="text"]')
+  const $trnum = $form.find('[type="text"]')
   const $submit = $form.find('[type="submit"]')
   const $message = $('<div class="message"></div>')
   const emailError = $email.attr('data-error')
-  const walletError = $wallet.attr('data-error')
+  const trnumError = $trnum.attr('data-error')
 
   $form.attr('novalidate', true)
   $form.prepend($message.hide())
-
-  $email.on('keydown', (e) => {
-    if ($wallet[0].checkValidity()) {
-      $form.removeClass('has-error')
-      $message.fadeOut(200)
-    }
-  })
-
-  $wallet.on('keydown', (e) => {
-    if ($email[0].checkValidity()) {
-      $form.removeClass('has-error')
-      $message.fadeOut(200)
-    }
-  })
 
   $submit.on('click', (e) => {
     if (!$form[0].checkValidity()) {
@@ -253,26 +239,22 @@ app.setPatternsSize()
       if (!$email[0].checkValidity()) {
         errors += `<span class="error">${emailError}</span>`
       }
-      if (!$wallet[0].checkValidity()) {
-        errors += `<span class="error">${walletError}</span>`
+      if (!$trnum[0].checkValidity()) {
+        errors += `<span class="error">${trnumError}</span>`
       }
       $message.html(errors).fadeIn(200)
+      e.preventDefault()
     } else {
       $.ajax({
         type: 'POST',
-        url: '/static/php/auth.php',
+        url: $form.attr('action'),
         data: {
           email: $email.val(),
-          wallet: $wallet.val()
+          trnum: $trnum.val()
         },
-        success (data) {
-          $message.html(`<span class="success">${data}</span>`).fadeIn(200)
-
-          // ...
-        }
+        success (data) {}
       })
     }
-    e.preventDefault()
   })
 })()
 

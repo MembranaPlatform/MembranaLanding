@@ -29,14 +29,14 @@ block content
                 span.icon-link__text!=app.competition.join_text
 
               .competition__sm-form
-                form.sm-form.js-join-form
+                form.sm-form.js-join-form(action="/static/php/idnow.php" method="post")
                   .sm-form__body
                     .label
                       span.label__title!=app.competition.email_label
-                      input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error required)
+                      input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error name="email" required)
                     .label
                       span.label__title!=app.competition.wallet_label
-                      input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error pattern="^0x[0-9A-Fa-f]{40}$" required)
+                      input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error name="trnum" pattern="^0x[0-9A-Fa-f]{40}$" required)
                   .sm-form__submit_policy
                     .sm-form__submit
                       button.sm-form-btn(type="submit")
