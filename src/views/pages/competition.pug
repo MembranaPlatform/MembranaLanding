@@ -36,7 +36,7 @@ block content
                       input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error required)
                     .label
                       span.label__title!=app.competition.wallet_label
-                      input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error pattern="/^0x[0-9A-Fa-f]{40}$/" required)
+                      input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error pattern="^0x[0-9A-Fa-f]{40}$" required)
                   .sm-form__submit_policy
                     .sm-form__submit
                       button.sm-form-btn(type="submit")
