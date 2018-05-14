@@ -58,7 +58,8 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/contacts\/$/, to: '/contacts/index.html'},
     { from: /\/faq\/$/, to: '/faq/index.html'},
     { from: /\/competition\/$/, to: '/competition/index.html'},
-    { from: /\/idnow-success\/$/, to: '/idnow-success/index.html'}
+    { from: /\/idnow-success\/$/, to: '/idnow-success/index.html'},
+    { from: /\/idnow-test-success\/$/, to: '/idnow-test-success/index.html'}
   ]
 }))
 
