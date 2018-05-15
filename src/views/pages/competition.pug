@@ -90,3 +90,76 @@ block content
             input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
             button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
 
+
+  .rules-modal(data-modal="rules" style="display:none" data-close-modal="")
+    .rules-modal__inner
+      .rules-modal__body(data-prevent-modal-close="")
+        a.rules-modal__close(href="javascript:void(0)", data-close-modal="")
+        .rules-modal__content
+          .rules-modal__section
+            h2.rules-modal__title 
+              b Rules 
+              | of 
+              b Global Trader Competition 
+            br
+            | On weekly basis all participants will receive funds for trading. This money will be given by 
+            b Membrana platform 
+            | with the use of its unique algorithm of trust management. 
+            br
+            br
+          .rules-modal__section
+            h3.rules-modal__sub-title
+              b Details of the Competition:
+            br
+            | Global Traders Competition will start 
+            b 15 June 2018.
+            br
+            | All traders will receive 0.012 btc each ($100). The money will be provided on 
+            b Binance exchange, 
+            | allowing users to trade there freely competing with each other. Winners will be determined by the balance at the end of the competition period and shown ROI.
+            br
+            | After each week - we will conclude results and give rewards for traders.
+            br
+            br
+            | Top5 traders will receive their winnings on 
+            b Ethereum wallet 
+            | and 
+            b official Membrana hoodie.
+            br
+            | All participants will receive 
+            b Tournament point 
+            | depending on their result position.
+            br
+            | Those Tournament point can be achieved every week and seen in the result list on Membrana official website.
+            br
+            br
+            | After 12 rounds of weekly competition we will conclude the results of 1st 
+            b Global Trading Competition 
+            | and reward each participant.
+            br
+            | All Tournaments points will be converted into 
+            b Membrana Tokens.
+            br
+            | Best 20 traders in the global ranking will receive a part of $100,000 prize pool!
+            br
+            br
+          .rules-modal__section
+            h3.rules-modal__sub-title How to participate?
+            br
+            | To participate, you need to pass the KYC procedure, available on our official website - 
+            a(href="/competition") Membrana.io/competition
+            br
+            br
+            | Then you need to login on our platform using your Ethereal wallet. You don’t need an account on exchange or anything else!
+            br
+            br
+            | After verifying your account we will place you in the tournament schedule. For first weekly rounds we limit the amount of participants to 100, but in case there will be no space, you can be sure, that you will have a chance to compete in future rounds. Also, need to be mentioned, that you can participate in multiple rounds of Global Trader Competition to earn as many Tournament Points as you can!
+            br
+            br
+            | Good luck to everyone, and let the competition begin!
+            br
+            br
+          
+          a(href="javascript:void(0)" target="_blank" data-close-modal="").competition__link.icon-link
+            img.icon-link__icon.js-prevent-inline(src="/static/img/icons/circled-down-arrow.svg" alt="")
+            span.icon-link__text Got It & Back

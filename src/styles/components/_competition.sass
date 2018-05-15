@@ -178,3 +178,122 @@
     .competition__image
       margin: -15% auto 0
 
+
+
+.rules-modal
+  background: rgba(0,0,0,.5)
+  bottom: 0
+  left: 0
+  height: 100%
+  overflow: auto
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 20
+
+  &__inner
+    padding: px-to-rem(146px) px-to-rem(75px)
+    @media(max-width: 767px)
+      padding: 20px
+
+
+  &__body
+    background: rgba(#25252c, .97)
+    border-radius: px-to-rem(10px)
+    color: #e9e9e9
+    font-size: px-to-rem(20px)
+    margin: 0 auto
+    max-width: px-to-rem(1251px)
+    position: relative
+    padding: px-to-rem(70px) px-to-rem(80px)
+    @media(max-width: 767px)
+      padding: 40px 30px
+
+
+  &__title
+    font-size: px-to-rem(33px)
+    font-weight: normal
+    line-height: .7
+    margin: 0
+    @media(max-width: 767px)
+      line-height: inherit
+
+
+    b
+      font-weight: bold
+
+  &__sub-title
+    font-size: px-to-rem(25px)
+    font-weight: normal
+    line-height: .92
+    margin: 0
+    position: relative
+    @media(max-width: 767px)
+      line-height: inherit
+
+
+    &::before
+      background: #f06d09
+      border-radius: 50%
+      box-shadow: 0 0 14px 1px #f06d09
+      content: ''
+      height: 5px
+      left: px-to-rem(-40px)
+      position: absolute
+      top: px-to-rem(8px)
+      width: 5px
+      @media(max-width: 767px)
+        left: -17px
+        top: 7px
+
+
+  &__content
+    max-width: 732px
+
+  &__section
+    &::after
+      border-bottom: 1px solid rgba(#fff, .1)
+      content: ''
+      display: block
+      margin-bottom: 1.3em
+      max-width: px-to-rem(337px)
+
+    a
+      color: inherit
+
+      &:hover
+        text-decoration: none
+
+  b
+    font-weight: 500
+
+  &__close
+    border-radius: 50%
+    height: 14px
+    position: absolute
+    right: px-to-rem(45px)
+    top: px-to-rem(60px)
+    width: 14px
+    z-index: 3
+    @media(max-width: 767px)
+      top: 20px
+      right: 18px
+
+
+    &::before,
+    &::after
+      background: rgba(#fff, .1)
+      border-radius: 5px
+      content: ''
+      height: 1px
+      left: 0
+      margin-top: -1px
+      position: absolute
+      top: 50%
+      width: 100%
+
+    &::before
+      transform: rotate(45deg)
+
+    &::after
+      transform: rotate(-45deg)

@@ -270,6 +270,7 @@ $('[data-open-modal]').on('click', function () {
       $('body').addClass('no-overflow')
     }
   })
+  $('body').css('overflow', 'hidden')
 })
 
 $('[data-close-modal]').on('click', function () {
@@ -281,6 +282,11 @@ $('[data-close-modal]').on('click', function () {
       $('body').removeClass('no-overflow')
     }
   })
+  $('body').css('overflow', 'auto')
+})
+
+$('[data-prevent-modal-close]').on('click', function (e) {
+  e.stopPropagation()
 })
 
 /**

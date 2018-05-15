@@ -12,7 +12,8 @@ block append head
 block content
 	.dot-pattern-wrapper
 		include ../components/top
-		include ../components/competition
+		if global.process.argv[2] === 'en'
+			include ../components/competition
 		include ../components/vision
 		include ../components/components
 		.cylinder-gradient-pattern-wrapper
