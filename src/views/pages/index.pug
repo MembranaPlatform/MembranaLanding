@@ -12,7 +12,7 @@ block append head
 block content
 	.dot-pattern-wrapper
 		include ../components/top
-		if global.process.argv[2] === 'en'
+		if global.process.argv[2] !== 'ru'
 			include ../components/competition
 		include ../components/vision
 		include ../components/components
@@ -26,8 +26,3 @@ block content
 			include ../components/join-us
 
 	a.scroll-btn.scroll-btn--fixed(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/icons/scroll-arrow.svg" alt="")
-
-
-	.youtube-modal(data-modal="video" style="display:none")
-		a.youtube-modal__close(href='javascript:void(0)', data-close-modal='')
-		.youtube-modal__iframe.js-youtube-iframe(data-src=app.youtube_video, data-allow="autoplay; encrypted-media", data-allowfullscreen) 

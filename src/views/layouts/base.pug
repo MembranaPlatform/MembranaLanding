@@ -71,4 +71,8 @@ html(lang=app.lang)
 
       a(href="https://t.me/membranaplatform" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
 
+      .youtube-modal(data-modal="video" style="display:none")
+        a.youtube-modal__close(href='javascript:void(0)', data-close-modal='')
+        .youtube-modal__iframe.js-youtube-iframe(data-src=app.youtube_video, data-allow="autoplay; encrypted-media", data-allowfullscreen) 
+
       //- script(defer async src="some metric uri")
