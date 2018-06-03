@@ -178,6 +178,34 @@ app.setPatternsSize()
 })()
 
 /**
+ * Scroll btn next
+ */
+;(() => {
+  const $btnNext = $('.scroll-btn-next')
+  const $sectionNext = $('.competition__profits')
+
+  if (!$btnNext.length) return false
+
+  $btnNext.on('click', () => {
+    $('html, body').animate({scrollTop: $sectionNext.offset().top})
+  })
+})()
+
+/**
+ * Scroll btn form
+ */
+;(() => {
+  const $btnForm = $('.scroll-btn-form, .binance__KYC')
+  const $formSection = $('.competition__join_sm-form-bottom')
+
+  if (!$btnForm.length) return false
+
+  $btnForm.on('click', () => {
+    $('html, body').animate({scrollTop: $formSection.offset().top})
+  })
+})()
+
+/**
  * Subscription form
  */
 ;(() => {
