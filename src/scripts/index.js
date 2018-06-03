@@ -201,7 +201,7 @@ app.setPatternsSize()
   if (!$btnForm.length) return false
 
   $btnForm.on('click', () => {
-    $('html, body').animate({scrollTop: $formSection.offset().top})
+    $('html, body').animate({scrollTop: $formSection.offset().top}); return false
   })
 })()
 
