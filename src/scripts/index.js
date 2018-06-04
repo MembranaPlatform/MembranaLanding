@@ -196,12 +196,12 @@ app.setPatternsSize()
  */
 ;(() => {
   const $btnForm = $('.scroll-btn-form, .binance__KYC')
-  const $formSection = $('.competition__join_sm-form-bottom')
+  const $formSection = $('.KYC_wr h2')
 
   if (!$btnForm.length) return false
 
   $btnForm.on('click', () => {
-    $('html, body').animate({scrollTop: $formSection.offset().top})
+    $('html, body').animate({scrollTop: $formSection.offset().top}); return false
   })
 })()
 
