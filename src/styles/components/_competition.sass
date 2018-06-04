@@ -791,7 +791,7 @@
     float: left;
     width: 49.5%;
     min-height: 380px
-    padding: 2% 8% 0 8%
+    padding: 2% 8% 0 12%
     box-sizing: border-box
     background-color: rgba(36,196,142, .6)
     @media(max-width: 767px)
@@ -807,7 +807,7 @@
     width: 49.5%;
     margin-left: 1%
     min-height: 380px
-    padding: 2% 8% 0 8%
+    padding: 2% 8% 0 12%
     box-sizing: border-box
     position: relative
     background-color: rgba(62,2,194,.6)
@@ -991,3 +991,33 @@
         &:before
           background-image: url("/static/img/new-page/more_arrow.svg")
         
+.non_displayed
+	display: none
+
+.pop_up-image
+	position: fixed
+	height: 100%
+	top: 0
+	width: 100%
+	left: 0
+	background-color: rgba(0,0,0,.2)
+	z-index: 1000
+	overflow: scroll
+
+	.close_pop_up
+		position: absolute
+		left: 0
+		width: 200%
+		bottom: 0
+		top: 0
+		background-color: rgba(0,0,0,.7)
+
+	svg
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 0
+		width: 200%
+		// background-color: rgba(0,0,0,.7)
+
+

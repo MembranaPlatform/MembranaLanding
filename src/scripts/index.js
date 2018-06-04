@@ -206,6 +206,26 @@ app.setPatternsSize()
 })()
 
 /**
+ * pop-up img
+ */
+
+;(() => {
+  const $imgClickTo = $('.how_it_works__img')
+  const $popUp = $('.pop_up-image')
+
+  if (!$imgClickTo.length) return false
+
+  $(document).on('click touchend', $imgClickTo, () => {
+    if ($(window).width() <= 500) $popUp.removeClass('non_displayed')
+  })
+
+  $(document).on('click touchend', '.close_pop_up', (e) => {
+    e.stopPropagation()
+    $popUp.addClass('non_displayed')
+  })
+})()
+
+/**
  * Subscription form
  */
 ;(() => {
