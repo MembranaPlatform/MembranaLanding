@@ -1,0 +1,12 @@
+<svg width="40" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.9 48.605">
+    <defs>
+        <style>
+            .arrow-green{fill:#24c48e}
+        </style>
+    </defs>
+    <g id="Group_39" data-name="Group 39" transform="translate(-932.6 -1357)">
+        <path id="path" d="M432.55 877l19.95 19.95-4.655 4.655-15.295-15.295-15.3 15.295-4.65-4.655z" class="arrow-green" transform="rotate(-180 692.55 1141.302)"/>
+        <path id="path-2" d="M432.55 877l19.95 19.95-4.655 4.655-15.295-15.295-15.3 15.295-4.65-4.655z" class="arrow-green" data-name="path" transform="rotate(-180 692.55 1135.302)"/>
+        <path id="path-3" d="M432.55 877l19.95 19.95-4.655 4.655-15.295-15.295-15.3 15.295-4.65-4.655z" class="arrow-green" data-name="path" transform="rotate(-180 692.55 1129.302)"/>
+    </g>
+</svg>
