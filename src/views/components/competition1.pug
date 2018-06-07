@@ -1,0 +1,16 @@
+.competition-wrapper.js-section
+  .patterns
+    div.pattern.bg
+      img.js-prevent-inline(src="/static/img/patterns/competition/bg.svg" alt="")
+
+  .competition.-index
+    .competition__container
+      .competition__left
+        h2.competition__title!=app.competition.title
+        .competition__text!=app.competition.text
+        a(href="/competition/" target="_blank").competition__link.icon-link
+          img.icon-link__icon.js-prevent-inline(src="/static/img/icons/circled-down-arrow.svg" alt="")
+          span.icon-link__text!=app.competition.link_text
+
+      .competition__right
+        img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")
