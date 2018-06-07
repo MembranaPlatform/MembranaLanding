@@ -209,19 +209,53 @@ app.setPatternsSize()
  * pop-up img
  */
 
+// ;(() => {
+//   const $imgClickTo = $('.how_it_works__img')
+//   const $popUp = $('.pop_up-image')
+
+//   if (!$imgClickTo.length) return false
+
+//   $('.how_it_works').on('click touchend', $imgClickTo, () => {
+//     if ($(window).width() <= 500) $popUp.removeClass('non_displayed'); $('html').css('overflow', 'hidden')
+//   })
+
+//   $(document).on('click touchend', '.close_pop_up, .close_pop_up_cross', (e) => {
+//     e.stopPropagation()
+//     $popUp.addClass('non_displayed')
+//     $('html').css('overflow', 'visible')
+//     return false
+//   })
+// })()
+
 ;(() => {
   const $imgClickTo = $('.how_it_works__img')
   const $popUp = $('.pop_up-image')
+  let popTouchmoved = false
 
   if (!$imgClickTo.length) return false
 
-  $(document).on('click touchend', $imgClickTo, () => {
-    if ($(window).width() <= 500) $popUp.removeClass('non_displayed')
+  $('.how_it_works').on('touchend', $imgClickTo, () => {
+    if ($(window).width() <= 500 && popTouchmoved !== true) {
+      $popUp.removeClass('non_displayed'); $('html').css('overflow', 'hidden')
+    }
   })
 
-  $(document).on('click touchend', '.close_pop_up', (e) => {
+  $(document).on('touchmove', $imgClickTo, () => {
+    popTouchmoved = true
+  })
+
+  $(document).on('touchstart', $imgClickTo, () => {
+    popTouchmoved = false
+  })
+
+  $(document).on('click touchend', '.close_pop_up, .close_pop_up_cross', (e) => {
     e.stopPropagation()
+
     $popUp.addClass('non_displayed')
+
+    $('html').css('overflow', 'visible')
+
+    return false
   })
 })()
 

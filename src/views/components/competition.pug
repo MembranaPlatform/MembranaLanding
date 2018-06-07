@@ -3,14 +3,40 @@
     div.pattern.bg
       img.js-prevent-inline(src="/static/img/patterns/competition/bg.svg" alt="")
 
-  .competition.-index
-    .competition__container
-      .competition__left
-        h2.competition__title!=app.competition.title
-        .competition__text!=app.competition.text
-        a(href="/competition/" target="_blank").competition__link.icon-link
-          img.icon-link__icon.js-prevent-inline(src="/static/img/icons/circled-down-arrow.svg" alt="")
-          span.icon-link__text!=app.competition.link_text
 
-      .competition__right
-        img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")
+  .competition.new-page.main_new       
+
+        
+
+        .competition__container  
+
+          .competition__left
+            h1.competition__header Get 
+              b FREE 100$ 
+              span on
+              br
+              span.competition__header_img
+                img(src="/static/img/new-page/header_logo.svg" alt="")
+              b.competition__header-colored Binance Exchange    
+
+            .competition__desc
+              p And a chance to win a part of prize pool 
+                span.competition__desc-colored 100,000$ 
+
+            .competition__btn_wr    
+
+              a(href="/competition/" target="_blank").sm-form-btn.sm-form__submit
+                img.sm-form-btn__icon(src="/static/img/icons/plus.svg" alt="")
+                span.sm-form-btn__text Learn More & Join 
+
+              .competition__btn_wr__arrow
+                div.arrow_down_wr
+                  a.scroll-btn-green.scroll-btn-next: img.scroll-btn__icon(src="/static/img/new-page/scroll-arrow-green.svg" alt="")
+
+
+              p.competition__btn_wr__desc Participate in
+                br
+                b.competition__desc-colored Global Traders Competition
+
+          .competition__right
+            img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")
