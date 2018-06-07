@@ -24,7 +24,7 @@ block content
         
 
         h1.competition__header Get 
-          b FREE 100$ 
+          b FREE $100 
           span on
           br
           span.competition__header_img
@@ -48,7 +48,7 @@ block content
                 span.icon-link__text!=app.competition.join_text
 
               .competition__sm-form
-                form.sm-form.js-join-form(action="/static/php/idnow.php" method="post")
+                form.sm-form.js-join-form.form_two(action="/static/php/idnow.php" method="post")
                   .sm-form__body
                     .label
                       span.label__title!=app.competition.email_label
@@ -91,7 +91,7 @@ block content
           .competition__profits_wr__item
             h4 
               b Part of 
-              span.profits__item-colored 100.000$ 
+              span.profits__item-colored $100.000 
               span prize pool
             p Best 20 traders will get a part of $100 000 prize pool
 
@@ -109,9 +109,9 @@ block content
           .competition__profits_wr__item
             h4 
               b 
-              span.profits__item-colored Membarana
+              span.profits__item-colored Membrana
             p TOP-5 traders will receive 
-              b official team's hoodie 
+              b Membrana team's hoodie 
               span each week of competition
            
         
@@ -141,7 +141,7 @@ block content
               b Pass KYC
             span &nbsp&nbsp&nbspvia the form.
             br 
-            span We have to know our traders. To get free 100$ you have to pass Know Your Customer (KYC) procedure.
+            span We have to know our traders. To get free $100 you have to pass Know Your Customer (KYC) procedure.
 
           p.binance__steps 
             b Get Email 
@@ -163,7 +163,7 @@ block content
           p.binance__steps
             a.binance__KYC(href="#")
               b Pass KYC
-            span &nbsp&nbsp&nbspvia the form. To get free 100$ you have to pass Know Your Customer (KYC) procedure.
+            span &nbsp&nbsp&nbspvia the form. To get free $100 you have to pass Know Your Customer (KYC) procedure.
 
 
           p.binance__steps 
@@ -195,7 +195,7 @@ block content
             span.icon-link__text Fill the form and click "Join"
 
           .competition__sm-form
-            form.sm-form.js-join-form(action="/static/php/idnow.php" method="post")
+            form.sm-form.js-join-form.form_one(action="/static/php/idnow.php" method="post")
               .sm-form__body
                 .label
                   span.label__title!=app.competition.email_label
