@@ -303,7 +303,7 @@ app.setPatternsSize()
  * Join form
  */
 ;(() => {
-  const $form = $('.js-join-form')
+  const $form = $('.js-join-form.form_one')
   const $email = $form.find('[type="email"]')
   const $trnum = $form.find('[type="text"]')
   const $submit = $form.find('[type="submit"]')
@@ -311,8 +311,19 @@ app.setPatternsSize()
   const emailError = $email.attr('data-error')
   const trnumError = $trnum.attr('data-error')
 
+  const $form2 = $('.js-join-form.form_two')
+  const $email2 = $form2.find('[type="email"]')
+  const $trnum2 = $form2.find('[type="text"]')
+  const $submit2 = $form2.find('[type="submit"]')
+  const $message2 = $('<div class="message"></div>')
+  const emailError2 = $email2.attr('data-error')
+  const trnumError2 = $trnum2.attr('data-error')
+
   $form.attr('novalidate', true)
   $form.prepend($message.hide())
+
+  $form2.attr('novalidate', true)
+  $form2.prepend($message2.hide())
 
   $submit.on('click', (e) => {
     if (!$form[0].checkValidity()) {
@@ -333,6 +344,31 @@ app.setPatternsSize()
         data: {
           email: $email.val(),
           trnum: $trnum.val()
+        },
+        success (data) {}
+      })
+    }
+  })
+
+  $submit2.on('click', (e) => {
+    if (!$form2[0].checkValidity()) {
+      $form2.addClass('has-error')
+      let errors = ''
+      if (!$email2[0].checkValidity()) {
+        errors += `<span class="error">${emailError2}</span>`
+      }
+      if (!$trnum2[0].checkValidity()) {
+        errors += `<span class="error">${trnumError2}</span>`
+      }
+      $message2.html(errors).fadeIn(200)
+      e.preventDefault()
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: $form.attr('action'),
+        data: {
+          email: $email2.val(),
+          trnum: $trnum2.val()
         },
         success (data) {}
       })
