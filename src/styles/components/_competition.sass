@@ -984,8 +984,9 @@
           background-repeat: no-repeat;
           background-size: contain;
           @media(max-width: 767px)
-            display: none;
-          
+            left: 50%;
+            top: -40px;
+            transform: translateX(-50%);
 
 
           
@@ -1176,7 +1177,9 @@
         transform: rotateZ(90deg) scale(.5,.5)
         padding: 10px 0
         @media(max-width: 1030px)
-          transform: rotateZ(180deg)
+          // transform: rotateZ(180deg)
+          display: none
+          
 
 
 
@@ -1191,6 +1194,8 @@
         padding-top: 8px
       @media(max-width: 1030px)
         width: 100%
+        padding-top: 58px
+        display: none
 
       .competition__desc-colored
         color: #24c48e
