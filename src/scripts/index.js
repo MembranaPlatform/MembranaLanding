@@ -339,6 +339,7 @@ app.setPatternsSize()
       $message.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      e.preventDefault()
       const email = $email.val()
       $.ajax({
         type: 'POST',
@@ -348,7 +349,11 @@ app.setPatternsSize()
         },
         success (data) {
           if (data.isNew) {
-            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN')
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
+              $form.submit()
+            })
+          } else {
+            $form.submit()
           }
           $.ajax({
             type: 'POST',
@@ -363,7 +368,6 @@ app.setPatternsSize()
           })
         }
       })
-      e.preventDefault()
     }
   })
 
@@ -380,6 +384,7 @@ app.setPatternsSize()
       $message2.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      e.preventDefault()
       const email = $email2.val()
       $.ajax({
         type: 'POST',
@@ -389,7 +394,11 @@ app.setPatternsSize()
         },
         success (data) {
           if (data.isNew) {
-            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN')
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
+              $form2.submit()
+            })
+          } else {
+            $form2.submit()
           }
           $.ajax({
             type: 'POST',
@@ -404,7 +413,6 @@ app.setPatternsSize()
           })
         }
       })
-      e.preventDefault()
     }
   })
 })()
