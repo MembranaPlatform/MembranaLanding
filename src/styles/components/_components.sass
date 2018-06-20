@@ -240,6 +240,9 @@
     color: rgba(255, 255, 255, .2)
     position: relative
     padding-bottom: 6.5px
+    @media(max-width: 767px)
+      padding-left: 0
+      width: 80%
 
     .link-youtube
       width: 22px;
@@ -257,6 +260,8 @@
       position: absolute
       left: 0
       top: 50%
+      @media(max-width: 767px)
+        top: 27%
 
     &:after
       content: ''
