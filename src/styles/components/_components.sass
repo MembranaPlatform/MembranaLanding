@@ -151,3 +151,72 @@
 
       &::after
         display: none
+
+
+.how-we-help
+  width: 100%
+  text-align: center
+  padding: 120px 0
+
+  .how-we-help__title
+    font-size: 41px
+    text-align: center
+    font-weight: 400
+    padding-bottom: 39px
+    margin-bottom: 0
+
+    .h-text-gradient
+      font-weight: 500
+
+  .how-we-help__video_wr
+    width: 100%
+    max-width: 840px
+    height: 490px
+    background-color: #343546
+    margin: 0 auto
+
+  .how-we-help__link
+    font-size: 21px
+    text-align: center
+    display: inline-block
+    padding-left: 20px
+    text-decoration: none
+    margin-top: 48px
+    color: rgba(255, 255, 255, .2)
+    position: relative
+    padding-bottom: 6.5px
+
+    .link-youtube
+      width: 22px;
+      height: 22px;
+      display: inline;
+      vertical-align: middle;
+      opacity: .2
+
+    i 
+      border: solid rgba(255, 255, 255, .2)
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg) translateY(-120%)
+      position: absolute
+      left: 0
+      top: 50%
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 1px
+      background-color: rgba(112, 112, 112, .1)
+
+    &:hover
+      color: rgba(255, 255, 255, .1)
+
+      i
+        border-color: rgba(255, 255, 255, .1)
+
+      .link-youtube
+        opacity: .1
