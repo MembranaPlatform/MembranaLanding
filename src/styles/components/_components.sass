@@ -157,6 +157,59 @@
   width: 100%
   text-align: center
   padding: 120px 0
+  position: relative
+  @media(max-width: 1023px)
+    padding: 2rem
+
+  .patternsed
+    @media(max-width: 1023px)
+      display: none
+
+    .js-prevent-inline
+      position: absolute
+      z-index: -1
+      width: 100px
+
+    .triangle_6
+      right: -15%;
+      height: 400px;
+      top: 100px;
+      width: 900px;
+
+    .triangle_1
+      right: 27%;
+      top: 80px;
+      width: 46px;
+
+    .triangle_2
+      right: 29%;
+      width: 36px;
+      top: 40px;
+      transform: scaleX(-1);
+
+    .triangle_3
+      bottom: 100px
+      width: 80px
+      left: 20%
+      transform: scaleY(-1)
+
+    .triangle_4
+      bottom: 20px
+      width: 101px;
+      right: 10%;
+      transform: rotate(-78deg);
+
+    .triangle_5
+      left: 10%
+      width: 63px;
+      top: 38%;
+      transform: rotate(125deg);
+
+    .triangle_7
+      right: 12%
+      width: 30px
+      bottom: 110px
+      transform: rotate(125deg)
 
   .how-we-help__title
     font-size: 41px
@@ -174,6 +227,8 @@
     height: 490px
     background-color: #343546
     margin: 0 auto
+    @media(max-width: 767px)
+      height: 180px
 
   .how-we-help__link
     font-size: 21px
