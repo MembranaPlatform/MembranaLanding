@@ -563,3 +563,20 @@ $(window).one('preloaded', () => {
     $item.replaceWith($iframe)
   })
 })
+
+$(document).ready(function () {
+  $('.member__avatar').hover(function () {
+    var dataImage = $(this).data('image')
+    $(this).css('transition', 'all .2s ease')
+    if (dataImage !== 'undefined') {
+      $(this).css('background', 'url(' + dataImage + ')')
+    }
+  },
+  function () {
+    var dataImage = $(this).data('image')
+    if (dataImage !== 'undefined') {
+      var curImage = $(this).data('cur_image')
+      $(this).css('background', 'url(' + curImage + ')')
+    }
+  })
+})
