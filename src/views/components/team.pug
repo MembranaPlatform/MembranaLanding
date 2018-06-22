@@ -6,7 +6,7 @@
         .team__items
           each member in group.items
             .member
-              .member__avatar(style=`background-image: url(${member.avatar})`)
+              .member__avatar(style=`background-image: url(${member.avatar})` data-image=`${member.avatar_hov}` data-cur_image=`${member.avatar}`)
               .member__occupation!=member.occupation
               .member__name!=member.full_name
               .member__description!=member.description
