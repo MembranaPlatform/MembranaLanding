@@ -565,18 +565,19 @@ $(window).one('preloaded', () => {
 })
 
 $(document).ready(function () {
-  $('.member__avatar').hover(function () {
+  $('.team__group:first-child .member__avatar').hover(function () {
+    console.log('heh')
     var dataImage = $(this).data('image')
     $(this).css('transition', 'all .2s ease')
     if (dataImage !== 'undefined') {
-      $(this).css('background', 'url(' + dataImage + ')')
+      $(this).css('background-image', 'url(' + dataImage + ')')
     }
   },
   function () {
     var dataImage = $(this).data('image')
     if (dataImage !== 'undefined') {
       var curImage = $(this).data('cur_image')
-      $(this).css('background', 'url(' + curImage + ')')
+      $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
 })
