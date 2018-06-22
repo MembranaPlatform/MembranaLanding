@@ -566,7 +566,6 @@ $(window).one('preloaded', () => {
 
 $(document).ready(function () {
   $('.team__group:first-child .member__avatar').hover(function () {
-    console.log('heh')
     var dataImage = $(this).data('image')
     $(this).css('transition', 'all .2s ease')
     if (dataImage !== 'undefined') {
