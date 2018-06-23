@@ -65,7 +65,7 @@ block content
                         span.sm-form-btn__text!=app.join_us.join
                     .sm-form__policy
                       span By clicking "Join" you agree with 
-                      a.terms_of_use(href="/static/pdf/Membrana.io_T&C_v2.1.docx.pdf" target="_blank")
+                      a.terms_of_use(href="/static/pdf/Membrana.io_T&C.pdf" target="_blank")
                         b Terms Of Use
             
 
@@ -198,40 +198,41 @@ block content
         div.arrow_down_wr
           a.scroll-btn-green.scroll-btn-form(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/new-page/scroll-arrow-green.svg" alt="")
 
-        .competition__join_sm-form.competition__join_sm-form-bottom
-          div.competition__join.icon-link
-            span.icon-link__text Fill the form and click 
-              b "Join"
+        .join_wr  
+          .competition__join_sm-form.competition__join_sm-form-bottom
+            div.competition__join.icon-link
+              span.icon-link__text Fill the form and click 
+                b "Join"
 
-          .competition__sm-form
-            form.sm-form.js-join-form.form_one(action="/static/php/idnow.php" method="post")
-              .sm-form__body
-                .label
-                  span.label__title Your 
-                    b Email:
-                  input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error name="email" required)
-                .label
-                  span.label__title Your 
-                    b Ethereum Wallet:
-                  input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error name="trnum" pattern="^0x[0-9A-Fa-f]{40}$" required)
-              .sm-form__submit_policy
-                .sm-form__submit
-                  button.sm-form-btn(type="submit")
-                    img.sm-form-btn__icon(src="/static/img/icons/plus.svg" alt="")
-                    span.sm-form-btn__text!=app.join_us.join
-                .sm-form__policy
-                  span By clicking "Join" you agree with 
-                    a.terms_of_use(href="/static/pdf/Membrana.io_T&C_v2.1.docx.pdf" target="_blank")
-                      b Terms Of Use
+            .competition__sm-form
+              form.sm-form.js-join-form.form_one(action="/static/php/idnow.php" method="post")
+                .sm-form__body
+                  .label
+                    span.label__title Your 
+                      b Email:
+                    input.input(type="email" placeholder=app.join_us.email data-error=app.competition.email_error name="email" required)
+                  .label
+                    span.label__title Your 
+                      b Ethereum Wallet:
+                    input.input(type="text" placeholder=app.competition.wallet_placeholder data-error=app.competition.wallet_error name="trnum" pattern="^0x[0-9A-Fa-f]{40}$" required)
+                .sm-form__submit_policy
+                  .sm-form__submit
+                    button.sm-form-btn(type="submit")
+                      img.sm-form-btn__icon(src="/static/img/icons/plus.svg" alt="")
+                      span.sm-form-btn__text!=app.join_us.join
+                  .sm-form__policy
+                    span By clicking "Join" you agree with 
+                      a.terms_of_use(href="/static/pdf/Membrana.io_T&C.pdf" target="_blank")
+                        b Terms Of Use
 
-  
-        .competition__guide
-          a.first_link(href="javascript:void(0)" data-open-modal="rules") Read more about 
-            b Rules of Competition.
-          a(href="/faq/") How to...?
-            br
-            span Open 
-              b F.A.Q.
+    
+          .competition__guide
+            a.first_link(href="javascript:void(0)" data-open-modal="rules") Read more about 
+              b Rules of Competition.
+            a(href="/faq/") How to...?
+              br
+              span Open 
+                b F.A.Q.
 
       h6.random_text We invite all traders to participate in this competition!
         br
@@ -288,9 +289,9 @@ block content
             | Global Traders Competition will start 
             b 15 June 2018.
             br 
-            | All traders will receive 0.012 btc each ($100). Deposit are avaible for trading 
+            | All traders will receive 0.012 btc each ($100). Deposit are available for trading 
             b only on Membrana platform 
-            | and work throught our smart-contract. Trading will be provided on Binance exchange...
+            | and work through our smart-contract. Trading will be provided on Binance exchange...
             br
             | After each week - we will conclude results and give rewards for traders.
             br
@@ -311,7 +312,7 @@ block content
             b Global Trading Competition 
             | and reward each participant.
             br
-            | All Tournaments points will be converted into 
+            | All Tournament points will be converted into 
             b Membrana Tokens.
             br
             | Best 20 traders in the global ranking will receive a part of $100,000 prize pool!
@@ -324,7 +325,7 @@ block content
             a(href="/competition") Membrana.io/competition
             br
             br
-            | Then you need to login on our platform using your Ethereal wallet. You don’t need an account on exchange or anything else!
+            | Then you need to login on our platform using your Ethereum wallet. You don’t need an account on exchange or anything else!
             br
             br
             | After verifying your account we will place you in the tournament schedule. For first weekly rounds we limit the amount of participants to 100, but in case there will be no space, you can be sure, that you will have a chance to compete in future rounds. Also, need to be mentioned, that you can participate in multiple rounds of Global Trader Competition to earn as many Tournament Points as you can!

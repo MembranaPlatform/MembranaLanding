@@ -301,7 +301,8 @@
     team: [{
       title: 'Our team',
       items: [{
-        avatar: '/static/img/pictures/team/evgeniy_buev.jpg',
+        avatar: '/static/img/pictures/team/evgeniy_buev.png',
+        avatar_hov: '/static/img/pictures/team/evgeniy_buev_hov.png',
         occupation: 'CEO',
         full_name: 'Eugene Buev',
         description: 'Master’s degree, Engineer, Peter the Great St.Petersburg Polytechnic University Trader, Poker AI Developer, Blockchain Enthusiast.',
@@ -311,7 +312,8 @@
         facebook: 'https://www.facebook.com/vtbeuro',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/maxim_khukhro.jpg',
+        avatar: '/static/img/pictures/team/maxim_khukhro.png',
+        avatar_hov: '/static/img/pictures/team/maxim_khukhro_hov.png',
         occupation: 'CTO',
         full_name: 'Maxim Khuhro',
         description: 'Master’s degree Novosibirsk State University, 8 years at Intel corp as a team lead 18 years experience in IT development AI, neural networks, machine learning expert.',
@@ -321,20 +323,22 @@
         facebook: '',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/yurii_gerasimov.jpg',
+        avatar: '/static/img/pictures/team/yurii_gerasimov.png',
+        avatar_hov: '/static/img/pictures/team/yurii_gerasimov_hov.png',
         occupation: 'COO',
         full_name: 'Yurii Gerasimov',
-        description: 'Master’s degree, Peter the Great St.Petersburg Polytechnic University, Marketing in SxS corporation, Serial Enterpreneur, Cryptoanalyst',
+        description: 'Master’s degree, Peter the Great St.Petersburg Polytechnic University, Marketing in SxS corporation, Serial Entrepreneur, Cryptanalyst',
         github: '',
         linkedin: 'https://www.linkedin.com/in/jerry-gerasimov/',
         twitter: '',
         facebook: '',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/kirill_romanov.jpg',
+        avatar: '/static/img/pictures/team/kirill_romanov.png',
+        avatar_hov: '/static/img/pictures/team/kirill_romanov_hov.png',
         occupation: 'CMO',
         full_name: 'Kirill Romanov',
-        description: 'Bachelor of Telecommunications Digital-agency founder Awards at Web development and advertisement Launch start ups at mobile, ibeacon and loyalty programms Marketing since 2009',
+        description: 'Bachelor of Telecommunications Digital-agency founder Awards at Web development and advertisement Launch startups at mobile, ibeacon and loyalty programs Marketing since 2009',
         github: '',
         linkedin: 'https://www.linkedin.com/in/kirill-romanov-4u',
         twitter: '',
@@ -351,7 +355,8 @@
         facebook: '',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/kseniya_kotvits.jpg',
+        avatar: '/static/img/pictures/team/kseniya_kotvits.png',
+        avatar_hov: '/static/img/pictures/team/kseniya_kotvits_hov.png',
         occupation: 'PR',
         full_name: 'Kseniya Kotvits',
         description: 'Northern (Arctic) Federal University named after M.V. Lomonosov, journalism Business and political PR since 2010. Worked in PR of The State Duma of Russia, Launched several business PR campaigns with millions of users',
@@ -361,22 +366,46 @@
         facebook: '',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/igor_knyazev.jpg',
+        avatar: '/static/img/pictures/team/igor_knyazev.png',
+        avatar_hov: '/static/img/pictures/team/igor_knyazev_hov.png',
         occupation: 'Backend and Solidity Developer',
         full_name: 'Igor Knyazev',
-        description: 'Developed own trading platform. Solidity developer since 2016. Blockchain and Smart Contracts expert.',
+        description: 'Degree in "Computer science” in KNU. More than 10 years of experience in the IT industry. Winner of several information security expert’s CTF competition. Since 2015 heavily involved in Blockchain related project development.',
         github: '',
         linkedin: 'https://www.linkedin.com/in/igor-knyazev-237914148/',
         twitter: '',
         facebook: '',
         bitcointalk: ''
       },{
-        avatar: '/static/img/pictures/team/vyacheslav_mychkin.jpg',
+        avatar: '/static/img/pictures/team/vyacheslav_mychkin.png',
+        avatar_hov: '/static/img/pictures/team/vyacheslav_mychkin_hov.png',
         occupation: 'Frontend and Mobile App Developer',
         full_name: 'Vyacheslav Mychkin',
-        description: 'Javascript full stack developer, mobile developer (Android, iOS)',
+        description: 'Degree in "Computer science” in KNU. Development practice in Germany. Javascript full stack developer, mobile developer (Android, iOS). Developed own high load system for 80k customers.',
         github: '',
         linkedin: 'https://www.linkedin.com/in/vyacheslavmychkin/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },
+      {
+        avatar: '/static/img/pictures/team/alex_badmashkaev.jpg',
+        occupation: 'Full stack developer',
+        full_name: 'Alex Badmashkaev',
+        description: 'Has a bachelor in Software Engineering from Adyghe State University. Software Engineer. Experienced back-end developer. 7 year’s experience at IT.',
+        github: 'https://github.com/alexbadm',
+        linkedin: 'www.linkedin.com/in/alexbadm',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },
+      {
+        avatar: '/static/img/pictures/team/victoriya_matveyeva.jpg',
+        occupation: 'QA Engineer',
+        full_name: 'Victoriya Matveyeva ',
+        description: 'A graduate of the Webcademy school. Frontend developer. HTML5, CSS3, jQuery.',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/viktoriya-matveyeva-91183a122/',
         twitter: '',
         facebook: '',
         bitcointalk: ''
@@ -623,6 +652,19 @@
         }]
       },{
         date: 'Q1 2019',
+        icon: '/static/img/pictures/roadmap/10.svg',
+        title: 'Dex implementation',
+        content: [{
+          text: 'Adding decentralized exchanges to Membrana platform.'
+        },{          
+          list: [
+            'Trading on DEX through inner trading terminal',
+            'Ability to give assets from DEX for trust management',
+            'Trust manamegent is executed with special smart-contract that allows traders to place orders on exchange using investor\'s funds. Remote work on DEX with Membrana API protocol',
+          ]
+        }]
+      },{
+        date: 'Q2 2019',
         icon: '/static/img/pictures/roadmap/8.svg',
         title: 'Advanced features & ROI prediction system',
         content: [{
@@ -636,7 +678,7 @@
           ]
         }]
       },{
-        date: 'Q2 2019',
+        date: 'Q3 2019',
         icon: '/static/img/pictures/roadmap/9.svg',
         title: 'Trust management with ethereum wallet',
         content: [{
@@ -646,19 +688,6 @@
             'Investor have an option to create a trust management contract without having an exchange account',
             'Deal is concluded by investor from his Ethereum wallet. Investor sends his money to smart-contract to start a deal. He has an option to close a deal, and recieve his money back',
             'Trading funds on exchange are provided by Membrana platform with usage of API protocol',
-          ]
-        }]
-      },{
-        date: 'Q3 2019',
-        icon: '/static/img/pictures/roadmap/10.svg',
-        title: 'Dex implementation',
-        content: [{
-          text: 'Adding decentralized exchanges to Membrana platform.'
-        },{          
-          list: [
-            'Trading on DEX through inner trading terminal',
-            'Ability to give assets from DEX for trust management',
-            'Trust manamegent is executed with special smart-contract that allows traders to place orders on exchange using investor\'s funds. Remote work on DEX with Membrana API protocol',
           ]
         }]
       },{
@@ -683,7 +712,7 @@
       title: 'FAQ',
       description: 'Can\'t find an answer? Email us at <a href="mailto:support@membrana.io">support@membrana.io</a>',
       items: [{
-        question: 'Where i can read more information about the service?',
+        question: 'Where can i read more information about the service?',
         answer: `The links are on the website <a href="https://membrana.io/" target="_blank">https://membrana.io/</a>
             <br>
             <a href="https://medium.com/@membrana" target="_blank">https://medium.com/@membrana</a>
@@ -708,15 +737,15 @@
       },{
         question: 'How can I register in the service as a trader?',
         answer: `The Membrana platform does not have its own registration system, to use the service it is necessary to log in, 
-            using the Ethereum wallet signature, for example via Metamax on a PC or Cipher, Toshi on a mobile phone.`.replace(/\n/g, '')
+            using the Ethereum wallet signature, for example via Metamask on a PC or Cipher, Toshi on a mobile phone.`.replace(/\n/g, '')
       },{
         question: 'What are the guarantees of investment return?',
-        answer: `Investors funds are always on his exchange account and trader recieve just temporary access for trading. More details 
-            of Membrana algorith are described in Whitepaper <a href="https://membrana.io/whitepaper/" target="_blank">https://membrana.io/whitepaper/</a>`.replace(/\n/g, '')
+        answer: `Investors funds are always on his exchange account and trader receive just temporary access for trading. More details 
+            of Membrana algorithm are described in Whitepaper <a href="https://membrana.io/whitepaper/" target="_blank">https://membrana.io/whitepaper/</a>`.replace(/\n/g, '')
       },{
         question: 'Is the service protected, where can I see the report?',
         answer: `An exceptional attention is given to the safety. We never store the funds of an investor or a trader in our wallets. 
-            At the moment, the Membrane's smart contract has successfully passed a security audit by Hacken
+            At the moment, the Membrana's smart contract has successfully passed a security audit by Hacken
             <br>
             <a href="https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d" target="_blank">
               https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d
@@ -741,7 +770,7 @@
             The dates will be announced soon.`.replace(/\n/g, '')
       },{
         question: 'Can I buy Membrana\'s tokens?',
-        answer: `All information about Membrana tokens and "Digital IPO: will be announced later in official "Offering Memorandum".`.replace(/\n/g, '')
+        answer: `All information about Membrana tokens and "Digital IPO" will be announced later in official "Offering Memorandum".`.replace(/\n/g, '')
       },{
         question: 'Can I transfer my Ethereum wallet assets into trust management?',
         answer: `Yes, you can, this is the basic function of the platform. You can see the video of how it is done 
@@ -753,7 +782,7 @@
         answer: `Statistics of every user can be seen in Rating. Their ROI - return of investment and numbers of their contracts.`.replace(/\n/g, '')
       },{
         question: 'Are there any partnership relations with the stock exchanges? Is there a commission at the stock exchanges?',
-        answer: `At currest stage Membrana platform works only with cryptocurrency exchanges. There is no commition for trading, 
+        answer: `At current stage Membrana platform works only with cryptocurrency exchanges. There is no commission for trading, 
             only for concluding contract for trust management.`.replace(/\n/g, '')
       },{
         question: `Do I still have my account if I replace the Ethereum wallet (as an investor), to which the 
@@ -771,7 +800,7 @@
             An experienced investor is able to enter into transactions with traders from the person of his customer, 
             transferring the customer's funds to the management of traders. 
             <br>
-            An experienced investor receives a commission for that. You can read more about that in Whtepaper 
+            An experienced investor receives a commission for that. You can read more about that in Whitepaper 
             <a href="https://membrana.io/whitepaper/" target="_blank">https://membrana.io/whitepaper/</a>`.replace(/\n/g, '')
       },{
         question: 'What are the average terms of the contract?',
@@ -813,7 +842,7 @@
       policy_text: 'I agree with Terms of Use',
       email_label: 'Your Email:',
       wallet_label: 'Your Ethereum Wallet:',
-      wallet_placeholder: 'Type Your Etherium Wallet Number Here...',
+      wallet_placeholder: 'Type Your Ethereum Wallet Number Here...',
       email_error: '*Type correct mail',
       wallet_error: '*Type correct wallet',
       policy: `<a href="javascript:void(0)" data-open-modal="rules">Read more about rules of competition.</a>
