@@ -579,7 +579,7 @@ $(document).ready(function () {
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
-  $(document).on('click', '.js-videoPoster', function (e) {
+  $(document).on('click', '.js-videoPoster, .video_wrapper', function (e) {
   // отменяем стандартное действие button
     e.preventDefault()
     var poster = $(this)
@@ -597,5 +597,6 @@ $(document).ready(function () {
     wrapper.addClass('videoWrapperActive')
     // подставляем в src параметр из data
     iframe.attr('src', src)
+    $('.video_wrapper').addClass('video-on')
   }
 })
