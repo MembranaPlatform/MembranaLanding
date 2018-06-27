@@ -15,8 +15,15 @@
 		| helps 
 		span.h-text-gradient Traders
 
+	
+
 	.how-we-help__video_wr
-		iframe(width="100%" height="100%" src="https://www.youtube.com/embed/zFs9AZn27HQ?controls=0&iv_load_policy=3&showinfo=0&rel=0&modestbranding=0" frameborder="0" allow="autoplay; encrypted-media" controls="0" allowfullscreen)
+		//- iframe(width="100%" height="100%" src="https://www.youtube.com/embed/zFs9AZn27HQ?controls=0&iv_load_policy=3&showinfo=0&rel=0&modestbranding=0" frameborder="0" allow="autoplay; encrypted-media" controls="0" allowfullscreen)
+		.video_wrapper.video_wrapper_full.js-videoWrapper
+			iframe.videoIframe.js-videoIframe(width="100%" height="100%" data-src="https://www.youtube.com/embed/zFs9AZn27HQ?controls=0&iv_load_policy=3&showinfo=0&rel=0&modestbranding=0&autoplay=1" src="" frameborder="0" allow="autoplay; encrypted-media" controls="0" allowfullscreen)
+			button.videoPoster.js-videoPoster
+
+
 
 	a(href="https://www.youtube.com/channel/UCZvglEWUXnggQ-lxkw9rFlA" target="_blank").how-we-help__link
 		i.arrow.right
