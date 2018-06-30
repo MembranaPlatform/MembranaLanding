@@ -568,15 +568,35 @@ $(document).ready(function () {
   $('.team__group:first-child .member__avatar').hover(function () {
     var dataImage = $(this).data('image')
     $(this).css('transition', 'all .2s ease')
-    if (dataImage !== 'undefined') {
+    if ((dataImage !== 'undefined') && (dataImage !== undefined)) {
       $(this).css('background-image', 'url(' + dataImage + ')')
     }
   },
   function () {
     var dataImage = $(this).data('image')
-    if (dataImage !== 'undefined') {
+    if ((dataImage !== 'undefined') && (dataImage !== undefined)) {
       var curImage = $(this).data('cur_image')
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
+  $(document).on('click', '.js-videoPoster, .video_wrapper', function (e) {
+  // отменяем стандартное действие button
+    e.preventDefault()
+    var poster = $(this)
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper')
+    videoPlay(wrapper)
+  })
+
+  // вопроизводим видео, при этом скрывая постер
+  function videoPlay (wrapper) {
+    var iframe = wrapper.find('.js-videoIframe')
+    // Берем ссылку видео из data
+    var src = iframe.data('src')
+    // скрываем постер
+    wrapper.addClass('videoWrapperActive')
+    // подставляем в src параметр из data
+    iframe.attr('src', src)
+    $('.video_wrapper').addClass('video-on')
+  }
 })
