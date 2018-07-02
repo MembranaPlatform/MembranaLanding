@@ -71,7 +71,9 @@ exports.pageFile = function (dev = true) {
   const path = require('path')
   const pagesFolder = path.resolve(__dirname, '../src/views/pages')
 
-  let lang = global.process.argv[2] === 'ru' ? 'ru' : ''; 
+  console.log(global.process.argv)
+  let lang = global.process.argv[2] === 'ru' ? 'ru' : '';
+  lang = global.process.argv[2] === 'jpn' ? 'jpn' : ''; 
 
   var list = []
   
@@ -93,7 +95,7 @@ exports.pageFile = function (dev = true) {
       // see https://github.com/ampedandwired/html-webpack-plugin
       options.minify = {
         removeComments: true,
-        collapseWhitespace: true,
+        collapseWhitespace: false,
         removeAttributeQuotes: true
       }
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin

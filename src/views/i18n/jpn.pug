@@ -1,0 +1,871 @@
+-
+  var app = { 
+    lang: 'jpn',
+
+    head: {
+      title: 'Membrana - trust management of digital assets', // default
+      description: 'The first trust management platform fully based on Ethereum smart contracts.', // default
+      index: {
+        title: '', // inserts before default
+        description: '' // overides default
+      },
+      competition: {
+        title: 'Join Global Traders Competition and trade by real money', // inserts before default
+        description: '' // overides default
+      },
+      whitepaper: {
+        title: 'Whitepaper', // inserts before default
+        description: 'Whitepaper of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+      },
+      business_overview: {
+        title: 'Business overview', // inserts before default
+        description: 'Business overview of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+      },
+      roadmap: {
+        title: 'Roadmap', // inserts before default
+        description: 'Roadmap of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+      },
+      faq: {
+        title: 'FAQ', // inserts before default
+        description: 'FAQ of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+      },
+      contacts: {
+        title: 'Contacts', // inserts before default
+        description: 'Contacts of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+      }
+    },
+
+    nav: [{
+      title: 'Quick guide',
+      isQuickGuide: true
+    },{
+      title: 'Whitepaper',
+      link: '/whitepaper_language/'
+    },{
+      title: 'Business overview',
+      link: '/business_overview_language/'
+    },{
+      title: 'Roadmap',
+      link: '/roadmap/'
+    },{
+      title: 'FAQ',
+      link: '/faq/'
+    },{
+      title: 'Contacts',
+      link: '/contacts/'
+    }],
+
+    socials: [{
+      icon: '/static/img/icons/socials/telegram.svg',
+      link: 'https://t.me/membrana_platform',
+      showInTop: true,
+      showInGetInTouch: true
+    },{
+      icon: '/static/img/icons/socials/medium.svg',
+      link: 'https://medium.com/@membrana',
+      showInTop: true,
+      showInGetInTouch: true
+    },{
+      icon: '/static/img/icons/socials/bitcointalk.svg',
+      link: 'https://bitcointalk.org/index.php?topic=3119562.new#new',
+      showInTop: true
+    },{
+      icon: '/static/img/icons/socials/twitter.svg',
+      link: 'https://twitter.com/membrana_io',
+      showInGetInTouch: true
+    },{
+      icon: '/static/img/icons/socials/reddit.svg',
+      link: 'https://www.reddit.com/user/Membrana_Platform/'
+    },{
+      icon: '/static/img/icons/socials/flames.svg',
+      link: 'https://steemit.com/@membranaio'
+    },{
+      icon: '/static/img/icons/socials/golos.svg',
+      link: 'https://golos.io/@membrana-io/'
+    },{
+      icon: '/static/img/icons/socials/linkedIn.svg',
+      link: 'https://www.linkedin.com/company/membrana-io/'
+    },{
+      icon: '/static/img/icons/socials/facebook.svg',
+      link: 'https://www.facebook.com/membrana.io/',
+      showInGetInTouch: true
+    },{
+      icon: '/static/img/icons/socials/github.svg',
+      link: 'https://github.com/MembranaPlatform',
+      showInGetInTouch: true
+    },{
+      icon: '/static/img/icons/socials/youtube.svg',
+      link: 'https://www.youtube.com/channel/UCZvglEWUXnggQ-lxkw9rFlA'
+    }],
+
+    top: {
+      title: 'デジタル資産の信託管理',
+      beta_text: 'Try alpha',
+      description: `十分に構築された随一の信託管理プラットフォームに参加する。 <br>早期入札者には手数料不要のブロックチェーン技術と取引を提供します。`.replace(/\n/g, '')
+    },
+
+    youtube_video: 'https://www.youtube.com/embed/4wnAsOjSupY?enablejsapi=1',
+
+    vision: {
+      title: 'MEMBRANAプロジェクトのビジョンの提示',
+      items: [{
+        icon: '/static/img/pictures/vision/1.svg',
+        title: 'MEMBRANAは安全',
+        description: `Membranaは安全なデジタル資産です。 独自のプラットフォームアルゴリズムとブロックチェーンテクノロジによって、すべての請負人または請負業者にとってリスクのない信頼と、投資家とトレーダーのセキュリティ保証が達成されています。`.replace(/\n/g, '')
+      },{
+        icon: '/static/img/pictures/vision/2.svg',
+        title: 'MEMBRANA は自由',
+        description: `Membranaは、集中化されたシステムの制約なしに、世界中のプラットフォームユーザー間でパートナーを自由に選択できます。`.replace(/\n/g, '')
+      },{
+        icon: '/static/img/pictures/vision/3.svg',
+        title: 'MEMBRANAは新しいビジネスチャンス',
+        description: `Membranaは、新たなビジネスチャンスを提供し、投資能力とマネジメントのための資金調達の手助けをします。 社会的地位や創業資金にかかわらず、すべての人々に経済的な自由を提供します。`.replace(/\n/g, '')
+      },{
+        icon: '/static/img/pictures/vision/4.svg',
+        title: 'MEMBRANA は勇気',
+        description: `Membranaには勇気の精神があります。 5つの異なる国で生まれ育った才能溢れるチームメンバーそれぞれの経験を組み合わせMembranaを築き上げました。ビジネスに定評がある私たち一人ひとりは、この崇高なアイデアをフル稼働させる準備が整いました。 私たちは完全に新しいシステムを構築しましたので、皆さんが知っているブローカーとはかなり違います。 多くの方々は我々のような世界をより良いものに変える熱心なプロジェクトを探していたのではないでしょうか？`.replace(/\n/g, '')
+      }]
+    },
+
+    components: {
+      title: 'MEMBRANAプラットフォーム構成要素',
+      items: [{
+        title: '投資家向け：',
+        image: '/static/img/pictures/components/investors.jpg',
+        content: [{ 
+          title: '投資家のためのプラットフォーム' 
+        },{ 
+          text: '投資家は最善のトレーダーを選び、3つの手順で契約書にサインします：'
+        },{
+          list: [{
+            icon: '/static/img/icons/config.svg',
+            text: '取引のAPIキーを追加する。'
+          },{
+            icon: '/static/img/icons/request.svg',
+            text: '規定の設定と取引のために選択したペアを使用して、選択したトレーダーにリクエストを送信する。'
+          },{
+            icon: '/static/img/icons/token.svg',
+            text: 'ETHトークンをスマートコントラクト（デジタルに表現される資産を予め定められたルールに従って自動的に移転させる仕組み）のアドレスに送信する（トレーダーの料金）。'
+          },{
+            icon: '/static/img/icons/lock.svg',
+            text: '取引開始においてトレーダーのアクセスを許可するスマートコントラクトに署名する。'
+          }] 
+        },{
+          light_text: '資金エクスチェンジアカウントに直接利益が振り込まれる。'
+        }]
+      },{
+        title: 'トレーダー向け：',
+        image: '/static/img/pictures/components/traders.jpg',
+        content: [{ 
+          title: 'トレーダーのためのプラットフォーム' 
+        },{ 
+          text: 'トレーダーは、信託管理のお金を受け取ることができます。'
+        },{
+          list: [{
+            icon: '/static/img/icons/statistics.svg',
+            text: 'Membranaトレーディングプラットフォームを通じて取引を開始する。'
+          },{
+            icon: '/static/img/icons/settings.svg',
+            text: '信頼管理のための特定の設定を定める。'
+          },{
+            icon: '/static/img/icons/rating.svg',
+            text: 'トレーダーの格付けで首位を達成する。'
+          },{
+            icon: '/static/img/icons/certificate.svg',
+            text: '投資家からの要請を受け入れ、スマートコントラクトに署名する。'
+          },{
+            icon: '/static/img/icons/unlock.svg',
+            text: 'APIキーを使用して取引のアクセス権を取得する。'
+          }] 
+        },{
+          light_text: '利益はスマートコントラクトで保証されます。利益は直接ETHウォレットで受け取ります。'
+        }]
+      },{
+        title: '資金のため :',
+        image: '/static/img/pictures/components/funds.jpg',
+        content: [{ 
+          title: '資金のためのプラットフォーム' 
+        },{ 
+          text: '投資家またはトレーダーは、わずかな手順でファンドへの参加や作成ができます。'
+        },{
+          list: [{
+            icon: '/static/img/icons/start.svg',
+            text: '貿易投資ファンドを作り、新会員を招待する。'
+          },{
+            icon: '/static/img/icons/settings.svg',
+            text: 'ファンドの設定とユーザーオプションをカスタマイズする。'
+          },{
+            icon: '/static/img/icons/check.svg',
+            text: '株主投票のオファーを提案する。'
+          },{
+            icon: '/static/img/icons/pen.svg',
+            text: 'multisigを介して企業行動を実行する。'
+          }] 
+        },{
+          light_text: '資金エクスチェンジアカウントに直接利益を送金する。'
+        }]
+      }]
+    },
+
+    layers: {
+      title: 'プラットフォーム層',
+      items: [{
+        title: '取引のAPIキー',
+        description: 'API取引サポートをお持ちの方は、Membranaプラットフォームの運用にご利用いただけます。'
+      },{
+        title: 'スマートオラクル(Smart Oracles)',
+        description: 'オラクルはスマートコントラクト用のオフブロックチェーンデータを提供します。 Membranaでは、すべての取引データがオラクルを経由します。'
+      },{
+        title: 'イーサリアム（ETHEREUM）スマートコントラクト ',
+        description: 'トレーダーと投資家の間のすべての取引は、スマートコントラクトを通じて取引します。 手数料はいただきません。'
+      }]
+    },
+
+    how_it_works: {
+      title: 'システム',
+      content: [{
+        border_text: `MEMBRANAでは投資家とトレーダー間で直接取引をしていただき、収益性の高い、安全な関係を作ります。投資家の資金はエクスチェンジウォレットを決して離れず、すべての信託管理がアクセスされ、APIキーの規定が実行されます。
+        すべての交渉は、スマート・コントラクトを通じて行われ、仲人や取引先リスクを排除し、契約の義務を履行します。
+        `.replace(/\n/g, ''),
+      },{
+        title: 'スマートコントラクトの内部には、すべての取引の詳細を記録しています：'
+      },{
+        list: [
+          '投資家のアカウント（BTC、ETHまたはUSDに等しい）のデジタル資産の初期金額',
+          '契約完了時の目標利益（トレーダーの平均収益性に基づいています。完了すると、契約は自動的に終了します。）',
+          '契約の期間（契約によって自動的に利益が計算され、トレーダーに送信されます）',
+          '最大損失（損失が最大値に達すると、アクセスは自動的に終了し契約は解約され、トレーダーの手数料は投資家に払い戻されます。）',
+          '取引のための認可されたペア',
+          'トレーダーの手数料とウォレット'
+        ]
+      }]
+    },
+
+    read_more: 'Read more',
+
+    technology: {
+      title: '技術',
+      items: [{
+        icon: '/static/img/pictures/technology/ethereum.svg',
+        title: 'イーサリアム（Ethereum）',
+        description: `イーサリアム（Ethereum）
+        Membranaは、人間の制御を必要とせず、自動的に作動する先進的なスマートコントラクト - 契約を可能にする次世代のブロックチェーンプロトコルであるイーサリアム上に構築されています。イーサリアムは分散型で安全です。 プラットフォーム上のすべての操作に透過性を提供します。
+        `.replace(/\n/g, ''),
+        link: 'javascript:void(0)'
+      },{
+        icon: '/static/img/pictures/technology/metamask.svg',
+        title: 'メタマスク（Metamask）',
+        description: `プラットフォームをより安全にするために、すべてのプロセスはMetaMaskを使用して行われます。Chromeプラグインを使用し、全体のイーサリアムノード（Ethereum Node）を実行せずに、Ethereum DAppsをフルブラウザで実行することができます。MetaMaskには、安全なID保管室が含まれており、ブロックチェーンの取り扱いを管理および署名するためのユーザーインターフェイスを提供します。`.replace(/\n/g, ''),
+        link: 'javascript:void(0)'
+      }]
+    },
+
+    partners: {
+      title: 'パートナー',
+      items: [{
+        icon: '/static/img/pictures/partners/zeus.svg',
+        description: `ゼウスエクスチェンジでのみ利用可能なユニークな資産の信頼管理のための契約締結。`,
+        link: 'https://twitter.com/ExchangeZeus/status/986366220877418501'
+      },{
+        icon: '/static/img/pictures/partners/trust-wallet.svg',
+        description: `Trust BrowserおすすめアプリにMembranaプラットフォームが追加されました。 Trust Browser経由でMembranaを使用できます。`,
+        link: 'https://twitter.com/membrana_io/status/988286785078874112'
+      },{
+        icon: '/static/img/pictures/partners/toshi.svg',
+        description: `Toshi BrowserのおすすめアプリにMembranaプラットフォームが追加されました。 Toshi Browser経由でMembranaを使用できるようになりました。`,
+        link: 'https://twitter.com/membrana_io/status/987065242080464896'
+      },{
+        icon: '/static/img/pictures/partners/cipher.svg',
+        description: `Cipher Browserを使用して、モバイルデバイス上で当社のプラットフォームを使用することができます。 Cipher Browserは、Ethereumブロックチェーン用の世界初のフル機能のddappブラウザとウォレットです。 Cipherを使用すると、モバイルデバイスであるEthereumを搭載したdappsと対話でき、EtherおよびERC20トークンの安全な保管、送受信が容易になります。`,
+        link: 'https://twitter.com/CipherBrowser/status/963867927257600001'
+      },{
+        icon: '/static/img/pictures/partners/ingvarr.png',
+        description: `Ingvarr’s team of advisory consultants are recognised experts in Corporate Governance, Mergers & Acquisitions and Finance. We are working together to provide legal safety for our customers all across the world...`,
+        link: 'http://ingvarr.com/'
+      },{
+        icon: '/static/img/pictures/partners/hacken.svg',
+        description: `当社のセキュリティパートナーであるHackenは、Membranaプラットフォームのスマートコントラクト監査と侵入テストを実施しました。サイバーセキュリティの専門家であり、ブロックチェーンのプロジェクトに、明日の安全をもたらすため世界中から集結した善玉ハッカーです。`,
+        link: 'https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d'
+      }]
+    },
+
+    team: [{
+      title: 'チーム',
+      items: [{
+        avatar: '/static/img/pictures/team/evgeniy_buev.png',
+        avatar_hov: '/static/img/pictures/team/evgeniy_buev_hov.png',
+        occupation: 'CEO',
+        full_name: 'Eugene Buev',
+        description: '修士号、エンジニア、サンクトペテルブルク工科大学トレーダー、Poker AIデベロッパー、ブロックチェーン愛好家',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/eugenebuev/',
+        twitter: '',
+        facebook: 'https://www.facebook.com/vtbeuro',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/maxim_khukhro.png',
+        avatar_hov: '/static/img/pictures/team/maxim_khukhro_hov.png',
+        occupation: 'CTO',
+        full_name: 'Maxim Khuhro',
+        description: 'ノボシビルスク州立大学修士号、インテル社で8年間チームリーダーとして勤務、IT開発、AI、ニューラルネットワーク、機械学習の専門家で18年の経験を持つ',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/maximkhukhro/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/yurii_gerasimov.png',
+        avatar_hov: '/static/img/pictures/team/yurii_gerasimov_hov.png',
+        occupation: 'COO',
+        full_name: 'Yurii Gerasimov',
+        description: ' サンクトペテルブルク工科大学修士号、SxS社マーケティング、ベンチャー事業を次々と立ち上げる起業家、暗号解読者',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/jerry-gerasimov/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/kirill_romanov.png',
+        avatar_hov: '/static/img/pictures/team/kirill_romanov_hov.png',
+        occupation: 'CMO',
+        full_name: 'Kirill Romanov',
+        description: '通信学部学士号、Web開発と広告にてデジタル代理店の創設者賞受賞。モバイル、ibeacon、ロイヤルティプログラムのスタートアップを開始。2009年よりマーケティングを開始',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/kirill-romanov-4u',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/michael_creadon.jpg',
+        occupation: 'CBDO',
+        full_name: 'Michael Creadon',
+        description: 'コロンビア大学修士号、4RevのNY CEO。CME にてトレーダーとして20年間金利リスクを管理。2500万ドルのプロップファームのCEO',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/michael-creadon-31404a30/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/kseniya_kotvits.png',
+        avatar_hov: '/static/img/pictures/team/kseniya_kotvits_hov.png',
+        occupation: 'PR',
+        full_name: 'Kseniya Kotvits',
+        description: '（北極）連邦大学 (ロモノソフ－モスクワ大学, M. V.)　ロシア国務省報道局にてキャリアを積み、 2010年以来ジャーナリズムビジネス、政治PRに従事。何百万人ものユーザーとビジネスPRキャンペーンを放つ。',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/kseniya-kotvits-29ba04159/',
+        twitter: 'https://twitter.com/kotvic_',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/igor_knyazev.png',
+        avatar_hov: '/static/img/pictures/team/igor_knyazev_hov.png',
+        occupation: 'Backend and Solidity Developer',
+        full_name: 'Igor Knyazev',
+        description: 'KNU "コンピュータサイエンス"学位、IT業界での10年以上の経験、情報セキュリティ専門家のCTFコンクール優秀者、2015年以降、ブロックチェーン関連のプロジェクト開発に多大な貢献をしている。  ',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/igor-knyazev-237914148/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/vyacheslav_mychkin.png',
+        avatar_hov: '/static/img/pictures/team/vyacheslav_mychkin_hov.png',
+        occupation: 'Frontend and Mobile App Developer',
+        full_name: 'Vyacheslav Mychkin',
+        description: 'KNU "コンピュータサイエンス"学位、ドイツでの開発実践。Javascriptのフルスタック開発、モバイル開発（Android、iOS）80kのお客様向けに独自の高負荷システムの開発者',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/vyacheslavmychkin/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },
+      {
+        avatar: '/static/img/pictures/team/alex_badmashkaev.jpg',
+        occupation: 'Full stack developer',
+        full_name: 'Alex Badmashkaev',
+        description: 'Has a bachelor in Software Engineering from Adyghe State University. Software Engineer. Experienced back-end developer. 7 year’s experience at IT.',
+        github: 'https://github.com/alexbadm',
+        linkedin: 'www.linkedin.com/in/alexbadm',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },
+      {
+        avatar: '/static/img/pictures/team/victoriya_matveyeva.jpg',
+        occupation: 'QA Engineer',
+        full_name: 'Victoriya Matveyeva ',
+        description: 'A graduate of the Webcademy school. Frontend developer. HTML5, CSS3, jQuery.',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/viktoriya-matveyeva-91183a122/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/sonder_s_lim.jpg',
+        occupation: 'Regional Brand Manager, Asia',
+        full_name: 'Sonder S. Lim',
+        description: 'デジタル資産カウンセラー<br>コンテンツマーケティングエージェンシー創設者<br>コンテンツ戦略家',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/sonderslim/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/adam_joseph.jpg',
+        occupation: 'Regional Brand Manager, India',
+        full_name: 'Adam Joseph',
+        description: '戦略的マーケティング<br>事業開発マネージャー',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/adam-joseph-266356153/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      }]
+    },{
+      title: 'Advisors',
+      items: [{
+        avatar: '/static/img/pictures/team/alexander_noxon.jpg',
+        occupation: 'Technical Advisor',
+        full_name: 'Alexander Noxon',
+        description: '2015年よりエキスパート暗号開発者<br>10+ IT経験',
+        github: 'https://github.com/noxonsu',
+        linkedin: '',
+        twitter: 'https://twitter.com/noxonsu',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/marie_noel.jpg',
+        occupation: 'Financial Advisor',
+        full_name: 'Marie-Noel Nsana',
+        description: '銀行と金融業界で15年間<br>アンチマネーロンダリング認定<br>ビットコイン＆暗号通貨プロフェッショナル（C4証明書）',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/marie-noel-nsana-120a433/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/anton_mogilevskiy.jpg',
+        occupation: 'Legal Advisor',
+        full_name: 'Anton Mogilevskiy',
+        description: 'PhD degree in law, from Mikhail Speransky Faculty of Law of the Academy of National Economy More than 14 years of experience in major international law firms Norton Rose and Allen & Overy.',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/anton-mogilevskiy-1167471/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/sls.png',
+        occupation: 'Technical Advisor',
+        full_name: 'Kushed',
+        description: 'SaluS（SLS）創設者',
+        github: '',
+        linkedin: '',
+        twitter: 'https://twitter.com/Kushed_Crypto',
+        facebook: '',
+        bitcointalk: 'https://bitcointalk.org/index.php?topic=1317448.0'
+      },{
+        avatar: '/static/img/pictures/team/edward_luo.jpg',
+        occupation: 'Financial Advisor',
+        full_name: 'Edward Luo',
+        description: 'ニューヨーク大学 会計学修士号、財務学士<br>金融業界における6年の経験<br>BSA / AMLとOFAC制裁の専門家 ',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/edward-luo/',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/yan_stolyar.jpg',
+        occupation: 'Legal Advisor',
+        full_name: 'Yan Stolyar',
+        description: 'CEOテレコム<br>IT、プロジェクト管理の専門家<br>経営MBA ',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/yanstolyar/',
+        twitter: '',
+        facebook: 'https://www.facebook.com/yan.stolyar',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/hans_choi.jpg',
+        occupation: 'Technical Advisor',
+        full_name: 'Hans Choi',
+        description: 'OpenChain CEO /開発者<br>ブロックチェーン開発＆設計者<br>フィンテック専門家 ',
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/hans-namkyu-choi-407618102',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
+        avatar: '/static/img/pictures/team/alex_finn.jpg',
+        occupation: 'Commercial Advisor',
+        full_name: 'Alexander Finn',
+        description: 'Rosblack Capital　CEO<br>起業家<br>ビットコイン愛好家',
+        github: '',
+        linkedin: '',
+        twitter: '',
+        facebook: 'https://www.facebook.com/alexgfinn',
+        bitcointalk: ''
+      }]
+    }],
+
+    join_us: {
+      title: '参加しませんか',
+      description: 'デジタル資産の信頼管理、Membrana使用法、お問い合わせはこちらをご覧ください。',
+      email: 'Type your e-mail here…',
+      email_error: '*Type correct mail to subscribe',
+      subscribe: 'Subscribe',
+      title_check: 'Please, check you are subscribe',
+      subscription_check: 'Don\'t miss any detail of Global Traders Competition',
+      join: 'Join'
+    },
+
+    choose_language: 'Choose language:',
+    english: 'English',
+    russian: 'Russian',
+    get_in_touch: 'Get in touch',
+
+    whitepaper_page: {
+      title: 'Whitepaper'
+    },
+
+    business_overview_page: {
+      title: 'Business overview'
+    },
+
+    contacts_page: {
+      title: 'Have some questions?',
+
+      text_fragment1: 'If you have any questions regarding the Membrana project do not hesitate to contact us!',
+      text_fragment2: 'You can use this email: ',
+      text_fragment3: 'We will be glad to answer any questions about our project.',
+    },
+
+    roadmap_page: {
+      title: 'Roadmap',
+
+      items: [{
+        date: 'Q1 2017',
+        icon: '/static/img/pictures/roadmap/1.svg',
+        title: 'Concept generation',
+        content: [{
+          text: 'Defining the idea of trust management for cryptocurrency assets.',
+        },{
+          text: 'Finding solutions to main problems in trust management market, such as:',
+        },{
+          list: [
+            'losing control of investment capital',
+            'middleman and counterparty risks',
+            'lack of trust',
+            'risk of fraud management results'
+          ]
+        },{
+          test: 'Finding the best way to implement the solutions. Generation of Membrana platform concept.'
+        }]
+      },{
+        date: 'Q2 2017',
+        icon: '/static/img/pictures/roadmap/2.svg',
+        title: 'Performance audit',
+        content: [{
+          text: 'Taking the concept to full performance audit.'
+        },{
+          text: `Discovering its survivability in all kind of scenarios. Additional security audits performed to ensure the safety of investor’s capital.
+                <br>Researching and analyzing all potential risks, adjusting or changing the operational process to eliminate them.`.replace(/\n/g, '')
+        }]
+      },{
+        date: 'Q3 2017',
+        icon: '/static/img/pictures/roadmap/3.svg',
+        title: 'Interface creation',
+        content: [{
+          text: 'Creating a platform architecture and shaping a fully-functional user interface.'
+        },{
+          text: `Forming a professional full-time work team, with specialists in design, UI/UX, front/back-end, solidity language, marketing and security.
+                <br>Fabricating the current version of design.`.replace(/\n/g, '')
+        }]
+      },{
+        date: 'Q1 2018',
+        icon: '/static/img/pictures/roadmap/4.svg',
+        title: 'Alpha version',
+        content: [{
+          text: 'Private testing of Membrana alpha version with incomplete functions:'
+        },{
+          list: [
+            'Allowing access for trading through API key',
+            'Authorizing with Metamask',
+            'Inner trading terminal',
+            'Adding Bittrex API keys',
+            'Sending and receiving requests',
+            'Sending Ethereum to a smart contract’s address',
+            'Showing terms of a smart contract on Etherscan',
+          ]
+        }]
+      },{
+        date: 'Q2 2018',
+        icon: '/static/img/pictures/roadmap/5.svg',
+        title: 'Beta version',
+        content: [{
+          text: 'Open testing of Membrana beta version with updated functions:'
+        },{
+          list: [
+            'Fixing bugs',
+            'Placing orders on exchange via inner trading platform',
+            'Writing results of trades in blockchain',
+            'Performing smart oracle work adjustment',
+            'Executing smart contracts with different scenarios',
+            'Examining all systems and working algorithms',
+            'Updating rating system with the result of a smart contract',
+          ]
+        }]
+      },{
+        date: 'Q3 2018',
+        icon: '/static/img/pictures/roadmap/6.svg',
+        title: 'Final release',
+        content: [{
+          text: 'Full release of complete Membrana platform with basic functions.'
+        },{
+          list: [
+            'Mobile version',
+            'Added support for most API exchanges',
+            'Bug-fixing and improvement through feedback',
+            'Best user experience possible',
+            'Data mining for startup Prediction AI.',
+          ]
+        }]
+      },{
+        date: 'Q4 2018',
+        icon: '/static/img/pictures/roadmap/7.svg',
+        title: 'United API',
+        content: [{
+          text: 'Creating our own united API protocol.'
+        },{
+          list: [
+            'A possibility to connect to Membrana platform with own software using API protocol',
+            'One united Membrana API that provides an access to all exchanges',
+            'Remote control for all Membrana platform functions',
+          ]
+        }]
+      },{
+        date: 'Q1 2019',
+        icon: '/static/img/pictures/roadmap/10.svg',
+        title: 'Dex implementation',
+        content: [{
+          text: 'Adding decentralized exchanges to Membrana platform.'
+        },{          
+          list: [
+            'Trading on DEX through inner trading terminal',
+            'Ability to give assets from DEX for trust management',
+            'Trust manamegent is executed with special smart-contract that allows traders to place orders on exchange using investor\'s funds. Remote work on DEX with Membrana API protocol',
+          ]
+        }]
+      },{
+        date: 'Q2 2019',
+        icon: '/static/img/pictures/roadmap/8.svg',
+        title: 'Advanced features & ROI prediction system',
+        content: [{
+          text: 'Adding advanced trading features to Membrana platform.'
+        },{
+          list: [
+            'Contracts with security - additional contract type in which trader reserves HIS funds to compensate part of investor\'s loss, if contract is failed',
+            'Algorithmic trading orders - adding advanced order type such as iceberg orders, peg orders, trailing orders and others',
+            'News feed workshop - enable an option to upload all news related to selected currency. Users can see correlation between price and news on price chart in terminal',
+            'ROI prediction system',
+          ]
+        }]
+      },{
+        date: 'Q3 2019',
+        icon: '/static/img/pictures/roadmap/9.svg',
+        title: 'Trust management with ethereum wallet',
+        content: [{
+          text: 'Creating new smart-contract for trust management.'
+        },{
+          list: [
+            'Investor have an option to create a trust management contract without having an exchange account',
+            'Deal is concluded by investor from his Ethereum wallet. Investor sends his money to smart-contract to start a deal. He has an option to close a deal, and recieve his money back',
+            'Trading funds on exchange are provided by Membrana platform with usage of API protocol',
+          ]
+        }]
+      },{
+        date: 'Q4 2019',
+        icon: '/static/img/pictures/roadmap/11.svg',
+        title: 'Otc/dark pool',
+        content: [{
+          text: 'Creating decentralized interbourse trading pools.'
+        },{
+          list: [
+            'Creating off the chain (OTC) trading pool - deals are happening with p2p transactions, not involving exchange trading platform.',
+            'Creating anonymous dark pool',
+            'Hidden order book in dark pool',
+            'Secured deal execution with escrow smart-contracts',
+            'Ability to trade big volumes without impacting the price',
+          ]
+        }]
+      }]
+    },
+
+    faq_page: {
+      title: 'FAQ',
+      description: 'Can\'t find an answer? Email us at <a href="mailto:support@membrana.io">support@membrana.io</a>',
+      items: [{
+        question: 'Where can i read more information about the service?',
+        answer: `The links are on the website <a href="https://membrana.io/" target="_blank">https://membrana.io/</a>
+            <br>
+            <a href="https://medium.com/@membrana" target="_blank">https://medium.com/@membrana</a>
+            <br>
+            <a href="https://bitcointalk.org/index.php?topic=3119562.new#new" target="_blank">https://bitcointalk.org/index.php?topic=3119562.new#new</a>
+            <br>
+            <a href="https://twitter.com/membrana_io" target="_blank">https://twitter.com/membrana_io</a>
+            <br>
+            <a href="https://www.reddit.com/user/Membrana_Platform/" target="_blank">https://www.reddit.com/user/Membrana_Platform/</a>
+            <br>
+            <a href="https://steemit.com/@membranaio" target="_blank">https://steemit.com/@membranaio</a>
+            <br>
+            <a href="https://golos.io/@membrana-io/" target="_blank">https://golos.io/@membrana-io/</a>
+            <br>
+            <a href="https://www.linkedin.com/company/membrana-io/" target="_blank">https://www.linkedin.com/company/membrana-io/</a>
+            <br>
+            <a href="https://www.facebook.com/membrana.io/" target="_blank">https://www.facebook.com/membrana.io/</a>
+            <br>
+            <a href="https://github.com/MembranaPlatform" target="_blank">https://github.com/MembranaPlatform</a>
+            <br>
+            <a href="https://www.youtube.com/channel/UCZvglEWUXnggQ-lxkw9rFlA" target="_blank">https://www.youtube.com/channel/UCZvglEWUXnggQ-lxkw9rFlA</a>`.replace(/\n/g, '')
+      },{
+        question: 'How can I register in the service as a trader?',
+        answer: `The Membrana platform does not have its own registration system, to use the service it is necessary to log in, 
+            using the Ethereum wallet signature, for example via Metamask on a PC or Cipher, Toshi on a mobile phone.`.replace(/\n/g, '')
+      },{
+        question: 'What are the guarantees of investment return?',
+        answer: `Investors funds are always on his exchange account and trader receive just temporary access for trading. More details 
+            of Membrana algorithm are described in Whitepaper <a href="https://membrana.io/whitepaper/" target="_blank">https://membrana.io/whitepaper/</a>`.replace(/\n/g, '')
+      },{
+        question: 'Is the service protected, where can I see the report?',
+        answer: `An exceptional attention is given to the safety. We never store the funds of an investor or a trader in our wallets. 
+            At the moment, the Membrana's smart contract has successfully passed a security audit by Hacken
+            <br>
+            <a href="https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d" target="_blank">
+              https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d
+            </a>`.replace(/\n/g, '')
+      },{
+        question: 'What is the minimum amount of entry for investor?',
+        answer: `There is no the minimum amount of entry for any user. Minimum contract amount is set by trader in his trust management parameters.`.replace(/\n/g, '')
+      },{
+        question: 'What are the advantages of the platform?',
+        answer: `You can read about Membrana's advantages in Business Overview
+            <br>
+            <a href="http://dl4.joxi.net/drive/2018/04/12/0006/3395/437571/71/2068e3f30b.jpg" target="_blank">
+              http://dl4.joxi.net/drive/2018/04/12/0006/3395/437571/71/2068e3f30b.jpg
+            </a>`.replace(/\n/g, '')
+      },{
+        question: 'How does the platform earn money?',
+        answer: `Membrana platform is absolutely free to join and use. Only fee required is commission for concluding the smart contract for trust management. 
+            The size of that commission fee is 0,5% of the contract amount. This fee is paid by investor when signing a deal.`.replace(/\n/g, '')
+      },{
+        question: 'What are the dates of the ICO?',
+        answer: `ICO will not be held, tokens will be sold through "Digital IPO". For active community and early adopters there will be an airdrop. 
+            The dates will be announced soon.`.replace(/\n/g, '')
+      },{
+        question: 'Can I buy Membrana\'s tokens?',
+        answer: `All information about Membrana tokens and "Digital IPO" will be announced later in official "Offering Memorandum".`.replace(/\n/g, '')
+      },{
+        question: 'Can I transfer my Ethereum wallet assets into trust management?',
+        answer: `Yes, you can, this is the basic function of the platform. You can see the video of how it is done 
+            (for the time being we have 1 video, the links to it are in chat and on the landing page in the first window)
+            <br>
+            <a href="https://www.youtube.com/watch?v=4wnAsOjSupY" target="_blank">https://www.youtube.com/watch?v=4wnAsOjSupY</a>`.replace(/\n/g, '')
+      },{
+        question: 'What is the service statistics (% of the successful / unsuccessful contracts)?',
+        answer: `Statistics of every user can be seen in Rating. Their ROI - return of investment and numbers of their contracts.`.replace(/\n/g, '')
+      },{
+        question: 'Are there any partnership relations with the stock exchanges? Is there a commission at the stock exchanges?',
+        answer: `At current stage Membrana platform works only with cryptocurrency exchanges. There is no commission for trading, 
+            only for concluding contract for trust management.`.replace(/\n/g, '')
+      },{
+        question: `Do I still have my account if I replace the Ethereum wallet (as an investor), to which the 
+            money should come after the termination of the contract with the trader?`.replace(/\n/g, ''),
+        answer: `You cannot replace the Ethereum wallet, which is involved in a smart contract. Please, protect your wallet with your own security.`.replace(/\n/g, '')
+      },{
+        question: 'What should I do if I want to make changes to the terms of the contract during the work?',
+        answer: `The terms of the contract cannot be changed.`.replace(/\n/g, '')
+      },{
+        question: 'How does the manager contract occur?',
+        answer: `The investor has the opportunity to delegate the task of choosing a successful trader to another, 
+            more experienced investor. For that, a special form of contract is concluded between the investor and, so-called, 
+            experienced investor - manager contract. 
+            <br>
+            An experienced investor is able to enter into transactions with traders from the person of his customer, 
+            transferring the customer's funds to the management of traders. 
+            <br>
+            An experienced investor receives a commission for that. You can read more about that in Whitepaper 
+            <a href="https://membrana.io/whitepaper/" target="_blank">https://membrana.io/whitepaper/</a>`.replace(/\n/g, '')
+      },{
+        question: 'What are the average terms of the contract?',
+        answer: `There are no such terms; you can put timing from a few hours to a year.`.replace(/\n/g, '')
+      },{
+        question: 'Where should I go if a technical failure / problem occurs?',
+        answer: `You can write on <a href="mailto:support@membrana.io">support@membrana.io</a> or in our official Telegram group.`.replace(/\n/g, '')
+      }]
+    },
+
+    press: {
+      title: '報道発表　',
+      items: [{
+        image: '/static/img/pictures/press/1.png',        
+        link: 'https://coinspectator.com/news/379298/zeus-exchange-connects-with-trust-management-app-membrana'
+      },{
+        image: '/static/img/pictures/press/2.png',
+        link: 'https://www.cryptoninjas.net/2018/04/19/zeus-exchange-connects-with-trust-management-app-membrana/'
+      },{
+        image: '/static/img/pictures/press/3.png',
+        link: 'https://bitcoingarden.org/blockchain-venture-summit-in-istanbul-dialogue-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+      },{
+        image: '/static/img/pictures/press/4.png',
+        link: 'https://coinidol.com/blockchain-venture-summit-in-istanbul/'
+      },{
+        image: '/static/img/pictures/press/5.png',
+        link: 'https://techmoran.com/blockchain-venture-summit-in-istanbul-pushes-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+      },{
+        image: '/static/img/pictures/press/6.png',
+        link: 'https://chaining.ru/2018/03/31/blockchain-venture-summit-in-istanbul-dialogue-for-the-development-of-the-crypto-industry-in-the-heart-of-eurasia/'
+      }]
+    },
+
+    competition: {
+      title: 'Join <b>Global Traders Competition</b> on Membrana platfrom!',
+      text: 'Earn tournament points to compete for $100,000 prize pool and platform tokens!',
+      link_text: 'Learn More & Join',
+      join_text: 'Fill the form and click "Join" to pass the KYC',
+      policy_text: 'I agree with Terms of Use',
+      email_label: 'Your Email:',
+      wallet_label: 'Your Ethereum Wallet:',
+      wallet_placeholder: 'Type Your Ethereum Wallet Number Here...',
+      email_error: '*Type correct mail',
+      wallet_error: '*Type correct wallet',
+      policy: `<a href="javascript:void(0)" data-open-modal="rules">Read more about rules of competition.</a>
+          <a href="/static/pdf/Membrana.io_T&C_v2.1.docx.pdf" target="_blank">I agree with Terms of Use</a>`.replace(/\n/g, ''),
+      info_text: `Last preparations for 
+          <br><br>
+          <b>Global Traders Competition!</b>
+          <br><br>
+          Every week from the start of the competition, traders will receive money for trading on 
+          <span>Membrana platform</span> 
+          to compete with each other. This is real trading with real money! 
+          <br><br>
+          All trading will be done on <span>Binance exchange</span> through Membrana unique interface.`.replace(/\n/g, ''),
+      prizes: {
+        intro: `Earn tournament points to compete for $100,000 prize pool!
+          <br><br><br>
+          At the end of each competitive week, 5 best traders will receive:`.replace(/\n/g, ''),
+        list: [
+          'All of their winnings on Ethereum wallet',
+          'Tournament points, depending on their rank position',
+          'Official Membana hoodie',
+          'Entry ticket for Membrana Platform Event, which will take place in autumn 2018'
+        ]
+      },
+      important_text: `After every round of competition we will calculate all the Tournament points achieved by each trader. 
+          After 12 rounds, we are giving participants Cash Prizes and Membrana Tokens, depending on their results. 
+          Everyone will receive prizes for participation, thats why we encourage you to join and to compete!`.replace(/\n/g, ''),
+      important_text_smaller: `For the record, Membrana tokens wont be sold through any crowdsale, so their availability 
+          is strongly limited.`.replace(/\n/g, ''),
+      invite_text: `We invite all traders to participate in this competition! Pass the KYC and follow the updates!`.replace(/\n/g, ''),
+
+      success_title: 'Thank you for submitting your document. You will receive e-mail message with the identification result.'
+    },
+    
+  }

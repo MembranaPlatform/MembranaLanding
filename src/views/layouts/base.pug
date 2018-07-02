@@ -2,12 +2,19 @@
 include ../i18n/en
 
 //- Applies while the build task is running
+//- Does not work locally
 if global.process.argv[2] === 'en'
   //- npm run build
   include ../i18n/en
 if global.process.argv[2] === 'ru'
   //- npm run build-ru
   include ../i18n/ru
+if global.process.argv[2] === 'jpn'
+  //- npm run build-jpn
+  include ../i18n/jpn
+
+script 
+  | console.log(global.process.argv[2])
 
 //- 
 block page_variables
@@ -15,6 +22,8 @@ block page_variables
 
 doctype html
 html(lang=app.lang)
+  script 
+    | console.log(app.lang)
   include ../shared/head
   block head
 
@@ -30,7 +39,7 @@ html(lang=app.lang)
             if page_class === 'index' 
               .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
             else
-              a.logo__link(href=`${app.lang === "ru" ? "ru" : "/"}`): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+              a.logo__link(href=`${app.lang === "ru" ? "ru" : "jpn" ? "jpn" : "/"}`): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
           nav.nav
             ul.nav__list
               each item in app.nav
@@ -47,11 +56,15 @@ html(lang=app.lang)
                 img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
               if app.lang === 'ru'
                 img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
+              if app.lang === 'jpn'
+                img.js-prevent-inline(src="/static/img/icons/jpn.svg" alt="")
             .select-language__list
               a.select-language__item(href="/" class={'active': app.lang === 'en'})
                 img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
               a.select-language__item(href="/ru/" class={'active': app.lang === 'ru'})
                 img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
+              a.select-language__item(href="/jpn/" class={'active': app.lang === 'jpn'})
+                img.js-prevent-inline(src="/static/img/icons/jpn.svg" alt="")
           a.hamburger.js-hamburger(href="javascript:void(0)") 
             span.hamburger__line
             span.hamburger__line
