@@ -74,6 +74,8 @@ exports.pageFile = function (dev = true) {
   console.log(global.process.argv)
   let lang = global.process.argv[2] === 'ru' ? 'ru' : '';
   lang = global.process.argv[2] === 'jpn' ? 'jpn' : ''; 
+  lang = global.process.argv[2] === 'chn' ? 'chn' : '';  
+  lang = global.process.argv[2] === 'kor' ? 'kor' : '';  
 
   var list = []
   
