@@ -12,12 +12,12 @@ if global.process.argv[2] === 'ru'
 if global.process.argv[2] === 'jpn'
   //- npm run build-jpn
   include ../i18n/jpn
-if global.process.argv[2] === 'chn'
-  //- npm run build-jpn
-  include ../i18n/chn
-if global.process.argv[2] === 'kor'
-  //- npm run build-jpn
-  include ../i18n/kor
+//- if global.process.argv[2] === 'chn'
+//-   //- npm run build-chn
+//-   include ../i18n/chn
+//- if global.process.argv[2] === 'kor'
+//-   //- npm run build-kor
+//-   include ../i18n/kor
 
 script 
   | console.log(global.process.argv[2])
@@ -64,21 +64,21 @@ html(lang=app.lang)
                 img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
               if app.lang === 'jpn'
                 img.js-prevent-inline(src="/static/img/icons/jpn.svg" alt="")
-              if app.lang === 'chn'
-                img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="")
-              if app.lang === 'kor'
-                img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="")
+              //- if app.lang === 'chn'
+              //-   img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="")
+              //- if app.lang === 'kor'
+              //-   img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="")
             .select-language__list
               a.select-language__item(href="/" class={'active': app.lang === 'en'})
                 img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
               a.select-language__item(href="/ru/" class={'active': app.lang === 'ru'})
                 img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
-              a.select-language__item(href="/jpn/" class={'active': app.lang === 'jpn'})
+              a.select-language__item(href="/jpn/" class={'active': app.lang === 'jpn'} style="display:none")
                 img.js-prevent-inline(src="/static/img/icons/jpn.svg" alt="")
-              a.select-language__item(href="/chn/" class={'active': app.lang === 'chn'})
-                img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="" style="width: 20px")
-              a.select-language__item(href="/kor/" class={'active': app.lang === 'kor'})
-                img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="" style="width: 20px")
+              //- a.select-language__item(href="/chn/" class={'active': app.lang === 'chn'})
+              //-   img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="" style="width: 20px")
+              //- a.select-language__item(href="/kor/" class={'active': app.lang === 'kor'})
+              //-   img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="" style="width: 20px")
           a.hamburger.js-hamburger(href="javascript:void(0)") 
             span.hamburger__line
             span.hamburger__line
