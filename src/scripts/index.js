@@ -4,6 +4,8 @@ const app = window.app = {}
 
 window.$ = $
 
+// var YouTubeIframeLoader = require('youtube-iframe')
+
 /**
  * Replace svg images with inline svg
  */
@@ -585,9 +587,14 @@ $(document).ready(function () {
     var poster = $(this)
     // ищем родителя ближайшего по классу
     var wrapper = poster.closest('.js-videoWrapper')
-    videoPlay(wrapper)
+    if ($(window).width() >= 1024) {
+      videoPlay(wrapper)
+    } else {
+      videoPlayMob()
+    }
   })
-
+  // var tag = document.createElement('script')
+  // tag.src = 'https://www.youtube.com/iframe_api'
   // вопроизводим видео, при этом скрывая постер
   function videoPlay (wrapper) {
     var iframe = wrapper.find('.js-videoIframe')
@@ -597,7 +604,47 @@ $(document).ready(function () {
     wrapper.addClass('videoWrapperActive')
     // подставляем в src параметр из data
     iframe.attr('src', src)
-    // iframe.playVideo()
     $('.video_wrapper').addClass('video-on')
   }
+  function videoPlayMob () {
+    $('<script>var player = new YT.Player("video_wrapper", {videoId: "zFs9AZn27HQ",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
+    // var player = new YT.Player('video_wrapper', {
+    //   videoId: 'zFs9AZn27HQ',
+    //   events: {
+    //     'onReady': onPlayerReady
+    //   }
+    // })
+    // function onPlayerReady (event) {
+    //   player.playVideo()
+    // }
+    // iframe.playVideo()
+    // var player
+    // YouTubeIframeLoader.load(function (YT) {
+    //   console.log(YT)
+    //   player = new YT.Player('player1', {
+    //     height: '390',
+    //     width: '640',
+    //     videoId: 'M7lc1UVf-VE'
+    //   })
+    // })
+    // function onYouTubeIframeAPIReady (YT) {
+    //   console.log(YT)
+    //   player = new YT.Player('video_wrapper', {
+    //     // height: '360',
+    //     // width: '640',
+    //     videoId: 'zFs9AZn27HQ',
+    //     events: {
+    //       'onReady': onPlayerReady
+    //     }
+    //   })
+    // }
+    // function onPlayerReady (event) {
+    //   player.playVideo()
+    // }
+    // onYouTubeIframeAPIReady()
+  }
+  // var tag = document.createElement('script')
+  // tag.src = 'https://www.youtube.com/iframe_api'
+  // var firstScriptTag = document.getElementsByTagName('script')[0]
+  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 })
