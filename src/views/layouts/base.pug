@@ -45,7 +45,7 @@ html(lang=app.lang)
             if page_class === 'index' 
               .logo__link: img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
             else
-              a.logo__link(href=`${app.lang === "ru" ? "ru" : "jpn" ? "jpn" : "chn" ? "chn" : "/"}`): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
+              a.logo__link(href=`${app.lang === "ru" ? "ru" : "jpn" ? "jpn" : "chn" ? "chn" : "kor" ? "kor" : "/"}`): img.logo__image(src="/static/img/logo.svg" alt=app.head.title)
           nav.nav
             ul.nav__list
               each item in app.nav
