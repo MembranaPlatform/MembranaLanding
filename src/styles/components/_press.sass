@@ -1,5 +1,6 @@
 .press-wrapper
   padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(115px)
+  overflow: hidden
   @media(max-width: 767px)
     padding-bottom: 0
 
@@ -7,6 +8,14 @@
 .press
   margin: 0 auto
   max-width: 127rem
+  width: 35%
+  margin-left: 10%
+  float: left
+  margin-right: 5%
+  @media(max-width: 1024px)
+    width: 80%
+    margin: 0 auto
+    float: none
 
   &__title
     margin-bottom: px-to-rem(40px)
@@ -21,20 +30,20 @@
 
 
   &__item
-    margin: px-to-rem(40px) px-to-rem(50px)
-    // width: calc(25% - 10rem)
-    width: calc(33.33% - 10rem)
+    margin: px-to-rem(20px) px-to-rem(50px)
+    width: calc(50% - 10rem)
+    // width: calc(33.33% - 10rem)
     @media(max-width: 1279px)
       margin: px-to-rem(25px) px-to-rem(30px)
       transform: scale(.75)
 
 
     @media(max-width: 1023px)
-      width: calc(33.33% - 6rem)
-
-
-    @media(max-width: 767px)
       width: calc(50% - 6rem)
+
+
+    // @media(max-width: 767px)
+    //   width: calc(50% - 6rem)
 
 
     @media(max-width: 579px)
@@ -45,3 +54,140 @@
     display: block
     margin: auto
     image-rendering: -webkit-optimize-contrast
+
+
+.events
+  width: 35%
+  margin-left: 5%
+  float: left
+  position: relative
+  @media(max-width: 1024px)
+    width: 80%
+    margin: 0 auto
+    float: none
+    padding-top: 10em
+
+  &__list
+    margin-top: 5em
+    position: relative
+
+    @media(max-width: 1440px)
+      margin-top: 4em
+
+  &__image
+    opacity: .48
+    width: 62%
+    mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))
+    mask-size: 100% 100%
+    -webkit-mask-size: 100% 100%
+    mask-repeat: no-repeat
+    -webkit-mask-repeat: no-repeat
+    mask-position: left top, left bottom
+    -webkit-mask-position: left top, left bottom
+    transition: all .8s ease
+    float: left
+
+  &__item
+    width: 100%
+    display: block
+    height: 100px
+    margin-bottom: 20px
+    overflow: hidden
+    position: relative
+    font-family: "MavenPro", sans-serif
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01))
+
+    &:hover
+
+      .events__image
+        opacity: 1
+        // -webkit-mask: none
+
+      .events__right
+
+        span
+
+          &:before
+            filter: drop-shadow(0 0 10px rgba(48, 224, 222, 0.95))
+
+  &__text
+    position: absolute
+    top: 26px
+    color: #ffffff
+    left: 23px
+
+    .events__title
+      margin: 0
+      font-size: 24px
+      line-height: 28px
+      letter-spacing: .7px
+      font-weight: 300
+
+    .events__place
+      font-size: 18px
+      font-weight: 300
+      opacity: .6
+
+  &__right
+    width: 38%
+    float: left
+    color: #2ad7dc
+    font-size: 15px
+    text-align: center
+
+    span
+      margin-top: 43px
+      display: inline-block
+      font-weight: 300
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        left: -30px
+        top: 50%
+        transform: translateY(-50%)
+        background-image: url(/static/img/pictures/events/icon.svg)
+        transition: all .4s ease
+
+  .scroll
+    position: absolute
+    // display: none
+
+  .scroll__left
+    top: 50%
+    transform: translateY(-50%)
+    left: -45px
+    width: 15px
+    height: 25px
+    background-image: url(/static/img/pictures/events/big_ar_left.svg)
+
+  .scroll__right
+    top: 50%
+    transform: translateY(-50%)
+    right: -45px
+    width: 15px
+    height: 25px
+    background-image: url(/static/img/pictures/events/big_ar_right.svg)
+
+  .slider
+    bottom: -34px
+    height: 6px
+    width: 100%
+    left: 0
+    text-align: center
+
+    &__item
+      height: 100%
+      width: 26px
+      border-radius: 5px
+      background-color: #fff
+      margin: 0 7px
+      display: inline-block
+      opacity: .1
+
+    .active
+      opacity: .5

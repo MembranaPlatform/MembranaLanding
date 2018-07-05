@@ -1,17 +1,28 @@
 
 include ../i18n/en
+//- script
+  | var app = {}
+//- script
+//-   | app.lang = 'en'
+//- script
+  | var link = document.location.href.split('/'); var a = link.pop(); app.lang = a
 
 //- Applies while the build task is running
 //- Does not work locally
-if global.process.argv[2] === 'en'
-  //- npm run build
-  include ../i18n/en
-if global.process.argv[2] === 'ru'
-  //- npm run build-ru
-  include ../i18n/ru
-if global.process.argv[2] === 'jpn'
-  //- npm run build-jpn
-  include ../i18n/jpn
+//- if global.process.argv[2] === 'en'
+//-   //- npm run build
+//-   include ../i18n/en
+//- if global.process.argv[2] === 'ru'
+//-   //- npm run build-ru
+
+//- if app.lang == 'ru'
+//-   script
+//-     | console.log('heh')
+//-   include ../i18n/ru
+//- //- if global.process.argv[2] === 'jpn'
+
+//- if app.lang == 'jpn'
+//-   include ../i18n/jpn
 //- if global.process.argv[2] === 'chn'
 //-   //- npm run build-chn
 //-   include ../i18n/chn
@@ -19,8 +30,8 @@ if global.process.argv[2] === 'jpn'
 //-   //- npm run build-kor
 //-   include ../i18n/kor
 
-script 
-  | console.log(global.process.argv[2])
+//- script 
+//-   | console.log(global.process.argv[2])
 
 //- 
 block page_variables
@@ -69,11 +80,11 @@ html(lang=app.lang)
               //- if app.lang === 'kor'
               //-   img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="")
             .select-language__list
-              a.select-language__item(href="/" class={'active': app.lang === 'en'})
+              a.select-language__item(href="/" class={'active': app.lang = 'en'})
                 img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
-              a.select-language__item(href="/ru/" class={'active': app.lang === 'ru'})
+              a.select-language__item(href="/ru/" class={'active': app.lang = 'ru'})
                 img.js-prevent-inline(src="/static/img/icons/ru.svg" alt="")
-              a.select-language__item(href="/jpn/" class={'active': app.lang === 'jpn'} style="display:none")
+              a.select-language__item(href="/jpn/" class={'active': app.lang = 'jpn'})
                 img.js-prevent-inline(src="/static/img/icons/jpn.svg" alt="")
               //- a.select-language__item(href="/chn/" class={'active': app.lang === 'chn'})
               //-   img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="" style="width: 20px")
