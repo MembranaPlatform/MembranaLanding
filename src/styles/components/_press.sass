@@ -67,7 +67,17 @@
     float: none
     padding-top: 10em
 
-  &__list
+  @media(max-width: 440px)
+    width: 86%
+
+  // &__list
+  //   margin-top: 5em
+  //   position: relative
+
+  //   @media(max-width: 1440px)
+  //     margin-top: 4em
+
+  .possbile_slider_cont 
     margin-top: 5em
     position: relative
 
@@ -117,6 +127,9 @@
     color: #ffffff
     left: 23px
 
+    @media(max-width: 500px)
+      left: 14px
+
     .events__title
       margin: 0
       font-size: 24px
@@ -124,10 +137,19 @@
       letter-spacing: .7px
       font-weight: 300
 
+      @media(max-width: 1440px)
+        font-size: 20px
+
+      @media(max-width: 500px)
+        font-size: 14px
+
     .events__place
       font-size: 18px
       font-weight: 300
       opacity: .6
+
+      @media(max-width: 1440px)
+        font-size: 16px
 
   &__right
     width: 38%
@@ -135,6 +157,9 @@
     color: #2ad7dc
     font-size: 15px
     text-align: center
+
+    @media(max-width: 375px)
+      display: none
 
     span
       margin-top: 43px
@@ -153,11 +178,17 @@
         background-image: url(/static/img/pictures/events/icon.svg)
         transition: all .4s ease
 
-  .scroll
+  .owl-prev,
+  .owl-next
+    all: unset
+    cursor: pointer
     position: absolute
     // display: none
 
-  .scroll__left
+    span
+      display: none
+
+  .owl-prev
     top: 50%
     transform: translateY(-50%)
     left: -45px
@@ -165,7 +196,7 @@
     height: 25px
     background-image: url(/static/img/pictures/events/big_ar_left.svg)
 
-  .scroll__right
+  .owl-next
     top: 50%
     transform: translateY(-50%)
     right: -45px
@@ -173,14 +204,14 @@
     height: 25px
     background-image: url(/static/img/pictures/events/big_ar_right.svg)
 
-  .slider
+  .owl-dots
     bottom: -34px
     height: 6px
     width: 100%
     left: 0
     text-align: center
 
-    &__item
+    .owl-dot
       height: 100%
       width: 26px
       border-radius: 5px
@@ -188,6 +219,14 @@
       margin: 0 7px
       display: inline-block
       opacity: .1
+      cursor: pointer
 
     .active
       opacity: .5
+
+  .owl-item
+    display: inline-block
+    vertical-align: top
+
+  .owl-stage-outer
+    overflow: hidden
