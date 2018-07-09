@@ -89,6 +89,7 @@
   &__image
     opacity: .48
     width: 62%
+    min-height: 100%
     mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))
     mask-size: 100% 100%
@@ -137,7 +138,7 @@
       font-size: 24px
       line-height: 28px
       letter-spacing: .7px
-      font-weight: 300
+      font-weight: 500
 
       @media(max-width: 1440px)
         font-size: 20px
@@ -246,3 +247,5 @@
   width: 1px
   background-color: #707070
   opacity: .2
+  @media(max-width: 1024px)
+    display: none
