@@ -5,20 +5,22 @@
       for item in app.press.items
         a.press__item(href=item.link target="_blank"): img.press__image(src=item.image alt="")
   .line
-  .events
-    h2.press__title.title.h-text-gradient!=app.events.title
-    .possbile_slider_cont
-      .events__list
-        for item in app.events.items
-          a.events__item(href=item.link target="_blank")
-            img.events__image(src=item.image alt="")
-            div.events__text
-              h5.events__title!=item.title
-              span.events__place!=item.place
-            div.events__right
-              span Learn More
-    a(href="#").scroll__left.scroll
-    a(href="#").scroll__right.scroll
-    .slider.scroll
-      a(href="#").slider__item.active
-      a(href="#").slider__item
+  if app.events
+    .events
+      h2.press__title.title.h-text-gradient!=app.events.title
+      .possbile_slider_cont
+        .events__list
+          for item in app.events.items
+            a.events__item(href=item.link target="_blank")
+              img.events__image(src=item.image alt="")
+              div.events__text
+                h5.events__title!=item.title
+                span.events__place!=item.place
+              div.events__right
+                span Learn More
+      a(href="#").scroll__left.scroll
+      a(href="#").scroll__right.scroll
+      .slider.scroll
+        a(href="#").slider__item.active
+        a(href="#").slider__item
+  

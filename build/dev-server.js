@@ -60,7 +60,10 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/binance-exchange\/$/, to: '/binance-exchange/index.html'},
     { from: /\/competition\/$/, to: '/competition/index.html'},
     { from: /\/idnow-success\/$/, to: '/idnow-success/index.html'},
-    { from: /\/idnow-test-success\/$/, to: '/idnow-test-success/index.html'}
+    { from: /\/idnow-test-success\/$/, to: '/idnow-test-success/index.html'},
+    { from: /\/jpn\/$/, to: '/jpn/index.html'},
+    { from: /\/chn\/$/, to: '/chn/index.html'},
+    { from: /\/kor\/$/, to: '/kor/index.html'}
   ]
 }))
 
