@@ -608,43 +608,32 @@ $(document).ready(function () {
   }
   function videoPlayMob () {
     $('<script>var player = new YT.Player("video_wrapper", {videoId: "zFs9AZn27HQ",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
-    // var player = new YT.Player('video_wrapper', {
-    //   videoId: 'zFs9AZn27HQ',
-    //   events: {
-    //     'onReady': onPlayerReady
-    //   }
-    // })
-    // function onPlayerReady (event) {
-    //   player.playVideo()
-    // }
-    // iframe.playVideo()
-    // var player
-    // YouTubeIframeLoader.load(function (YT) {
-    //   console.log(YT)
-    //   player = new YT.Player('player1', {
-    //     height: '390',
-    //     width: '640',
-    //     videoId: 'M7lc1UVf-VE'
-    //   })
-    // })
-    // function onYouTubeIframeAPIReady (YT) {
-    //   console.log(YT)
-    //   player = new YT.Player('video_wrapper', {
-    //     // height: '360',
-    //     // width: '640',
-    //     videoId: 'zFs9AZn27HQ',
-    //     events: {
-    //       'onReady': onPlayerReady
-    //     }
-    //   })
-    // }
-    // function onPlayerReady (event) {
-    //   player.playVideo()
-    // }
-    // onYouTubeIframeAPIReady()
   }
-  // var tag = document.createElement('script')
-  // tag.src = 'https://www.youtube.com/iframe_api'
-  // var firstScriptTag = document.getElementsByTagName('script')[0]
-  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+  var count = 1
+  var counter = 0
+  if ($('.events__item').length > 3) {
+    $('<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>').appendTo(document.body)
+    $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></style>').appendTo(document.body)
+    $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"></style>').appendTo(document.body)
+    setTimeout(function () {
+      $('<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>').appendTo(document.body)
+    }, 500)
+    $.each($('.events__item'), function (i, e) {
+      if ((i + 1) % 3 === 0) $('.possbile_slider_cont').append("<div class='events__list'></div>")
+      if (i > 2) {
+        if (counter === 3) {
+          count++
+          counter = 0
+        }
+        counter++
+        var elem = $(this).detach()
+        var eventList = $('.events__list')[count]
+        elem.appendTo(eventList)
+        elem = null
+      }
+    })
+    setTimeout(function () {
+      $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:false,items:1});</script>').appendTo(document.body)
+    }, 1000)
+  }
 })
