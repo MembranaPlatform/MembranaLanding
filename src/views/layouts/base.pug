@@ -15,7 +15,9 @@ if global.process.argv[2] === 'en'
 if global.process.argv[2] === 'ru'
   //- npm run build-ru
   include ../i18n/ru
-
+if global.process.argv[2] === 'chn'
+  //- npm run build
+  include ../i18n/chn
 //- if app.lang == 'ru'
 //-   script
 //-     | console.log('heh')
