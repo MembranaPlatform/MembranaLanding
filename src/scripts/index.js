@@ -633,7 +633,7 @@ $(document).ready(function () {
       }
     })
     setTimeout(function () {
-      $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:false,items:1});</script>').appendTo(document.body)
+      $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:true,items:1});</script>').appendTo(document.body)
     }, 1000)
   }
 })

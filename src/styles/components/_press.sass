@@ -125,10 +125,10 @@
             filter: drop-shadow(0 0 10px rgba(48, 224, 222, 0.95))
 
       .events__title
-      	transform: translateX(10px)
+      	transform: translateX(15px)
 
       	&:before
-      		transform: translateX(-30px)
+      		transform: translateX(-35px)
       		opacity: 1
 
   &__text
@@ -218,7 +218,12 @@
     all: unset
     cursor: pointer
     position: absolute
+    opacity: .25
+    transition: all .2s ease
     // display: none
+
+    &:hover
+    	opacity: 1
 
     span
       display: none
@@ -264,6 +269,9 @@
       opacity: .1
       cursor: pointer
       border: none
+
+      &:hover
+      	opacity: .3
 
     .active
       opacity: .5

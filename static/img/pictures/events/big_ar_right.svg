@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.725 25.5">
     <defs>
         <style>
-            .cls-1{fill:#fff;opacity:.1}
+            .cls-1{fill:#fff;opacity:.4}
         </style>
     </defs>
     <path id="path" d="M319.425 877.975l-9.775 9.775 9.775 9.775-2.975 2.975-12.75-12.75L316.45 875z" class="cls-1" transform="rotate(180 159.712 450.25)"/>
