@@ -124,14 +124,26 @@
           &:before
             filter: drop-shadow(0 0 10px rgba(48, 224, 222, 0.95))
 
+      .events__title
+      	transform: translateX(10px)
+
+      	&:before
+      		transform: translateX(-30px) translateY(-50%)
+      		opacity: 1
+
   &__text
     position: absolute
-    top: 26px
+    top: 50%
+    transform: translateY(-50%)
     color: #ffffff
     left: 23px
 
+    @media(max-width: 1440px)
+    	max-width: 62%
+
     @media(max-width: 500px)
       left: 14px
+      max-width: 50%
 
     .events__title
       margin: 0
@@ -139,12 +151,30 @@
       line-height: 28px
       letter-spacing: .7px
       font-weight: 500
+      transition: all .4s ease
+      position: relative
 
       @media(max-width: 1440px)
-        font-size: 20px
+        font-size: 18px
+        line-height: 22px
 
       @media(max-width: 500px)
         font-size: 14px
+        line-height: 20px
+
+      &:before
+      	content: ''
+      	position: absolute
+      	left: 20px
+      	width: 7px
+      	height: 12px
+      	top: 50%
+      	transform: translateY(-50%)
+      	background-image: url(/static/img/pictures/events/icon_ar.svg)
+      	background-repeat: no-repeat
+      	background-size: cover
+      	opacity: 0
+      	transition: all .4s ease
 
     .events__place
       font-size: 18px
@@ -161,7 +191,7 @@
     font-size: 15px
     text-align: center
 
-    @media(max-width: 375px)
+    @media(max-width: 340px)
       display: none
 
     span
@@ -198,6 +228,10 @@
     width: 15px
     height: 25px
     background-image: url(/static/img/pictures/events/big_ar_left.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    @media(max-width: 415px)
+    	left: -30px
 
   .owl-next
     top: 50%
@@ -206,6 +240,10 @@
     width: 15px
     height: 25px
     background-image: url(/static/img/pictures/events/big_ar_right.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    @media(max-width: 415px)
+    	right: -30px
 
   .owl-dots
     bottom: -34px
@@ -223,9 +261,13 @@
       display: inline-block
       opacity: .1
       cursor: pointer
+      border: none
 
     .active
       opacity: .5
+
+      &:focus
+      	outline: none
 
   .owl-item
     display: inline-block
