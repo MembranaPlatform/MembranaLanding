@@ -367,3 +367,41 @@
   -webkit-transition-delay: 0s, 800ms;
   -moz-transition-delay: 0s, 800ms;
   transition-delay: 0s, 800ms;
+
+.close_video
+  display: none
+  position: absolute
+  top: 50px
+  right: 50px
+  width: 50px
+  height: 50px
+
+  span
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) rotate(45deg)
+    width: 100%
+    height: 3px
+    background-color: rgba(255, 255, 255, .2)
+    left: 0
+
+    &:nth-child(2)
+      transform: translateY(-50%) rotate(-45deg)
+    
+  
+.video_wrapper.video-on
+  @media(min-width: 1024px)
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: black;
+    z-index: 100;
+
+    .close_video
+      display: block
+    
+

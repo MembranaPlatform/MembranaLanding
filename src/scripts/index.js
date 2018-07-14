@@ -593,6 +593,14 @@ $(document).ready(function () {
       videoPlayMob()
     }
   })
+  $('.close_video').click(function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    $('.video_wrapper').removeClass('video-on')
+    $('.js-videoIframe').attr('src', '')
+    $('.js-videoWrapper').removeClass('videoWrapperActive')
+    $('html, body').css('overflow', 'auto')
+  })
   // var tag = document.createElement('script')
   // tag.src = 'https://www.youtube.com/iframe_api'
   // вопроизводим видео, при этом скрывая постер
@@ -600,6 +608,7 @@ $(document).ready(function () {
     var iframe = wrapper.find('.js-videoIframe')
     // Берем ссылку видео из data
     var src = iframe.data('src')
+    $('html, body').css('overflow', 'hidden')
     // скрываем постер
     wrapper.addClass('videoWrapperActive')
     // подставляем в src параметр из data
