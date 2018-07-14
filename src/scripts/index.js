@@ -612,12 +612,29 @@ $(document).ready(function () {
   var count = 1
   var counter = 0
   if ($('.events__item').length > 3) {
-    $('<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>').appendTo(document.body)
-    $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></style>').appendTo(document.body)
-    $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"></style>').appendTo(document.body)
-    setTimeout(function () {
-      $('<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>').appendTo(document.body)
-    }, 500)
+    var script = document.createElement('script')
+    script.src = 'https://code.jquery.com/jquery-3.3.1.min.js'
+    document.body.appendChild(script)
+    script.onload = function () {
+      var script2 = document.createElement('script')
+      script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
+      document.body.appendChild(script2)
+      script2.onload = function () {
+        $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:true,items:1});</script>').appendTo(document.body)
+      }
+      // script2.onerror = function () {
+      //   alert('Проблемы с интернетом, попробуйте обновить страницу')
+      // }
+    }
+    // script.onerror = function () {
+    //   alert('Проблемы с интернетом, попробуйте обновить страницу')
+    // }
+    // $('<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>').appendTo(document.body)
+    // $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></style>').appendTo(document.body)
+    // $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"></style>').appendTo(document.body)
+    // setTimeout(function () {
+    //   $('<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>').appendTo(document.body)
+    // }, 500)
     $.each($('.events__item'), function (i, e) {
       if ((i + 1) % 3 === 0) $('.possbile_slider_cont').append("<div class='events__list'></div>")
       if (i > 2) {
@@ -632,8 +649,8 @@ $(document).ready(function () {
         elem = null
       }
     })
-    setTimeout(function () {
-      $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:false,items:1});</script>').appendTo(document.body)
-    }, 1000)
+    // setTimeout(function () {
+    //   $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:true,items:1});</script>').appendTo(document.body)
+    // }, 1000)
   }
 })

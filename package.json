@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js en",
-    "build-ru": "node build/build.js ru"
+    "build-ru": "node build/build.js ru",
+    "build-all": "node build/build.js en && node build/build.js ru && node build/build.js chn && node build/build.js kor && node build/build.js jpn"
   },
   "author": "Konstantin Dralyuk <dralyuk_kostya@mail.ru>",
   "license": "MIT",
