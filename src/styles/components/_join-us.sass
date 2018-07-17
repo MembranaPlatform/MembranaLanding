@@ -428,6 +428,32 @@
       color: #ec2650
       font-size: 19px
 
+    &:before
+      content: ''
+      position: absolute
+      top: 6px
+      right: 6px
+      background-image: url('/static/img/pictures/register/path.svg')
+      background-size: cover
+      background-repeat: no-repeat
+      opacity: 0
+      bottom: 6px
+      left: 6px
+      transition: all ease .4s
+
+  .item__check.active:before
+    opacity: 1
+
+  .ar_1,
+  .ar_2,
+  .ar_3
+    transition: all ease .4s
+
+  .ar_1
+    .cls-1
+      fill: #24c48e
+      opacity: 1
+
   .social_check__desc
     margin-top: 68px
     text-align: center
@@ -497,7 +523,8 @@
     background-image: url('/static/img/pictures/register/video.svg')
 
   .registr_page__btn
-    background-color: #4d09d6
+    background-color: rgba(255, 255, 255, .05)
+    opacity: .5
     width: 270px
     margin: 0 auto
     border-radius: 34px
@@ -508,9 +535,6 @@
     text-align: center
     padding: 24px 0
 
-    &:hover
-      .registr_page__btn_ar
-        transform: translateX(-5px)
 
   .registr_page__btn_ar
     width: 14px
@@ -532,6 +556,8 @@
       height: 1px
       top: 50%
       background-color: rgba(112, 112, 112, .3)
+      @media(max-width: 480px)
+        display: none
 
     &:before
       left: auto
@@ -547,3 +573,28 @@
   .registr_page__warning_colored
     color: #f62753
     font-size: 26px
+
+  // .bg
+  //   img
+  //     position: absolute
+  //     width: 50px
+  //     height: 50px
+
+.registr .page-content-pattern::after
+  top: 100px
+  bottom: auto
+
+.registr_page.socials_done .ar_2,
+.registr_page.socials_done .ar_3
+  .cls-1
+    fill: #24c48e
+    opacity: 1
+
+.registr_page.socials_done
+  .registr_page__btn
+    background-color: #4d09d6
+    opacity: 1
+
+    &:hover
+      .registr_page__btn_ar
+        transform: translateX(-5px)

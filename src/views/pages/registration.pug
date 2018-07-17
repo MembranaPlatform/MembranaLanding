@@ -1,8 +1,8 @@
 extends ../layouts/base
 
 block page_variables
-  - var page_class = 'registr';
-  - var page_active = '/registr/';
+  - var page_class = 'registration';
+  - var page_active = '/registration/';
 
 block append head
   block head_variables
@@ -17,7 +17,8 @@ block content
         div.pattern.bg
           //- img.js-prevent-inline(src="/static/img/patterns/competition/bg-page.svg" alt="")
           //- img.js-prevent-inline.triangle_12(src="/static/img/new-page/mid_bg.svg" alt="")
-          //- img.js-prevent-inline.triangle_21(src="/static/img/new-page/mid_bg2.svg" alt="") 
+          //- img.js-prevent-inline.triangle_21(src="/static/img/new-page/mid_bg2.svg" alt="")
+          //- img.js-prevent-inline.triangle_12(src="/static/img/new-page/mid_bg.svg" alt="") 
 
 
         h1.registr_page__title
@@ -30,7 +31,7 @@ block content
 
         h5.registr_page__steps_title Follow the next steps to continue
 
-        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down.ar_1
 
         .registr_page__social_check
           h5.social_check__title
@@ -55,7 +56,7 @@ block content
                 a(href="www.twitter.com").item__block_color Telegram
           p.social_check__desc By clicking on the checkbox, you agree that you are following us
 
-        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down.ar_2
 
         .registr_page__video_block
           h5.video_block__title
@@ -71,7 +72,7 @@ block content
                 span
                 span
 
-        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down.ar_3
 
         .registr_page__btn_cont
           a(href="").registr_page__btn
