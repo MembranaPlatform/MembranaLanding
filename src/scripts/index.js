@@ -348,7 +348,7 @@ app.setPatternsSize()
           trnum: $trnum.val()
         },
         success (data) {
-          window.location.href = '/registration/'
+          // window.location.href = '/registration/'
         }
       })
     }
@@ -375,7 +375,7 @@ app.setPatternsSize()
           trnum: $trnum2.val()
         },
         success (data) {
-          window.location.href = '/registration/'
+          // window.location.href = '/registration/'
         }
       })
     }
