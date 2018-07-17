@@ -30,14 +30,57 @@ block content
 
         h5.registr_page__steps_title Follow the next steps to continue
 
-        div.arrow_down_wr
-          a.scroll-btn-green.scroll-btn-next(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/new-page/scroll-arrow-green.svg" alt="")
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
 
+        .registr_page__social_check
+          h5.social_check__title
+            span.social_check__title_number 1.
+            span.social_check__title_text  Please make sure, what you are following us on social media:
+          ul.registr_page__socials
+            li.social_check__item
+              .item__check
+              .item__block
+                //- span.item__block_ar
+                img(src="/static/img/icons/green_arr.svg").item__block_icon
+                span Subscribe
+                img(src="/static/img/icons/twitter.svg").item__block_icon
+                a(href="www.twitter.com").item__block_color Twitter
+            li.social_check__item
+              .item__check
+              .item__block
+                //- span.item__block_ar
+                img(src="/static/img/icons/green_arr.svg").item__block_icon
+                span Subscribe
+                img(src="/static/img/icons/tele.svg").item__block_icon
+                a(href="www.twitter.com").item__block_color Telegram
+          p.social_check__desc By clicking on the checkbox, you agree that you are following us
 
-       
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
 
-        div.arrow_down_wr
-          a.scroll-btn-green.scroll-btn-form(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/new-page/scroll-arrow-green.svg" alt="")
+        .registr_page__video_block
+          h5.video_block__title
+            span.video_block__title_number 2.
+            span.video_block__title_text  In the next step you will have to go through the identification of your personality
+              br 
+              | So that you do not have any problems, we recommend you to watch this video
+          .registr_page__video_wr
+            .video_wrapper.video_wrapper_full.js-videoWrapper#video_wrapper
+              iframe.videoIframe.js-videoIframe(width="100%" height="100%" data-src="https://www.youtube.com/embed/zFs9AZn27HQ?controls=0&iv_load_policy=3&showinfo=0&rel=0&modestbranding=0&autoplay=1&playsinline=1" src="" frameborder="0" allow="autoplay; encrypted-media" controls="0" allowfullscreen playsinline webkit-playsinline)
+              button.videoPoster.js-videoPoster
+              a.close_video(href="#")
+                span
+                span
+
+        img(src="/static/img/icons/arrow_down.svg").registr_page__arrow_down
+
+        .registr_page__btn_cont
+          a(href="").registr_page__btn
+            img(src="/static/img/pictures/register/arrow_right.svg").registr_page__btn_ar
+            | Continue. Step 2
+
+        span.registr_page__warning 
+          span.registr_page__warning_colored * 
+          | - fields are required
 
 
 
