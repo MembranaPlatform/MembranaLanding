@@ -340,6 +340,7 @@ app.setPatternsSize()
       $message.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      window.location.href = '/registr/'
       $.ajax({
         type: 'POST',
         url: $form.attr('action'),
@@ -353,6 +354,7 @@ app.setPatternsSize()
   })
 
   $submit2.on('click', (e) => {
+    window.location.href = '/registr/'
     if (!$form2[0].checkValidity()) {
       $form2.addClass('has-error')
       let errors = ''
@@ -365,6 +367,7 @@ app.setPatternsSize()
       $message2.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      window.location.href = '/registr/'
       $.ajax({
         type: 'POST',
         url: $form.attr('action'),
@@ -374,6 +377,7 @@ app.setPatternsSize()
         },
         success (data) {}
       })
+      window.location.href = '/registr/'
     }
   })
 })()
