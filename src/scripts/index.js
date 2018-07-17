@@ -340,7 +340,6 @@ app.setPatternsSize()
       $message.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
-      window.location.href = '/registr/'
       $.ajax({
         type: 'POST',
         url: $form.attr('action'),
@@ -348,13 +347,14 @@ app.setPatternsSize()
           email: $email.val(),
           trnum: $trnum.val()
         },
-        success (data) {}
+        success (data) {
+          // window.location.href = '/registration/'
+        }
       })
     }
   })
 
   $submit2.on('click', (e) => {
-    window.location.href = '/registr/'
     if (!$form2[0].checkValidity()) {
       $form2.addClass('has-error')
       let errors = ''
@@ -367,7 +367,6 @@ app.setPatternsSize()
       $message2.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
-      window.location.href = '/registr/'
       $.ajax({
         type: 'POST',
         url: $form.attr('action'),
@@ -375,9 +374,10 @@ app.setPatternsSize()
           email: $email2.val(),
           trnum: $trnum2.val()
         },
-        success (data) {}
+        success (data) {
+          // window.location.href = '/registration/'
+        }
       })
-      window.location.href = '/registr/'
     }
   })
 })()
@@ -642,12 +642,6 @@ $(document).ready(function () {
     // script.onerror = function () {
     //   alert('Проблемы с интернетом, попробуйте обновить страницу')
     // }
-    // $('<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>').appendTo(document.body)
-    // $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></style>').appendTo(document.body)
-    // $('<style href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"></style>').appendTo(document.body)
-    // setTimeout(function () {
-    //   $('<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>').appendTo(document.body)
-    // }, 500)
     $.each($('.events__item'), function (i, e) {
       if ((i + 1) % 3 === 0) $('.possbile_slider_cont').append("<div class='events__list'></div>")
       if (i > 2) {
@@ -662,8 +656,20 @@ $(document).ready(function () {
         elem = null
       }
     })
-    // setTimeout(function () {
-    //   $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:true,items:1});</script>').appendTo(document.body)
-    // }, 1000)
   }
+  $('.item__check').click(function () {
+    $(this).toggleClass('active')
+    $('.registr_page').removeClass('socials_done')
+    if (($('.item__check').eq(0).hasClass('active')) && ($('.item__check').eq(1).hasClass('active'))) {
+      $('.registr_page').addClass('socials_done')
+    }
+  })
+  $('.registr_page__btn').click(function () {
+    $('.item__check').removeClass('not_done')
+    if (!$('.registr_page').hasClass('socials_done')) {
+      $('html, body').animate({scrollTop: $('.registr_page__social_check').offset().top})
+      $('.item__check:not(.active)').addClass('not_done')
+      return false
+    }
+  })
 })
