@@ -198,3 +198,60 @@
     margin-left: px-to-rem(27px)
     @media(max-width: 767px)
       margin: 20px auto 0
+
+
+
+.registr_page
+  max-width: 758px
+  margin: 0 auto
+
+  &__title
+    padding-top: 190px
+    text-align: center
+    color: #24c48e
+    font-size: 58px
+    line-height: 68px
+    text-shadow: 0 7px 6px rgba(0, 0, 0, 0.16)
+    margin-bottom: 0
+
+
+  &__desc
+    color: #ffffff
+    font-size: 39px
+    text-align: left
+    margin-top: 0
+    left: 46px
+    margin-bottom: 120px
+    font-weight: normal
+    
+    &_color
+      color: #686868
+
+  &__steps_title
+    font-size: 18px
+    line-height: 21px
+    color: #ffffff
+    text-align: center
+    font-weight: normal
+    position: relative
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+      width: 26%
+      left: 0
+      height: 1px
+      background-color: #707070
+      opacity: .3
+
+    &:after
+      left: auto
+      right: 0      
+    
