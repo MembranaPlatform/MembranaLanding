@@ -665,6 +665,11 @@ $(document).ready(function () {
     }
   })
   $('.registr_page__btn').click(function () {
-    if (!$('.registr_page').hasClass('socials_done')) return false
+    $('.item__check').removeClass('not_done')
+    if (!$('.registr_page').hasClass('socials_done')) {
+      $('html, body').animate({scrollTop: $('.registr_page__social_check').offset().top})
+      $('.item__check:not(.active)').addClass('not_done')
+      return false
+    }
   })
 })

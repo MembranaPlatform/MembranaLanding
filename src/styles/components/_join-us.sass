@@ -431,15 +431,20 @@
     &:before
       content: ''
       position: absolute
-      top: 6px
+      top: 9px
       right: 6px
       background-image: url('/static/img/pictures/register/path.svg')
-      background-size: cover
+      background-size: contain
       background-repeat: no-repeat
       opacity: 0
       bottom: 6px
       left: 6px
       transition: all ease .4s
+      cursor: pointer
+
+  .registr_page__video_block,
+  .registr_page__video_block ~ .registr_page__arrow_down
+    display: none
 
   .item__check.active:before
     opacity: 1
@@ -534,6 +539,7 @@
     display: block
     text-align: center
     padding: 24px 0
+    cursor: default
 
 
   .registr_page__btn_ar
@@ -579,8 +585,17 @@
   //     position: absolute
   //     width: 50px
   //     height: 50px
+  .not_done
+    animation: blink 2s .5s ease
+    box-sizing: border-box
+    border: 1px rgba(255, 255, 255, 0) solid
 
-.registr .page-content-pattern::after
+    @keyframes blink
+      0% 
+        border: 1px #f72854 solid
+      100%
+  
+.registration .page-content-pattern::after
   top: 100px
   bottom: auto
 
@@ -594,6 +609,7 @@
   .registr_page__btn
     background-color: #4d09d6
     opacity: 1
+    cursor: pointer
 
     &:hover
       .registr_page__btn_ar
