@@ -528,9 +528,10 @@
     background-image: url('/static/img/pictures/register/video.svg')
 
   .registr_page__btn
-    background-color: rgba(255, 255, 255, .05)
-    opacity: .5
+    // background-color: rgba(255, 255, 255, .05)
+    // opacity: .5
     width: 270px
+    background-color: #4d09d6
     margin: 0 auto
     border-radius: 34px
     text-decoration: none
@@ -539,7 +540,10 @@
     display: block
     text-align: center
     padding: 24px 0
-    cursor: default
+
+    &:hover
+      .registr_page__btn_ar
+        transform: translateX(-5px)
 
 
   .registr_page__btn_ar
@@ -605,12 +609,14 @@
     fill: #24c48e
     opacity: 1
 
-.registr_page.socials_done
-  .registr_page__btn
-    background-color: #4d09d6
-    opacity: 1
-    cursor: pointer
 
-    &:hover
-      .registr_page__btn_ar
-        transform: translateX(-5px)
+
+// .registr_page.socials_done
+  // .registr_page__btn
+  //   background-color: #4d09d6
+  //   opacity: 1
+  //   cursor: pointer
+
+  //   &:hover
+  //     .registr_page__btn_ar
+  //       transform: translateX(-5px)
