@@ -341,6 +341,7 @@ app.setPatternsSize()
     } else {
       e.preventDefault()
       const email = $email.val()
+      const trnum = $trnum.val()
       $.ajax({
         type: 'POST',
         url: '/static/php/unique_join.php',
@@ -350,22 +351,13 @@ app.setPatternsSize()
         success (data) {
           if (data.isNew) {
             window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
-              $form.submit()
+              const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+              window.location = locationnew
             })
           } else {
-            $form.submit()
+            const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+            window.location = locationnew
           }
-          $.ajax({
-            type: 'POST',
-            url: $form.attr('action'),
-            data: {
-              email: $email.val(),
-              trnum: $trnum.val()
-            },
-            success (data) {
-              // window.location.href = '/registration/'
-            }
-          })
         }
       })
     }
@@ -386,6 +378,7 @@ app.setPatternsSize()
     } else {
       e.preventDefault()
       const email = $email2.val()
+      const trnum = $trnum2.val()
       $.ajax({
         type: 'POST',
         url: '/static/php/unique_join.php',
@@ -395,22 +388,13 @@ app.setPatternsSize()
         success (data) {
           if (data.isNew) {
             window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
-              $form2.submit()
+              const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+              window.location = locationnew
             })
           } else {
-            $form2.submit()
+            const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+            window.location = locationnew
           }
-          $.ajax({
-            type: 'POST',
-            url: $form.attr('action'),
-            data: {
-              email: $email.val(),
-              trnum: $trnum.val()
-            },
-            success (data) {
-              // window.location.href = '/registration/'
-            }
-          })
         }
       })
     }
@@ -864,12 +848,42 @@ $(document).ready(function () {
       $('.registr_page').addClass('socials_done')
     }
   })
-  $('.registr_page__btn').click(function () {
+  $('.registr_page__btn').click(function (e) {
     $('.item__check').removeClass('not_done')
     if (!$('.registr_page').hasClass('socials_done')) {
       $('html, body').animate({scrollTop: $('.registr_page__social_check').offset().top})
       $('.item__check:not(.active)').addClass('not_done')
       return false
+    } else {
+      e.preventDefault()
+      const url = new URL(window.location)
+      const email = url.searchParams.get('email')
+      const trnum = url.searchParams.get('trnum')
+      const form = $('<form/>',
+        {
+          action: '/static/php/idnow.php',
+          method: 'post',
+          css: {
+            display: 'none'
+          }
+        }
+      )
+      form.append($('<input/>',
+        {
+          type: 'text',
+          name: 'email',
+          value: email
+        }
+      ))
+      form.append($('<input/>',
+        {
+          type: 'text',
+          name: 'trnum',
+          value: trnum
+        }
+      ))
+      $('body').append(form)
+      form.submit()
     }
   })
 })
