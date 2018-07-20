@@ -1,0 +1,29 @@
+.backed-wrapper.js-section
+  .patterns
+    - 
+      var path = "/static/img/patterns/vision/"
+      var list = [
+        "net.png",
+        //- "line.svg",
+        "triangle1.png"
+        //- "triangle2.png",
+        //- "triangle3.png",
+        //- "triangle4.png",
+        //- "triangle5.png",
+        //- "triangle6.png"
+      ]
+    each pattern in list
+      img.pattern(class=(pattern.split('.')[0]) src=path+pattern alt="")
+
+  .backed
+    h2.backed__tittle.title.h-text-gradient!=app.backed.title
+    .backed__wr
+      .backed__coin
+        a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
+          img(src="/static/img/pictures/backed/ld.png" alt="")
+        a(href="https://coinbargroup.com/ " target="blank").logo
+          img(src="/static/img/pictures/backed/logo_coinbar.svg" alt="")
+      .line
+      .backed__FBC
+        a(href="https://firstblock.capital/ " target="blank")
+          img(src="/static/img/pictures/backed/logo.png" alt="")
