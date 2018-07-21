@@ -620,7 +620,7 @@ $(document).ready(function () {
     $('.video_wrapper').addClass('video-on')
   }
   function videoPlayMob () {
-    $('<script>var player = new YT.Player("video_wrapper", {videoId: "zFs9AZn27HQ",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
+    $('<script>var player = new YT.Player("video_wrapper", {videoId: "_XLvCRkjZJY",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
   }
   var count = 1
   var counter = 0
