@@ -585,7 +585,20 @@ $(document).ready(function () {
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
-  $(document).on('touchend click', '.js-videoPoster, .video_wrapper', function (e) {
+  $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
+  // отменяем стандартное действие button
+    e.preventDefault()
+    var poster = $(this)
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper')
+    if ($(window).width() >= 1024) {
+      videoPlay(wrapper)
+    } else {
+      console.log('heh')
+      videoPlayMob2()
+    }
+  })
+  $(document).on('touchend click', '.registr_page__video_wr .video_wrapper', function (e) {
   // отменяем стандартное действие button
     e.preventDefault()
     var poster = $(this)
@@ -631,15 +644,16 @@ $(document).ready(function () {
     modestbranding: false,
     related: false
   })
-  player.on('started', () => {
-    if ($(window).width() < 1024) {
-      videoPlayMob()
-    }
-  })
   function videoPlayMob () {
     $('.video_wrapper').addClass('video-on')
     $('.registr_page__video_wr').addClass('video-on')
     player.load('_XLvCRkjZJY')
+    player.play()
+  }
+  function videoPlayMob2 () {
+    $('.video_wrapper').addClass('video-on')
+    $('.registr_page__video_wr').addClass('video-on')
+    player.load('zFs9AZn27HQ')
     player.play()
   }
   var count = 1

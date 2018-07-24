@@ -370,12 +370,12 @@
 
 .close_video
   display: none
-  position: fixed
+  position: absolute
   top: 50px
   right: 50px
   width: 50px
   height: 50px
-  z-index: 10000
+  // z-index: 10000
 
   span
     position: absolute
@@ -391,16 +391,16 @@
     
   
 .video_wrapper.video-on
-  // @media(min-width: 1024px)
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  background-color: black;
-  z-index: 100;
+  @media(min-width: 1024px)
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: black;
+    z-index: 100;
 
 .video-on .close_video
   display: block
