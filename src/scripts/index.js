@@ -585,7 +585,20 @@ $(document).ready(function () {
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
-  $(document).on('touchend click', '.js-videoPoster, .video_wrapper', function (e) {
+  $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
+  // отменяем стандартное действие button
+    e.preventDefault()
+    var poster = $(this)
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper')
+    if ($(window).width() >= 1024) {
+      videoPlay(wrapper)
+    } else {
+      console.log('heh')
+      videoPlayMob2()
+    }
+  })
+  $(document).on('touchend click', '.registr_page__video_wr .video_wrapper', function (e) {
   // отменяем стандартное действие button
     e.preventDefault()
     var poster = $(this)
@@ -601,9 +614,11 @@ $(document).ready(function () {
     e.preventDefault()
     e.stopPropagation()
     $('.video_wrapper').removeClass('video-on')
+    $('.registr_page__video_wr').removeClass('video-on')
     $('.js-videoIframe').attr('src', '')
     $('.js-videoWrapper').removeClass('videoWrapperActive')
     $('html, body').css('overflow', 'auto')
+    player.pause()
   })
   // var tag = document.createElement('script')
   // tag.src = 'https://www.youtube.com/iframe_api'
@@ -619,8 +634,27 @@ $(document).ready(function () {
     iframe.attr('src', src)
     $('.video_wrapper').addClass('video-on')
   }
+  // $('<script>var player = new YT.Player("video_wrapper", {videoId: "_XLvCRkjZJY",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
+  const YTPlayer = require('yt-player')
+  const player = new YTPlayer('#video_wrapper', {
+    autoplay: true,
+    controls: false,
+    info: false,
+    annotations: false,
+    modestbranding: false,
+    related: false
+  })
   function videoPlayMob () {
-    $('<script>var player = new YT.Player("video_wrapper", {videoId: "zFs9AZn27HQ",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
+    $('.video_wrapper').addClass('video-on')
+    $('.registr_page__video_wr').addClass('video-on')
+    player.load('_XLvCRkjZJY')
+    player.play()
+  }
+  function videoPlayMob2 () {
+    $('.video_wrapper').addClass('video-on')
+    $('.registr_page__video_wr').addClass('video-on')
+    player.load('zFs9AZn27HQ')
+    player.play()
   }
   var count = 1
   var counter = 0

@@ -378,6 +378,9 @@
 
     .item__block
       position: absolute;
+      display: block;
+      text-decoration: none
+      color: #ffffff
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -442,9 +445,9 @@
       transition: all ease .4s
       cursor: pointer
 
-  .registr_page__video_block,
-  .registr_page__video_block ~ .registr_page__arrow_down
-    display: none
+  // .registr_page__video_block,
+  // .registr_page__video_block ~ .registr_page__arrow_down
+  //   display: none
 
   .item__check.active:before
     opacity: 1
@@ -526,6 +529,11 @@
 
   .videoPoster
     background-image: url('/static/img/pictures/register/video.svg')
+
+  .video_wrapper:before
+    background-image: url('/static/img/pictures/backed/video.svg')
+    width: 44px
+    height: 44px
 
   .registr_page__btn
     // background-color: rgba(255, 255, 255, .05)
