@@ -100,26 +100,28 @@
     .cls-2
       clip-path: none
 
-  .backed__FBC
-    padding-left: 54px
-    padding-top: 40px
-    @media(max-width: 900px)
-      max-width: 366px
-      padding: 40px 0 0
-      float: none
-      margin: 0 auto
-      @media(max-width: 440px)
-        padding: 30px 5% 0
+  // .backed__FBC
+  //   padding-left: 54px
+  //   padding-top: 40px
+  //   @media(max-width: 900px)
+  //     max-width: 366px
+  //     padding: 40px 0 0
+  //     float: none
+  //     margin: 0 auto
+  //     @media(max-width: 440px)
+  //       padding: 30px 5% 0
 
-    a
-      width: 350px
-      
+  //   a
+  //     width: 350px
 
-  .backed__coin>*
+
+  .backed__coin>*,
+  .backed__FBC>*
     float: right
 
-  .backed__coin
-    @media(max-width: 900px)
+  .backed__coin,
+  .backed__FBC
+    @media(max-width: 810px)
       float: none
       margin: 0 auto
       overflow: hidden
@@ -136,6 +138,11 @@
         margin-top: 24px
         margin-left: 20px
         margin-right: 20px
+
+  .backed__FBC .logo
+    padding-top: 30px
+    @media(max-width: 440px)
+      padding-top: 22px
 
 .backed__tittle
   margin-bottom: 100px
