@@ -4,8 +4,6 @@ const app = window.app = {}
 
 window.$ = $
 
-// var YouTubeIframeLoader = require('youtube-iframe')
-
 /**
  * Replace svg images with inline svg
  */

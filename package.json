@@ -62,7 +62,6 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "youtube-iframe": "^1.0.3",
     "yt-player": "^3.1.0"
   },
   "engines": {
