@@ -1,7 +1,5 @@
 .vision-wrapper
-  padding: px-to-rem(113px) px-to-rem(30px) px-to-rem(140px)
-  @media(max-width: 767px)
-    padding-bottom: 0
+  padding: 0
 
 
 .vision
@@ -15,27 +13,48 @@
   &__items
     display: flex
     flex-wrap: wrap
-    margin: px-to-rem(50px) px-to-rem(-50px) px-to-rem(-40px)
+    margin: px-to-rem(20px) px-to-rem(-50px) px-to-rem(-40px)
     @media(max-width: 1023px)
       margin: px-to-rem(20px) px-to-rem(-20px) px-to-rem(-20px)
     @media(max-width: 767px)
       flex-direction: column
 
+.faq-item__answer.vision
+  margin-left: -10rem
+  @media(max-width: 1023px)
+    margin-left: -13rem
+  @media(max-width: 767px)
+    margin-left: -10rem
+
+  .vision-item__title
+    font-size: 2.3rem
+    font-weight: 500
+    color: #b1b5e5
+    text-transform: none
+
+  .vision-item__description
+    font-weight: 300
+    padding-right: 20px
+    @media(max-width: 1023px)
+      padding-right: 0
 
 .vision-item
   align-items: flex-start
   display: flex
-  padding: px-to-rem(40px) px-to-rem(50px)
-  width: 50%
-  @media(max-width: 1023px)
-    padding: px-to-rem(20px)
+  padding: px-to-rem(27px) px-to-rem(50px) px-to-rem(17px)
+  width: 100%
+  position: relative
 
-
-  @media(max-width: 767px)
-    align-items: center
-    flex-direction: column
-    text-align: center
-    width: 100%
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 150px
+    width: 105px
+    height: 1px
+    background-color: rgba(112, 112, 112, .2)
+    @media(max-width: 1023px)
+      display: none
 
 
   &__icon
@@ -47,25 +66,33 @@
     margin-right: px-to-rem(30px)
     width: px-to-rem(71px)
     @media(max-width: 767px)
-      margin: 20px 0
+      margin: 0
+
+    svg
+      width: 4rem !important
 
 
   &__title
-    color: $greenish-teal
-    font-size: px-to-rem(30px)
-    font-weight: 400
-    letter-spacing: px-to-rem(3px)
-    margin: 0 0 px-to-rem(20px)
+    color: #b1b5e5
+    // font-size: 23px
+    // line-height: 27px
+    font-weight: normal
+    // letter-spacing: px-to-rem(3px)
+    margin: 0 0 px-to-rem(8px)
     text-transform: uppercase
 
   &__description
-    color: $steel
-    font-weight: 300
+    color: #b1b5e5
+    // font-size: 18px
+    font-weight: normal
     letter-spacing: px-to-rem(.5px)
-    line-height: 1.28
+    // line-height: 21px
 
+.vision-item:last-child:after
+  display: none
 
-
+.vision-item:last-child
+  padding-bottom: 50px
 
 .backed__wr>*
   float: left
@@ -100,26 +127,28 @@
     .cls-2
       clip-path: none
 
-  .backed__FBC
-    padding-left: 54px
-    padding-top: 40px
-    @media(max-width: 900px)
-      max-width: 366px
-      padding: 40px 0 0
-      float: none
-      margin: 0 auto
-      @media(max-width: 440px)
-        padding: 30px 5% 0
+  // .backed__FBC
+  //   padding-left: 54px
+  //   padding-top: 40px
+  //   @media(max-width: 900px)
+  //     max-width: 366px
+  //     padding: 40px 0 0
+  //     float: none
+  //     margin: 0 auto
+  //     @media(max-width: 440px)
+  //       padding: 30px 5% 0
 
-    a
-      width: 350px
-      
+  //   a
+  //     width: 350px
 
-  .backed__coin>*
+
+  .backed__coin>*,
+  .backed__FBC>*
     float: right
 
-  .backed__coin
-    @media(max-width: 900px)
+  .backed__coin,
+  .backed__FBC
+    @media(max-width: 810px)
       float: none
       margin: 0 auto
       overflow: hidden
@@ -136,6 +165,11 @@
         margin-top: 24px
         margin-left: 20px
         margin-right: 20px
+
+  .backed__FBC .logo
+    padding-top: 30px
+    @media(max-width: 440px)
+      padding-top: 22px
 
 .backed__tittle
   margin-bottom: 100px

@@ -17,6 +17,10 @@ block content
 
       .faq-block
         .faq-block__list
+          .faq-item
+            .faq-item__question Presenting The Vision of Membrana Project Components
+            .faq-item__answer.vision
+              include ../components/vision
           for item in app.faq_page.items
             .faq-item
               .faq-item__question!=item.question
