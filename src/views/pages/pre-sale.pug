@@ -1,0 +1,112 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'pre-sale';
+  - var page_active = '/pre-sale/';
+
+block append head
+  block head_variables
+    - var title = app.head.competition.title;
+    - var description = app.head.competition.description;
+
+block content
+  .page-content-pattern
+
+    .pre-sale-wrapper
+      //- .patternsed
+      //-   div.patterned
+      //-     img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
+      //-     img.js-prevent-inline.triangle_4(src="/static/img/new-page/small_bg.svg" alt="")
+      //-     img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
+      //-     img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
+      //-     img.js-prevent-inline.triangle_5(src="/static/img/new-page/small_bg2.svg" alt="")
+      //-     img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")  
+
+    .pre-sale
+      .h1.title Pre-sale
+
+      .dates
+        .dates__left
+          span.dates__bold Pre-sale Dates: 
+          | 1.09 - 30.09.2018
+        .dates__right
+          span.dates__bold ICO Dates:
+          | 1.11 - 30.11.2018
+
+      .questions On all questions of cooperation and investments
+        br
+        | please address on 
+        a(href="mailto:invest@membrana.io").colored invest@membrana.io
+
+      img(src="/static/img/pictures/pre-sale/logo.png" alt="").logo
+
+      .top_description
+        .top_description__img
+          img(src="/static/img/pictures/pre-sale/token.svg" alt="").token
+          img(src="/static/img/pictures/pre-sale/corner.svg" alt="").corner
+        .top_description__text
+          span.capital MBN token 
+          | is an utility token. It is used on the platform to unlock advanced features, use Membrana external API or to pay platform commission fees. Users can pay in other currencies or fiat, but paying with MBN tokens will be significantly cheaper.
+
+      .documents_btns
+        a(href='#').documents_btns__btn One Pager
+        a(href='#').documents_btns__btn.colored Whitepaper
+        a(href='#').documents_btns__btn Business Overview
+
+      ul.list
+        li 
+          span.list__left 
+            span.text_wr Softcap
+          span.lift__right US 
+            span.lift__right-colored $2M
+        li 
+          span.list__left 
+            span.text_wr Hardcap
+          span.lift__right US 
+            span.lift__right-colored $7M
+        li 
+          span.list__left 
+            span.text_wr Token amount
+          span.lift__right
+            span.lift__right-colored 1,000,000,000
+        li 
+          span.list__left 
+            span.text_wr Crowdsale token price
+          span.lift__right
+            span.lift__right-colored $0,02
+
+      .graph_block
+        h2.graph_block__title Token distribution:
+        .js-pie-chart.pie-chart#pieChart
+
+
+
+
+
+  .pop_up-image.non_displayed
+    .close_pop_up
+    img(src="/static/img/new-page/climbing.svg" alt="")
+    a(href='#').close_pop_up_cross
+    //- .close_pop_up.close_pop_up_2
+
+
+
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js")

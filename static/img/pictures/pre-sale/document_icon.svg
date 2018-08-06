@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.033 17.542">
+    <defs>
+        <style>
+            .cls-1{fill:#c7cbfd}
+        </style>
+    </defs>
+    <g id="file" transform="translate(-6)">
+        <path id="Path_30" d="M26.6 25h-7.308a.292.292 0 0 0 0 .585H26.6a.292.292 0 0 0 0-.585z" class="cls-1" data-name="Path 30" transform="translate(-9.199 -17.691)"/>
+        <path id="Path_31" d="M19.292 17.585h2.924a.292.292 0 0 0 0-.585h-2.924a.292.292 0 0 0 0 .585z" class="cls-1" data-name="Path 31" transform="translate(-9.199 -12.03)"/>
+        <path id="Path_32" d="M26.6 33h-7.308a.292.292 0 0 0 0 .585H26.6a.292.292 0 0 0 0-.585z" class="cls-1" data-name="Path 32" transform="translate(-9.199 -23.352)"/>
+        <path id="Path_33" d="M26.6 41h-7.308a.292.292 0 0 0 0 .585H26.6a.292.292 0 0 0 0-.585z" class="cls-1" data-name="Path 33" transform="translate(-9.199 -29.013)"/>
+        <path id="Path_34" d="M26.6 49h-7.308a.292.292 0 0 0 0 .585H26.6a.292.292 0 0 0 0-.585z" class="cls-1" data-name="Path 34" transform="translate(-9.199 -34.674)"/>
+        <path id="Path_35" d="M18.571 4.264V0H6v16.08h1.462v1.462h12.571V5.726zM15.94 2.46l2.631 2.631.464.464H15.94zM6.585 15.495V.585h11.4V3.68l-2.216-2.218H7.462v14.033zm1.462 1.462V2.047h7.309V6.14h4.093v10.817z" class="cls-1" data-name="Path 35"/>
+    </g>
+</svg>

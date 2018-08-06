@@ -61,6 +61,7 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "d3": "^5.5.0",
     "jquery": "^3.3.1",
     "youtube-iframe": "^1.0.3",
     "yt-player": "^3.1.0"
