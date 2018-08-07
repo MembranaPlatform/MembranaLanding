@@ -13,6 +13,9 @@
     padding-bottom: 42px
     color: #32ba94
     text-transform: none
+    @media(max-width:767px)
+      padding-top: 90px
+      padding-bottom: 30px
 
   .dates
     display: inline-block
@@ -20,13 +23,26 @@
     font-size: 20px
     line-height: 1.15
     padding-bottom: 73px
+    @media(max-width:1023px)
+      padding: 50px
+    @media(max-width:767px)
+      padding: 8%
 
     .dates__right
       float: right
+      @media(max-width:1023px)
+        float: none
 
     .dates__left
       float: left
       margin-right: 140px
+      @media(max-width:1023px)
+        margin-right: 0
+        float: none
+        margin-bottom: 20px
+        padding-left: 20px
+        @media(max-width:767px)
+          padding-left: 0
 
       &:after
         content: '------'
@@ -36,6 +52,8 @@
         top: 50%
         transform: translateY(-50%)
         color: #525361
+        @media(max-width:1023px)
+          display: none
 
     .dates__bold
       font-weight: bold
@@ -53,6 +71,8 @@
         transform: translateY(-50%)
         background: url('/static/img/pictures/pre-sale/clock.svg') no-repeat
         background-size: contain
+        @media(max-width:767px)
+          display: none
 
   .questions
     font-size: 17px
@@ -60,6 +80,8 @@
     line-height: 1.18
     padding: 30px 0
     position: relative
+    @media(max-width:767px)
+      padding: 20px 8%
 
     .colored
       color: #32ba94
@@ -79,19 +101,25 @@
       top: auto
       bottom: 0
 
-  .logo
+  .logo_main
     width: 175.5px
     padding-top: 47.5px
     padding-bottom: 62px
+    @media(max-width:767px)
+      padding: 20px 8% 20px
 
   .top_description
     max-width: 864px
     margin: 0 auto
     padding-bottom: 104px
+    @media(max-width:767px)
+      padding-bottom: 40px
 
     .top_description__img
       position: relative
       float: left
+      @media(max-width:767px)
+        display: none
 
       .token
         width: 60px
@@ -110,17 +138,24 @@
       line-height: 1.18
       color: #d9d9d9
       text-align: left
+      @media(max-width:1023px)
+        font-size: 18px
+        padding: 0 8%
 
       .capital
         font-size: 41px
         line-height: 26px
         color: #32ba94
         font-weight: bold
+        @media(max-width:1023px)
+          font-size: 30px
 
   .documents_btns
     overflow: hidden
     padding-bottom: 231px
     position: relative
+    @media(max-width:767px)
+      padding-bottom: 40px
 
     &__btn
       text-decoration: none
@@ -132,6 +167,9 @@
       margin: 0 7px
       position: relative
       transition: all .4s ease
+      @media(max-width:767px)
+        display: block
+        margin: 10px 8%
 
       &:before
         content: ''
@@ -158,6 +196,8 @@
       left: 50%
       transform: translateX(-50%)
       background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
 
   .list
     text-align: left
@@ -166,11 +206,16 @@
     line-height: 26px
     padding-bottom: 253px
     position: relative
+    @media(max-width:767px)
+      padding: 0 8%
 
     .list__left
       display: inline-block
       min-width: 300px
       position: relative
+      @media(max-width:767px)
+        min-width: 100%
+        margin-top: 10px
 
       &:after
         content: ''
@@ -181,6 +226,8 @@
         right: 8px
         background-color: rgba(255, 255, 255, .3)
         z-index: -1
+        @media(max-width:767px)
+          display: none
 
       &:before
         content: ''
@@ -208,6 +255,8 @@
       left: 50%
       transform: translateX(-50%)
       background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
 
 
   .graph_block
@@ -216,6 +265,13 @@
     overflow: hidden
     padding-bottom: 437px
     position: relative
+    @media(max-width:1023px)
+      padding-bottom: 200px
+      @media(max-width:767px)
+        padding-bottom: 40px
+
+    path
+      transition: all ease .2s
 
     &:after
       content: ''
@@ -226,17 +282,29 @@
       left: 50%
       transform: translateX(-50%)
       background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
 
     &__title
       font-size: 47px
       padding: 20px 0
       line-height: 1.17
       background: url('/static/img/pictures/pre-sale/title_border.svg') center no-repeat
+      @media(max-width:767px)
+        background: none
+        padding: 20px 8%
+
 
     .pie-chart
       width: 452px
       float: left
       margin-left: 90px
+      @media(max-width:1023px)
+        width: 50%
+        margin-left: 3%
+        @media(max-width:767px)
+          width: 84%
+          margin: 20px 8%
 
     .desc__title
       font-size: 29px
@@ -246,6 +314,10 @@
       margin-bottom: 10px
       opacity: .5
       transition: all .4s ease
+      @media(max-width:1023px)
+        padding-left: 10%
+        @media(max-width:767px)
+          padding-left: 14%
 
       .small_text
         font-weight: normal
@@ -279,6 +351,13 @@
       width: 256px
       float: left
       text-align: left
+      @media(max-width:1023px)
+        width: 40%
+        margin-left: 3%
+        @media(max-width:767px)
+          width: 84%
+          margin: 20px 8%
+
 
       &>div:hover .desc__title
         opacity: 1
@@ -294,6 +373,13 @@
     color: rgba(255, 255, 255, .5)
     float: left
     width: 80%
+    @media(max-width:1023px)
+      width: 100%
+      padding-left: 8%
+
+    .desc__title
+      @media(max-width:767px)
+        padding-left: 0
 
     .percents_block
       padding: 28px 30px
@@ -301,12 +387,17 @@
       list-style: none
       font-size: 19px
       line-height: 1.16
+      @media(max-width:767px)
+        background: none
+        padding: 20px 0
 
       .left__part
         display: inline-block
         max-width: 380px
         width: 100%
         position: relative
+        @media(max-width:767px)
+          padding-top: 10px
 
         &:after
           content: ''
@@ -317,6 +408,8 @@
           right: 20px
           background-color: rgba(255, 255, 255, .3)
           z-index: -1
+          @media(max-width:767px)
+            display: none
 
         &_text
           background-color: #27283a
@@ -350,6 +443,8 @@
     font-weight: normal
     padding: 19px 35px
     background: url('/static/img/pictures/pre-sale/title2_border.svg') center no-repeat
+    @media(max-width:767px)
+      background: none
 
   .discounts
     list-style: none
@@ -358,6 +453,10 @@
     margin: 0 auto 46px
     padding-bottom: 87px
     position: relative
+    @media(max-width:767px)
+      width: 84%
+      margin: 20px 8%
+      padding-bottom: 20px
 
     &:after
       content: ''
@@ -369,6 +468,8 @@
       transform: translateX(-50%)
       background-color: rgba(112, 112, 112, .5)
       z-index: -1
+      @media(max-width:767px)
+        display: none
 
     &__percents
       font-size: 93px
@@ -378,6 +479,12 @@
       top: 50%
       transform: translateY(-50%)
       position: absolute
+      @media(max-width:767px)
+        font-size: 40px
+        right: auto
+        left: 0
+        @media(max-width:375px)
+          font-size: 24px
 
     &__money
       font-size: 25px
@@ -388,6 +495,8 @@
       padding-bottom: 42px
       text-align: center
       border: solid 4px #2e2f40
+      @media(max-width:375px)
+        width: 210px
 
     .colored
       color: #32ba94
@@ -405,6 +514,8 @@
     position: relative
     padding-bottom: 320px
     display: inline-block
+    @media(max-width:767px)
+      padding-bottom: 40px
 
     .colored
       color: #32ba94
@@ -418,10 +529,14 @@
       left: 50%
       transform: translateX(-50%)
       background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
 
   .lane_gr_cont
     position: relative
     padding-bottom: 228px
+    @media(max-width:767px)
+      padding-bottom: 40px
 
     &:after
       content: ''
@@ -432,6 +547,8 @@
       left: 50%
       transform: translateX(-50%)
       background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
 
     &__title
       font-size: 34px
@@ -439,6 +556,9 @@
       font-weight: 500
       margin: 0 0 66px
       background: url('/static/img/pictures/pre-sale/title3_border.svg') center no-repeat
+      @media(max-width:767px)
+        background: none
+        margin-bottom: 40px
 
     &__btn_wr
       display: inline-block
@@ -529,12 +649,22 @@
       .form_section__title_cont
         padding: 0 228px
         background-color: #27283a
+        @media(max-width:1023px)
+          padding: 0 8%
+          display: block
+          @media(max-width:375px)
+            font-size: 40px
 
     .document_links_wr
       width: 430px
       margin: 0 auto
       position: relative
       padding-bottom: 47px
+      @media(max-width:767px)
+        width: 84%
+        margin: 20px 8%
+        padding-bottom: 20px
+
 
       &:after
         content: ''
@@ -546,6 +676,8 @@
         transform: translateX(-50%)
         background-color: rgba(112, 112, 112, .2)
         z-index: -1
+        @media(max-width:767px)
+          display: none
 
     .form_section__doc_link
       color: #c7cbfd
@@ -556,6 +688,12 @@
       text-align: left
       margin-bottom: 16px
       position: relative
+      transition: all ease .4s
+      @media(max-width:767px)
+        width: 100%
+
+      &:hover
+        opacity: .5
 
       svg
         width: 29px
@@ -574,9 +712,15 @@
       text-align: left
       width: 430px
       margin: 0 auto
+      @media(max-width:767px)
+        width: 84%
+        margin: 20px 8%
 
       .bold
         font-weight: 500
+
+      .thin
+        font-size: 13px
 
       .form__text
         display: block
@@ -602,9 +746,12 @@
         .form__inline
           display: inline-block
           margin-right: 16px
+          @media(max-width:767px)
+            width: 100%;
+            padding: 5px 0;
 
         .form__check_input
-          margin-right: 11px
+          margin-right: 21px
 
         .drpdwn_menu
           display: none
@@ -621,5 +768,101 @@
             padding: 16px 0 0 20px
             background-color: rgba(255, 255, 255, .05)
             border-radius: 10px
+            cursor: pointer
+
+            &:after
+              content: ''
+              position: absolute
+              width: 10px
+              height: 5px
+              bottom: 21px
+              left: 76px
+              background: url('/static/img/pictures/pre-sale/arrow_down.svg') no-repeat
+
+        input
+          &:focus
+            outline: none 
+
+        
+
+      .sm-form-btn
+        background-color: #4d09d6
+        border-radius: 34px
+        width: 230px
+        padding-left: 16%
+        @media(max-width:767px)
+          padding-left: 22%
+
+        svg
+          filter: none
+
+        .cls-1
+          opacity: 1
+
+      .form__check_label
+        position: relative
+        cursor: pointer
+        padding: 3px 0
+
+        .custom_input
+          position: absolute
+          top: 0
+          left: 0
+          height: 23px
+          width: 23px
+          border-radius: 50%
+          background-color: #323344
+
+          &:after
+            content: ''
+            position: absolute
+            display: none
+            left: 50%
+            top: 50%
+            background-color: #32ba94
+            width: 13px
+            height: 13px
+            border-radius: 50%
+            transform: translateX(-50%) translateY(-50%)
+
+        input
+          // position: absolute
+          opacity: 0       
+
+          &:checked ~ .custom_input
+            // background-color: red
+
+            &:after
+              display: block
+
+      .me_understand
+        padding-left: 60px
+        display: block
+        margin-bottom: 90px
+
+        .custom_input
+          border-radius: 0
+          top: 4px
+
+          &:after
+            border-radius: 0
+            background: url('/static/img/pictures/pre-sale/check.svg') no-repeat
+            width: 18px
+            height: 14px
+
+        input
+          margin-left: -60px
+          margin-right: 48px !important
+
+      option
+        color: #000000
+
+      select
+        font-size: 13px
+
+        &:focus
+            outline: none 
+
+
 
       
