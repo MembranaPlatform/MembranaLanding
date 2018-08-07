@@ -169,6 +169,97 @@ block content
             .lane_gr__item(data-number="3")
             .lane_gr__item(data-number="4")
 
+      .form_section
+        h2.form_section__title 
+          span.form_section__title_cont Interested in contributing?
+        .document_links_wr
+          a(href="#" target="blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Deck.pdf
+          a(href="#" target="blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Idication of Interest.pdf
+          a(href="#" target="blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Summary.pdf
+          a(href="#" target="blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Terms & Conditions.pdf
+        form.pre_sale_form
+          .form_grp
+            label(for="name").form__text Full 
+              span.bold Name
+            input(name="name" placeholder="Type Your Full Name Here...").text_input
+          .form_grp
+            label(for="mail").form__text Your 
+              span.bold Email
+            input(name="mail" placeholder="Type Your Email Here...").text_input
+          .form_grp
+            p.form__text Are you an accredited 
+              span.bold investor:
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="accredited" id="accredited_yes" value="1" checked="checked").form__check_input 
+                | Yes
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="accredited" id="accredited_no" value="0").form__check_input
+                | No
+          .form_grp
+            p.form__text What type of entity do you 
+              span.bold represent:
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="individual" value="individual" checked="checked").form__check_input 
+                | Individual
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="syndicate" value="syndicate").form__check_input
+                | Syndicate
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="fund" value="fund").form__check_input
+                | Professional Fund
+          .form_grp
+            label(for="sum").form__text Desired  
+              span.bold Allocation:
+            .input_grp
+              input(name="sum" placeholder="25000...").text_input
+              .input_grp__btn
+                a.change_money USD
+                .drpdwn_menu
+                  .drpdwn_menu__item USD
+                  .drpdwn_menu__item ETH
+                  .drpdwn_menu__item BTC
+          .form_grp
+            label(for="citizenship").form__text.bold Citizenship :
+            select(name="citizenship").citizenship.text_input
+              option(value="EH") Western Sahara
+              option(value="YE") Yemen
+              option(value="ZM") Zambia
+              option(value="ZW") Zimbabwe
+          .form_grp
+            label(for="name").form__text 
+              span.bold ETH 
+              | or 
+              span.bold BTC 
+              | address you plan to send from? 
+              span.thin (optional):
+            input(name="name" placeholder="Ox...").text_input
+          .form_grp
+            label(for="name").form__text 
+              span.bold Anything else 
+              | we should know? 
+              span.thin (optional):
+            input(name="name").text_input
+          .form_grp
+            p.form__text.bold Important notice:
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="individual" value="individual").form__check_input 
+                | I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.
+          button.form__btn Submit
+
 
 
 
