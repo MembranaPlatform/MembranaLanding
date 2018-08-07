@@ -589,6 +589,13 @@ $(document).ready(function () {
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
+  // lane graph
+  $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
+    $('.lane_gr_cont__btn').eq($(this).data('number')).addClass('colored')
+    $('.lane_gr__item').eq($(this).data('number')).addClass('colored')
+  }, function () {
+    $('.lane_gr_cont__btn, .lane_gr__item').removeClass('colored')
+  })
   // pie chart
   var script4 = document.createElement('script')
   script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'
