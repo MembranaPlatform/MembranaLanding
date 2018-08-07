@@ -1,3 +1,6 @@
+.pre-sale .page-content-pattern::after
+  display: none
+
 .pre-sale
   text-align: center
   font-weight: normal
@@ -208,9 +211,213 @@
 
 
   .graph_block
+    max-width: 800px
+    margin: 0 auto
+    overflow: hidden
+    padding-bottom: 437px
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 120px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
 
     &__title
       font-size: 47px
       padding: 20px 0
       line-height: 1.17
       background: url('/static/img/pictures/pre-sale/title_border.svg') center no-repeat
+
+    .pie-chart
+      width: 452px
+      float: left
+      margin-left: 90px
+
+    .desc__title
+      font-size: 29px
+      line-height: 1.17
+      font-weight: 500
+      position: relative
+      margin-bottom: 10px
+      opacity: .5
+      transition: all .4s ease
+
+      .small_text
+        font-weight: normal
+        line-height: 1.13
+        font-size: 16px
+        // opacity: .5
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        margin-left: 9px
+        transition: all .4s ease
+
+    .bordered_block
+      text-align: center
+      font-size: 23px
+      line-height: 1.17
+      padding: 22px 0 30px
+      margin-bottom: 26px
+      transition: all .4s ease
+      color: rgba(255, 255, 255, .5)
+      background: url('/static/img/pictures/pre-sale/percent_border.svg') center no-repeat
+
+    .small
+      padding-top: 44px
+      padding-bottom: 36px
+
+    .bold
+      font-weight: 500
+
+    .graph__desc_vert
+      width: 256px
+      float: left
+      text-align: left
+
+      &>div:hover .desc__title
+        opacity: 1
+
+      &>div:hover .bordered_block
+        color: #ffffff
+
+      &>div:hover .small_text
+        opacity: .5
+
+  .graph__desc_hor
+    text-align: left
+    color: rgba(255, 255, 255, .5)
+    float: left
+    width: 80%
+
+    .percents_block
+      padding: 28px 30px
+      background: url('/static/img/pictures/pre-sale/percents_border.svg') no-repeat
+      list-style: none
+      font-size: 19px
+      line-height: 1.16
+
+      .left__part
+        display: inline-block
+        max-width: 380px
+        width: 100%
+        position: relative
+
+        &:after
+          content: ''
+          position: absolute
+          width: 280px
+          height: 1px
+          bottom: 6px
+          right: 20px
+          background-color: rgba(255, 255, 255, .3)
+          z-index: -1
+
+        &_text
+          background-color: #27283a
+          padding-right: 8px
+
+      .right__part
+        color: #32ba94
+        opacity: .5
+        transition: all .4s ease
+
+      .non_colored
+        color: rgba(255, 255, 255, .5)
+        font-size: 14px
+        line-height: 22px
+        transition: all .4s ease
+
+    .percents_block__string
+      transition: all .4s ease
+
+    .percents_block__string:hover
+      color: #ffffff
+
+      .right__part
+        opacity: 1
+
+      .non_colored
+        opacity: .5
+
+  .discounts__title
+    font-size: 34px
+    font-weight: normal
+    padding: 19px 35px
+    background: url('/static/img/pictures/pre-sale/title2_border.svg') center no-repeat
+
+  .discounts
+    list-style: none
+    width: 470px
+    padding: 0
+    margin: 0 auto 46px
+    padding-bottom: 87px
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      width: 110px
+      height: 1px
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: rgba(112, 112, 112, .5)
+      z-index: -1
+
+    &__percents
+      font-size: 93px
+      opacity: .8
+      text-align: right
+      right: 60%
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+
+    &__money
+      font-size: 25px
+      line-height: 1.16
+      display: inline-block
+      width: 250px
+      padding-top: 32px
+      padding-bottom: 42px
+      text-align: center
+      border: solid 4px #2e2f40
+
+    .colored
+      color: #32ba94
+      font-size: 25px
+      font-weight: bold
+
+    .discount
+      text-align: right
+      margin-bottom: 20px
+      position: relative
+
+  .no_disc
+    font-size: 22px
+    font-weight: 500
+    position: relative
+    padding-bottom: 320px
+    display: inline-block
+
+    .colored
+      color: #32ba94
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 140px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+
+
+      

@@ -6,7 +6,7 @@ const app = window.app = {}
 window.$ = $
 
 // var d3 = require('d3')
-var d3 = Object.assign({}, require('d3-format'), require('d3-geo'))
+// var d3 = Object.assign({}, require('d3-format'), require('d3-geo'))
 
 // var YouTubeIframeLoader = require('youtube-iframe')
 
@@ -594,108 +594,109 @@ $(document).ready(function () {
   script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'
   document.body.appendChild(script4)
   script4.onload = function () {
-    var datasPie = [
-      { 'label': 'Label1', 'number': '150', 'color': '#8BC34A' },
-      { 'label': 'Label4', 'number': '150', 'color': '#8BC34A' },
-      { 'label': 'Label5', 'number': '150', 'color': '#8BC34A' },
-      { 'label': 'Label2', 'number': '30', 'color': '#CDDC39' },
-      { 'label': 'Label3', 'number': '80', 'color': '#FFEB3B' }
-    ]
-    console.log(d3)
+    $('<script>var datasPie = [  {"label":"Label1","number":"40","color":"#32ba94" },  {"label":"Label4","number":"20","color":"#32ba94" },  {"label":"Label5","number":"8.5","color":"#32ba94" },  {"label":"Label2","number":"10","color":"#32ba94" },  {"label":"Label3","number":"17.5","color":"#32ba94" },  {"label":"Label9","number":"4","color":"#32ba94" }];drawPie(datasPie);console.log(d3);function drawPie(data) {  var $container = $(".js-pie-chart"),      width = 452,      height = width,      r = width/2,      ir = r/128,      pi = Math.PI;  var pie = d3.layout.pie();      pie.padAngle(.02)        .sort(null)        .value(function (d) {            return d.number;        })        .startAngle(-270 * (pi / 180))        .endAngle(90 * (pi / 180));  var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5),      arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir);  var object = d3.select("#pieChart").append("object")      .attr("width","100%")      .attr("height","auto")      .style("display", "block")      .style("position", "relative")      .style("padding-top", height+"px");  var vis = object.append("svg")              .data([data])                  .attr("width", "100%")                  .attr("height", "100%")                  .attr("viewBox","0 0 "+width +" "+height )                  .attr("preserveAspectRatio","xMinYMin")                  .style("position","absolute")                  .style("top","0")                  .style("left","0")                  .append("g")                    .attr("transform", "translate(" + r + "," + r + ")");  var arcs = vis.selectAll("g.slice")      .data(pie)      .enter()      .append("g")      .attr("class", "slice");  arcs.on("mouseover", function (d) {      })      .on("mouseout", function (d) {      });  arcs      .append("path")          .attr("fill", "#3e4053")          .attr("d", arc)          .on("mouseover", function (d, i) {              d3.select(this)                  .transition()                  .duration(500)                  .attr("fill", data[i].color)                  .attr("d", arcHover);          })          .on("mouseout", function (d) {              d3.select(this)                  .transition()                  .duration(500)                  .attr("fill", "#3e4053")                  .attr("d", arc);          });$(".graph__desc1").on("mouseover", function () {$($(".slice path")[0]).attr("fill", "#32ba94")}).on("mouseout", function (){$($(".slice path")[0]).attr("fill", "#3e4053")});$(".graph__desc2").on("mouseover", function () {$($(".slice path")[1]).attr("fill", "#32ba94")}).on("mouseout", function (){$($(".slice path")[1]).attr("fill", "#3e4053")})}</script>').appendTo(document.body)
+  //   var datasPie = [
+  //     { 'label': 'Label1', 'number': '150', 'color': '#8BC34A' },
+  //     { 'label': 'Label4', 'number': '150', 'color': '#8BC34A' },
+  //     { 'label': 'Label5', 'number': '150', 'color': '#8BC34A' },
+  //     { 'label': 'Label2', 'number': '30', 'color': '#CDDC39' },
+  //     { 'label': 'Label3', 'number': '80', 'color': '#FFEB3B' }
+  //   ]
+  //   console.log(d3)
 
-    drawPie(datasPie)
+  //   drawPie(datasPie)
 
-    function drawPie (data) {
-      /* ------------ initialization/calculation ------------- */
-      /* ----------------------------------------------------- */
-      var $container = $('.js-pie-chart')
-      var width = $container.width()
-      var height = width
-      var r = width / 2
-      var ir = r / 128
-      var pi = Math.PI
+  //   function drawPie (data) {
+  //     /* ------------ initialization/calculation ------------- */
+  //     /* ----------------------------------------------------- */
+  //     var $container = $('.js-pie-chart')
+  //     var width = $container.width()
+  //     var height = width
+  //     var r = width / 2
+  //     var ir = r / 128
+  //     var pi = Math.PI
 
-      // pie structure
-      var pie = d3.layout.pie()
-      pie.padAngle(0.02)
-        .sort(null)
-        .value(function (d) {
-          return d.number
-        })
-        .startAngle(-270 * (pi / 180))
-        .endAngle(90 * (pi / 180))
+  //     // pie structure
+  //     var pie = d3.layout.pie()
+  //     pie.padAngle(0.02)
+  //       .sort(null)
+  //       .value(function (d) {
+  //         return d.number
+  //       })
+  //       .startAngle(-270 * (pi / 180))
+  //       .endAngle(90 * (pi / 180))
 
-      // tooltip div, content dynamically changed
-      // var tip = d3.tip()
-      //     .attr('class', 'd3-tip')
-      //     .offset([-10, -10])
-      //     .html(function (d) {
-      //         return '<p class="d3-tip__label">' + d.data.label + '</p><p>' + d.data.number + '</p>';
-      //     });
-      var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5)
-      var arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir)
+  //     // tooltip div, content dynamically changed
+  //     // var tip = d3.tip()
+  //     //     .attr('class', 'd3-tip')
+  //     //     .offset([-10, -10])
+  //     //     .html(function (d) {
+  //     //         return '<p class="d3-tip__label">' + d.data.label + '</p><p>' + d.data.number + '</p>';
+  //     //     });
+  //     var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5)
+  //     var arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir)
 
-      /* ------------------ drawing ------------------------- */
-      /* ----------------------------------------------------- */
-      // draw svg element
-      var object = d3.select('#pieChart').append('object')
-        .attr('width', '100%')
-        .attr('height', 'auto')
-        .style('display', 'block')
-        .style('position', 'relative')
-        .style('padding-top', height + 'px')
+  //     /* ------------------ drawing ------------------------- */
+  //     /* ----------------------------------------------------- */
+  //     // draw svg element
+  //     var object = d3.select('#pieChart').append('object')
+  //       .attr('width', '100%')
+  //       .attr('height', 'auto')
+  //       .style('display', 'block')
+  //       .style('position', 'relative')
+  //       .style('padding-top', height + 'px')
 
-      var vis = object.append('svg')
-        .data([data])
-        .attr('width', '100%')
-        .attr('height', '100%')
-        .attr('viewBox', '0 0 ' + width + ' ' + height)
-        .attr('preserveAspectRatio', 'xMinYMin')
-        .style('position', 'absolute')
-        .style('top', '0')
-        .style('left', '0')
-        .append('g')
-        .attr('transform', 'translate(' + r + ',' + r + ')')
+  //     var vis = object.append('svg')
+  //       .data([data])
+  //       .attr('width', '100%')
+  //       .attr('height', '100%')
+  //       .attr('viewBox', '0 0 ' + width + ' ' + height)
+  //       .attr('preserveAspectRatio', 'xMinYMin')
+  //       .style('position', 'absolute')
+  //       .style('top', '0')
+  //       .style('left', '0')
+  //       .append('g')
+  //       .attr('transform', 'translate(' + r + ',' + r + ')')
 
-      // init tooltips
-      // vis.call(tip);
+  //     // init tooltips
+  //     // vis.call(tip);
 
-      // draw slices
-      var arcs = vis.selectAll('g.slice')
-        .data(pie)
-        .enter()
-        .append('g')
-        .attr('class', 'slice')
+  //     // draw slices
+  //     var arcs = vis.selectAll('g.slice')
+  //       .data(pie)
+  //       .enter()
+  //       .append('g')
+  //       .attr('class', 'slice')
 
-      arcs.on('mouseover', function (d) {
-        // tip.show(d);
-        // $('.d3-tip').addClass('is-active');
-      })
-        .on('mouseout', function (d) {
-        // tip.hide(d);
-        // $('.d3-tip').removeClass('is-active');
-        })
+  //     arcs.on('mouseover', function (d) {
+  //       // tip.show(d);
+  //       // $('.d3-tip').addClass('is-active');
+  //     })
+  //       .on('mouseout', function (d) {
+  //       // tip.hide(d);
+  //       // $('.d3-tip').removeClass('is-active');
+  //       })
 
-      // draw arcs
-      arcs
-        .append('path')
-        .attr('fill', '#00796B')
-        .attr('d', arc)
-        .on('mouseover', function (d, i) {
-          d3.select(this)
-            .transition()
-            .duration(500)
-            .attr('fill', data[i].color)
-            .attr('d', arcHover)
-        })
-        .on('mouseout', function (d) {
-          d3.select(this)
-            .transition()
-            .duration(500)
-            .attr('fill', '#00796B')
-            .attr('d', arc)
-        })
-    }
+  //     // draw arcs
+  //     arcs
+  //       .append('path')
+  //       .attr('fill', '#00796B')
+  //       .attr('d', arc)
+  //       .on('mouseover', function (d, i) {
+  //         d3.select(this)
+  //           .transition()
+  //           .duration(500)
+  //           .attr('fill', data[i].color)
+  //           .attr('d', arcHover)
+  //       })
+  //       .on('mouseout', function (d) {
+  //         d3.select(this)
+  //           .transition()
+  //           .duration(500)
+  //           .attr('fill', '#00796B')
+  //           .attr('d', arc)
+  //       })
+  //   }
   }
   //
   $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
