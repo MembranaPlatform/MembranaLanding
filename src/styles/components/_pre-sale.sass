@@ -360,15 +360,15 @@
           margin: 20px 8%
 
 
-      &>div:hover .desc__title
+      &>div:hover .desc__title,
       &>div.hovered .desc__title
         opacity: 1
 
-      &>div:hover .bordered_block
+      &>div:hover .bordered_block,
       &>div.hovered .bordered_block
         color: #ffffff
 
-      &>div:hover .small_text
+      &>div:hover .small_text,
       &>div.hovered .small_text
         opacity: .5
 
@@ -380,6 +380,7 @@
     @media(max-width:1023px)
       width: 100%
       padding-left: 8%
+      padding-right: 8%
 
     .desc__title
       @media(max-width:767px)
@@ -433,7 +434,7 @@
     .percents_block__string
       transition: all .4s ease
 
-    .percents_block__string:hover
+    .percents_block__string:hover,
     .percents_block__string.hovered
       color: #ffffff
 
@@ -747,11 +748,16 @@
           border: none
           padding-left: 16px
           color: rgba(255, 255, 255, .4)
+          padding-top: 4px
 
           &::placeholder
             color: rgba(255, 255, 255, .2)
             font-size: 13px
+            line-height: normal
             // padding-left: 16px
+
+          &::-webkit-input-placeholder
+            line-height: normal
 
         .form__inline
           display: inline-block
@@ -771,7 +777,7 @@
           cursor: pointer
           position: absolute
           margin-top: 6px
-          padding: 4px 0 0 20px
+          padding: 4px 0 6px 20px
           left: 0
           width: 100%
           z-index: 10
@@ -811,11 +817,12 @@
         display: none
         position: absolute
         width: 100%
-        background-color: #383a4c
+        background-color: #323444
         z-index: 1
         top: 100px
         height: 320px
         overflow-Y: scroll
+        border-radius: 0 0 10px 10px
 
         &.opened
           display: block
@@ -833,7 +840,7 @@
         &.showed
           color: rgba(255, 255, 255, .2)
           font-size: 13px
-          padding-top: 16px
+          padding-top: 20px
       
       .citizenship_label
         position: relative
@@ -937,9 +944,12 @@
           margin-left: -60px
           margin-right: 48px !important
 
-      option
+      .option
         // color: #000000
         cursor: pointer
+        padding-left: 15px
+        color: #c7cbfd;
+        line-height: 24px
 
       select
         font-size: 13px

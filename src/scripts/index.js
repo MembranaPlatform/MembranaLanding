@@ -608,10 +608,9 @@ $(document).ready(function () {
     $('.change_money').text(whatMoney).attr('data-money', whatMoney)
     $('.what_money').val(whatMoney)
   })
-  $('.pre_sale_form option').click(function (e) {
-    var country = $(this).val()
+  $('.pre_sale_form .option').click(function (e) {
+    var country = $(this).data('value')
     var countryName = $(this).text()
-    console.log()
     $('.citizenship.text_input.showed').text(countryName)
     $('.citizenship.hidden').val(country)
   })
