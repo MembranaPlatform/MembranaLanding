@@ -583,6 +583,8 @@
       color: #ffffff
       font-size: 19px
       transition: all ease .4s
+      @media(max-width: 1023px)
+        margin: 2px
 
       &:first-child
         margin-left: 0
@@ -748,7 +750,8 @@
           border: none
           padding-left: 16px
           color: rgba(255, 255, 255, .4)
-          padding-top: 4px
+          // padding-top: 4px
+          font-size: 13px
 
           &::placeholder
             color: rgba(255, 255, 255, .2)
@@ -756,8 +759,8 @@
             line-height: normal
             // padding-left: 16px
 
-          &::-webkit-input-placeholder
-            line-height: normal
+          // &::-webkit-input-placeholder
+          //   line-height: normal
 
         .form__inline
           display: inline-block
@@ -781,6 +784,7 @@
           left: 0
           width: 100%
           z-index: 10
+          line-height: 30px
 
 
           &.opened
@@ -819,7 +823,7 @@
         width: 100%
         background-color: #323444
         z-index: 1
-        top: 100px
+        top: 106px
         height: 320px
         overflow-Y: scroll
         border-radius: 0 0 10px 10px
@@ -840,7 +844,7 @@
         &.showed
           color: rgba(255, 255, 255, .2)
           font-size: 13px
-          padding-top: 20px
+          padding-top: 17px
       
       .citizenship_label
         position: relative
@@ -942,7 +946,7 @@
 
         input
           margin-left: -60px
-          margin-right: 48px !important
+          margin-right: 46px !important
 
       .option
         // color: #000000
@@ -950,6 +954,9 @@
         padding-left: 15px
         color: #c7cbfd;
         line-height: 24px
+        font-size: 13px
+        @media(max-width:1023px)
+          line-height: 30px
 
       select
         font-size: 13px
@@ -957,6 +964,86 @@
         &:focus
             outline: none 
 
+  .patterned
+
+    .block1,
+    .block2
+      position: relative
+      z-index: -5
+      @media(max-width:1023px)
+        display: none
+
+    .block1
+      top: 600px
+
+    .block2
+      top: 2850px
+
+    img
+      position: absolute
+      width: 30px
+      height: 30px
+
+    .triangle_1
+      left: 150px
+      top: 120px
+
+    .triangle_2
+      top: 180px
+      transform: rotate(90deg)
+      left: 190px
+
+    .triangle_5
+      top: 200px
+
+    .triangle_3
+      top: 400px
+      width: 130px
+      height: 130px
+      left: 15%
+
+    .triangle_4
+      top: 0
+      right: 14%
+      width: 100px
+      height: 80px
+      // transform: scaleY(-1)
+
+    .triangle_7
+      top: 100px
+      right: 12%
+
+    .triangle_8
+      top: 360px
+      width: 30px
+      left: 12%
+
+    .triangle_6,
+    .triangle_66
+      width: 1200px
+      height: 400px
+      right: -30%
+      top: 950px
+      @media(max-width:1440px)
+        right: -80%
+        display: none
+
+    .triangle_66
+      top: 4000px
+      right: auto
+      left: -30%
+
+    .triangle_21
+      width: 30px
+      right: 20%
+      top: 2000px
+
+
+    .triangle_22
+      width: 130px
+      height: 100px
+      top: 2100px
+      right: 13%
 
 
       
