@@ -73,14 +73,14 @@ block content
           span.list__left 
             span.text_wr Crowdsale token price
           span.lift__right
-            span.lift__right-colored $0,02
+            span.lift__right-colored $0,015
 
       .graph_block
         h2.graph_block__title Token distribution:
         .graph__desc_vert
           .graph__desc1
             .desc__title 40% 
-              span.small_text Lock-up 1-6 month
+              span.small_text 1 month lockup for bonus
             .bordered_block Tokens
               br
               | available
@@ -113,40 +113,51 @@ block content
                 span.non_colored Lock up to 3 month
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text Community Events
+                span.left__part_text Community Airdrop
               span.right__part 4%
 
       .discounts_block
         h2.discounts__title Presale discounts
         ul.discounts
           li.discount
-            span.discounts__percents 5%
-            span.discounts__money from 
-              span.colored $10,000 
-              br 
-              | to 
-              span.colored $50,000
+            span.discounts__percents 0%
+            span.discounts__money  to 
+              span.colored $15,000
           li.discount
-            span.discounts__percents 10%
+            span.discounts__percents 20%
             span.discounts__money from 
-              span.colored $50,001 
+              span.colored $15,001 
               br 
               | to 
-              span.colored $100,000
-          li.discount
-            span.discounts__percents 15%
-            span.discounts__money from 
-              span.colored $100,001  
-              br 
-              | to 
-              span.colored $500,000
+              span.colored $30,000
           li.discount
             span.discounts__percents 25%
             span.discounts__money from 
-              span.colored $500,001 
+              span.colored $30,001  
+              br 
+              | to 
+              span.colored $75,000
+          li.discount
+            span.discounts__percents 30%
+            span.discounts__money from 
+              span.colored $75,001 
+              br 
+              | to 
+              span.colored $150,000
+          li.discount
+            span.discounts__percents 35%
+            span.discounts__money from 
+              span.colored $150,001  
+              br 
+              | to 
+              span.colored $300,000
+          li.discount
+            span.discounts__percents 40%
+            span.discounts__money from 
+              span.colored $300,001 
 
       span.no_disc *Public Sale 
-        span.colored NOdiscount
+        span.colored No Bonuses
 
       .lane_gr_cont
         h2.lane_gr_cont__title Distribution of funds collected
@@ -155,9 +166,9 @@ block content
             a(href="#" data-number="0").lane_gr_cont__btn Product Development 
               span.bold - 30%
             a(href="#" data-number="1").lane_gr_cont__btn Marketing 
-              span.bold - 30%
+              span.bold - 20%
             a(href="#" data-number="2").lane_gr_cont__btn Exchange listings 
-              span.bold - 25%
+              span.bold - 35%
             a(href="#" data-number="3").lane_gr_cont__btn Legal 
               span.bold - 10%
             a(href="#" data-number="4").lane_gr_cont__btn Customer Events 
@@ -189,11 +200,11 @@ block content
           .form_grp
             label(for="name").form__text Full 
               span.bold Name
-            input(name="name" placeholder="Type Your Full Name Here...").text_input
+            input(name="name" placeholder="Type Your Full Name Here..." autocomplete="off").text_input
           .form_grp
             label(for="mail").form__text Your 
               span.bold Email
-            input(name="mail" placeholder="Type Your Email Here...").text_input
+            input(name="mail" placeholder="Type Your Email Here..." autocomplete="off").text_input
           .form_grp
             p.form__text Are you an accredited 
               span.bold investor:
@@ -229,17 +240,21 @@ block content
             label(for="sum").form__text Desired  
               span.bold Allocation:
             .input_grp
-              input(name="sum" placeholder="25000...").text_input
+              input(name="sum" placeholder="25000..." autocomplete="off").text_input
               .input_grp__btn
-                a.change_money USD
+                a.change_money(data-money="USD") USD
                 .drpdwn_menu
-                  .drpdwn_menu__item USD
-                  .drpdwn_menu__item ETH
-                  .drpdwn_menu__item BTC
+                  .drpdwn_menu__item(data-money="USD") USD
+                  .drpdwn_menu__item(data-money="ETH") ETH
+                  .drpdwn_menu__item(data-money="BTC") BTC
           .form_grp
-            label(for="citizenship").form__text.bold Citizenship :
-            select(name="citizenship").citizenship.text_input
-              option(value="NO") Chose...
+            label(for="citizenship").form__text.citizenship_label
+              span.bold Citizenship :
+            //- select(name="citizenship").citizenship.text_input
+            input(name="citizenship" autocomplete="off").citizenship.text_input.hidden
+            .citizenship.text_input.showed Chose...
+            .hidden_opt
+              //- option(value="NO") Chose...
               option(value="AF") Afghanistan
               option(value="AX") Åland Islands
               option(value="AL") Albania
@@ -490,19 +505,20 @@ block content
               option(value="ZM") Zambia
               option(value="ZW") Zimbabwe
           .form_grp
-            label(for="name").form__text 
+            label(for="adress").form__text 
               span.bold ETH 
               | or 
               span.bold BTC 
               | address you plan to send from? 
               span.thin (optional):
-            input(name="name" placeholder="Ox...").text_input
+            input(name="adress" placeholder="Ox..." autocomplete="off").text_input
           .form_grp
-            label(for="name").form__text 
+            label(for="addInfo").form__text 
               span.bold Anything else 
               | we should know? 
               span.thin (optional):
-            input(name="name").text_input
+            input(name="addInfo" autocomplete="off").text_input
+            input(name="whatMoney" value="USD" autocomplete="off").text_input.what_money.hidden
           .form_grp
             p.form__text.bold Important notice:
             .form__inline

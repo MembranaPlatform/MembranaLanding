@@ -305,6 +305,7 @@
         @media(max-width:767px)
           width: 84%
           margin: 20px 8%
+          display: none
 
     .desc__title
       font-size: 29px
@@ -360,12 +361,15 @@
 
 
       &>div:hover .desc__title
+      &>div.hovered .desc__title
         opacity: 1
 
       &>div:hover .bordered_block
+      &>div.hovered .bordered_block
         color: #ffffff
 
       &>div:hover .small_text
+      &>div.hovered .small_text
         opacity: .5
 
   .graph__desc_hor
@@ -430,6 +434,7 @@
       transition: all .4s ease
 
     .percents_block__string:hover
+    .percents_block__string.hovered
       color: #ffffff
 
       .right__part
@@ -482,7 +487,8 @@
       @media(max-width:767px)
         font-size: 40px
         right: auto
-        left: 0
+        left: 10%
+        transform: translateX(-50%) translateY(-50%)
         @media(max-width:375px)
           font-size: 24px
 
@@ -611,10 +617,10 @@
           width: 29%
 
         &:nth-child(2)
-          width: 29%
+          width: 20%
 
         &:nth-child(3)
-          width: 25%
+          width: 34%
 
         &:nth-child(4)
           width: 10%
@@ -704,6 +710,7 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
+        left: 70px
 
     .pre_sale_form
       color: #c7cbfd
@@ -718,6 +725,9 @@
 
       .bold
         font-weight: 500
+
+        &.alert
+          border-bottom: 2px solid red
 
       .thin
         font-size: 13px
@@ -755,6 +765,20 @@
 
         .drpdwn_menu
           display: none
+          // background-color: rgba(255, 255, 255, .05)
+          background-color: #383a4c
+          border-radius: 0 0 10px 10px 
+          cursor: pointer
+          position: absolute
+          margin-top: 6px
+          padding: 4px 0 0 20px
+          left: 0
+          width: 100%
+          z-index: 10
+
+
+          &.opened
+            display: block
 
         .input_grp
           position: relative
@@ -782,7 +806,46 @@
         input
           &:focus
             outline: none 
+      
+      .hidden_opt
+        display: none
+        position: absolute
+        width: 100%
+        background-color: #383a4c
+        z-index: 1
+        top: 100px
+        height: 320px
+        overflow-Y: scroll
 
+        &.opened
+          display: block
+
+      .hidden
+        position: absolute
+        opacity: 0
+        z-index: -10
+        height: 0
+        width: 0
+
+      .citizenship
+        cursor: pointer
+
+        &.showed
+          color: rgba(255, 255, 255, .2)
+          font-size: 13px
+          padding-top: 16px
+      
+      .citizenship_label
+        position: relative
+
+        &:after
+          content: ''
+          position: absolute
+          width: 10px
+          height: 5px
+          right: 10px
+          bottom: -27px
+          background: url('/static/img/pictures/pre-sale/arrow_down.svg') no-repeat
         
 
       .sm-form-btn
@@ -790,8 +853,12 @@
         border-radius: 34px
         width: 230px
         padding-left: 16%
+        transition: all ease .4s
         @media(max-width:767px)
           padding-left: 22%
+
+        .sm-form-btn__text
+          transition: all ease .4s
 
         svg
           filter: none
@@ -799,6 +866,19 @@
         .cls-1
           opacity: 1
 
+        &:hover
+          opacity: .9
+
+          svg
+            transform: translateX(-5px)
+
+          .sm-form-btn__text
+            transform: translateX(5px)
+
+      .sm-form__submit
+        @media(max-width:767px)
+          text-align: center
+  
       .form__check_label
         position: relative
         cursor: pointer
@@ -844,6 +924,9 @@
           border-radius: 0
           top: 4px
 
+          &.alert
+            border: 2px solid red
+
           &:after
             border-radius: 0
             background: url('/static/img/pictures/pre-sale/check.svg') no-repeat
@@ -855,7 +938,8 @@
           margin-right: 48px !important
 
       option
-        color: #000000
+        // color: #000000
+        cursor: pointer
 
       select
         font-size: 13px
