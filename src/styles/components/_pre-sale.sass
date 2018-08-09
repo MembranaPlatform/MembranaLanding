@@ -1,0 +1,1066 @@
+.pre-sale .page-content-pattern::after
+  display: none
+
+.pre-sale
+  text-align: center
+  font-weight: normal
+  color: #ffffff
+
+  .title
+    font-size: 52px
+    line-height: 61px
+    padding-top: 153px
+    padding-bottom: 42px
+    color: #32ba94
+    text-transform: none
+    @media(max-width:767px)
+      padding-top: 90px
+      padding-bottom: 30px
+
+  .dates
+    display: inline-block
+    margin: 0 auto
+    font-size: 20px
+    line-height: 1.15
+    padding-bottom: 73px
+    @media(max-width:1023px)
+      padding: 50px
+    @media(max-width:767px)
+      padding: 8%
+
+    .dates__right
+      float: right
+      @media(max-width:1023px)
+        float: none
+
+    .dates__left
+      float: left
+      margin-right: 140px
+      @media(max-width:1023px)
+        margin-right: 0
+        float: none
+        margin-bottom: 20px
+        padding-left: 20px
+        @media(max-width:767px)
+          padding-left: 0
+
+      &:after
+        content: '------'
+        position: absolute
+        // width: 53px
+        right: -86px
+        top: 50%
+        transform: translateY(-50%)
+        color: #525361
+        @media(max-width:1023px)
+          display: none
+
+    .dates__bold
+      font-weight: bold
+
+    &>*
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        left: -24px
+        width: 15px
+        height: 15px
+        top: 50%
+        transform: translateY(-50%)
+        background: url('/static/img/pictures/pre-sale/clock.svg') no-repeat
+        background-size: contain
+        @media(max-width:767px)
+          display: none
+
+  .questions
+    font-size: 17px
+    opacity: .7
+    line-height: 1.18
+    padding: 30px 0
+    position: relative
+    @media(max-width:767px)
+      padding: 20px 8%
+
+    .colored
+      color: #32ba94
+
+    &:after,
+    &:before
+      content: ''
+      position: absolute
+      width: 320px
+      height: 1px
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: rgba(112, 112, 112, .3)
+
+    &:after
+      top: auto
+      bottom: 0
+
+  .logo_main
+    width: 175.5px
+    padding-top: 47.5px
+    padding-bottom: 62px
+    @media(max-width:767px)
+      padding: 20px 8% 20px
+
+  .top_description
+    max-width: 864px
+    margin: 0 auto
+    padding-bottom: 104px
+    @media(max-width:767px)
+      padding-bottom: 40px
+
+    .top_description__img
+      position: relative
+      float: left
+      @media(max-width:767px)
+        display: none
+
+      .token
+        width: 60px
+        margin: 0 30px 34px 36px
+
+      .cls-2
+        fill: #32ba94;
+        opacity: 1
+
+
+      .corner
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 50px
+        height: 50px
+
+    .top_description__text
+      font-size: 22px
+      line-height: 1.18
+      color: #d9d9d9
+      text-align: left
+      @media(max-width:1023px)
+        font-size: 18px
+        padding: 0 8%
+
+      .capital
+        font-size: 41px
+        line-height: 26px
+        color: #32ba94
+        font-weight: bold
+        @media(max-width:1023px)
+          font-size: 30px
+
+  .documents_btns
+    overflow: hidden
+    padding-bottom: 231px
+    position: relative
+    @media(max-width:767px)
+      padding-bottom: 40px
+
+    &__btn
+      text-decoration: none
+      color: #c7cbfd
+      border-radius: 30px
+      background-color: rgba(255, 255, 255, .1)
+      padding: 20px 28px 20px 56px
+      display: inline-block
+      margin: 0 7px
+      position: relative
+      transition: all .4s ease
+      @media(max-width:767px)
+        display: block
+        margin: 10px 8%
+
+      &:before
+        content: ''
+        position: absolute
+        width: 14px
+        height: 18px
+        left: 30px
+        top: 50%
+        transform: translateY(-50%)
+        background: url('/static/img/pictures/pre-sale/document_icon.svg') no-repeat
+
+      &:hover
+        opacity: .6
+
+    .colored
+      background-color: #4d09d6
+  
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 74px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
+
+  .list
+    text-align: left
+    display: inline-block
+    font-size: 22px
+    line-height: 26px
+    padding-bottom: 253px
+    position: relative
+    @media(max-width:767px)
+      padding: 0 8%
+
+    .list__left
+      display: inline-block
+      min-width: 300px
+      position: relative
+      @media(max-width:767px)
+        min-width: 100%
+        margin-top: 10px
+
+      &:after
+        content: ''
+        position: absolute
+        width: 280px
+        height: 1px
+        bottom: 10px
+        right: 8px
+        background-color: rgba(255, 255, 255, .3)
+        z-index: -1
+        @media(max-width:767px)
+          display: none
+
+      &:before
+        content: ''
+        position: absolute
+        width: 7px
+        height: 12px
+        left: -16px
+        top: 50%
+        transform: translateY(-50%)
+        background: url('/static/img/pictures/pre-sale/arrow.svg') no-repeat
+
+    .lift__right-colored
+      color: #32ba94
+
+    .text_wr
+      background-color: #27283a
+      padding-right: 8px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 72px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
+
+
+  .graph_block
+    max-width: 800px
+    margin: 0 auto
+    overflow: hidden
+    padding-bottom: 437px
+    position: relative
+    @media(max-width:1023px)
+      padding-bottom: 200px
+      @media(max-width:767px)
+        padding-bottom: 40px
+
+    path
+      transition: all ease .2s
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 120px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
+
+    &__title
+      font-size: 47px
+      padding: 20px 0
+      line-height: 1.17
+      background: url('/static/img/pictures/pre-sale/title_border.svg') center no-repeat
+      @media(max-width:767px)
+        background: none
+        padding: 20px 8%
+
+
+    .pie-chart
+      width: 452px
+      float: left
+      margin-left: 90px
+      @media(max-width:1023px)
+        width: 50%
+        margin-left: 3%
+        @media(max-width:767px)
+          width: 84%
+          margin: 20px 8%
+          display: none
+
+    .desc__title
+      font-size: 29px
+      line-height: 1.17
+      font-weight: 500
+      position: relative
+      margin-bottom: 10px
+      opacity: .5
+      transition: all .4s ease
+      @media(max-width:1023px)
+        padding-left: 10%
+        @media(max-width:767px)
+          padding-left: 14%
+
+      .small_text
+        font-weight: normal
+        line-height: 1.13
+        font-size: 16px
+        // opacity: .5
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        margin-left: 9px
+        transition: all .4s ease
+
+    .bordered_block
+      text-align: center
+      font-size: 23px
+      line-height: 1.17
+      padding: 22px 0 30px
+      margin-bottom: 26px
+      transition: all .4s ease
+      color: rgba(255, 255, 255, .5)
+      background: url('/static/img/pictures/pre-sale/percent_border.svg') center no-repeat
+
+    .small
+      padding-top: 44px
+      padding-bottom: 36px
+
+    .bold
+      font-weight: 500
+
+    .graph__desc_vert
+      width: 256px
+      float: left
+      text-align: left
+      @media(max-width:1023px)
+        width: 40%
+        margin-left: 3%
+        @media(max-width:767px)
+          width: 84%
+          margin: 20px 8%
+
+
+      &>div:hover .desc__title,
+      &>div.hovered .desc__title
+        opacity: 1
+
+      &>div:hover .bordered_block,
+      &>div.hovered .bordered_block
+        color: #ffffff
+
+      &>div:hover .small_text,
+      &>div.hovered .small_text
+        opacity: .5
+
+  .graph__desc_hor
+    text-align: left
+    color: rgba(255, 255, 255, .5)
+    float: left
+    width: 80%
+    @media(max-width:1023px)
+      width: 100%
+      padding-left: 8%
+      padding-right: 8%
+
+    .desc__title
+      @media(max-width:767px)
+        padding-left: 0
+
+    .percents_block
+      padding: 28px 30px
+      background: url('/static/img/pictures/pre-sale/percents_border.svg') no-repeat
+      list-style: none
+      font-size: 19px
+      line-height: 1.16
+      @media(max-width:767px)
+        background: none
+        padding: 20px 0
+
+      .left__part
+        display: inline-block
+        max-width: 380px
+        width: 100%
+        position: relative
+        @media(max-width:767px)
+          padding-top: 10px
+
+        &:after
+          content: ''
+          position: absolute
+          width: 280px
+          height: 1px
+          bottom: 6px
+          right: 20px
+          background-color: rgba(255, 255, 255, .3)
+          z-index: -1
+          @media(max-width:767px)
+            display: none
+
+        &_text
+          background-color: #27283a
+          padding-right: 8px
+
+      .right__part
+        color: #32ba94
+        opacity: .5
+        transition: all .4s ease
+
+      .non_colored
+        color: rgba(255, 255, 255, .5)
+        font-size: 14px
+        line-height: 22px
+        transition: all .4s ease
+
+    .percents_block__string
+      transition: all .4s ease
+
+    .percents_block__string:hover,
+    .percents_block__string.hovered
+      color: #ffffff
+
+      .right__part
+        opacity: 1
+
+      .non_colored
+        opacity: .5
+
+  .discounts__title
+    font-size: 34px
+    font-weight: normal
+    padding: 19px 35px
+    background: url('/static/img/pictures/pre-sale/title2_border.svg') center no-repeat
+    @media(max-width:767px)
+      background: none
+
+  .discounts
+    list-style: none
+    width: 470px
+    padding: 0
+    margin: 0 auto 46px
+    padding-bottom: 87px
+    position: relative
+    @media(max-width:767px)
+      width: 84%
+      margin: 20px 8%
+      padding-bottom: 20px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 110px
+      height: 1px
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: rgba(112, 112, 112, .5)
+      z-index: -1
+      @media(max-width:767px)
+        display: none
+
+    &__percents
+      font-size: 93px
+      opacity: .8
+      text-align: right
+      right: 60%
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+      @media(max-width:767px)
+        font-size: 40px
+        right: auto
+        left: 10%
+        transform: translateX(-50%) translateY(-50%)
+        @media(max-width:375px)
+          font-size: 24px
+
+    &__money
+      font-size: 25px
+      line-height: 1.16
+      display: inline-block
+      width: 250px
+      padding-top: 32px
+      padding-bottom: 42px
+      text-align: center
+      border: solid 4px #2e2f40
+      @media(max-width:375px)
+        width: 210px
+
+    &__description
+      font-size: 22px
+      line-height: 1.18
+      color: #d9d9d9
+      padding-bottom: 50px
+      padding-top: 20px
+
+    .colored
+      color: #32ba94
+      font-size: 25px
+      font-weight: bold
+
+    .discount
+      text-align: right
+      margin-bottom: 20px
+      position: relative
+
+  .capital
+    font-size: 41px
+    line-height: 26px
+    color: #32ba94
+    font-weight: bold
+
+  .no_disc
+    font-size: 22px
+    font-weight: 500
+    position: relative
+    padding-bottom: 320px
+    display: inline-block
+    @media(max-width:767px)
+      padding-bottom: 40px
+
+    .colored
+      color: #32ba94
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 140px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
+
+  .lane_gr_cont
+    position: relative
+    padding-bottom: 228px
+    @media(max-width:767px)
+      padding-bottom: 40px
+
+    &:after
+      content: ''
+      position: absolute
+      width: 63px
+      height: 75px
+      bottom: 70px
+      left: 50%
+      transform: translateX(-50%)
+      background: url('/static/img/pictures/pre-sale/separator.svg') no-repeat
+      @media(max-width:767px)
+        display: none
+
+    &__title
+      font-size: 34px
+      padding: 18px 28px
+      font-weight: 500
+      margin: 0 0 66px
+      background: url('/static/img/pictures/pre-sale/title3_border.svg') center no-repeat
+      @media(max-width:767px)
+        background: none
+        margin-bottom: 40px
+
+    &__btn_wr
+      display: inline-block
+      margin-bottom: 26px
+
+    &__wr
+      display: inline-block
+
+    &__btn
+      padding: 10px 18px
+      display: inline-block
+      border: solid 1px rgba(112, 112, 112, .5)
+      margin-left: 14px
+      text-decoration: none
+      color: #ffffff
+      font-size: 19px
+      transition: all ease .4s
+      @media(max-width: 1023px)
+        margin: 2px
+
+      &:first-child
+        margin-left: 0
+
+      &:hover
+        background-color: #32ba94
+        border-color: #32ba94
+        color: #000000
+
+    .colored
+      background-color: #32ba94
+      border-color: #32ba94
+      color: #000000
+
+    .bold
+      font-weight: 500
+
+    .lane_gr
+      height: 60px
+      text-align: left
+
+      &__item
+        margin-left: .5%
+        background-color: #3e4053
+        height: 100%
+        width: 15%
+        display: inline-block
+        cursor: pointer
+        transition: all ease .4s
+
+        &:first-child
+          margin-left: 0
+          width: 29%
+
+        &:nth-child(2)
+          width: 20%
+
+        &:nth-child(3)
+          width: 34%
+
+        &:nth-child(4)
+          width: 10%
+
+        &:nth-child(5)
+          width: 5%
+
+        &:hover
+          background-color: #32ba94
+
+      .colored
+        background-color: #32ba94
+
+  .form_section
+
+    .form_section__title
+      font-size: 60px
+      font-weight: normal
+      position: relative
+      margin: 0 0 73px
+
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 3px
+        bottom: 30px
+        left: 0
+        background-color: #32ba94
+        z-index: -1
+
+      .form_section__title_cont
+        padding: 0 228px
+        background-color: #27283a
+        @media(max-width:1023px)
+          padding: 0 8%
+          display: block
+          @media(max-width:375px)
+            font-size: 40px
+
+    .document_links_wr
+      width: 430px
+      margin: 0 auto
+      position: relative
+      padding-bottom: 47px
+      @media(max-width:767px)
+        width: 84%
+        margin: 20px 8%
+        padding-bottom: 20px
+
+
+      &:after
+        content: ''
+        position: absolute
+        width: 160px
+        height: 1px
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: rgba(112, 112, 112, .2)
+        z-index: -1
+        @media(max-width:767px)
+          display: none
+
+    .form_section__doc_link
+      color: #c7cbfd
+      font-size: 15px
+      text-decoration: underline
+      display: inline-block
+      width: 50%
+      text-align: left
+      margin-bottom: 16px
+      position: relative
+      transition: all ease .4s
+      @media(max-width:767px)
+        width: 100%
+
+      &:hover
+        opacity: .5
+
+      svg
+        width: 29px
+        display: inline-block
+        margin-right: 25px
+
+      .link__text
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 70px
+
+    .pre_sale_form
+      color: #c7cbfd
+      font-size: 17px
+      line-height: 1.18
+      text-align: left
+      width: 430px
+      margin: 0 auto
+      @media(max-width:767px)
+        width: 84%
+        margin: 20px 8%
+
+      .bold
+        font-weight: 500
+
+        &.alert
+          border-bottom: 2px solid red
+
+      .thin
+        font-size: 13px
+
+      .form__text
+        display: block
+        padding: 36px 0 10px
+
+      .form_grp
+        position: relative
+
+        .text_input
+          width: 100%
+          background-color: rgba(255, 255, 255, .05)
+          border-radius: 10px
+          height: 48px
+          border: none
+          padding-left: 16px
+          color: rgba(255, 255, 255, .4)
+          // padding-top: 4px
+          font-size: 13px
+
+          &::placeholder
+            color: rgba(255, 255, 255, .2)
+            font-size: 13px
+            line-height: normal
+            // padding-left: 16px
+
+          // &::-webkit-input-placeholder
+          //   line-height: normal
+
+        .form__inline
+          display: inline-block
+          margin-right: 16px
+          @media(max-width:767px)
+            width: 100%;
+            padding: 5px 0;
+
+        .form__check_input
+          margin-right: 21px
+
+        .drpdwn_menu
+          display: none
+          // background-color: rgba(255, 255, 255, .05)
+          background-color: #383a4c
+          border-radius: 0 0 10px 10px 
+          cursor: pointer
+          position: absolute
+          margin-top: 6px
+          padding: 4px 0 6px 20px
+          left: 0
+          width: 100%
+          z-index: 10
+          line-height: 30px
+
+
+          &.opened
+            display: block
+
+        .input_grp
+          position: relative
+
+          &__btn
+            position: absolute
+            right: 0
+            top: 0
+            width: 96px
+            height: 100%
+            padding: 16px 0 0 20px
+            background-color: rgba(255, 255, 255, .05)
+            border-radius: 10px
+            cursor: pointer
+
+            &:after
+              content: ''
+              position: absolute
+              width: 10px
+              height: 5px
+              bottom: 21px
+              left: 76px
+              background: url('/static/img/pictures/pre-sale/arrow_down.svg') no-repeat
+
+        input
+          &:focus
+            outline: none 
+      
+      .hidden_opt
+        display: none
+        position: absolute
+        width: 100%
+        background-color: #323444
+        z-index: 1
+        top: 106px
+        height: 320px
+        overflow-Y: scroll
+        border-radius: 0 0 10px 10px
+
+        &.opened
+          display: block
+
+      .hidden
+        position: absolute
+        opacity: 0
+        z-index: -10
+        height: 0
+        width: 0
+
+      .citizenship
+        cursor: pointer
+
+        &.showed
+          color: rgba(255, 255, 255, .2)
+          font-size: 13px
+          padding-top: 17px
+      
+      .citizenship_label
+        position: relative
+
+        &:after
+          content: ''
+          position: absolute
+          width: 10px
+          height: 5px
+          right: 10px
+          bottom: -27px
+          background: url('/static/img/pictures/pre-sale/arrow_down.svg') no-repeat
+        
+
+      .sm-form-btn
+        background-color: #4d09d6
+        border-radius: 34px
+        width: 230px
+        padding-left: 16%
+        transition: all ease .4s
+        @media(max-width:767px)
+          padding-left: 22%
+
+        .sm-form-btn__text
+          transition: all ease .4s
+
+        svg
+          filter: none
+
+        .cls-1
+          opacity: 1
+
+        &:hover
+          opacity: .9
+
+          svg
+            transform: translateX(-5px)
+
+          .sm-form-btn__text
+            transform: translateX(5px)
+
+      .sm-form__submit
+        @media(max-width:767px)
+          text-align: center
+  
+      .form__check_label
+        position: relative
+        cursor: pointer
+        padding: 3px 0
+
+        .custom_input
+          position: absolute
+          top: 0
+          left: 0
+          height: 23px
+          width: 23px
+          border-radius: 50%
+          background-color: #323344
+
+          &:after
+            content: ''
+            position: absolute
+            display: none
+            left: 50%
+            top: 50%
+            background-color: #32ba94
+            width: 13px
+            height: 13px
+            border-radius: 50%
+            transform: translateX(-50%) translateY(-50%)
+
+        input
+          // position: absolute
+          opacity: 0       
+
+          &:checked ~ .custom_input
+            // background-color: red
+
+            &:after
+              display: block
+
+      .me_understand
+        padding-left: 60px
+        display: block
+        margin-bottom: 90px
+
+        .custom_input
+          border-radius: 0
+          top: 4px
+
+          &.alert
+            border: 2px solid red
+
+          &:after
+            border-radius: 0
+            background: url('/static/img/pictures/pre-sale/check.svg') no-repeat
+            width: 18px
+            height: 14px
+
+        input
+          margin-left: -60px
+          margin-right: 46px !important
+
+      .option
+        // color: #000000
+        cursor: pointer
+        padding-left: 15px
+        color: #c7cbfd;
+        line-height: 24px
+        font-size: 13px
+        @media(max-width:1023px)
+          line-height: 30px
+
+      select
+        font-size: 13px
+
+        &:focus
+            outline: none 
+
+  .patterned
+
+    .block1,
+    .block2
+      position: relative
+      z-index: -5
+      @media(max-width:1023px)
+        display: none
+
+    .block1
+      top: 600px
+
+    .block2
+      top: 2850px
+
+    img
+      position: absolute
+      width: 30px
+      height: 30px
+
+    .triangle_1
+      left: 150px
+      top: 120px
+
+    .triangle_2
+      top: 180px
+      transform: rotate(90deg)
+      left: 190px
+
+    .triangle_5
+      top: 200px
+
+    .triangle_3
+      top: 400px
+      width: 130px
+      height: 130px
+      left: 15%
+
+    .triangle_4
+      top: 0
+      right: 14%
+      width: 100px
+      height: 80px
+      // transform: scaleY(-1)
+
+    .triangle_7
+      top: 100px
+      right: 12%
+
+    .triangle_8
+      top: 360px
+      width: 30px
+      left: 12%
+
+    .triangle_6,
+    .triangle_66
+      width: 1200px
+      height: 400px
+      right: -30%
+      top: 950px
+      @media(max-width:1440px)
+        right: -80%
+        display: none
+
+    .triangle_66
+      top: 4000px
+      right: auto
+      left: -30%
+
+    .triangle_21
+      width: 30px
+      right: 20%
+      top: 2000px
+
+
+    .triangle_22
+      width: 130px
+      height: 100px
+      top: 2100px
+      right: 13%
+
+
+      

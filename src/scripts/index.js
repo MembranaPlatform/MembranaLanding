@@ -1,4 +1,5 @@
 import $ from 'jquery'
+// import * as d3 from 'd3'
 
 const app = window.app = {}
 
@@ -583,6 +584,90 @@ $(document).ready(function () {
       $(this).css('background-image', 'url(' + curImage + ')')
     }
   })
+  // form
+  $(document).click(function () {
+    $('.drpdwn_menu').removeClass('opened')
+    $('.hidden_opt').removeClass('opened')
+  })
+  $('.input_grp__btn').click(function (e) {
+    e.stopPropagation()
+    $('.drpdwn_menu').toggleClass('opened')
+  })
+  $('.citizenship').click(function (e) {
+    e.stopPropagation()
+    $('.hidden_opt').toggleClass('opened')
+    return false
+  })
+  $('.drpdwn_menu__item').click(function (e) {
+    var whatMoney = $(this).data('money')
+    $('.change_money').text(whatMoney).attr('data-money', whatMoney)
+    $('.what_money').val(whatMoney)
+  })
+  $('.pre_sale_form .option').click(function (e) {
+    var country = $(this).data('value')
+    var countryName = $(this).text()
+    $('.citizenship.text_input.showed').text(countryName)
+    $('.citizenship.hidden').val(country)
+  })
+  $('.pre_sale_form .sm-form-btn').click(function (e) {
+    // e.preventDefault()
+    $('.bold').removeClass('alert')
+    $('.me_understand .custom_input').removeClass('alert')
+    var formData = $('.pre_sale_form').serializeArray()
+    var whatMoney = $('.change_money').data('money')
+    formData[4].money = whatMoney
+    var boolCounter = true
+    if (!formData[9]) {
+      boolCounter = false
+      $('.me_understand .custom_input').addClass('alert')
+    }
+    if (!formData[0].value) {
+      $('.form_grp:nth-child(1) .bold').addClass('alert')
+      boolCounter = false
+    }
+    if (!formData[1].value) {
+      $('.form_grp:nth-child(2) .bold').addClass('alert')
+      boolCounter = false
+    }
+    if (!formData[4].value) {
+      $('.form_grp:nth-child(5) .bold').addClass('alert')
+      boolCounter = false
+    }
+    if (!formData[5].value) {
+      $('.form_grp:nth-child(6) .bold').addClass('alert')
+      boolCounter = false
+    }
+    if (!boolCounter) return false
+  })
+  // lane graph
+  $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
+    $('.lane_gr_cont__btn').eq($(this).data('number')).addClass('colored')
+    $('.lane_gr__item').eq($(this).data('number')).addClass('colored')
+  }, function () {
+    $('.lane_gr_cont__btn, .lane_gr__item').removeClass('colored')
+  })
+  $('.lane_gr_cont__btn').click(function () {
+    return false
+  })
+  // pie chart
+  var script4 = document.createElement('script')
+  script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'
+  document.body.appendChild(script4)
+  script4.onload = function () {
+    $('<script>var datasPie = [  {"label":"Label1","number":"40","color":"#32ba94" },  {"label":"Label4","number":"20","color":"#32ba94" },  {"label":"Label5","number":"8.5","color":"#32ba94" },  {"label":"Label2","number":"10","color":"#32ba94" },  {"label":"Label3","number":"17.5","color":"#32ba94" },  {"label":"Label9","number":"4","color":"#32ba94" }];drawPie(datasPie);console.log(d3);function drawPie(data) {  var $container = $(".js-pie-chart"),      width = 452,      height = width,      r = width/2,      ir = r/32,      pi = Math.PI;  var pie = d3.layout.pie();      pie.padAngle(.02)        .sort(null)        .value(function (d) {            return d.number;        })        .startAngle(-270 * (pi / 180))        .endAngle(90 * (pi / 180));  var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5),      arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir - 5);  var object = d3.select("#pieChart").append("object")      .attr("width","100%")      .attr("height","auto")      .style("display", "block")      .style("position", "relative")      .style("padding-top", height+"px");  var vis = object.append("svg")              .data([data])                  .attr("width", "100%")                  .attr("height", "100%")                  .attr("viewBox","0 0 "+width +" "+height )                  .attr("preserveAspectRatio","xMinYMin")                  .style("position","absolute")                  .style("top","0")                  .style("left","0")                  .append("g")                    .attr("transform", "translate(" + r + "," + r + ")");  var arcs = vis.selectAll("g.slice")      .data(pie)      .enter()      .append("g")      .attr("class", "slice");  arcs.on("mouseover", function (d) {      })      .on("mouseout", function (d) {      });  arcs      .append("path")          .attr("fill", "#3e4053")          .attr("d", arc)          .on("mouseover", function (d, i) {              d3.select(this)                   .attr("fill", data[i].color)                  .attr("d", arcHover);          })          .on("mouseout", function (d) {              d3.select(this)                                 .attr("fill", "#3e4053")                  .attr("d", arc);          });$(".graph__desc1").on("mouseover", function () {$($(".slice path")[0]).attr("fill", "#32ba94")}).on("mouseout", function (){$($(".slice path")[0]).attr("fill", "#3e4053")});$(".graph__desc2").on("mouseover", function () {$($(".slice path")[1]).attr("fill", "#32ba94")}).on("mouseout", function (){$($(".slice path")[1]).attr("fill", "#3e4053")});$(".percents_block__string").on("mouseover", function () {var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#32ba94")}).on("mouseout", function (){var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#3e4053")});}</script>').appendTo(document.body)
+    for (var k = 0; k < $('.slice').length; k++) {
+      var p = k - 2
+      $('.slice').eq(k).attr('data-hover', '.percents_block__string:eq(' + p + ')')
+    }
+    for (var i = 0; i < 2; i++) {
+      var c = i + 1
+      $('.slice').eq(i).attr('data-hover', '.graph__desc' + c)
+    }
+    $('.slice').hover(function () {
+      var dataHover = $(this).data('hover')
+      $(dataHover).toggleClass('hovered')
+    })
+  }
   $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
   // отменяем стандартное действие button
     e.preventDefault()

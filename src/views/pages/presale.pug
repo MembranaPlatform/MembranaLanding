@@ -1,0 +1,585 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'pre-sale';
+  - var page_active = '/pre-sale/';
+
+block append head
+  block head_variables
+    - var title = app.head.competition.title;
+    - var description = app.head.competition.description;
+
+block content
+  .page-content-pattern
+
+    .pre-sale-wrapper
+      .patternsed
+        div.patterned
+          .block1
+            img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+            img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
+            //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
+            img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+          .block2
+            img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+            img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+            img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
+            //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
+            img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+          img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
+          img.js-prevent-inline.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+          img.js-prevent-inline.triangle_22(src="/static/img/new-page/mid_bg2.svg" alt="")
+          img.js-prevent-inline.triangle_21(src="/static/img/new-page/small_bg.svg" alt="")
+
+    .pre-sale
+      .h1.title Presale
+
+      .dates
+        .dates__left
+          span.dates__bold Presale Dates: 
+          | 1.09 - 30.09.2018
+        .dates__right
+          span.dates__bold ICO Dates:
+          | 1.11 - 30.11.2018
+
+      .questions On all questions of cooperation and investments
+        br
+        | please address on 
+        a(href="mailto:invest@membrana.io").colored invest@membrana.io
+
+      img(src="/static/img/pictures/pre-sale/logo.png" alt="").logo_main
+
+      .top_description
+        .top_description__img
+          img(src="/static/img/pictures/pre-sale/token.svg" alt="").token
+          img(src="/static/img/pictures/pre-sale/corner.svg" alt="").corner
+        .top_description__text
+          span.capital MBN token 
+          | is an utility token. It is used on the platform to unlock advanced features, use Membrana external API or to pay platform commission fees. Users can pay in other currencies or fiat, but paying with MBN tokens will be significantly cheaper.
+
+      .documents_btns
+        a(href="/static/pdf/updated/Membrana_One_Pager.pdf" target="_blank").documents_btns__btn One Pager
+        a(href="/static/pdf/updated/Membrana_Whitepaper_ENG.pdf" target="_blank").documents_btns__btn.colored Whitepaper
+        a(href="/static/pdf/updated/Business_Overview.pdf" target="_blank").documents_btns__btn Business Overview
+
+      ul.list
+        li 
+          span.list__left 
+            span.text_wr Softcap
+          span.lift__right US 
+            span.lift__right-colored $3M
+        li 
+          span.list__left 
+            span.text_wr Hardcap
+          span.lift__right US 
+            span.lift__right-colored $8M
+        li 
+          span.list__left 
+            span.text_wr Token amount
+          span.lift__right
+            span.lift__right-colored 1,000,000,000
+        li 
+          span.list__left 
+            span.text_wr Crowdsale token price
+          span.lift__right
+            span.lift__right-colored $0,015
+
+      .graph_block
+        h2.graph_block__title Token distribution:
+        .graph__desc_vert
+          .graph__desc1
+            .desc__title 40% 
+              span.small_text 1 month lockup for bonus
+            .bordered_block Tokens
+              br
+              | available
+              br
+              span.bold for Presale
+          .graph__desc2
+            .desc__title 20% 
+              span.small_text Not lock up
+            .bordered_block.small Reserved
+              br
+              span.bold for Public Sale
+        .js-pie-chart.pie-chart#pieChart
+        .graph__desc_hor
+          .desc__title Reserved for distribution to
+          ul.percents_block
+            li(data-number="2").percents_block__string 
+              span.left__part
+                span.left__part_text Private Sale Investors
+              span.right__part 8,5% 
+                span.non_colored Lock up to 6 month
+            li(data-number="3").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana Advisors and Partners
+              span.right__part 10% 
+                span.non_colored Lock up to 3 month
+            li(data-number="4").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana team
+              span.right__part 17,5% 
+                span.non_colored Lock up to 3 month
+            li(data-number="5").percents_block__string 
+              span.left__part
+                span.left__part_text Community Airdrop
+              span.right__part 4%
+
+      .discounts_block
+        h2.discounts__title Presale bonuses
+        .discounts__description
+          span.capital 30% 
+          | for all presale contributions
+          br
+          | Additional bonus from the purchase amount:
+        ul.discounts
+          li.discount
+            span.discounts__percents 0%
+            span.discounts__money  to 
+              span.colored $15,000
+          li.discount
+            span.discounts__percents 20%
+            span.discounts__money from 
+              span.colored $15,001 
+              br 
+              | to 
+              span.colored $30,000
+          li.discount
+            span.discounts__percents 25%
+            span.discounts__money from 
+              span.colored $30,001  
+              br 
+              | to 
+              span.colored $75,000
+          li.discount
+            span.discounts__percents 30%
+            span.discounts__money from 
+              span.colored $75,001 
+              br 
+              | to 
+              span.colored $150,000
+          li.discount
+            span.discounts__percents 35%
+            span.discounts__money from 
+              span.colored $150,001  
+              br 
+              | to 
+              span.colored $300,000
+          li.discount
+            span.discounts__percents 40%
+            span.discounts__money from 
+              span.colored $300,001 
+
+      span.no_disc *Public Sale 
+        span.colored No Bonuses
+
+      .lane_gr_cont
+        h2.lane_gr_cont__title Distribution of funds collected
+        .lane_gr_cont__wr
+          .lane_gr_cont__btn_wr
+            a(href="#" data-number="0").lane_gr_cont__btn Product Development 
+              span.bold - 30%
+            a(href="#" data-number="1").lane_gr_cont__btn Marketing 
+              span.bold - 20%
+            a(href="#" data-number="2").lane_gr_cont__btn Exchange listings 
+              span.bold - 35%
+            a(href="#" data-number="3").lane_gr_cont__btn Legal 
+              span.bold - 10%
+            a(href="#" data-number="4").lane_gr_cont__btn Customer Events 
+              span.bold - 5%
+          .lane_gr_cont__graph.lane_gr
+            .lane_gr__item(data-number="0")
+            .lane_gr__item(data-number="1")
+            .lane_gr__item(data-number="2")
+            .lane_gr__item(data-number="3")
+            .lane_gr__item(data-number="4")
+
+      .form_section
+        h2.form_section__title 
+          span.form_section__title_cont Interested in contributing?
+        .document_links_wr
+          a(href="/static/pdf/updated/Membrana_Investor_Deck.pdf" target="_blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Deck.pdf
+          a(href="/static/pdf/updated/Membrana_Indication_of_interest.pdf" target="_blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Idication of Interest.pdf
+          a(href="/static/pdf/updated/Membrana_Indicative_Summary.pdf" target="_blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Summary.pdf
+          a(href="/static/pdf/updated/Membrana.io_Terms&Conditions.pdf" target="_blank").form_section__doc_link
+            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
+            span.link__text Terms & Conditions.pdf
+        form.pre_sale_form
+          .form_grp
+            label(for="name").form__text Full 
+              span.bold Name
+            input(name="name" placeholder="Type Your Full Name Here..." autocomplete="off").text_input
+          .form_grp
+            label(for="mail").form__text Your 
+              span.bold Email
+            input(name="mail" placeholder="Type Your Email Here..." autocomplete="off").text_input
+          .form_grp
+            p.form__text Are you an accredited 
+              span.bold investor:
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="accredited" id="accredited_yes" value="1" checked="checked").form__check_input 
+                .custom_input
+                | Yes
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="accredited" id="accredited_no" value="0").form__check_input
+                .custom_input
+                | No
+          .form_grp
+            p.form__text What type of entity do you 
+              span.bold represent:
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="individual" value="individual" checked="checked").form__check_input 
+                .custom_input
+                | Individual
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="syndicate" value="syndicate").form__check_input
+                | Syndicate
+                .custom_input
+            .form__inline
+              label.form__check_label
+                input(type="radio" name="entity_type" id="fund" value="fund").form__check_input
+                | Professional Fund
+                .custom_input
+          .form_grp
+            label(for="sum").form__text Desired  
+              span.bold Allocation:
+            .input_grp
+              input(name="sum" placeholder="25000..." autocomplete="off").text_input
+              .input_grp__btn
+                a.change_money(data-money="USD") USD
+                .drpdwn_menu
+                  .drpdwn_menu__item(data-money="USD") USD
+                  .drpdwn_menu__item(data-money="ETH") ETH
+                  .drpdwn_menu__item(data-money="BTC") BTC
+          .form_grp
+            label(for="citizenship").form__text.citizenship_label
+              span.bold Citizenship :
+            //- select(name="citizenship").citizenship.text_input
+            input(name="citizenship" autocomplete="off").citizenship.text_input.hidden
+            .citizenship.text_input.showed Chose...
+            .hidden_opt
+              //- .option(data-value="NO") Chose...
+              .option(data-value="AF") Afghanistan
+              .option(data-value="AX") Åland Islands
+              .option(data-value="AL") Albania
+              .option(data-value="DZ") Algeria
+              .option(data-value="AS") American Samoa
+              .option(data-value="AD") Andorra
+              .option(data-value="AO") Angola
+              .option(data-value="AI") Anguilla
+              .option(data-value="AQ") Antarctica
+              .option(data-value="AG") Antigua and Barbuda
+              .option(data-value="AR") Argentina
+              .option(data-value="AM") Armenia
+              .option(data-value="AW") Aruba
+              .option(data-value="AU") Australia
+              .option(data-value="AT") Austria
+              .option(data-value="AZ") Azerbaijan
+              .option(data-value="BS") Bahamas
+              .option(data-value="BH") Bahrain
+              .option(data-value="BD") Bangladesh
+              .option(data-value="BB") Barbados
+              .option(data-value="BY") Belarus
+              .option(data-value="BE") Belgium
+              .option(data-value="BZ") Belize
+              .option(data-value="BJ") Benin
+              .option(data-value="BM") Bermuda
+              .option(data-value="BT") Bhutan
+              .option(data-value="BO") Bolivia, Plurinational State of
+              .option(data-value="BQ") Bonaire, Sint Eustatius and Saba
+              .option(data-value="BA") Bosnia and Herzegovina
+              .option(data-value="BW") Botswana
+              .option(data-value="BV") Bouvet Island
+              .option(data-value="BR") Brazil
+              .option(data-value="IO") British Indian Ocean Territory
+              .option(data-value="BN") Brunei Darussalam
+              .option(data-value="BG") Bulgaria
+              .option(data-value="BF") Burkina Faso
+              .option(data-value="BI") Burundi
+              .option(data-value="KH") Cambodia
+              .option(data-value="CM") Cameroon
+              .option(data-value="CA") Canada
+              .option(data-value="CV") Cape Verde
+              .option(data-value="KY") Cayman Islands
+              .option(data-value="CF") Central African Republic
+              .option(data-value="TD") Chad
+              .option(data-value="CL") Chile
+              .option(data-value="CN") China
+              .option(data-value="CX") Christmas Island
+              .option(data-value="CC") Cocos (Keeling) Islands
+              .option(data-value="CO") Colombia
+              .option(data-value="KM") Comoros
+              .option(data-value="CG") Congo
+              .option(data-value="CD") Congo, the Democratic Republic of the
+              .option(data-value="CK") Cook Islands
+              .option(data-value="CR") Costa Rica
+              .option(data-value="CI") Côte d'Ivoire
+              .option(data-value="HR") Croatia
+              .option(data-value="CU") Cuba
+              .option(data-value="CW") Curaçao
+              .option(data-value="CY") Cyprus
+              .option(data-value="CZ") Czech Republic
+              .option(data-value="DK") Denmark
+              .option(data-value="DJ") Djibouti
+              .option(data-value="DM") Dominica
+              .option(data-value="DO") Dominican Republic
+              .option(data-value="EC") Ecuador
+              .option(data-value="EG") Egypt
+              .option(data-value="SV") El Salvador
+              .option(data-value="GQ") Equatorial Guinea
+              .option(data-value="ER") Eritrea
+              .option(data-value="EE") Estonia
+              .option(data-value="ET") Ethiopia
+              .option(data-value="FK") Falkland Islands (Malvinas)
+              .option(data-value="FO") Faroe Islands
+              .option(data-value="FJ") Fiji
+              .option(data-value="FI") Finland
+              .option(data-value="FR") France
+              .option(data-value="GF") French Guiana
+              .option(data-value="PF") French Polynesia
+              .option(data-value="TF") French Southern Territories
+              .option(data-value="GA") Gabon
+              .option(data-value="GM") Gambia
+              .option(data-value="GE") Georgia
+              .option(data-value="DE") Germany
+              .option(data-value="GH") Ghana
+              .option(data-value="GI") Gibraltar
+              .option(data-value="GR") Greece
+              .option(data-value="GL") Greenland
+              .option(data-value="GD") Grenada
+              .option(data-value="GP") Guadeloupe
+              .option(data-value="GU") Guam
+              .option(data-value="GT") Guatemala
+              .option(data-value="GG") Guernsey
+              .option(data-value="GN") Guinea
+              .option(data-value="GW") Guinea-Bissau
+              .option(data-value="GY") Guyana
+              .option(data-value="HT") Haiti
+              .option(data-value="HM") Heard Island and McDonald Islands
+              .option(data-value="VA") Holy See (Vatican City State)
+              .option(data-value="HN") Honduras
+              .option(data-value="HK") Hong Kong
+              .option(data-value="HU") Hungary
+              .option(data-value="IS") Iceland
+              .option(data-value="IN") India
+              .option(data-value="ID") Indonesia
+              .option(data-value="IR") Iran, Islamic Republic of
+              .option(data-value="IQ") Iraq
+              .option(data-value="IE") Ireland
+              .option(data-value="IM") Isle of Man
+              .option(data-value="IL") Israel
+              .option(data-value="IT") Italy
+              .option(data-value="JM") Jamaica
+              .option(data-value="JP") Japan
+              .option(data-value="JE") Jersey
+              .option(data-value="JO") Jordan
+              .option(data-value="KZ") Kazakhstan
+              .option(data-value="KE") Kenya
+              .option(data-value="KI") Kiribati
+              .option(data-value="KP") Korea, Democratic People's Republic of
+              .option(data-value="KR") Korea, Republic of
+              .option(data-value="KW") Kuwait
+              .option(data-value="KG") Kyrgyzstan
+              .option(data-value="LA") Lao People's Democratic Republic
+              .option(data-value="LV") Latvia
+              .option(data-value="LB") Lebanon
+              .option(data-value="LS") Lesotho
+              .option(data-value="LR") Liberia
+              .option(data-value="LY") Libya
+              .option(data-value="LI") Liechtenstein
+              .option(data-value="LT") Lithuania
+              .option(data-value="LU") Luxembourg
+              .option(data-value="MO") Macao
+              .option(data-value="MK") Macedonia, the former Yugoslav Republic of
+              .option(data-value="MG") Madagascar
+              .option(data-value="MW") Malawi
+              .option(data-value="MY") Malaysia
+              .option(data-value="MV") Maldives
+              .option(data-value="ML") Mali
+              .option(data-value="MT") Malta
+              .option(data-value="MH") Marshall Islands
+              .option(data-value="MQ") Martinique
+              .option(data-value="MR") Mauritania
+              .option(data-value="MU") Mauritius
+              .option(data-value="YT") Mayotte
+              .option(data-value="MX") Mexico
+              .option(data-value="FM") Micronesia, Federated States of
+              .option(data-value="MD") Moldova, Republic of
+              .option(data-value="MC") Monaco
+              .option(data-value="MN") Mongolia
+              .option(data-value="ME") Montenegro
+              .option(data-value="MS") Montserrat
+              .option(data-value="MA") Morocco
+              .option(data-value="MZ") Mozambique
+              .option(data-value="MM") Myanmar
+              .option(data-value="NA") Namibia
+              .option(data-value="NR") Nauru
+              .option(data-value="NP") Nepal
+              .option(data-value="NL") Netherlands
+              .option(data-value="NC") New Caledonia
+              .option(data-value="NZ") New Zealand
+              .option(data-value="NI") Nicaragua
+              .option(data-value="NE") Niger
+              .option(data-value="NG") Nigeria
+              .option(data-value="NU") Niue
+              .option(data-value="NF") Norfolk Island
+              .option(data-value="MP") Northern Mariana Islands
+              .option(data-value="NO") Norway
+              .option(data-value="OM") Oman
+              .option(data-value="PK") Pakistan
+              .option(data-value="PW") Palau
+              .option(data-value="PS") Palestinian Territory, Occupied
+              .option(data-value="PA") Panama
+              .option(data-value="PG") Papua New Guinea
+              .option(data-value="PY") Paraguay
+              .option(data-value="PE") Peru
+              .option(data-value="PH") Philippines
+              .option(data-value="PN") Pitcairn
+              .option(data-value="PL") Poland
+              .option(data-value="PT") Portugal
+              .option(data-value="PR") Puerto Rico
+              .option(data-value="QA") Qatar
+              .option(data-value="RE") Réunion
+              .option(data-value="RO") Romania
+              .option(data-value="RU") Russian Federation
+              .option(data-value="RW") Rwanda
+              .option(data-value="BL") Saint Barthélemy
+              .option(data-value="SH") Saint Helena, Ascension and Tristan da Cunha
+              .option(data-value="KN") Saint Kitts and Nevis
+              .option(data-value="LC") Saint Lucia
+              .option(data-value="MF") Saint Martin (French part)
+              .option(data-value="PM") Saint Pierre and Miquelon
+              .option(data-value="VC") Saint Vincent and the Grenadines
+              .option(data-value="WS") Samoa
+              .option(data-value="SM") San Marino
+              .option(data-value="ST") Sao Tome and Principe
+              .option(data-value="SA") Saudi Arabia
+              .option(data-value="SN") Senegal
+              .option(data-value="RS") Serbia
+              .option(data-value="SC") Seychelles
+              .option(data-value="SL") Sierra Leone
+              .option(data-value="SG") Singapore
+              .option(data-value="SX") Sint Maarten (Dutch part)
+              .option(data-value="SK") Slovakia
+              .option(data-value="SI") Slovenia
+              .option(data-value="SB") Solomon Islands
+              .option(data-value="SO") Somalia
+              .option(data-value="ZA") South Africa
+              .option(data-value="GS") South Georgia and the South Sandwich Islands
+              .option(data-value="SS") South Sudan
+              .option(data-value="ES") Spain
+              .option(data-value="LK") Sri Lanka
+              .option(data-value="SD") Sudan
+              .option(data-value="SR") Suriname
+              .option(data-value="SJ") Svalbard and Jan Mayen
+              .option(data-value="SZ") Swaziland
+              .option(data-value="SE") Sweden
+              .option(data-value="CH") Switzerland
+              .option(data-value="SY") Syrian Arab Republic
+              .option(data-value="TW") Taiwan, Province of China
+              .option(data-value="TJ") Tajikistan
+              .option(data-value="TZ") Tanzania, United Republic of
+              .option(data-value="TH") Thailand
+              .option(data-value="TL") Timor-Leste
+              .option(data-value="TG") Togo
+              .option(data-value="TK") Tokelau
+              .option(data-value="TO") Tonga
+              .option(data-value="TT") Trinidad and Tobago
+              .option(data-value="TN") Tunisia
+              .option(data-value="TR") Turkey
+              .option(data-value="TM") Turkmenistan
+              .option(data-value="TC") Turks and Caicos Islands
+              .option(data-value="TV") Tuvalu
+              .option(data-value="UG") Uganda
+              .option(data-value="UA") Ukraine
+              .option(data-value="AE") United Arab Emirates
+              .option(data-value="GB") United Kingdom
+              .option(data-value="US") United States
+              .option(data-value="UM") United States Minor Outlying Islands
+              .option(data-value="UY") Uruguay
+              .option(data-value="UZ") Uzbekistan
+              .option(data-value="VU") Vanuatu
+              .option(data-value="VE") Venezuela, Bolivarian Republic of
+              .option(data-value="VN") Viet Nam
+              .option(data-value="VG") Virgin Islands, British
+              .option(data-value="VI") Virgin Islands, U.S.
+              .option(data-value="WF") Wallis and Futuna
+              .option(data-value="EH") Western Sahara
+              .option(data-value="YE") Yemen
+              .option(data-value="ZM") Zambia
+              .option(data-value="ZW") Zimbabwe
+          .form_grp
+            label(for="adress").form__text 
+              span.bold ETH 
+              | or 
+              span.bold BTC 
+              | address you plan to send from? 
+              span.thin (optional):
+            input(name="adress" placeholder="Ox..." autocomplete="off").text_input
+          .form_grp
+            label(for="addInfo").form__text 
+              span.bold Anything else 
+              | we should know? 
+              span.thin (optional):
+            input(name="addInfo" autocomplete="off").text_input
+            input(name="whatMoney" value="USD" autocomplete="off").text_input.what_money.hidden
+          .form_grp
+            p.form__text.bold Important notice:
+            .form__inline
+              label.form__check_label.me_understand
+                input(type="radio" name="iagree" id="iagree" value="iagree").form__check_input 
+                | I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.
+                .custom_input
+          .sm-form__submit
+            button.sm-form-btn(type="submit")
+              img.sm-form-btn__icon(src="/static/img/pictures/pre-sale/plus.svg" alt="")
+              span.sm-form-btn__text Submit
+
+
+
+
+
+
+
+  .pop_up-image.non_displayed
+    .close_pop_up
+    img(src="/static/img/new-page/climbing.svg" alt="")
+    a(href='#').close_pop_up_cross
+    //- .close_pop_up.close_pop_up_2
+
+
+
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js")

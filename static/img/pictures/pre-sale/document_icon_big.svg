@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.883 36.104">
+    <defs>
+        <style>
+            .cls-1{opacity:.2}.cls-2{fill:#c7cbfd}
+        </style>
+    </defs>
+    <g id="file" class="cls-1">
+        <path id="Path_30" d="M34.645 25H19.6a.6.6 0 0 0 0 1.2h15.045a.6.6 0 1 0 0-1.2z" class="cls-2" data-name="Path 30" transform="translate(-11.178 -9.957)"/>
+        <path id="Path_31" d="M19.6 18.2h6.017a.6.6 0 1 0 0-1.2H19.6a.6.6 0 0 0 0 1.2z" class="cls-2" data-name="Path 31" transform="translate(-11.178 -6.771)"/>
+        <path id="Path_32" d="M34.645 33H19.6a.6.6 0 1 0 0 1.2h15.045a.6.6 0 1 0 0-1.2z" class="cls-2" data-name="Path 32" transform="translate(-11.178 -13.143)"/>
+        <path id="Path_33" d="M34.645 41H19.6a.6.6 0 0 0 0 1.2h15.045a.6.6 0 1 0 0-1.2z" class="cls-2" data-name="Path 33" transform="translate(-11.178 -16.329)"/>
+        <path id="Path_34" d="M34.645 49H19.6a.6.6 0 1 0 0 1.2h15.045a.6.6 0 1 0 0-1.2z" class="cls-2" data-name="Path 34" transform="translate(-11.178 -19.516)"/>
+        <path id="Path_35" d="M31.874 8.777V0H6v33.095h3.009V36.1h25.874V11.785zm-5.415-3.714l5.416 5.416.954.954h-6.37zM7.2 31.891V1.2h23.471v6.37l-4.565-4.561H9.009v28.882zm3.012 3.009V4.212h15.043v8.424h8.424V34.9z" class="cls-2" data-name="Path 35" transform="translate(-6)"/>
+    </g>
+</svg>

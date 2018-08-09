@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 77">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-1{stroke:#32ba94;stroke-width:4px;stroke-dasharray:223 35}.cls-2{stroke:none}
+        </style>
+    </defs>
+    <g id="Rectangle_5" class="cls-1" data-name="Rectangle 5">
+        <path d="M0 0h345v77H0z" class="cls-2"/>
+        <path d="M2 2h341v73H2z" class="cls-3"/>
+    </g>
+</svg>
