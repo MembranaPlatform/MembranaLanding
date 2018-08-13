@@ -807,6 +807,23 @@
           &.opened
             display: block
 
+          &__item
+            position: relative
+
+            &:before
+              content: ''
+              position: absolute
+              left: -12px
+              top: 50%
+              transform: translateY(-50%)
+              width: 10px
+              height: 8px
+              background: url('/static/img/pictures/pre-sale/arrow_menu_hov.svg') no-repeat
+              transition: all ease .4s
+
+            &:hover:before
+              background-image: url('/static/img/pictures/pre-sale/arrow_menu.svg')
+
         .input_grp
           position: relative
 
