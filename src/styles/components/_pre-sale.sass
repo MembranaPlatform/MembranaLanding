@@ -739,9 +739,11 @@
       text-align: left
       width: 430px
       margin: 0 auto
+      margin-bottom: 150px
+      position: relative
       @media(max-width:767px)
         width: 84%
-        margin: 20px 8%
+        margin: 20px 8% 30px
 
       .bold
         font-weight: 500
@@ -758,6 +760,7 @@
 
       .form_grp
         position: relative
+        transition: all ease .4s
 
         .text_input
           width: 100%
@@ -997,6 +1000,42 @@
 
         &:focus
             outline: none 
+
+    .confirm_form
+      padding-top: 114px
+      position: absolute
+      font-weight: 500
+      color: #32ba94
+      font-size: 24px
+      text-align: center
+      width: 100%
+
+      @media(max-width:767px)
+        padding-top: 40px
+
+    .confirm_form_bg
+      position: absolute
+      top: -10px
+      left: -10px
+      right: -10px
+      bottom: -10px
+      background-color: rgba(0, 0, 0, 0)
+      border-radius: 10px
+
+    .opacity
+
+      .form_grp,
+      .sm-form-btn
+        opacity: .3
+
+      .sm-form-btn:hover
+        opacity: .3
+
+        svg
+          transform: none
+
+        .sm-form-btn__text
+          transform: none
 
   .patterned
 

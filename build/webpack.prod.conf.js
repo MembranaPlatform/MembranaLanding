@@ -6,7 +6,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ImageminPlugin = require('imagemin-webpack-plugin').default
+// var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 var env = config.build.env
 

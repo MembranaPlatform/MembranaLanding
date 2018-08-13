@@ -638,6 +638,11 @@ $(document).ready(function () {
       boolCounter = false
     }
     if (!boolCounter) return false
+    $('<div class="confirm_form">Your data has been send</div>').appendTo('.sm-form__submit')
+    $('.pre_sale_form').addClass('opacity')
+    $('<div class="confirm_form_bg"></div>').appendTo('.pre_sale_form')
+    return false
+    // alert('Форма будет отправлена вместе с перезагрузкой страницы методом гет после нажатия на кнопку "ок"')
   })
   // lane graph
   $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
