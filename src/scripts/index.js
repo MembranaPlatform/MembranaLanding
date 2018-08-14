@@ -609,6 +609,7 @@ $(document).ready(function () {
     $('.citizenship.text_input.showed').text(countryName)
     $('.citizenship.hidden').val(country)
   })
+  var boolForm = false
   $('.pre_sale_form .sm-form-btn').click(function (e) {
     // e.preventDefault()
     $('.bold').removeClass('alert')
@@ -666,6 +667,8 @@ $(document).ready(function () {
         $('<div class="confirm_form">Your data has been send</div>').appendTo('.sm-form__submit')
         $('.pre_sale_form').addClass('opacity')
         $('<div class="confirm_form_bg"></div>').appendTo('.pre_sale_form')
+        boolForm = true
+        history.pushState(null, null, '/presale/form-sended/')
         // window.location.href = '/registration/'
       }
     }).fail(function () {
@@ -674,6 +677,13 @@ $(document).ready(function () {
       $('.pre_sale_form .sm-form-btn').prop('disabled', false)
     })
     return false
+  })
+  $(document).click(function () {
+    if (boolForm) {
+      $('.pre_sale_form').removeClass('opacity')
+      $('.confirm_form, .confirm_form_bg').remove()
+      boolForm = false
+    }
   })
   // lane graph
   $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
