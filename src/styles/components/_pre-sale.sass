@@ -822,7 +822,12 @@
               width: 10px
               height: 8px
               background: url('/static/img/pictures/pre-sale/arrow_menu_hov.svg') no-repeat
-              transition: all ease .4s
+              // transition: background-image ease .4s
+
+            &:after
+              content: ''
+              position: absolute
+              background: url('/static/img/pictures/pre-sale/arrow_menu.svg') no-repeat
 
             &:hover:before
               background-image: url('/static/img/pictures/pre-sale/arrow_menu.svg')
