@@ -638,11 +638,42 @@ $(document).ready(function () {
       boolCounter = false
     }
     if (!boolCounter) return false
-    $('<div class="confirm_form">Your data has been send</div>').appendTo('.sm-form__submit')
-    $('.pre_sale_form').addClass('opacity')
-    $('<div class="confirm_form_bg"></div>').appendTo('.pre_sale_form')
+    const name = formData[0].value
+    const email = formData[1].value
+    const isAccreditedInvestor = formData[2].value
+    const entityType = formData[3].value
+    const amount = formData[4].value
+    const currency = whatMoney
+    const citizenship = formData[5].value
+    const address = formData[6].value
+    const comment = formData[7].value
+    $('.pre_sale_form .sm-form-btn').prop('disabled', true)
+    $.ajax({
+      type: 'POST',
+      url: '/static/php/presale.php',
+      data: {
+        email,
+        name,
+        isAccreditedInvestor,
+        entityType,
+        amount,
+        currency,
+        citizenship,
+        address,
+        comment
+      },
+      success (data) {
+        $('<div class="confirm_form">Your data has been send</div>').appendTo('.sm-form__submit')
+        $('.pre_sale_form').addClass('opacity')
+        $('<div class="confirm_form_bg"></div>').appendTo('.pre_sale_form')
+        // window.location.href = '/registration/'
+      }
+    }).fail(function () {
+      alert('Failed to submit')
+    }).always(function () {
+      $('.pre_sale_form .sm-form-btn').prop('disabled', false)
+    })
     return false
-    // alert('Форма будет отправлена вместе с перезагрузкой страницы методом гет после нажатия на кнопку "ок"')
   })
   // lane graph
   $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
