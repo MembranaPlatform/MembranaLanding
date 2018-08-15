@@ -354,7 +354,7 @@
     text-shadow: 0 7px 6px rgba(0, 0, 0, 0.16)
     display: block
     text-align: center
-    height: 160px
+    height: 60px
     margin-bottom: 22px
     @media(max-width: 340px)
       font-size: 16px
@@ -382,15 +382,16 @@
       display: block;
       text-decoration: none
       color: #ffffff
-      left: 29%;
-      bottom: 16px;
-      transform: translateX(-50%);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       flex-wrap: nowrap;
       height: 21px;
-      @media(max-width: 767px)
-        transform: none
-        left: 5%
+      @media(max-width: 480px)
+        right: 5%
+        left: auto
+        transform: translateY(-50%)
 
       &>*
         margin: 0 4px
@@ -399,32 +400,7 @@
         fill: #24c48e
         opacity: 1
 
-    .check_sub_form
-      position: absolute
-      left: 35%
-      transform: translateX(-50%)
-      top: 16px
-      @media(max-width: 767px)
-        transform: none
-        left: 5%
 
-      .form__text
-        display: block;
-        padding: 0 0 10px;
-        text-align: left
-
-      .text_input
-        width: 300px;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        height: 48px;
-        border: none;
-        padding-left: 16px;
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 13px;
-        @media(max-width: 480px)
-          width: 180px
-  
     .item__block_color
       color: #24c48e
       text-decoration: none
@@ -439,13 +415,14 @@
     position: absolute
     width: 30px
     height: 32px
-    top: 44%
+    top: 50%
     transform: translateY(-50%)
-    right: 250px
+    left: 96px
     border-radius: 12px
     background-color: rgba(255, 255, 255, .14)
-    @media(max-width: 767px)
-      right: 5%
+    position: relative
+    @media(max-width: 480px)
+      left: 5%
 
     &:after
       content: '*'
