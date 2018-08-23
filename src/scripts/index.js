@@ -339,17 +339,31 @@ app.setPatternsSize()
       $message.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      const email = $email.val()
       $.ajax({
         type: 'POST',
-        url: $form.attr('action'),
+        url: '/static/php/unique_join.php',
         data: {
-          email: $email.val(),
-          trnum: $trnum.val()
+          email: email
         },
         success (data) {
-          // window.location.href = '/registration/'
+          if (data.isNew) {
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN')
+          }
+          $.ajax({
+            type: 'POST',
+            url: $form.attr('action'),
+            data: {
+              email: $email.val(),
+              trnum: $trnum.val()
+            },
+            success (data) {
+              // window.location.href = '/registration/'
+            }
+          })
         }
       })
+      e.preventDefault()
     }
   })
 
@@ -366,17 +380,31 @@ app.setPatternsSize()
       $message2.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      const email = $email2.val()
       $.ajax({
         type: 'POST',
-        url: $form.attr('action'),
+        url: '/static/php/unique_join.php',
         data: {
-          email: $email2.val(),
-          trnum: $trnum2.val()
+          email: email
         },
         success (data) {
-          // window.location.href = '/registration/'
+          if (data.isNew) {
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN')
+          }
+          $.ajax({
+            type: 'POST',
+            url: $form.attr('action'),
+            data: {
+              email: $email.val(),
+              trnum: $trnum.val()
+            },
+            success (data) {
+              // window.location.href = '/registration/'
+            }
+          })
         }
       })
+      e.preventDefault()
     }
   })
 })()
