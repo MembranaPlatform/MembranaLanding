@@ -822,6 +822,7 @@ $(document).ready(function () {
   }
   $('.item__check').click(function () {
     $(this).toggleClass('active')
+    $(this).closest('.social_check__item').toggleClass('hidden')
     $('.registr_page').removeClass('socials_done')
     if (($('.item__check').eq(0).hasClass('active')) && ($('.item__check').eq(1).hasClass('active'))) {
       $('.registr_page').addClass('socials_done')

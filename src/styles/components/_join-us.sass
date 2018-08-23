@@ -353,12 +353,18 @@
     font-weight: normal
     text-shadow: 0 7px 6px rgba(0, 0, 0, 0.16)
     display: block
-    text-align: center
-    height: 60px
+    // text-align: center
+    height: 193px
     margin-bottom: 22px
+    transition: all 1s ease 
+    overflow: hidden
+    max-height: 1000px
     @media(max-width: 340px)
       font-size: 16px
 
+    &.hidden
+      max-height: 80px
+      height: 72px
 
     &:after
       content: '...'
@@ -378,23 +384,23 @@
     padding-left: 0
 
     .item__block
-      position: absolute;
+      // position: absolute;
       display: block;
       text-decoration: none
       color: #ffffff
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      // left: 50%;
+      // top: 50%;
+      // transform: translate(-50%, -50%);
+      display: block
       display: flex;
       flex-wrap: nowrap;
-      height: 21px;
-      @media(max-width: 480px)
-        right: 5%
-        left: auto
-        transform: translateY(-50%)
+      // height: 21px;
+      display: inline-block
+      vertical-align: middle
 
       &>*
         margin: 0 4px
+        vertical-align: middle
 
       .cls-1
         fill: #24c48e
@@ -406,23 +412,27 @@
       text-decoration: none
 
     .item__block_icon
-      width: 28px
+      width: 24px
       display: inline
       @media(max-width: 340px)
         width: 20px
 
+      &:first-child
+        width: 19px
+
   .item__check
-    position: absolute
+    // position: absolute
     width: 30px
     height: 32px
-    top: 50%
-    transform: translateY(-50%)
-    left: 96px
+    // top: 50%
+    // transform: translateY(-50%)
+    // left: 96px
     border-radius: 12px
     background-color: rgba(255, 255, 255, .14)
     position: relative
-    @media(max-width: 480px)
-      left: 5%
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
 
     &:after
       content: '*'
@@ -618,7 +628,73 @@
     fill: #24c48e
     opacity: 1
 
+.check_sub_form
+  padding-top: 11px
+  margin-top: 11px
+  padding-bottom: 20px
+  position: relative
+  max-height: 1000px
+  height: auto
+  margin-left: 96px
+  // opacity: 1
+  transition: all 1s ease
+  overflow: hidden
+  z-index: 1
+  @media(max-width: 767px)
+    margin: 0 auto
+    width: 320px
+  @media(max-width: 450px)
+    width: auto
+    margin-left: 10px
+    margin-right: 10px
 
+
+  .text_input
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    height: 48px;
+    border: none;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    max-width: 430px
+    display: block
+    @media(max-width: 340px)
+      font-size: 11px
+
+    &:focus
+      outline: 0
+
+    &::placeholder
+      color: rgba(255, 255, 255, 0.5)
+
+  .form__text
+    padding-bottom: 10px
+    display: inline-block
+    color: #c7cbfd
+    position: relative
+
+    &:after
+      content: '*'
+      position: absolute
+      top: 0px
+      right: -8px
+      color: #ec2650
+      font-size: 19px
+
+  .bold
+    font-weight: 500
+
+  &:before
+    content: ''
+    position: absolute
+    width: 32px
+    height: 1px
+    top: 0
+    left: 0
+    background-color: #707070
+    opacity: .3
 
 // .registr_page.socials_done
   // .registr_page__btn
@@ -629,3 +705,34 @@
   //   &:hover
   //     .registr_page__btn_ar
   //       transform: translateX(-5px)
+
+.cont
+  padding-left: 96px
+  padding-top: 20px
+  padding-bottom: 20px
+  // padding-bottom: 0
+  background-color: #343546
+  z-index: 10
+  @media(max-width: 767px)
+    margin: 0 auto
+    width: 320px
+    padding-left: 0
+  @media(max-width: 450px)
+    width: 100%
+    margin-left: 10px
+    margin-right: 10px
+
+.hidden
+  .check_sub_form
+    // position: absolute
+    z-index: -10
+    // height: 0
+    // margin-top: 0
+    // padding-top: 0
+    opacity: 0
+    // max-height: 0
+    transform: translateY(-100%)
+
+  .cont
+    // padding-bottom: 20px
+
