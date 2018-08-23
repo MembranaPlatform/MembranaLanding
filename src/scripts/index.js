@@ -856,34 +856,49 @@ $(document).ready(function () {
       return false
     } else {
       e.preventDefault()
+      const formFields = $('form.check_sub_form').serializeArray()
+      const twitter = formFields[0].value
+      const telegram = formFields[0].value
       const url = new URL(window.location)
-      const email = url.searchParams.get('email')
       const trnum = url.searchParams.get('trnum')
-      const form = $('<form/>',
-        {
-          action: '/static/php/idnow.php',
-          method: 'post',
-          css: {
-            display: 'none'
-          }
+      const email = url.searchParams.get('email')
+      $.ajax({
+        type: 'POST',
+        url: '/static/php/social_subscribe.php',
+        data: {
+          twitter: twitter,
+          telegram: telegram,
+          email: email,
+          trnum: trnum
+        },
+        success (data) {
+          const form = $('<form/>',
+            {
+              action: '/static/php/idnow.php',
+              method: 'post',
+              css: {
+                display: 'none'
+              }
+            }
+          )
+          form.append($('<input/>',
+            {
+              type: 'text',
+              name: 'email',
+              value: email
+            }
+          ))
+          form.append($('<input/>',
+            {
+              type: 'text',
+              name: 'trnum',
+              value: trnum
+            }
+          ))
+          $('body').append(form)
+          form.submit()
         }
-      )
-      form.append($('<input/>',
-        {
-          type: 'text',
-          name: 'email',
-          value: email
-        }
-      ))
-      form.append($('<input/>',
-        {
-          type: 'text',
-          name: 'trnum',
-          value: trnum
-        }
-      ))
-      $('body').append(form)
-      form.submit()
+      })
     }
   })
 })
