@@ -339,15 +339,25 @@ app.setPatternsSize()
       $message.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      e.preventDefault()
+      const email = $email.val()
+      const trnum = $trnum.val()
       $.ajax({
         type: 'POST',
-        url: $form.attr('action'),
+        url: '/static/php/unique_join.php',
         data: {
-          email: $email.val(),
-          trnum: $trnum.val()
+          email: email
         },
         success (data) {
-          // window.location.href = '/registration/'
+          if (data.isNew) {
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
+              const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+              window.location = locationnew
+            })
+          } else {
+            const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+            window.location = locationnew
+          }
         }
       })
     }
@@ -366,15 +376,25 @@ app.setPatternsSize()
       $message2.html(errors).fadeIn(200)
       e.preventDefault()
     } else {
+      e.preventDefault()
+      const email = $email2.val()
+      const trnum = $trnum2.val()
       $.ajax({
         type: 'POST',
-        url: $form.attr('action'),
+        url: '/static/php/unique_join.php',
         data: {
-          email: $email2.val(),
-          trnum: $trnum2.val()
+          email: email
         },
         success (data) {
-          // window.location.href = '/registration/'
+          if (data.isNew) {
+            window.yaCounter47624572.reachGoal('NEW_COMPETITION_JOIN', function () {
+              const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+              window.location = locationnew
+            })
+          } else {
+            const locationnew = '/registration?email=' + email + '&trnum=' + trnum
+            window.location = locationnew
+          }
         }
       })
     }
@@ -828,12 +848,57 @@ $(document).ready(function () {
       $('.registr_page').addClass('socials_done')
     }
   })
-  $('.registr_page__btn').click(function () {
+  $('.registr_page__btn').click(function (e) {
     $('.item__check').removeClass('not_done')
     if (!$('.registr_page').hasClass('socials_done')) {
       $('html, body').animate({scrollTop: $('.registr_page__social_check').offset().top})
       $('.item__check:not(.active)').addClass('not_done')
       return false
+    } else {
+      e.preventDefault()
+      const formFields = $('form.check_sub_form').serializeArray()
+      const twitter = formFields[0].value
+      const telegram = formFields[0].value
+      const url = new URL(window.location)
+      const trnum = url.searchParams.get('trnum')
+      const email = url.searchParams.get('email')
+      $.ajax({
+        type: 'POST',
+        url: '/static/php/social_subscribe.php',
+        data: {
+          twitter: twitter,
+          telegram: telegram,
+          email: email,
+          trnum: trnum
+        },
+        success (data) {
+          const form = $('<form/>',
+            {
+              action: '/static/php/idnow.php',
+              method: 'post',
+              css: {
+                display: 'none'
+              }
+            }
+          )
+          form.append($('<input/>',
+            {
+              type: 'text',
+              name: 'email',
+              value: email
+            }
+          ))
+          form.append($('<input/>',
+            {
+              type: 'text',
+              name: 'trnum',
+              value: trnum
+            }
+          ))
+          $('body').append(form)
+          form.submit()
+        }
+      })
     }
   })
 })
