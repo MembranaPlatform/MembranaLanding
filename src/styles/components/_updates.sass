@@ -1,0 +1,53 @@
+.updates__icon
+  width: 20px
+  vertical-align: middle
+
+.updates__document_links_wr
+  margin: 0 auto
+  display: inline-block
+  max-width: 900px
+
+.updates__doc_link,
+.updates__icon
+  display: inline-block
+  margin-right: 20px
+  transition: all ease .4s
+
+.updates__doc_link
+  margin-right: 8rem
+  font-size: 2.2rem
+  margin-bottom: 4rem
+
+.updates__doc_link:last-child
+  // margin-right: 0
+
+.updates__title
+  margin-bottom: 4rem
+
+.updates
+  text-align: center
+  margin-bottom: 12rem
+  @media(max-width:767px)
+    margin-top: 12rem
+
+  .link__text,
+  .updates__doc_link
+    color: #8386a8
+    font-size: 20px
+    // text-decoration: none
+    vertical-align: middle
+    
+.updates__doc_link:hover 
+  .link__text
+    opacity: .6
+
+  svg 
+    g
+      opacity: 1
+    g > path 
+      fill: #32BA94
+
+.updates__doc_link
+  g,
+  path
+    transition: all ease .4s
