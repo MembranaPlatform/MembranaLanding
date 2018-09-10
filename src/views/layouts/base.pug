@@ -1,42 +1,6 @@
 if !varForLang
   include ../i18n/en
-//- script
-  //- | var app = {}
-//- script
-//-   | app.lang = 'en'
-//- script
-  //- | var link = document.location.href.split('/'); var a = link.pop(); app.lang = a
 
-//- Applies while the build task is running
-//- Does not work locally
-if global.process.argv[2] === 'en'
-  //- npm run build
-  include ../i18n/en
-if global.process.argv[2] === 'ru'
-  //- npm run build-ru
-  include ../i18n/ru
-if global.process.argv[2] === 'chn'
-  //- npm run build
-  include ../i18n/chn
-//- if app.lang == 'ru'
-//-   script
-//-     | console.log('heh')
-//-   include ../i18n/ru
-//- //- if global.process.argv[2] === 'jpn'
-
-//- if app.lang == 'jpn'
-//-   include ../i18n/jpn
-//- if global.process.argv[2] === 'chn'
-//-   //- npm run build-chn
-//-   include ../i18n/chn
-//- if global.process.argv[2] === 'kor'
-//-   //- npm run build-kor
-//-   include ../i18n/kor
-
-//- script 
-//-   | console.log(global.process.argv[2])
-
-//- 
 block page_variables
 
 
