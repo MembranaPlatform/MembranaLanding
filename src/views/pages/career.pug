@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 block page_variables
-	- var page_class = 'career';
+	- var page_class = 'career_page';
 	- var page_active = '/career/';
 
 block append head
@@ -11,6 +11,14 @@ block append head
 
 block content
 	.page-content-pattern
+	.patterns
+		div.pattern.bg
+			img.js-prevent-inline.triangle_1(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_3(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_4(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_2(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_5(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_6(src="/static/img/pictures/career/red_tr.svg" alt="")
 		.page-content
 			h1.page-content__title!=app.career.title
 			.career_wr
@@ -21,16 +29,33 @@ block content
 					p.career__desc We don't care about your age, sex or where you live. We care about your 
 						span.bold skills
 						| !
-					img(src="/static/img/pictures/career/img.png")
+					img(src="/static/img/pictures/career/img.png").career__img
+					.border
 					.career__perks
-						p.career__perks_title.colored Perks
-						
-			//- each item in app.career.items
-			//- 	p!=item.title
-			//- 	each field in item.content
-			//- 		.vision-item__content
-			//- 			h4.vision-item__title!=field.title
-			//- 				.vision-item__description!=field.description
+						img(src="/static/img/pictures/career/icon2.svg")
+						p.career__perks_title.colored.bold Perks:
+						span.career__perk.career-op Flexible Hours
+						span.career__perk.career-op Flexible Holidays
+						span.career__perk.career-op Competitive Salary
+
+				.career_wr__right
+					.career__pos.colored.bold Open positions:
+					.border
+					each item in app.career.items
+						.career__wr
+							a(href="#").bold.pos_name!=item.title
+							p.career-op!=item.desc
+							each field in item.content
+								.career__about
+									a(href="#").bold.career__item!=field.title
+									.career__about_desc
+										span.career-op!=field.desc1
+										span.career-op!=field.desc2
+					p.career__desc Don’t see an opening that matches your skills?
+						br
+						| Please email us at 
+						a(href="mailto:careers@membrana.io").colored careers@membrana.io
+
 
 
 	include ../components/join-us

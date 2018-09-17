@@ -705,6 +705,10 @@ $(document).ready(function () {
       boolForm = false
     }
   })
+  $('.pos_name').click(function () {
+    $(this).closest('.career__wr').toggleClass('open')
+    return false
+  })
   // lane graph
   $('.lane_gr_cont__btn, .lane_gr__item').hover(function () {
     $('.lane_gr_cont__btn').eq($(this).data('number')).addClass('colored')
