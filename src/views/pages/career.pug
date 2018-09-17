@@ -1,0 +1,36 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'career';
+	- var page_active = '/career/';
+
+block append head
+	block head_variables
+		- var title = app.head.whitepaper.title;
+		- var description = app.head.whitepaper.description;
+
+block content
+	.page-content-pattern
+		.page-content
+			h1.page-content__title!=app.career.title
+			.career_wr
+				.career_wr__left
+					p.career__desc At 
+						span.bold Membrana
+						| , you'll work with some of the best global talent and build a project used by major crypto-traders.
+					p.career__desc We don't care about your age, sex or where you live. We care about your 
+						span.bold skills
+						| !
+					img(src="/static/img/pictures/career/img.png")
+					.career__perks
+						p.career__perks_title.colored Perks
+						
+			//- each item in app.career.items
+			//- 	p!=item.title
+			//- 	each field in item.content
+			//- 		.vision-item__content
+			//- 			h4.vision-item__title!=field.title
+			//- 				.vision-item__description!=field.description
+
+
+	include ../components/join-us

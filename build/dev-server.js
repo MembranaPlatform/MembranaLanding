@@ -68,6 +68,7 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/chn\/$/, to: '/chn/index.html'},
     { from: /\/team\/$/, to: '/team/index.html'},
     { from: /\/docs\/$/, to: '/docs/index.html'},
+    { from: /\/career\/$/, to: '/career/index.html'},
     { from: /\/kor\/$/, to: '/kor/index.html'}
   ]
 }))
