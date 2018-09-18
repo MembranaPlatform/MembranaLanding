@@ -289,3 +289,115 @@
 	.career__about
 		max-height: 300px
 		margin-top: 23px
+
+
+.career__job
+	@media(max-width:767px)
+		font-size: 18px
+
+	.page-content
+		max-width: 120rem
+
+	.job_wr__desc
+		text-align: center
+		padding-bottom: 85px
+		max-width: 98rem
+		margin: 0 auto
+
+	.job__block_title
+		font-size: 26px
+		margin-top: 38px
+		margin-bottom: 31px
+
+		&:first-child
+			margin-top: 0
+
+	.job__block_item
+		padding-left: 47px
+		position: relative
+		padding-right: 50px
+		@media(max-width:1023px)
+			display: inline-block
+			@media(max-width:767px)
+				padding-left: 20px
+				padding-right: 20px
+				margin: 10px 0
+
+		&::before
+			content: ''
+			position: absolute
+			width: 30px
+			height: 1px
+			top: 10px
+			left: 0
+			background-color: rgba(255, 255, 255, .1)
+			@media(max-width:767px)
+				display: none
+
+	.job__block_list
+		padding-left: 20px
+		margin-left: 86px
+		position: relative
+		@media(max-width:1023px)
+			margin: 10px 0
+			padding: 0
+
+		&::after
+			position: absolute
+			content: ''
+			width: 3px
+			height: 3px
+			background-color: #3d3e4a
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			@media(max-width:1023px)
+				display: none
+
+	.moving
+		max-width: 294px
+		@media(max-width:1023px)
+			margin: 0 auto
+			text-align: left
+	
+	.moving__email
+		margin-top: 15px
+		margin-bottom: 35px
+		padding-bottom: 35px
+		border-bottom: 2px dashed rgba(255, 255, 255, .1)
+
+		a
+			margin-top: 6px
+			font-size: 25px
+
+	.moving__btn
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		justify-content: center
+		height: 50px
+		border-radius: 26px
+		align-items: center
+		background-color: #3d3e4a
+		margin-top: 20px
+		font-size: 18px
+
+		img,
+		svg
+			margin-right: 15px
+
+	.moving__title
+		position: relative
+
+		&::after
+			background-color: #32ba94
+			content: ''
+			position: absolute
+			width: 102px
+			height: 2px
+			right: 0
+			top: 50%
+			transform: translateY(-50%)

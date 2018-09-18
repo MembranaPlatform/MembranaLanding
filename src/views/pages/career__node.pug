@@ -1,0 +1,55 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'career_page career__job';
+	- var page_active = '/career/';
+
+block append head
+	block head_variables
+		- var title = app.head.whitepaper.title;
+		- var description = app.head.whitepaper.description;
+
+block content
+	.page-content-pattern
+	.patterns
+		div.pattern.bg
+			img.js-prevent-inline.triangle_1(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_3(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_4(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_2(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_5(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_6(src="/static/img/pictures/career/red_tr.svg" alt="")
+		.page-content.job_wr.career_wr
+			h1.page-content__title.job_wr__title!=app.nodeJS.title
+			p.job_wr__desc!=app.nodeJS.desc
+			.career_wr__left
+				.job__block
+					each item in app.nodeJS.items
+						p.job__block_title.colored.bold!=item.title
+						each field in item.content
+							p.job__block_item!=field.title
+							if field.list
+								each item in field.list
+									p.job__block_list.bold!=item.title
+
+			.career_wr__right
+				.career__move_wr.moving
+					p.job__block_title.colored.bold.moving__title Interested?
+					p.moving__desc Please send us your 
+						span.bold resume, a detailed cover letter
+						span , and tell us 
+						span.bold why you’d be a good fit for the team.
+					.moving__email
+						p.career-op Email us:
+						a(href="mailto:job@membrana.io").bold job@membrana.io
+					.moving__btn_wr
+						p We’re always looking for talents
+						a(href="/career/").moving__btn
+							img(src="/static/img/pictures/career/icon4.svg" alt="")
+							span All positions
+
+				
+
+
+
+	include ../components/join-us

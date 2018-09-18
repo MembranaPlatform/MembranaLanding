@@ -47,7 +47,7 @@ block content
 							p.career-op!=item.desc
 							each field in item.content
 								.career__about
-									a(href="#").bold.career__item!=field.title
+									a(href=field.link).bold.career__item!=field.title
 									.career__about_desc
 										span.career-op!=field.desc1
 										span.career-op!=field.desc2
