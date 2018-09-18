@@ -45,16 +45,17 @@ block content
 						.career__wr
 							a(href="#").bold.pos_name!=item.title
 							p.career-op!=item.desc
-							each field in item.content
-								.career__about
-									a(href=field.link).bold.career__item!=field.title
-									.career__about_desc
-										span.career-op!=field.desc1
-										span.career-op!=field.desc2
+							if item.content
+								each field in item.content
+									.career__about
+										a(href=field.link).bold.career__item!=field.title
+										.career__about_desc
+											span.career-op!=field.desc1
+											span.career-op!=field.desc2
 					p.career__desc Don’t see an opening that matches your skills?
 						br
 						| Please email us at 
-						a(href="mailto:careers@membrana.io").colored careers@membrana.io
+						a(href="mailto:job@membrana.io").colored job@membrana.io
 
 
 
