@@ -1,0 +1,19 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'our_team';
+	- var page_active = '/team/';
+
+//- block append head
+//- 	block head_variables
+//- 		- var title = app.head.whitepaper.title;
+//- 		- var description = app.head.whitepaper.description;
+
+block content
+	//- .page-content-pattern
+	//- 	.page-content
+	include ../components/team
+
+	include ../components/get-in-touch
+
+	include ../components/join-us

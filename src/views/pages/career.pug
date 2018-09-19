@@ -1,0 +1,62 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'career_page';
+	- var page_active = '/career/';
+
+block append head
+	block head_variables
+		- var title = app.head.whitepaper.title;
+		- var description = app.head.whitepaper.description;
+
+block content
+	.page-content-pattern
+	.patterns
+		div.pattern.bg
+			img.js-prevent-inline.triangle_1(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_3(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_4(src="/static/img/pictures/career/blue_tr.svg" alt="")
+			img.js-prevent-inline.triangle_2(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_5(src="/static/img/pictures/career/red_tr.svg" alt="")
+			img.js-prevent-inline.triangle_6(src="/static/img/pictures/career/red_tr.svg" alt="")
+		.page-content
+			h1.page-content__title!=app.career.title
+			.career_wr
+				.career_wr__left
+					p.career__desc At 
+						span.bold Membrana
+						| , you'll work with some of the best global talent and build a project used by major crypto-traders.
+					p.career__desc We don't care about your age, sex or where you live. We care about your 
+						span.bold skills
+						| !
+					img(src="/static/img/pictures/career/img.png").career__img
+					.border
+					.career__perks
+						img(src="/static/img/pictures/career/icon2.svg")
+						p.career__perks_title.colored.bold Perks:
+						span.career__perk.career-op Flexible Hours
+						span.career__perk.career-op Flexible Holidays
+						span.career__perk.career-op Competitive Salary
+
+				.career_wr__right
+					.career__pos.colored.bold Open positions:
+					.border
+					each item in app.career.items
+						.career__wr
+							a(href="#").bold.pos_name!=item.title
+							p.career-op!=item.desc
+							if item.content
+								each field in item.content
+									.career__about
+										a(href=field.link).bold.career__item!=field.title
+										.career__about_desc
+											span.career-op!=field.desc1
+											span.career-op!=field.desc2
+					p.career__desc Don’t see an opening that matches your skills?
+						br
+						| Please email us at 
+						a(href="mailto:job@membrana.io").colored job@membrana.io
+
+
+
+	include ../components/join-us

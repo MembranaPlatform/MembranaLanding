@@ -1,0 +1,414 @@
+.career_page
+	.page-content
+		max-width: 127rem
+		z-index: 5
+
+	.pattern
+		right: 0
+		left: 0
+
+		img
+			position: absolute
+			@media(max-width:1023px)
+				display: none
+				
+
+	.triangle_1
+		right: 18%
+		top: 270px
+
+	.triangle_2
+		top: 300px
+		left: 15%
+
+	.triangle_3
+		top: 440px
+		left: 13%
+		width: 26px
+		height: 19px
+		transform: rotate(180deg)
+
+	.triangle_4
+		top: 700px
+		left: 49%
+		width: 26px
+		height: 19px
+		transform: rotate(90deg)
+
+	.triangle_6
+		top: 890px
+		left: 49%
+		width: 33px
+		height: 32px
+		transform: rotate(90deg)
+
+	.triangle_5
+		top: 470px
+		right: 19%
+		width: 32px
+		height: 30px
+		transform: rotate(90deg)
+
+.career_wr
+	color: #fff
+	font-size: 20px
+	overflow: hidden
+
+	a
+		color: #fff
+		text-decoration: none
+		
+
+	.colored
+		color: #32ba94
+
+	.career-op
+		opacity: .5
+
+	.bold
+		font-weight: bold
+
+	.border
+		display: inline-block
+		height: 2px
+		width: 110px
+		border-bottom: 2px dashed rgba(255, 255, 255, .1)
+
+
+.career_wr__left
+	float: left
+	width: 56%
+	border-right: 2px dashed rgba(255, 255, 255, .1)
+	padding-bottom: 40px
+	@media(max-width:1023px)
+		width: 100%
+		float: none
+		border-right: none
+		text-align: center
+
+	.border
+		margin-left: 142px
+		@media(max-width:1023px)
+			display: none
+			
+
+	.career__desc
+		padding-left: 142px
+		padding-right: 50px
+		margin-top: 0
+		@media(max-width:1023px)
+			padding-left: 0
+			padding-right: 0
+
+	.career__img
+		max-width: 620px
+		margin-bottom: 15px
+		width: 100%
+		@media(max-width:1279px)
+			padding-right: 50px
+			@media(max-width:1023px)
+				padding-right: 0
+
+	.career__perks
+		padding-left: 142px
+		@media(max-width:1023px)
+			padding-left: 0
+
+		img,
+		svg
+			display: inline-block
+			margin-right: 4px
+
+		.career__perk
+			padding-right: 14px
+			position: relative
+			@media(max-width:767px)
+				display: block
+				padding-bottom: 5px
+				
+
+			&::after
+				position: absolute
+				content: ''
+				width: 3px
+				height: 3px
+				background-color: #3d3e4a
+				right: 5px
+				top: 50%
+				transform: translateY(-50%)
+
+			&:last-child::after
+				display: none
+	
+	.career__perks_title
+		padding-top: 0
+		margin-bottom: 4px
+		display: inline-block
+		padding-right: 80%
+		@media(max-width:1023px)
+			padding-right: 40px
+			@media(max-width:767px)
+				padding-right: 0
+
+
+.career_wr__right
+	float: left
+	width: 44%
+	padding-left: 50px
+	min-height: 590px
+	padding-bottom: 90px
+	position: relative
+	@media(max-width:1279px)
+		padding-bottom: 110px
+		@media(max-width:1023px)
+			width: 100%
+			float: none
+			min-height: inherit
+			text-align: center
+			padding: 0 5%
+
+	.career__pos
+		font-size: 26px
+		padding-bottom: 15px
+		// margin-bottom: 25px
+		margin-top: 0
+
+	.pos_name
+		font-size: 26px
+		margin-bottom: 4px
+		margin-top: 23px
+		display: inline-block
+		padding-right: 20px
+		position: relative
+
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 50%
+			width: 12px
+			height: 10px
+			background-image: url(/static/img/pictures/career/icon3.svg)
+			background-size: contain
+			background-repeat: no-repeat
+			transition: all ease .4s
+			transform: translateY(-50%) rotate(180deg)
+			
+	.open
+
+		.pos_name::after
+			transform: translateY(-50%)
+
+	.career__item
+		font-size: 26px
+		margin-bottom: 4px
+		display: inline-block
+		position: relative
+		padding-right: 30px
+
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 50%
+			width: 15px
+			height: 15px
+			background-image: url(/static/img/pictures/career/arrow.svg)
+			background-size: contain
+			background-repeat: no-repeat
+			transition: all ease .4s
+			transform: translateY(-50%)
+
+		&:hover::after
+			transform: translateY(-50%) translateX(10px)
+			
+
+	.career__desc
+		position: absolute
+		bottom: 0
+		padding-top: 20px
+		@media(max-width:1023px)
+			position: static
+
+		&::before
+			content: ''
+			position: absolute
+			height: 2px
+			width: 110px
+			border-bottom: 2px dashed rgba(255, 255, 255, .1)
+			top: 0
+			left: 0
+			@media(max-width:1023px)
+				display: none
+				
+
+	p
+		margin: 0
+
+	.career__about
+		padding-left: 46px	
+		position: relative
+		@media(max-width:767px)
+			display: inline-block
+
+		&::before
+			content: ''
+			position: absolute	
+			top: 14px
+			height: 1px
+			width: 30px
+			left: 0
+			background-color: rgba(255, 255, 255, .1)
+
+		span
+			padding-right: 20px
+			position: relative
+			@media(max-width:767px)
+				font-size: 16px
+
+			&::after
+				position: absolute
+				content: ''
+				width: 3px
+				height: 3px
+				background-color: #3d3e4a
+				right: 9px
+				top: 50%
+				transform: translateY(-50%)
+
+			&:last-child::after
+				display: none
+
+.career__about
+	max-height: 0
+	transition: all ease .2s
+	overflow: hidden
+	margin: 0
+
+.open
+	.career__about
+		max-height: 300px
+		margin-top: 23px
+
+
+.career__job
+	@media(max-width:767px)
+		font-size: 18px
+
+	.page-content
+		max-width: 120rem
+
+	.job_wr__desc
+		text-align: center
+		padding-bottom: 85px
+		max-width: 98rem
+		margin: 0 auto
+
+	.job__block_title
+		font-size: 26px
+		margin-top: 38px
+		margin-bottom: 31px
+
+		&:first-child
+			margin-top: 0
+
+	.job__block_item
+		padding-left: 47px
+		position: relative
+		padding-right: 50px
+		@media(max-width:1023px)
+			display: inline-block
+			@media(max-width:767px)
+				padding-left: 20px
+				padding-right: 20px
+				margin: 10px 0
+
+		&::before
+			content: ''
+			position: absolute
+			width: 30px
+			height: 1px
+			top: 10px
+			left: 0
+			background-color: rgba(255, 255, 255, .1)
+			@media(max-width:767px)
+				display: none
+
+	.job__block_list
+		padding-left: 20px
+		margin-left: 86px
+		position: relative
+		@media(max-width:1023px)
+			margin: 10px 0
+			padding: 0
+
+		&::after
+			position: absolute
+			content: ''
+			width: 3px
+			height: 3px
+			background-color: #3d3e4a
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			@media(max-width:1023px)
+				display: none
+
+	.moving
+		max-width: 294px
+		@media(max-width:1023px)
+			margin: 0 auto
+			text-align: left
+	
+	.moving__email
+		margin-top: 15px
+		margin-bottom: 35px
+		padding-bottom: 35px
+		border-bottom: 2px dashed rgba(255, 255, 255, .1)
+
+		a
+			margin-top: 6px
+			font-size: 25px
+
+	.moving__btn
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		justify-content: center
+		height: 50px
+		border-radius: 26px
+		align-items: center
+		background-color: #3d3e4a
+		margin-top: 20px
+		font-size: 18px
+
+		img,
+		svg
+			margin-right: 15px
+			transition: all ease .4s
+
+		span
+			transition: all ease .4s
+
+		&:hover
+			img,
+			svg
+				transform: translateX(-10px)
+			span
+				transform: translateX(10px)
+
+	.moving__title
+		position: relative
+
+		&::after
+			background-color: #32ba94
+			content: ''
+			position: absolute
+			width: 102px
+			height: 2px
+			right: 0
+			top: 50%
+			transform: translateY(-50%)

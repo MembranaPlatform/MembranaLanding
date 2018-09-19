@@ -1,0 +1,38 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'docs';
+	- var page_active = '/docs/';
+
+block append head
+	block head_variables
+		- var title = app.head.whitepaper.title;
+		- var description = app.head.whitepaper.description;
+
+block content
+	.page-content-pattern
+		.page-content
+			h1.page-content__title!=app.whitepaper_page.title
+			h2.page-content__subtitle!=app.choose_language
+			.languages-list
+				a.languages-list-item(href="/static/pdf/membrana_whitepaper_eng.pdf" target="_blank")
+					h2.languages-list-item__title!=app.english
+					.languages-list__item-flag: img(src="/static/img/pictures/en.png" alt="")
+				a.languages-list-item(href="/static/pdf/membrana_whitepaper_ru.pdf" target="_blank")
+					h2.languages-list-item__title!=app.russian
+					.languages-list__item-flag: img(src="/static/img/pictures/ru.png" alt="")
+
+		.page-content
+			h1.page-content__title!=app.business_overview_page.title
+			h2.page-content__subtitle!=app.choose_language
+			.languages-list
+				a.languages-list-item(href="/static/pdf/membrana_business_overview.pdf" target="_blank")
+					h2.languages-list-item__title!=app.english
+					.languages-list__item-flag: img(src="/static/img/pictures/en.png" alt="")
+				// a.languages-list-item(href="/static/pdf/Business_overview.pdf" target="_blank")
+				// 	h2.languages-list-item__title!=app.russian
+				// 	.languages-list__item-flag: img(src="/static/img/pictures/ru.png" alt="")
+
+			include ../components/get-in-touch
+
+	include ../components/join-us

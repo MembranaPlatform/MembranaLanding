@@ -2,7 +2,7 @@
   .team
     each group in app.team
       .team__group.js-section
-        h2.team__title.title.h-text-gradient!=group.title
+        h2.team__title.title!=group.title
         .team__items
           each member in group.items
             .member
