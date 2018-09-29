@@ -1,0 +1,25 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'referral';
+  - var page_active = '/referral/';
+
+block append head
+  block head_variables
+    - var title = app.head.faq.title;
+    - var description = app.head.faq.description;
+
+block content
+  .page-content-pattern
+    .page-content
+      h1.page-content__title!=app.ref_page.title
+      .page-content__description!=app.ref_page.description
+
+      .faq-block
+        .faq-block__list
+          for item in app.ref_page.items
+            .faq-item
+              .faq-item__question!=item.question
+              .faq-item__answer!=item.answer
+      
+  include ../components/join-us
