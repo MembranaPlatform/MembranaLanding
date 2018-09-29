@@ -1,4 +1,76 @@
+.cases 
+  position: relative
+  padding-top: 30px
+
+  .pattern
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+    img
+      position: absolute
+      @media (max-width: 1024px)
+        display: none
+        
+
+    .lane1
+      top: 60%
+      right: 0
+      left: 92%
+
+    .lane3
+      top: 90%
+      right: 0
+      left: 90%
+
+    .lane4
+      top: 33%
+      transform: rotate(180deg)
+      right: 90%
+
+    .lane2
+      top: 60%
+      transform: rotate(180deg)
+      right: 92%
+
+    .bg
+      top: -200px
+      left: 9.5%
+      right: 10%
+      width: 80%
+      @media (max-width: 1440px)
+        top: -160px
+        left: 0
+        right: 0
+        width: 100%
+
+    .grp
+      width: 80%
+      left: 10%
+      
+
 .cases__wr
+  padding: 80px 40px 80px
+  position: relative
+
+  &::after,
+  &::before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%) rotate(180deg) 
+    height: 77px
+    top: 0
+    width: 38px
+    background-repeat: no-repeat
+    background-image: url(/static/img/pictures/cases/lane5.svg)
+
+  &::after
+    top: auto
+    bottom: 0
+    transform: translateX(-50%)   
 
   .bold
     font-weight: 500
@@ -22,6 +94,9 @@
   color: #3defd3
   margin: 0
   line-height: 90px
+  @media (max-width: 767px)
+    font-size: 44px
+    line-height: 1
 
 .cases__numb_wr
   height: 100px
@@ -33,12 +108,18 @@
   align-items: center
   float: left
   margin-right: 18px
+  @media (max-width: 767px)
+    height: 50px
+    width: 40px
 
 .cases__wr1_top
   font-size: 50px
   line-height: 44px
   text-transform: uppercase
   overflow: hidden
+  @media (max-width: 767px)
+    font-size: 22px
+    line-height: 1.1
 
   .text_fix
     float: left
@@ -48,6 +129,10 @@
   font-size: 37px
   line-height: 32px
   padding-top: 14px
+  @media (max-width: 767px)
+    font-size: 18px
+    line-height: 1.1
+    padding-top: 5px
 
 .cases__wr1
   max-width: 590px
@@ -57,18 +142,43 @@
   margin-bottom: 66px
   min-height: 445px
   position: relative
+  @media (max-width: 1024px)
+    min-height: 0
+    padding: 0
+    max-width: 515px
 
 .cases__right
   padding-left: 97px
   padding-right: 0
+  @media (max-width: 1280px)
+    padding-left: 0
+
+  .cases__wr1_top
+    @media (max-width: 767px)
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+      justify-content: flex-end
+
+    .cases__numb_wr
+      @media (max-width: 767px)
+        margin-right: 0
 
 .cases__center
   padding-right: 0
   max-width: 780px
+  min-height: 0
+  padding-bottom: 0
+  margin-bottom: 0
+  @media (max-width: 1024px)
+    max-width: 515px
 
   .cases__list
     max-width: 460px
     float: left
+    margin-bottom: 0
 
   .cases__btn
     position: static
@@ -77,6 +187,10 @@
     margin-left: 90px
     background-color: #25c993
     color: #27283a
+    @media (max-width: 1280px)
+      margin-top: 60px
+      @media (max-width: 1024px)
+        margin-left: 0
 
     path
       fill: #27283a
@@ -92,9 +206,36 @@
     display: -o-flex
     display: flex
     align-items: center
+    justify-content: center
+    position: relative
+    overflow: visible
+    @media (max-width: 1024px)
+      font-size: 45px
+      @media (max-width: 767px)
+        font-size: 18px
 
     span
       padding-left: 10px
+
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      transform: translateY(-50%) translateX(-80%)
+      height: 38px
+      width: 500px
+      top: 50%
+      background-repeat: no-repeat
+      background-image: url(/static/img/pictures/cases/lane2.svg)
+      @media (max-width: 1024px)
+        display: none
+        
+
+    &::after
+      left: auto
+      right: 0
+      transform: translateY(-50%) translateX(80%) rotate(180deg)
 
 @keyframes moving_arr 
   0%, 100% 
@@ -131,7 +272,7 @@
     transform: translateY(-50%)
     height: 1px
     width: 15px
-    background-color: rgba(203, 203, 203, 0.16)
+    background-color: #b9bdeb
 
 .cases__btn
   width: 230px
@@ -152,6 +293,8 @@
   position: absolute
   bottom: 0
   font-weight: 500
+  @media (max-width: 1280px)
+    position: relative
 
   span
     margin-left: 10px
@@ -183,4 +326,6 @@
     background-image: url(/static/img/pictures/cases/lane1.svg)
     background-repeat: no-repeat
     transform: translateX(50%)
-
+    @media (max-width: 1278px)
+      display: none
+      
