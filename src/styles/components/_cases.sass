@@ -182,9 +182,9 @@
     margin-bottom: 0
 
   .cases__btn
-    position: static
+    position: relative
     float: left
-    margin-top: 90px
+    margin-top: 82px
     margin-left: 90px
     background-color: #25c993
     color: #27283a
@@ -198,6 +198,18 @@
 
     img,
     svg
+      // animation: moving_arr 1s ease infinite
+
+    &::before
+      content: ''
+      position: absolute
+      left: -80px
+      transform: translateY(-50%)
+      height: 50px
+      width: 50px
+      top: 50%
+      background-repeat: no-repeat
+      background-image: url(/static/img/pictures/cases/icon2.svg)
       animation: moving_arr 1s ease infinite
 
   .cases__wr1_top
@@ -240,9 +252,9 @@
 
 @keyframes moving_arr 
   0%, 100% 
-    transform: translateX(0)
+    transform: translateX(0) translateY(-50%)
   50% 
-    transform: translateX(-10px)
+    transform: translateX(-10px) translateY(-50%)
 
 
 .cases__wr_cont
