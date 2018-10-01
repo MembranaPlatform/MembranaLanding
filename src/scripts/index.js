@@ -1,4 +1,6 @@
 import $ from 'jquery'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // import * as d3 from 'd3'
 
 const app = window.app = {}
@@ -590,6 +592,7 @@ $(window).one('preloaded', () => {
 })
 
 $(document).ready(function () {
+  AOS.init()
   $('.team__group:first-child .member__avatar').hover(function () {
     var dataImage = $(this).data('image')
     $(this).css('transition', 'all .2s ease')
