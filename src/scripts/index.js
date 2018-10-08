@@ -885,6 +885,10 @@ $(document).ready(function () {
       $('.registr_page').addClass('socials_done')
     }
   })
+
+  const url = new URL(window.location)
+  const email = url.searchParams.get('email')
+  $('div.check_email').text('Please, assept email subcription. We sent email to ' + email + '. Note, email can be found in "Promotions" or "SPAM"')
   $('.registr_page__btn').click(function (e) {
     $('.item__check').removeClass('not_done')
     if (!$('.registr_page').hasClass('socials_done')) {
@@ -909,31 +913,44 @@ $(document).ready(function () {
           trnum: trnum
         },
         success (data) {
-          const form = $('<form/>',
-            {
-              action: '/static/php/idnow.php',
-              method: 'post',
-              css: {
-                display: 'none'
+          $.ajax({
+            type: 'GET',
+            url: '/static/php/is_subscribed.php',
+            data: {
+              email: email
+            },
+            success (data) {
+              if (!data || !data.subscribed) {
+                alert('Please, assept email subcription. We sent email to ' + email + '. Note, email can be found in "Promotions" or "SPAM"')
+                return
               }
+              const form = $('<form/>',
+                {
+                  action: '/static/php/idnow.php',
+                  method: 'post',
+                  css: {
+                    display: 'none'
+                  }
+                }
+              )
+              form.append($('<input/>',
+                {
+                  type: 'text',
+                  name: 'email',
+                  value: email
+                }
+              ))
+              form.append($('<input/>',
+                {
+                  type: 'text',
+                  name: 'trnum',
+                  value: trnum
+                }
+              ))
+              $('body').append(form)
+              form.submit()
             }
-          )
-          form.append($('<input/>',
-            {
-              type: 'text',
-              name: 'email',
-              value: email
-            }
-          ))
-          form.append($('<input/>',
-            {
-              type: 'text',
-              name: 'trnum',
-              value: trnum
-            }
-          ))
-          $('body').append(form)
-          form.submit()
+          })
         }
       })
     }
