@@ -1,6 +1,9 @@
 .cases 
   position: relative
   padding-top: 30px
+  margin-bottom: 15rem
+  @media (max-width: 1024px)
+    margin-bottom: 0
 
   .pattern
     position: absolute
@@ -88,6 +91,8 @@
   padding: 5px 10px
   background-color: rgba(203, 203, 203, 0.06)
   display: inline-block
+  font-size: 2.1rem
+  margin-bottom: 5px
 
 .cases__numb
   font-size: 103px
@@ -202,6 +207,9 @@
       padding-left: 40px
       padding-right: 40px
 
+  .cases__numb
+    color: #25c993
+
   .cases__list
     // max-width: 460px
     // float: left
@@ -246,7 +254,7 @@
     transform: translateX(-50%)
     height: 50px
     width: 1200px
-    top: 0
+    top: -18px
     background-repeat: no-repeat
     background-image: url(/static/img/pictures/cases/lane6.svg)
     // animation: moving_arr 1s ease infinite
