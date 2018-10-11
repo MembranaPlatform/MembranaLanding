@@ -21,9 +21,8 @@ head
 	meta(name='description', content=description ? description : app.head.description)
 	meta(name='yandex-verification', content='4ebdfc97a2b8fa91')
 	link(href='/static/img/favicon.ico', rel='icon', type='image/x-icon')
+	script()!=`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MGWM8RL');`
 
-	script(async src='https://www.googletagmanager.com/gtag/js?id=UA-116221496-1')
-	script()!=`function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-116221496-1");`
 	script(type='text/javascript' async defer)!=`(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47624572 = new Ya.Metrika({ id:47624572, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");`
 	noscript: div: img(src='https://mc.yandex.ru/watch/47624572', style='position:absolute; left:-9999px;', alt='')
 	script(type='text/javascript' id='mcjs')!=`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/993708d3ee57501055057f283/6b1c585c0e41aa0a1838b7f97.js");`
