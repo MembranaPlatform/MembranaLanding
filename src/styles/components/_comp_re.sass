@@ -1,0 +1,156 @@
+@keyframes moving
+  0%
+  100%
+    transform: translateX(-50%) rotate(90deg)
+  50% 
+    transform: translateY(-10px) translateX(-50%) rotate(90deg)
+
+.comp_re__bg
+  top: 240px
+  position: absolute
+  @media(max-width: 1180px)
+    display: none
+
+.comp_wr
+  max-width: 1400px
+  width: 100%
+  padding-bottom: 50px
+  margin: 0 auto
+  overflow: hidden
+  text-align: center
+  font-weight: normal
+  @media(max-width: 1180px)
+    padding-top: 100px
+
+  &-colored 
+    font-weight: bold
+    // padding: 0 5px
+
+  &-colored_yell
+    color: #ffbe15
+    margin: 0
+
+  &-bold
+    font-weight: bold
+
+  &__side
+    font-size: px-to-rem(25px)
+    color: #fff
+    margin-top: 280px
+    width: 30%
+    width: calc(30% + 50px)
+    position: relative
+    padding-left: 60px
+    text-align: left
+    min-height: 40px
+    line-height: 40px
+    @media(max-width: 1180px)
+      width: 100%
+      max-width: 400px
+      margin: 20px auto 0
+
+  &__icon
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+
+  &__side-left
+    float: left
+    @media(max-width: 1180px)
+      float: none
+    
+  &__side-right
+    float: right
+    @media(max-width: 1180px)
+      float: none
+
+  &__center
+    float: left
+    width: 40%
+    margin: 0 -50px
+    // max-width: 500px
+    height: 700px
+    background-image: url(/static/img/pictures/competition/comp_re.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position-x: 6px
+    position: relative
+    @media(max-width: 1180px)
+      margin: 0 auto
+      width: 90%
+      max-width: 500px
+      float: none
+      @media(max-width: 767px)
+        height: 540px
+      
+    &::after
+      content: ''
+      position: absolute
+      width: 167px
+      height: 37px
+      left: 50%
+      bottom: 0
+      background-image: url(/static/img/pictures/competition/arrow.svg)
+      transform: translateX(-50%) rotate(90deg)
+      animation: moving 2s ease infinite
+
+  &__title
+    color: #fff
+    font-size: px-to-rem(164px)
+    font-weight: bold
+    text-transform: uppercase
+    line-height: .85
+    padding-top: 140px
+    margin: 0
+    @media(max-width: 767px)
+      font-size: 80px
+
+  &__btn
+    border-radius: 44px
+    background-color: #ffbe15
+    height: 87px
+    width: 358px
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 30px auto 14px
+    color: #000
+    text-decoration: none
+    font-size: 26px
+    transition: all ease .4s
+    position: relative
+    @media(max-width: 767px)
+      width: 100%
+      font-size: 20px
+
+    &:hover
+      opacity: .8
+
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      width: 167px
+      height: 37px
+      right: -250px
+      top: 50%
+      background-image: url(/static/img/pictures/competition/arrow.svg)
+      transform: translateY(-50%)
+
+    &::before
+      right: auto
+      left: -250px
+      transform: translateY(-50%) rotate(180deg)
+
+    .comp_wr-bold
+      padding-left: 5px
+
+  &__desc
+    color: #fff
+    opacity: .7
+       
