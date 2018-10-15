@@ -1,6 +1,9 @@
 .cases 
   position: relative
   padding-top: 30px
+  margin-bottom: 15rem
+  @media (max-width: 1024px)
+    margin-bottom: 0
 
   .pattern
     position: absolute
@@ -52,7 +55,7 @@
       
 
 .cases__wr
-  padding: 80px 40px 80px
+  padding: 80px 40px 0
   position: relative
 
   &::after,
@@ -88,6 +91,8 @@
   padding: 5px 10px
   background-color: rgba(203, 203, 203, 0.06)
   display: inline-block
+  font-size: 2.1rem
+  margin-bottom: 5px
 
 .cases__numb
   font-size: 103px
@@ -118,9 +123,23 @@
   line-height: 44px
   text-transform: uppercase
   overflow: hidden
+  position: relative
   @media (max-width: 767px)
     font-size: 22px
     line-height: 1.1
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    transform: translateY(-50%)
+    height: 70px
+    top: 50%
+    width: 70px
+    background-repeat: no-repeat
+    background-image: url(/static/img/pictures/cases/icon3.svg)
+    @media (max-width: 1024px)
+      display: none
 
   .text_fix
     float: left
@@ -136,62 +155,90 @@
     padding-top: 5px
 
 .cases__wr1
-  max-width: 590px
+  max-width: 620px
   display: inline-block
   width: 100%
-  padding: 0 75px 0 0
-  margin-bottom: 66px
+  padding: 0 75px 118px 0
+  margin-bottom: 0
   min-height: 445px
   position: relative
   @media (max-width: 1024px)
     min-height: 0
     padding: 0
+    margin-bottom: 50px
     max-width: 515px
 
 .cases__right
-  padding-left: 97px
+  padding-left: 75px
   padding-right: 0
   @media (max-width: 1280px)
     padding-left: 0
 
   .cases__wr1_top
-    @media (max-width: 767px)
-      display: -webkit-flex
-      display: -moz-flex
-      display: -ms-flex
-      display: -o-flex
-      display: flex
-      justify-content: flex-end
 
-    .cases__numb_wr
-      @media (max-width: 767px)
-        margin-right: 0
+    &::before
+      left: auto
+      right: 70px
+
+.cases__center_fix
+  background-image: linear-gradient(to bottom, rgba(37, 201, 147, .05), rgba(255, 255, 255, 0))
+  display: block
+  width: calc(100% + 80px)
+  margin-left: -40px
+  margin-right: -40px
+  padding-bottom: 80px
+  text-align: center
 
 .cases__center
   padding-right: 0
-  max-width: 780px
+  max-width: 1000px
   min-height: 0
+  padding-top: 70px
   padding-bottom: 0
   margin-bottom: 0
+  text-align: center
+  @media (max-width: 767px)
+    text-align: left
+
   @media (max-width: 1024px)
     max-width: 515px
 
+    @media (max-width: 767px)
+      padding-left: 40px
+      padding-right: 40px
+
+  .cases__numb
+    color: #25c993
+
   .cases__list
-    max-width: 460px
-    float: left
+    // max-width: 460px
+    // float: left
     margin-bottom: 0
+
+    &_item
+      &::before
+        position: static
+        display: inline-block
+        vertical-align: middle
+        transform: none
+        margin-right: 15px
+        @media (max-width: 767px)
+          position: absolute
 
   .cases__btn
     position: relative
-    float: left
-    margin-top: 82px
-    margin-left: 90px
+    // float: left
+    margin-top: 14px
+    display: inline-flex
     background-color: #25c993
     color: #27283a
+    width: 300px
     @media (max-width: 1280px)
       margin-top: 60px
       @media (max-width: 1024px)
         margin-left: 0
+        @media (max-width: 767px)
+          width: 100%
 
     path
       fill: #27283a
@@ -200,17 +247,17 @@
     svg
       // animation: moving_arr 1s ease infinite
 
-    &::before
-      content: ''
-      position: absolute
-      left: -80px
-      transform: translateY(-50%)
-      height: 50px
-      width: 50px
-      top: 50%
-      background-repeat: no-repeat
-      background-image: url(/static/img/pictures/cases/icon2.svg)
-      animation: moving_arr 1s ease infinite
+  &::before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    height: 50px
+    width: 1200px
+    top: -18px
+    background-repeat: no-repeat
+    background-image: url(/static/img/pictures/cases/lane6.svg)
+    // animation: moving_arr 1s ease infinite
 
   .cases__wr1_top
     display: -webkit-flex
@@ -222,6 +269,7 @@
     justify-content: center
     position: relative
     overflow: visible
+    color: #fff
     @media (max-width: 1024px)
       font-size: 45px
       @media (max-width: 767px)
@@ -230,25 +278,9 @@
     span
       padding-left: 10px
 
-    &::after,
     &::before
-      content: ''
-      position: absolute
-      left: 0
-      transform: translateY(-50%) translateX(-80%)
-      height: 38px
-      width: 500px
-      top: 50%
-      background-repeat: no-repeat
-      background-image: url(/static/img/pictures/cases/lane2.svg)
-      @media (max-width: 1024px)
-        display: none
-        
+      left: 130px
 
-    &::after
-      left: auto
-      right: 0
-      transform: translateY(-50%) translateX(80%) rotate(180deg)
 
 @keyframes moving_arr 
   0%, 100% 
@@ -303,8 +335,8 @@
   color: #c7cbfd
   text-decoration: none
   transition: all ease .4s
-  position: absolute
-  bottom: 0
+  // position: absolute
+  // bottom: 0
   font-weight: 500
   @media (max-width: 1280px)
     position: relative
@@ -332,16 +364,52 @@
   &::after
     content: ''
     position: absolute
-    top: 0
+    top: -10px
     right: 0
-    width: 38px
-    bottom: 0
+    width: 50px
+    bottom: -10px
+    background-size: cover
     background-image: url(/static/img/pictures/cases/lane1.svg)
     background-repeat: no-repeat
     transform: translateX(50%)
-    @media (max-width: 1278px)
+    @media (max-width: 1336px)
       display: none
 
+  .cases__wr1_top
+    text-align: right
+    @media (max-width: 1024px)
+      text-align: left
+
+  .cases__wr1_low
+    text-align: left
+
+  .cases__numb_wr
+    margin-left: 96px
+    @media (max-width: 1024px)
+      margin-left: 0
+  
+  .cases__list_item
+    padding-left: 0
+    padding-right: 30px
+    position: relative
+    text-align: right
+    @media (max-width: 1024px)
+      text-align: left
+      padding-right: 0
+      padding-left: 30px
+
+    &::before
+      left: auto
+      right: 0
+      @media (max-width: 1024px)
+        left: 0
+        right: auto
+
+
+  .cases__btn
+    float: right
+    @media (max-width: 1024px)
+      float: none
 
 .ref__underlane
   text-decoration: underline
