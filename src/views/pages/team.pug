@@ -4,10 +4,10 @@ block page_variables
 	- var page_class = 'our_team';
 	- var page_active = '/team/';
 
-//- block append head
-//- 	block head_variables
-//- 		- var title = app.head.whitepaper.title;
-//- 		- var description = app.head.whitepaper.description;
+block append head
+	block head_variables
+		- var title = app.head.team.title;
+		- var description = app.head.team.description;
 
 block content
 	//- .page-content-pattern
