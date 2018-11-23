@@ -33,32 +33,34 @@
     @media(max-width:767px)
       padding: 8%
 
-    .dates__right
-      float: right
-      @media(max-width:1023px)
-        float: none
+    &__date
+      text-align: left
+    // .dates__right
+    //   float: right
+    //   @media(max-width:1023px)
+    //     float: none
 
-    .dates__left
-      float: left
-      margin-right: 140px
-      @media(max-width:1023px)
-        margin-right: 0
-        float: none
-        margin-bottom: 20px
-        padding-left: 20px
-        @media(max-width:767px)
-          padding-left: 0
-
-      &:after
-        content: '------'
-        position: absolute
-        // width: 53px
-        right: -86px
-        top: 50%
-        transform: translateY(-50%)
-        color: #525361
-        @media(max-width:1023px)
-          display: none
+    // .dates__left
+    //   float: left
+    //   margin-right: 140px
+    //   @media(max-width:1023px)
+    //     margin-right: 0
+    //     float: none
+    //     margin-bottom: 20px
+    //     padding-left: 20px
+    //     @media(max-width:767px)
+    //       padding-left: 0
+    //
+    //   &:after
+    //     content: '------'
+    //     position: absolute
+    //     // width: 53px
+    //     right: -86px
+    //     top: 50%
+    //     transform: translateY(-50%)
+    //     color: #525361
+    //     @media(max-width:1023px)
+    //       display: none
 
     .dates__bold
       font-weight: bold
@@ -195,7 +197,7 @@
 
     .colored
       background-color: #4d09d6
-  
+
     &:after
       content: ''
       position: absolute
@@ -639,9 +641,9 @@
 
         &:first-child
           margin-left: 0
-          width: 34%          
+          width: 34%
 
-        &:nth-child(2)          
+        &:nth-child(2)
           width: 29%
 
         &:nth-child(3)
@@ -801,7 +803,7 @@
           display: none
           // background-color: rgba(255, 255, 255, .05)
           background-color: #383a4c
-          border-radius: 0 0 10px 10px 
+          border-radius: 0 0 10px 10px
           cursor: pointer
           position: absolute
           margin-top: 6px
@@ -862,8 +864,8 @@
 
         input
           &:focus
-            outline: none 
-      
+            outline: none
+
       .hidden_opt
         display: none
         position: absolute
@@ -892,7 +894,7 @@
           color: rgba(255, 255, 255, .2)
           font-size: 13px
           padding-top: 17px
-      
+
       .citizenship_label
         position: relative
 
@@ -904,7 +906,7 @@
           right: 10px
           bottom: -27px
           background: url('/static/img/pictures/pre-sale/arrow_down.svg') no-repeat
-        
+
 
       .sm-form-btn
         background-color: #4d09d6
@@ -936,7 +938,7 @@
       .sm-form__submit
         @media(max-width:767px)
           text-align: center
-  
+
       .form__check_label
         position: relative
         cursor: pointer
@@ -965,7 +967,7 @@
 
         input
           // position: absolute
-          opacity: 0       
+          opacity: 0
 
           &:checked ~ .custom_input
             // background-color: red
@@ -1009,7 +1011,7 @@
         font-size: 13px
 
         &:focus
-            outline: none 
+            outline: none
 
     .confirm_form
       padding-top: 114px
@@ -1127,6 +1129,3 @@
       height: 100px
       top: 2100px
       right: 13%
-
-
-      
