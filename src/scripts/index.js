@@ -348,6 +348,7 @@ app.setPatternsSize()
         type: 'POST',
         url: '/static/php/unique_join.php',
         data: {
+          trnum: trnum,
           email: email
         },
         success (data) {
@@ -385,7 +386,8 @@ app.setPatternsSize()
         type: 'POST',
         url: '/static/php/unique_join.php',
         data: {
-          email: email
+          email: email,
+          trnum: trnum
         },
         success (data) {
           if (data.isNew) {
@@ -885,6 +887,25 @@ $(document).ready(function () {
       $('.registr_page').addClass('socials_done')
     }
   })
+
+  if ($('div.check_email')[0]) {
+    const url = new URL(window.location)
+    const email = url.searchParams.get('email')
+    if (email) {
+      $.ajax({
+        type: 'GET',
+        url: '/static/php/is_subscribed.php',
+        data: {
+          email: email
+        },
+        success (data) {
+          if (!data || !data.subscribed) {
+            $('div.check_email').text('Please, accept email subscription. We sent email to ' + email + '. Note, email can be found in "Promotions" or "SPAM"')
+          }
+        }
+      })
+    }
+  }
   $('.registr_page__btn').click(function (e) {
     $('.item__check').removeClass('not_done')
     if (!$('.registr_page').hasClass('socials_done')) {
@@ -909,31 +930,44 @@ $(document).ready(function () {
           trnum: trnum
         },
         success (data) {
-          const form = $('<form/>',
-            {
-              action: '/static/php/idnow.php',
-              method: 'post',
-              css: {
-                display: 'none'
+          $.ajax({
+            type: 'GET',
+            url: '/static/php/is_subscribed.php',
+            data: {
+              email: email
+            },
+            success (data) {
+              if (!data || !data.subscribed) {
+                alert('Please, accept email subscription. We sent email to ' + email + '. Note, email can be found in "Promotions" or "SPAM"')
+                return
               }
+              const form = $('<form/>',
+                {
+                  action: '/static/php/idnow.php',
+                  method: 'post',
+                  css: {
+                    display: 'none'
+                  }
+                }
+              )
+              form.append($('<input/>',
+                {
+                  type: 'text',
+                  name: 'email',
+                  value: email
+                }
+              ))
+              form.append($('<input/>',
+                {
+                  type: 'text',
+                  name: 'trnum',
+                  value: trnum
+                }
+              ))
+              $('body').append(form)
+              form.submit()
             }
-          )
-          form.append($('<input/>',
-            {
-              type: 'text',
-              name: 'email',
-              value: email
-            }
-          ))
-          form.append($('<input/>',
-            {
-              type: 'text',
-              name: 'trnum',
-              value: trnum
-            }
-          ))
-          $('body').append(form)
-          form.submit()
+          })
         }
       })
     }
