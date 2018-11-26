@@ -102,8 +102,13 @@
     justify-content: center
     align-items: center
 
-    border: 5px solid  #00ead7
+    // border: 5px solid  #00ead7
     border-radius: 30px
+
+    background-image: url('/static/img/icons/border.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
 
     color: #fff
     line-height: 50px
@@ -118,6 +123,10 @@
 
     @media(max-width: 767px)
       width: 100%
+
+      border: 5px solid  #00ead7
+
+      background-image: none
       // margin: 0 10% 20px
 
   &__btn_img
