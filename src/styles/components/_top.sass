@@ -49,6 +49,154 @@
     @media(max-width: 767px)
       margin: 35px 0 40px
 
+  // new
+
+  &__title2
+    font-size: px-to-rem(64px)
+    font-weight: 500
+    color: #fff
+
+    margin-bottom: 0
+    padding-bottom: 23px
+
+    @media(max-width: 767px)
+      font-size: px-to-rem(30px)
+
+    &-col
+      color: #00ead7
+
+      position: relative
+
+      padding-left: 13px
+
+      &::before
+        content: ''
+        position: absolute
+
+        left: -9px
+        top: 50%
+        transform: translateY(-50%)
+        width: 13px
+        height: 14px
+
+        background: url('/static/img/icons/round.svg') top center no-repeat
+        background-size: contain
+
+        @media(max-width: 767px)
+          left: -1px
+          width: 8px
+          height: 10px
+
+  &__btn
+    width: 544px
+    height: 60px
+    margin: 0 auto 40px
+
+    box-sizing: border-box
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+
+    justify-content: center
+    align-items: center
+
+    border: 5px solid  #00ead7
+    border-radius: 30px
+
+    color: #fff
+    line-height: 50px
+    text-decoration: none
+
+    &:hover
+      .top__btn_img
+        transform: translateX(-5px)
+
+      .top__btn_span
+        transform: translateX(5px)
+
+    @media(max-width: 767px)
+      width: 100%
+      // margin: 0 10% 20px
+
+  &__btn_img
+    width: 8px
+    height: 9px
+    margin-right: 10px
+
+    transition: all ease .4s
+
+  &__btn_span
+    margin-right: px-to-rem(5px)
+
+    transition: all ease .4s
+
+  &-bold
+    font-weight: 500
+
+  &-bold_700
+    font-weight: 700
+    color: #fff
+
+  &__widgets
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+
+    @media(max-width: 767px)
+      flex-wrap: wrap
+
+      justify-content: center
+
+    &_img
+      width: 54px
+
+  &__widget
+    margin-right: 10px
+
+    @media(max-width: 767px)
+      margin-bottom: 10px
+
+  &__widget1_img
+    width: 174px
+
+  //timer
+
+  &_timer
+    text-align: left
+
+    padding-bottom: 50px
+
+    &__desc
+      margin: 0
+      padding-bottom: 2px
+      margin-bottom: 10px
+
+      font-size: px-to-rem(17px)
+      color: #fff
+
+      display: inline-block
+
+      border-bottom: 1px solid  #00FCCF
+
+    &__wr
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: flex
+
+      font-size: 41px
+      font-weight: bold
+      color: #dadada
+
+    &-colored
+      color: #00fccf
+
+
 .select-language
 
   img
