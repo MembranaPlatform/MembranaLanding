@@ -976,7 +976,7 @@ $(document).ready(function () {
 
 // timer
 $(document).ready(function () {
-  var countDownDate = new Date('Jan 1, 2019 00:00:00').getTime()
+  var countDownDate = new Date('Dec 10, 2018 00:00:00').getTime()
   var x = setInterval(function () {
     // Get todays date and time
     var now = new Date().getTime()
