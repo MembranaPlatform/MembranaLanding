@@ -977,9 +977,9 @@ $(document).ready(function () {
 // timer
 $(document).ready(function () {
   var countDownDate = new Date('Dec 10, 2018 00:00:00').getTime()
-  function checkForLenght (_this) {
-    if (_this < 10) _this = '0' + _this
-    return _this
+  function padDecimal (number) {
+    if (number < 10) number = '0' + number
+    return number
   }
   var mainPageTimeout = setInterval(function () {
     // Get todays date and time
@@ -993,9 +993,9 @@ $(document).ready(function () {
     var minute = 1000 * 60
 
     // Time calculations for days, hours, minutes
-    var days = checkForLenght(Math.floor(distance / day))
-    var hours = checkForLenght(Math.floor((distance % day) / hour))
-    var minutes = checkForLenght(Math.floor((distance % hour) / minute))
+    var days = Math.floor(distance / day)
+    var hours = padDecimal(Math.floor((distance % day) / hour))
+    var minutes = padDecimal(Math.floor((distance % hour) / minute))
 
     $('.top_timer__d .timerJs').html(days)
     $('.top_timer__h .timerJs').html(hours)
