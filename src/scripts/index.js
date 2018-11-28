@@ -976,7 +976,7 @@ $(document).ready(function () {
 
 // timer
 $(document).ready(function () {
-  var countDownDate = new Date('Dec 10, 2018 00:00:00').getTime()
+  var countDownDate = new Date('2018-12-10T00:00:00+0000').getTime()
   function padDecimal (number) {
     if (number < 10) number = '0' + number
     return number
