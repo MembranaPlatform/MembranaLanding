@@ -974,9 +974,9 @@ $(document).ready(function () {
   })
 })
 
-// timer
+// timers
 $(document).ready(function () {
-  var countDownDate = new Date('Dec 10, 2018 00:00:00').getTime()
+  var countDownDateStart = new Date('Dec 10, 2018 00:00:00').getTime()
   function padDecimal (number) {
     if (number < 10) number = '0' + number
     return number
@@ -986,7 +986,7 @@ $(document).ready(function () {
     var now = new Date().getTime()
 
     // Find the distance between now and the count down date
-    var distance = countDownDate - now
+    var distance = countDownDateStart - now
 
     var day = 1000 * 60 * 60 * 24
     var hour = 1000 * 60 * 60
@@ -1007,6 +1007,40 @@ $(document).ready(function () {
       $('.top_timer__d .timerJs').html('00')
       $('.top_timer__h .timerJs').html('00')
       $('.top_timer__m .timerJs').html('00')
+    }
+  }, 1000)
+
+  var countDownDateEnd = new Date('Feb 1, 2019 00:00:00').getTime()
+  var salePageTimeout = setInterval(function () {
+    // Get todays date and time
+    var now = new Date().getTime()
+
+    // Find the distance between now and the count down date
+    var distance = countDownDateEnd - now
+
+    var day = 1000 * 60 * 60 * 24
+    var hour = 1000 * 60 * 60
+    var minute = 1000 * 60
+    var sec = 1000
+
+    // Time calculations for days, hours, minutes
+    var days = Math.floor(distance / day)
+    var hours = padDecimal(Math.floor((distance % day) / hour))
+    var minutes = padDecimal(Math.floor((distance % hour) / minute))
+    var seconds = padDecimal(Math.floor((distance % minute) / sec))
+
+    $('.live-sale__days .live-sale__time_number').html(days)
+    $('.live-sale__hours .live-sale__time_number').html(hours)
+    $('.live-sale__minutes .live-sale__time_number').html(minutes)
+    $('.live-sale__seconds .live-sale__time_number').html(seconds)
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(salePageTimeout)
+      $('.live-sale__days .live-sale__time_number').html('00')
+      $('.live-sale__hours .live-sale__time_number').html('00')
+      $('.live-sale__minutes .live-sale__time_number').html('00')
+      $('.live-sale__seconds .live-sale__time_number').html('00')
     }
   }, 1000)
 })

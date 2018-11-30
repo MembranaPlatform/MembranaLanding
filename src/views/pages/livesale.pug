@@ -1,0 +1,190 @@
+extends ../layouts/base
+
+block page_variables
+  - var page_class = 'live-sale';
+  - var page_active = '/live-sale/';
+
+block append head
+  block head_variables
+    - var title = app.head.competition.title;
+    - var description = app.head.competition.description;
+
+block content
+  .page-content-pattern
+
+    //- .pre-sale-wrapper
+    //-   .patternsed
+    //-     div.patterned
+    //-       .block1
+    //-         img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+    //-         img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
+    //-         //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
+    //-         img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+    //-       .block2
+    //-         img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+    //-         img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+    //-         img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
+    //-         //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
+    //-         img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+    //-       img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
+    //-       img.js-prevent-inline.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+    //-       img.js-prevent-inline.triangle_22(src="/static/img/new-page/mid_bg2.svg" alt="")
+    //-       img.js-prevent-inline.triangle_21(src="/static/img/new-page/small_bg.svg" alt="")
+
+    .pre-sale.live-sale
+
+      h1.live-sale__head TOKEN SALE 
+        span.live-sale__head_span LIVE
+
+      .live-sale__soc
+        .live-sale__soc_wr.live-sale__soc_wr-first
+          img(src="/static/img/icons/socials/tw-round.svg", alt="").live-sale__social_img_1
+          span 95,000
+        .live-sale__soc_wr
+          img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__social_img_1
+          span 15,000
+      
+      .live-sale__wr.live-sale__top_wr
+        p.live-sale__bdb
+          span.live-sale-bold 70% Bonus 
+          span Ends in:
+
+        .live-sale__wr1
+          p.live-sale__low_text1 Current Price
+          p.live-sale__bold_text1 USD 
+            span.live-sale-bold 0.3 = 1.75 
+            span MBN
+
+      .live-sale__timer.live-sale__wr
+        .live-sale__time_wr.live-sale__days
+          .live-sale__time_number.live-sale-bold 30
+          .live-sale__time_desc Days
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__hours
+          .live-sale__time_number.live-sale-bold 10
+          .live-sale__time_desc Hours
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__minutes
+          .live-sale__time_number.live-sale-bold 30
+          .live-sale__time_desc Minutes
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__seconds
+          .live-sale__time_number.live-sale-bold 03
+          .live-sale__time_desc Seconds
+
+      a(href="").top__btn.live-sale__btn
+        img(src="/static/img/icons/play2.svg" alt="").top__btn_img
+        span.live-sale__pad_r.top__btn_span Buy 
+        span.top__btn_span.top-bold Tokens
+
+      p.live-sale__text2 
+        span.live-sale-bold Restricted:
+        span US citizens (among institutional investors) and China citizens
+
+      .live-sale__wr.live-sale__wr_2
+        .live-sale__doc
+          a(href="#").live-sale__doc_link
+            img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__doc_img
+            span One Pager
+          a(href="#").live-sale__doc_link
+            img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__doc_img
+            span Whitepaper
+          a(href="#").live-sale__doc_link.live-sale__doc_link-big
+            img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__doc_img
+            span Business Overview
+        .live-sale__paym
+          p.live-sale__bdb.live-sale__paym_bdb We 
+            span.live-sale-bold Accept:
+          .live-sale__pay_wr
+            img(src="/static/img/pictures/live-sale/bitkoin.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/ethereum.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/litecoin.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/visa.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/mastercard.svg", alt="").live-sale__paym_img
+
+      .top__widgets.live-sale__widgets
+
+        a(href="https://icobench.com/ico/membrana" target="_blank" rel="nofollow" title="Membrana on ICObench").top__widget1.top__widget
+          img(border="0" src="https://icobench.com/rated/membrana?shape=horizontal&size=s" width="174px" height="76px" alt="Membrana ICO rating")
+
+        a(href="https://www.trackico.io/ico/membrana/", target="_blank", title="Membrana on TrackICO").top__widget1.top__widget
+          img(border="0", src="https://www.trackico.io/widget/horizontal/membrana/300.png", width="230px", height="76px", alt="Membrana TrackICO rating")
+          
+        a(href="https://www.icohotlist.com/ico/membrana-platform/", target="_blank", title="Membrana on IcoHotList").top__widget1.top__widget
+          img(border="0", src="/static/img/icons/HotListed.png", width="76px", height="76px", alt="Membrana IcoHotList rating")
+
+
+
+
+
+      .graph_block
+        h2.graph_block__title Token distribution:
+        .graph__desc_vert
+          .graph__desc1
+            .desc__title 40% 
+              span.small_text 1 month lockup for bonus
+            .bordered_block Tokens
+              br
+              | available
+              br
+              span.bold for Presale
+          .graph__desc2
+            .desc__title 15% 
+              span.small_text Not lock up
+            .bordered_block.small Reserved
+              br
+              span.bold for Public Sale
+        .js-pie-chart.pie-chart#pieChart
+        .graph__desc_hor
+          .desc__title Reserved for distribution to
+          ul.percents_block
+            li(data-number="2").percents_block__string 
+              span.left__part
+                span.left__part_text Private Sale Investors
+              span.right__part 12% 
+                span.non_colored Lock up to 6 month
+            li(data-number="3").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana Advisors and Partners
+              span.right__part 10% 
+                span.non_colored Lock up to 3 month
+            li(data-number="4").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana team
+              span.right__part 20%
+                span.non_colored Lock up to 3 month
+            li(data-number="5").percents_block__string 
+              span.left__part
+                span.left__part_text Community Airdrop
+              span.right__part 3%
+
+
+
+
+
+
+
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js")

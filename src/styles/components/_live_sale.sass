@@ -1,0 +1,254 @@
+.live-sale
+	margin: 0 auto
+
+	&__wr
+		margin: 0 auto
+
+	&-bold
+		font-weight: bold
+
+	&__head
+		font-size: px-to-rem(64px)
+		font-weight: 500
+
+		padding: px-to-rem(200px) 0 5rem
+		margin: 0
+
+		&_span
+			color: #00E8D8
+
+			position: relative
+
+			margin-left: 10px
+
+			&::after
+				content: ''
+				position: absolute
+
+				left: 0
+				right: 0
+				bottom: 6px
+				height: 3px
+
+				background-color: #00E8D8
+
+			&::before
+				content: ''
+				position: absolute
+
+				left: -20px
+				top: 50%
+				transform: translateY(-50%)
+				width: 13px
+				height: 13px
+
+				border-radius: 50%
+
+				background-color: #00E8D8
+
+	&__soc
+		display: flex
+
+		justify-content: center
+
+		padding-bottom: 70px
+
+	&__soc_wr
+		height: 45px
+		padding: 0 50px
+
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		align-items: center
+
+		&-first
+			border-right: 1px dashed #5b5c73
+
+	&__social_img_1
+		width: 26px
+		height: 26px
+		margin-right: 10px
+
+	&__top_wr
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		justify-content: space-between
+
+		max-width: 800px
+		width: 100%
+		padding-bottom: 60px
+
+	&__bdb
+		font-size: 3.1rem
+		line-height: 2
+
+		border-bottom: 2px solid  #00E8D8
+
+		margin: 0
+
+	&__wr1
+		text-align: left
+		padding-top: 10px
+
+	&__low_text1
+		color: #91919b
+		font-size: 1.7rem
+
+		margin: 0 0 2px
+
+	&__bold_text1
+		margin: 0
+
+		font-size: 2.3rem
+
+	&__timer
+		max-width: 800px
+		width: 100%
+		padding: 29px 75px 60px
+		margin-bottom: 55px
+
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		// justify-content: space-between
+
+		font-size: 9.6rem
+
+		background-image: url(/static/img/pictures/live-sale/border.svg)
+		background-size: 100% 100%
+		background-position: center
+
+	&__time_wr
+		position: relative
+
+	&__time_desc
+		position: absolute
+
+		left: 50%
+		transform: translateX(-50%)
+		bottom: -30px
+
+		font-size: 3.7rem
+
+	&__martel
+		font-family: 'MartelSans';
+		line-height: 9.6rem
+		font-size: 5.4rem
+		color: #39ebd6
+
+		width: 5.9rem
+
+	&__btn
+		margin-bottom: 15px
+
+	&__text2
+		color: #91919b
+		font-size: 1.6rem
+
+		margin: 0 auto 55px
+
+	&__wr_2
+		display: inline-flex
+		position: relative
+
+		margin-bottom: 75px
+
+		&::before
+			content: ''
+			position: absolute
+
+			top: -15px
+			left: 50%
+			transform: translateX(-50%)
+			width: 1px
+			bottom: -20px
+
+			background: linear-gradient(#00dbdf, rgba(0, 219, 223, 0))
+
+	&__doc
+		width: 365px
+		padding-right: 60px
+
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		flex-wrap: wrap
+		box-sizing: content-box
+
+		justify-content: space-between
+
+		&_img
+			width: 25px
+			margin-right: 20px
+
+		&_link
+			width: 49%
+			height: 50px
+			margin-bottom: 20px
+
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
+			justify-content: center
+			align-items: center
+
+			text-decoration: none
+			color: #fff
+			font-size: 1.7rem
+
+			background-image: url(/static/img/pictures/live-sale/border2-fade.svg)
+			background-size: 100% 100%
+			background-position: center
+
+			&-big
+				width: 100%
+				margin-bottom: 0
+
+				background-image: url(/static/img/pictures/live-sale/border2-fade-full.svg)
+
+	&__pay_wr
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		align-items: center
+
+	&__paym
+		text-align: left
+
+		padding-left: 60px
+
+		&_bdb
+			display: inline-block
+
+			font-size: 2.2rem
+			line-height: 1.3
+
+			margin-bottom: 40px
+
+		&_img
+			margin-right: 33px
+
+	&__widgets
+		justify-content: center
+
+		padding-bottom: 75px
