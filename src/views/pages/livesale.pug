@@ -118,6 +118,17 @@ block content
         a(href="https://www.icohotlist.com/ico/membrana-platform/", target="_blank", title="Membrana on IcoHotList").top__widget1.top__widget
           img(border="0", src="/static/img/icons/HotListed.png", width="76px", height="76px", alt="Membrana IcoHotList rating")
 
+        a(href="https://findico.io/ico/membrana", target="_blank", title="Membrana (MBN) on FindICO")
+          img(border="0", src="https://findico.io/widget/horizontal/membrana/300.png", width="auto", height="76px", alt="Membrana (MBN) FindICO rating").top__widget-height
+
+      .live-sale__wr.live-sale__press
+        h2.live-sale__title.live-sale-grad In The Press
+
+        .live-sale__pr_list.live-sale__wr
+          for item in app.press.items2
+            a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
+          a(href="#").live-sale__pr_link See all...
+
 
 
 

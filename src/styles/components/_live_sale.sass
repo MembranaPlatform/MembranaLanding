@@ -252,3 +252,76 @@
 		justify-content: center
 
 		padding-bottom: 75px
+
+	&__title
+		font-size: 4.9rem
+		font-weight: normal
+
+		padding-bottom: 7.5rem
+		margin: 0
+
+	&-grad
+	  color: $greenish-cyan
+	  @supports (-webkit-background-clip: text)
+	    background-image: linear-gradient(90deg, #26a6d1, #00f5d2)
+	    -webkit-background-clip: text
+	    -webkit-text-fill-color: transparent
+
+	&__press
+		margin-bottom: 80px
+
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			z-index: -1
+
+			top: -110px
+			left: 0
+			right: 0
+			bottom: 0
+
+			background-color: #292a3d
+
+	&__pr_list
+		max-width: 900px
+		height: 80px
+		padding-bottom: 130px
+
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		position: relative
+		box-sizing: content-box
+
+		justify-content: space-between
+		align-items: center
+
+	&__pr_item
+		width: 30%
+
+		display: inline-block
+
+		transition: all .4s ease
+
+		&:hover
+			opacity: .6
+
+	&__pr_image
+		width: 100%
+
+	&__pr_link
+		position: absolute
+
+		right: 0
+		bottom: 63px
+
+		color: #00fccf
+		font-size: 1.9rem
+
+		opacity: .5
+
+	
