@@ -86,6 +86,16 @@
 		width: 100%
 		padding-bottom: 60px
 
+		@media(max-width:1023px)
+			padding: 0 40px 60px
+
+		@media(max-width:767px)
+			flex-wrap: wrap
+
+			flex-direction: column-reverse
+
+			padding: 0 20px 20px
+
 	&__bdb
 		font-size: 3.1rem
 		line-height: 2
@@ -97,6 +107,9 @@
 	&__wr1
 		text-align: left
 		padding-top: 10px
+
+		@media(max-width:767px)
+			padding-bottom: 30px
 
 	&__low_text1
 		color: #91919b
@@ -129,6 +142,17 @@
 		background-size: 100% 100%
 		background-position: center
 
+		@media(max-width:1280px)
+			padding: 20px 150px 40px
+
+		@media(max-width:767px)
+			background-image: none
+
+			font-size: 6.6rem
+
+			padding: 20px 20px 40px
+			margin-bottom: 20px
+
 	&__time_wr
 		position: relative
 
@@ -141,6 +165,9 @@
 
 		font-size: 3.7rem
 
+		@media(max-width:767px)
+			font-size: 2.4rem
+
 	&__martel
 		font-family: 'MartelSans';
 		line-height: 9.6rem
@@ -148,6 +175,9 @@
 		color: #39ebd6
 
 		width: 5.9rem
+
+		@media(max-width:767px)
+			line-height: 6.6rem
 
 	&__btn
 		margin-bottom: 15px
@@ -164,6 +194,16 @@
 
 		margin-bottom: 75px
 
+		@media(max-width:1023px)
+			flex-wrap: wrap
+
+		@media(max-width:767px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
 		&::before
 			content: ''
 			position: absolute
@@ -175,6 +215,9 @@
 			bottom: -20px
 
 			background: linear-gradient(#00dbdf, rgba(0, 219, 223, 0))
+
+			@media(max-width:1023px)
+				display: none
 
 	&__doc
 		width: 365px
@@ -190,6 +233,15 @@
 		box-sizing: content-box
 
 		justify-content: space-between
+
+		@media(max-width:1023px)
+			// width: 100%
+			margin: 0 auto
+			padding: 0 40px
+
+		@media(max-width:767px)
+			padding: 0
+			width: 320px
 
 		&_img
 			width: 25px
@@ -237,6 +289,10 @@
 
 		padding-left: 60px
 
+		@media(max-width:1023px)
+			padding: 0 40px
+			margin: 30px auto 0
+
 		&_bdb
 			display: inline-block
 
@@ -259,6 +315,9 @@
 
 		padding-bottom: 7.5rem
 		margin: 0
+
+		@media(max-width:767px)
+			padding-bottom: 4rem
 
 	&-grad
 	  color: $greenish-cyan
@@ -300,6 +359,14 @@
 		justify-content: space-between
 		align-items: center
 
+		@media(max-width:1023px)
+			padding: 0 40px 80px
+
+		@media(max-width:767px)
+			flex-wrap: wrap
+
+			height: auto
+
 	&__pr_item
 		width: 30%
 
@@ -309,6 +376,10 @@
 
 		&:hover
 			opacity: .6
+
+		@media(max-width:767px)
+			width: 300px
+			margin-bottom: 20px
 
 	&__pr_image
 		width: 100%
@@ -366,6 +437,9 @@
 		width: 24%
 		margin-right: 5%
 
+		@media(max-width:767px)
+			width: 122%
+
 	&__bon_pr_wr
 		display: inline-flex
 
@@ -381,6 +455,13 @@
 
 		height: 18px
 		width: 90%
+
+		@media(max-width:767px)
+			width: 0 !important
+
+	&__bon_list
+		@media(max-width:767px)
+			padding: 0 0 20px
 
 	&__bon_pr_bar
 		height: 100%
@@ -454,6 +535,13 @@
 			width: 340px
 			padding-top: 45px
 
+			@media(max-width:1023px)
+				width: 300px
+
+			@media(max-width:767px)
+				padding-top: 0
+				margin-bottom: 0
+
 		.pie-chart
 			width: 345px
 			margin-left: 65px
@@ -464,8 +552,17 @@
 		.desc__title
 			font-size: 2.2rem
 
+			@media(max-width:1023px)
+				padding-left: 0
+
+			@media(max-width:767px)
+				padding-left: 15px
+
 		.live-sale__title
 			padding-bottom: 6.5rem
+
+			@media(max-width:767px)
+				padding-bottom: 2rem
 
 		.percents_block
 			background-image: url(/static/img/pictures/live-sale/border-fade.svg)
@@ -484,24 +581,44 @@
 			flex-wrap: wrap
 			position: relative
 
+			@media(max-width:767px)
+				background-image: none
+
+				width: 100%
+				height: auto
+				margin: 0
+
 			&__string
 				// width: 50%
 				width: 43%
 				padding: 15px 0
 				margin: 0 25px
 
+				@media(max-width:767px)
+					width: 100%
+					padding: 0
+
 				&:nth-child(1),
 				&:nth-child(2)
 					border-bottom: 1px dashed #5b5c73
+
+					@media(max-width:767px)
+						border-bottom: none
 
 				&:nth-child(1),
 				&:nth-child(3)
 					width: 46%
 
+					@media(max-width:767px)
+						width: 100%
+
 				&:nth-child(2),
 				&:nth-child(4)
 					position: relative
 					width: 40%
+
+					@media(max-width:767px)
+						width: 100%
 
 					&::before
 						content: ''
@@ -513,6 +630,9 @@
 						width: 1px
 
 						border-left: 1px dashed #5b5c73
+
+						@media(max-width:767px)
+							display: none
 
 				&:nth-child(2)::before
 					top: 15px
@@ -538,6 +658,13 @@
 		.graph__desc_hor
 			width: 100%
 
+			@media(max-width:1023px)
+				padding: 0 7px
+
+			@media(max-width:767px)
+				.desc__title
+					display: none
+
 		.graph__desc_vert
 
 			.live-sale__bordered
@@ -552,6 +679,13 @@
 				margin-bottom: 30px
 
 				transition: all ease .4s
+
+				@media(max-width:767px)
+					padding: 0
+					margin-bottom: 0
+					height: auto
+
+					background-image: none
 
 				&:hover,
 				&.hovered
@@ -583,6 +717,12 @@
 		flex-wrap: wrap
 		justify-content: space-between
 
+		@media(max-width:1280px)
+			max-width: 480px
+
+		@media(max-width:767px)
+			padding: 20px 20px 40px
+
 	&__about_item
 		width: 49%
 		margin-bottom: 15px
@@ -600,14 +740,28 @@
 		background-repeat: no-repeat
 		background-size: contain
 
+		@media(max-width:767px)
+			background-image: none
+
+			width: 48%
+
 		&:nth-child(3),
 		&:nth-child(4)
 			padding: 0
 
 			background-image: url(/static/img/pictures/live-sale/border5-fade.svg)
 
+			@media(max-width:1280px)
+				padding: 0 3px
+
+			@media(max-width:767px)
+				background-image: none
+
 	&__about_icon
 		width: 93px
+
+		@media(max-width:767px)
+			display: none
 
 	&__about_text
 		max-width: 200px
@@ -624,6 +778,10 @@
 
 	&__problems
 		padding-bottom: 6.5rem
+
+		@media(max-width:767px)
+			padding-left: 20px
+			padding-right: 20px
 
 	&__problems_desc
 		margin: 0
@@ -697,11 +855,23 @@
 
 			padding: 40px 20px
 
+			@media(max-width:1280px)
+				padding: 54px 20px
+
+			@media(max-width:1023px)
+				background-image: none
+
 	&__backed
 		padding-bottom: 9rem
 
 	&__economy
 		padding-bottom: 14rem
+
+		@media(max-width:1023px)
+			padding: 0 40px 10rem
+
+		@media(max-width:767px)
+			padding: 0 0 6rem
 
 		&_title
 			font-weight: 500
@@ -711,6 +881,13 @@
 			height: 406px
 			margin-top: 15px
 			margin-right: 45px
+
+			@media(max-width:1280px)
+				height: 286px
+				width: 270px
+
+			@media(max-width:1023px)
+				display: none
 
 		&_wr
 			display: -webkit-flex
@@ -734,6 +911,10 @@
 
 			position: relative
 
+			@media(max-width:767px)
+				padding-right: 20px
+				padding-left: 20px
+
 			&::after
 				content: ''
 				position: absolute
@@ -745,6 +926,14 @@
 
 				background-repeat: no-repeat
 				background-size: contain
+
+				@media(max-width:1280px)
+					height: 70px
+
+					background-position: center center
+
+				@media(max-width:767px)
+					display: none
 
 		.ec_item1::after
 			background-image: url(/static/img/pictures/live-sale/token1.svg)
@@ -792,6 +981,9 @@
 
 		border-collapse: collapse
 
+		@media(max-width:1440px)
+			width: 90%
+
 	&__col
 		width: 27.3%
 		padding: 32px
@@ -803,6 +995,9 @@
 
 		vertical-align: top
 
+		@media(max-width:767px)
+			padding: 3px
+
 		&:first-child
 			width: 18%
 			padding-left: 0
@@ -810,6 +1005,9 @@
 			color: #00e9d7
 			font-weight: 500
 			font-size: 2.2rem
+
+			@media(max-width:767px)
+				font-size: 1.4rem
 
 		&:last-child
 			padding-right: 0
@@ -824,14 +1022,23 @@
 
 				padding-right: 16px
 
+				@media(max-width:767px)
+					font-size: 1.4rem
+
 				&:nth-child(2)
 					text-align: center
 
 					padding-right: 32px
 
+					@media(max-width:767px)
+						padding-right: 0
+
 					img,
 					svg
 						display: inline-block
+
+						@media(max-width:767px)
+							width: 80px !important
 
 
 	&__done
@@ -839,6 +1046,9 @@
 		margin-bottom: 6rem
 
 		position: relative
+
+		@media(max-width:1023px)
+			padding: 0 40px 20rem
 
 		&::after
 			content: ''
@@ -868,6 +1078,9 @@
 
 			font-size: 2.3rem
 
+			@media(max-width:767px)
+				padding-bottom: 3rem
+
 		&_wr
 			display: flex
 
@@ -877,6 +1090,13 @@
 			width: 650px
 			height: 400px
 			margin-right: 7.7rem
+
+			@media(max-width:1440px)
+				width: 45%
+				height: auto
+
+			@media(max-width:767px)
+				display: none				
 
 		&_right
 			width: 430px
