@@ -129,27 +129,64 @@ block content
             a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
           a(href="#").live-sale__pr_link See all...
 
+      .live-sale__bonuses
+        h2.live-sale__title.live-sale-grad Presale Bonuses
 
+        ul.live-sale__bon_list.live-sale__wr
+          li.live-sale__bon_item
+            span.live-sale__bon_text Early Adopters
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 90%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item
+            span.live-sale__bon_text First 24 Hours
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 70%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 70%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item
+            span.live-sale__bon_text First and Second Week
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 50%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 50%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.active
+            span.live-sale__bon_text Third and Fourth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 35%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 35%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text Fifth and Sixth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 30%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 30%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text  Seventh and Eighth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 25%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 25%
+                span.live-sale__bon_active Active
 
-
-
-      .graph_block
-        h2.graph_block__title Token distribution:
+      .graph_block.live-sale__graph
+        h2.live-sale__title.live-sale-grad Token distribution:
         .graph__desc_vert
-          .graph__desc1
+          .graph__desc1.live-sale__bordered
+            .bordered_block Tokens available for Presale
             .desc__title 40% 
               span.small_text 1 month lockup for bonus
-            .bordered_block Tokens
-              br
-              | available
-              br
-              span.bold for Presale
-          .graph__desc2
+          .graph__desc2.live-sale__bordered
+            .bordered_block.small Reserved for Public Sale
             .desc__title 15% 
               span.small_text Not lock up
-            .bordered_block.small Reserved
-              br
-              span.bold for Public Sale
         .js-pie-chart.pie-chart#pieChart
         .graph__desc_hor
           .desc__title Reserved for distribution to
@@ -159,23 +196,70 @@ block content
                 span.left__part_text Private Sale Investors
               span.right__part 12% 
                 span.non_colored Lock up to 6 month
+            li(data-number="4").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana team
+              span.right__part 20% 
+                span.non_colored Lock up to 3 month
             li(data-number="3").percents_block__string 
               span.left__part
                 span.left__part_text Membrana Advisors and Partners
               span.right__part 10% 
                 span.non_colored Lock up to 3 month
-            li(data-number="4").percents_block__string 
-              span.left__part
-                span.left__part_text Membrana team
-              span.right__part 20%
-                span.non_colored Lock up to 3 month
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text Community Airdrop
+                span.left__part_text Private Sale Investors
               span.right__part 3%
 
 
+      .live-sale__about
+        h2.live-sale__title.live-sale-grad What is 
+          span.live-sale-bold Membrana?
+        p.live-sale__about_title 
+          span.live-sale__about-colored Membrana 
+          | is a decentralized platform for trust management
+        p This technology is made for 
+          span.live-sale-bold investors 
+          | and 
+          span.live-sale-bold traders 
+          | to contact directly
+          br
+          | and conclude a mutually beneficial, secure, and reliable contracts
+        .live-sale__about_wr.live-sale__wr
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon1.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Membrana blockchain platform is currently in MVP stage 
+              span.live-sale__about-op (Open Beta)
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon2.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Can be used from PC or mobile phone, from any point of the world 
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon3.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Has developed unique algorithm to address $50+ billion market opportunity
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon4.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Currently 3000+ customers with more than US $1M dollars in management
+          p.live-sale__about-op.live-sale__about-desc Expected 10,000+ customers till the end of 2020
 
+      .live-sale__problems
+        h2.live-sale__title.live-sale-grad 
+          span.live-sale-bold Problems 
+          | that we 
+          span.live-sale-bold Solve
+        p.live-sale__problems_desc We have developed a unique algorithm to solve the following problems:
+        ul.live-sale__problems_wr
+          li.live-sale__problems_item
+            p.live-sale__problems_title Loss of control over invested funds
+            p.live-sale__problems_text To get his assets in management, investor need to send them to 3rd party or to a trader.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Middleman issues
+            p.live-sale__problems_text No reliable tool for middleman to work with his customers.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Lack of trust
+            p.live-sale__problems_text Counterparties don’t trust each other and that limits possibilities for gaining profit.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Lack of transparency
+            p.live-sale__problems_text Investor can’t get any proof of traders activities. Trader can send him fake data and get the profit.
 
 
 
