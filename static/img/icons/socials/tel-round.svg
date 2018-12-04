@@ -4,9 +4,9 @@
 	 viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve">
 <style type="text/css">
 	.st0{opacity:0.5;clip-path:url(#SVGID_2_);}
-	.st1{fill:#41B4E6;}
-	.st2{fill:#0091C8;}
-	.st3{fill:#FFFFFF;}
+	.st11{fill:#41B4E6;}
+	.st22{fill:#0091C8;}
+	.st33{fill:#FFFFFF;}
 	.st4{fill:#D2D2D7;}
 	.st5{fill:#B9B9BE;}
 	.st6{clip-path:url(#SVGID_4_);}
@@ -19,10 +19,10 @@
 		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st0">
-		<path class="st1" d="M13,26c7.2,0,13-5.8,13-13S20.2,0,13,0S0,5.8,0,13S5.8,26,13,26z"/>
-		<path class="st2" d="M26,13c0-0.3,0-0.6,0-0.9l-5.4-5.4l-15.2,6l5.8,5.8l0.1,0.3l0.1-0.1v0l-0.1,0.1l6.4,6.4
+		<path class="st11" d="M13,26c7.2,0,13-5.8,13-13S20.2,0,13,0S0,5.8,0,13S5.8,26,13,26z"/>
+		<path class="st22" d="M26,13c0-0.3,0-0.6,0-0.9l-5.4-5.4l-15.2,6l5.8,5.8l0.1,0.3l0.1-0.1v0l-0.1,0.1l6.4,6.4
 			C22.6,23.2,26,18.5,26,13L26,13z"/>
-		<path class="st3" d="M11.7,14.9l5.9,4.4l3-12.7l-15.2,6l4.6,1.5l8.4-5.6L11.7,14.9L11.7,14.9z"/>
+		<path class="st33" d="M11.7,14.9l5.9,4.4l3-12.7l-15.2,6l4.6,1.5l8.4-5.6L11.7,14.9L11.7,14.9z"/>
 		<path class="st4" d="M10,14.2l1.3,4.5l0.4-3.8l6.7-6.4L10,14.2z"/>
 		<path class="st5" d="M13.6,16.3l-2.4,2.4l0.4-3.8L13.6,16.3L13.6,16.3z"/>
 	</g>
@@ -35,10 +35,10 @@
 		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st6">
-		<path class="st1" d="M13,26c7.2,0,13-5.8,13-13S20.2,0,13,0S0,5.8,0,13S5.8,26,13,26z"/>
-		<path class="st2" d="M26,13c0-0.3,0-0.6,0-0.9l-5.4-5.4l-15.2,6l5.8,5.8l0.1,0.3l0.1-0.1v0l-0.1,0.1l6.4,6.4
+		<path class="st11" d="M13,26c7.2,0,13-5.8,13-13S20.2,0,13,0S0,5.8,0,13S5.8,26,13,26z"/>
+		<path class="st22" d="M26,13c0-0.3,0-0.6,0-0.9l-5.4-5.4l-15.2,6l5.8,5.8l0.1,0.3l0.1-0.1v0l-0.1,0.1l6.4,6.4
 			C22.6,23.2,26,18.5,26,13L26,13z"/>
-		<path class="st3" d="M11.7,14.9l5.9,4.4l3-12.7l-15.2,6l4.6,1.5l8.4-5.6L11.7,14.9L11.7,14.9z"/>
+		<path class="st33" d="M11.7,14.9l5.9,4.4l3-12.7l-15.2,6l4.6,1.5l8.4-5.6L11.7,14.9L11.7,14.9z"/>
 		<path class="st4" d="M10,14.2l1.3,4.5l0.4-3.8l6.7-6.4L10,14.2z"/>
 		<path class="st5" d="M13.6,16.3l-2.4,2.4l0.4-3.8L13.6,16.3L13.6,16.3z"/>
 	</g>
