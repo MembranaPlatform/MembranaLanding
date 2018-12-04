@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1921" height="224" fill="none" viewBox="0 0 1921 224">
+    <path fill="#39EBD6" fill-rule="evenodd" d="M611.549 20h-46c-6.075 0-11 4.925-11 11v162c0 6.075 4.925 11 11 11h46v-4h-46a7 7 0 0 1-7-7V31a7 7 0 0 1 7-7h46v-4zm688.001 180h45c3.87 0 7-3.134 7-7V31c0-3.866-3.13-7-7-7h-45v-4h45c6.07 0 11 4.925 11 11v162c0 6.075-4.93 11-11 11h-45v-4z" clip-rule="evenodd" filter="url(#a)" opacity=".2"/>
+    <path fill="#39EBD6" fill-rule="evenodd" d="M611.549 20h-46c-6.075 0-11 4.925-11 11v162c0 6.075 4.925 11 11 11h46v-4h-46a7 7 0 0 1-7-7V31a7 7 0 0 1 7-7h46v-4zm688.001 180h45c3.87 0 7-3.134 7-7V31c0-3.866-3.13-7-7-7h-45v-4h45c6.07 0 11 4.925 11 11v162c0 6.075-4.93 11-11 11h-45v-4z" clip-rule="evenodd"/>
+    <path stroke="url(#b)" stroke-width="5" d="M1.55 126.51c31.566-24.931 120.564-66.018 224.021-30.915 129.322 43.879 200.602 61.829 257.626 30.915 45.619-24.732 66.743-26.334 72.852-23.01" opacity=".1"/>
+    <path stroke="url(#c)" stroke-width="5" d="M1353.55 126.51c32.08-24.931 122.51-66.018 227.64-30.915 131.41 43.879 203.84 61.829 261.79 30.915 46.36-24.732 70.36-24.266 76.57-20.942" opacity=".1"/>
+    <defs>
+        <filter id="a" width="841" height="224" x="534.549" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="10"/>
+        </filter>
+        <linearGradient id="b" x1="589.098" x2="1.596" y1="98.587" y2="124.579" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00FCCF"/>
+            <stop offset="1" stop-color="#00DBDF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="c" x1="1950.59" x2="1353.64" y1="98.587" y2="125.424" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00FCCF" stop-opacity="0"/>
+            <stop offset="1" stop-color="#39EBD6"/>
+        </linearGradient>
+    </defs>
+</svg>

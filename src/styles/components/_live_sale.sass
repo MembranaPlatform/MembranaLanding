@@ -622,6 +622,9 @@
 		width: 100%
 		margin: -5px 0 0
 
+	&__problems
+		padding-bottom: 6.5rem
+
 	&__problems_desc
 		margin: 0
 		padding-bottom: 8rem
@@ -640,16 +643,65 @@
 
 		font-size: 1.7rem
 
+		padding-bottom: 5rem
+
 	&__problems_title
 		font-size: 2.2rem
 		color: #00e9d7
+		font-weight: 500
 
 		position: relative
 
 		padding-left: 18px
-		margin: 0
+		margin: 0 0 7px
+
+		&::before
+			content: ''
+			position: absolute
+
+			left: 0
+			top: 50%
+			transform: translateY(-50%) rotate(180deg)
+			width: 5px
+			height: 8px
+
+			background-image: url(/static/img/pictures/live-sale/arr.svg)
+			background-size: contain
+			background-repeat: no-repeat
 
 	&__problems_text
 		padding-left: 18px
 		margin: 0
+
+		opacity: .7
+
+	&__why
+		font-size: 3.1rem
+
+		padding-bottom: 6rem
+
+		&_title
+			font-weight: 500
+
+		&-col
+			color: #00fccf
+
+		&_text
+			max-width: 765px
+			margin: 0 auto
+
+		&_bg
+			background-image: url(/static/img/pictures/live-sale/border6.svg)
+			background-position: center center
+			// background-size: 100%
+
+			padding: 40px 20px
+
+	&__backed
+		padding-bottom: 9rem
+
+	&__economy
+
+		&_title
+			font-weight: 500
 
