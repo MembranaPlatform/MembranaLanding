@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import 'owl.carousel'
 // import * as d3 from 'd3'
 
 const app = window.app = {}
@@ -1043,4 +1044,31 @@ $(document).ready(function () {
       $('.live-sale__seconds .live-sale__time_number').html('00')
     }
   }, 1000)
+})
+
+$(document).ready(function () {
+  // press slider
+  $('.live-sale__pr-owl').owlCarousel({
+    items: 1,
+    loop: true,
+    dots: false,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    autoplaySpeed: 3000,
+    smartSpeed: 500,
+    slideTransition: 'linear',
+    responsive: {
+      1439: {
+        items: 7
+      },
+      1024: {
+        items: 6
+      },
+      767: {
+        items: 3
+      }
+    }
+  })
 })

@@ -37,14 +37,16 @@ block content
 
     .pre-sale.live-sale
 
-      h1.live-sale__head TOKEN SALE 
-        span.live-sale__head_span LIVE
+      //- h1.live-sale__head TOKEN SALE 
+      //-   span.live-sale__head_span LIVE
+      h1.live-sale__head PRESALE STARTING 
+        span.live-sale__head_span SOON
 
       .live-sale__soc
-        .live-sale__soc_wr.live-sale__soc_wr-first
+        a(href="https://twitter.com/membrana_io", target="_blank").live-sale__soc_wr.live-sale__soc_wr-first
           img(src="/static/img/icons/socials/tw-round.svg", alt="").live-sale__social_img_1
           span 95,000
-        .live-sale__soc_wr
+        a(href="https://t.me/membranaplatform", target="_blank").live-sale__soc_wr
           img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__social_img_1
           span 15,000
       
@@ -56,7 +58,7 @@ block content
         .live-sale__wr1
           p.live-sale__low_text1 Current Price
           p.live-sale__bold_text1 USD 
-            span.live-sale-bold 0.3 = 1.75 
+            span.live-sale-bold 0.02 = 1 
             span MBN
 
       .live-sale__timer.live-sale__wr
@@ -78,12 +80,13 @@ block content
 
       a(href="").top__btn.live-sale__btn
         img(src="/static/img/icons/play2.svg" alt="").top__btn_img
-        span.live-sale__pad_r.top__btn_span Buy 
-        span.top__btn_span.top-bold Tokens
+        //- span.live-sale__pad_r.top__btn_span Buy 
+        //- span.top__btn_span.top-bold Tokens
+        span.top__btn_span Registration will open soon
 
       p.live-sale__text2 
         span.live-sale-bold Restricted:
-        span US citizens (among institutional investors) and China citizens
+        span US citizens (institutional investors are allowed) and China citizens
 
       .live-sale__wr.live-sale__wr_2
         .live-sale__doc
@@ -124,8 +127,9 @@ block content
         h2.live-sale__title.live-sale-grad In The Press
 
         .live-sale__pr_list.live-sale__wr
-          for item in app.press.items2
-            a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
+          .live-sale__pr-owl.owl-carousel
+            for item in app.press.items
+              a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
           a(href="#").live-sale__pr_link See all...
 
       .live-sale__bonuses
@@ -272,7 +276,7 @@ block content
             | . This world allows business opportunities and financial freedom for everyone
 
       .backed.live-sale__backed
-        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") Backed
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") Venture Funds on Board
         .backed__wr(data-aos="fade-left")
           .backed__coin
             a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
@@ -355,17 +359,19 @@ block content
             p.live-sale__done_text Smart-Contract holds all the information about the deal and allows autonomous and safe workflow for users.
             p.live-sale__bdb.live-sale__done_bdb We’re already working with:
             .live-sale__done_wr2
+              img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/bittrex.svg", alt="").live-sale__done_icon
 
       h2.live-sale__bon_title(data-aos="fade-left") 70% Bonus
       a(href="").top__btn.live-sale__btn(data-aos="fade-left")
         img(src="/static/img/icons/play2.svg" alt="").top__btn_img
-        span.live-sale__pad_r.top__btn_span Buy 
-        span.top__btn_span.top-bold Tokens
+        //- span.live-sale__pad_r.top__btn_span Buy 
+        //- span.top__btn_span.top-bold Tokens
+        span.top__btn_span Registration will open soon
       p.live-sale__text2(data-aos="fade-left")
         span.live-sale-bold Restricted:
-        span US citizens (among institutional investors) and China citizens
+        span US citizens (institutional investors are allowed) and China citizens
 
 
   .join-us-wrapper

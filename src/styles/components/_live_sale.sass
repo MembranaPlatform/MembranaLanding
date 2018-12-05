@@ -12,6 +12,8 @@
 			-o-transform: translateX(-50%)
 			transform: translateX(-50%)
 			top: 240px
+
+			z-index: -1
 			
 		.triangle_1
 			top: 50px
@@ -82,6 +84,14 @@
 		padding: px-to-rem(200px) 0 5rem
 		margin: 0
 
+		@media(max-width:1601px)
+			padding: 10rem 0px 2rem
+
+		@media(max-width:767px)
+			padding: 85px 20px 20px
+
+			font-size: 5.4rem
+
 		&_span
 			color: #00E8D8
 
@@ -121,6 +131,9 @@
 
 		padding-bottom: 70px
 
+		@media(max-width:1601px)
+			padding-bottom: 2rem
+
 	&__soc_wr
 		height: 45px
 		padding: 0 50px
@@ -132,6 +145,9 @@
 		display: flex
 
 		align-items: center
+
+		color: #fff
+		text-decoration: none
 
 		&-first
 			border-right: 1px dashed #5b5c73
@@ -153,6 +169,9 @@
 		max-width: 800px
 		width: 100%
 		padding-bottom: 60px
+
+		@media(max-width:1601px)
+			padding-bottom: 2rem
 
 		@media(max-width:1023px)
 			padding: 0 40px 60px
@@ -427,20 +446,20 @@
 
 		position: relative
 
-		&::before
-			content: ''
-			position: absolute
-			z-index: -1
+		// &::before
+		// 	content: ''
+		// 	position: absolute
+		// 	z-index: -1
 
-			top: -110px
-			left: 0
-			right: 0
-			bottom: 0
+		// 	top: -110px
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
 
-			background-color: #292a3d
+		// 	background-color: #292a3d
 
 	&__pr_list
-		max-width: 900px
+		// max-width: 900px
 		height: 80px
 		padding-bottom: 130px
 
@@ -463,8 +482,18 @@
 
 			height: auto
 
+		.owl-stage
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
+			align-items: center
+
 	&__pr_item
-		width: 30%
+		// width: 30%
+		width: 70%
 
 		display: inline-block
 
@@ -474,7 +503,8 @@
 			opacity: .6
 
 		@media(max-width:767px)
-			width: 300px
+			// width: 300px
+			width: 90%
 			margin-bottom: 20px
 
 	&__pr_image
@@ -1226,6 +1256,7 @@
 
 		&_icon
 			margin-right: 20px
+			max-width: 180px
 
 	&__bon_title 
 		font-size: 5.3rem
