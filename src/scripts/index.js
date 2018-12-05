@@ -1011,39 +1011,105 @@ $(document).ready(function () {
     }
   }, 1000)
 
-  var countDownDateEnd = new Date('Feb 1, 2019 00:00:00').getTime()
-  var salePageTimeout = setInterval(function () {
-    // Get todays date and time
-    var now = new Date().getTime()
+  var dates = {}
+  // dates.check = {
+  //   date: new Date('Dec 05, 2018 19:47:00').getTime(),
+  //   perc: 'test ',
+  //   act: '1'
+  // }
+  dates.decTenStart = {
+    date: new Date('Dec 10, 2018 00:00:00').getTime(),
+    perc: '70% '
+  }
+  dates.decTenEnd = {
+    date: new Date('Dec 11, 2018 00:00:00').getTime(),
+    perc: '70% ',
+    act: '5'
+  }
+  dates.decEl = {
+    date: new Date('Dec 25, 2018 00:00:00').getTime(),
+    perc: '50% ',
+    act: '4'
+  }
+  dates.janEig = {
+    date: new Date('Jan 08, 2019 00:00:00').getTime(),
+    perc: '35% ',
+    act: '3'
+  }
+  dates.janTw = {
+    date: new Date('Jan 22, 2019 00:00:00').getTime(),
+    perc: '30% ',
+    act: '2'
+  }
+  dates.febFo = {
+    date: new Date('Feb 05, 2019 00:00:00').getTime(),
+    perc: '25% ',
+    act: '1'
+  }
+  var today = Date.now()
+  var nextStepDate = ''
 
-    // Find the distance between now and the count down date
-    var distance = countDownDateEnd - now
-
-    var day = 1000 * 60 * 60 * 24
-    var hour = 1000 * 60 * 60
-    var minute = 1000 * 60
-    var sec = 1000
-
-    // Time calculations for days, hours, minutes
-    var days = Math.floor(distance / day)
-    var hours = padDecimal(Math.floor((distance % day) / hour))
-    var minutes = padDecimal(Math.floor((distance % hour) / minute))
-    var seconds = padDecimal(Math.floor((distance % minute) / sec))
-
-    $('.live-sale__days .live-sale__time_number').html(days)
-    $('.live-sale__hours .live-sale__time_number').html(hours)
-    $('.live-sale__minutes .live-sale__time_number').html(minutes)
-    $('.live-sale__seconds .live-sale__time_number').html(seconds)
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(salePageTimeout)
-      $('.live-sale__days .live-sale__time_number').html('00')
-      $('.live-sale__hours .live-sale__time_number').html('00')
-      $('.live-sale__minutes .live-sale__time_number').html('00')
-      $('.live-sale__seconds .live-sale__time_number').html('00')
+  function loopDates () {
+    for (const key in dates) {
+      let value = dates[key]
+      if (value.date > today) {
+        // top timer changes
+        nextStepDate = value.date
+        loopLiveSaleTimeout(nextStepDate)
+        $('.bonusHead').text(value.perc)
+        // active positioning
+        if (value.act) {
+          $('.live-sale__bon_item').removeClass('past active')
+          var iPlusOne
+          for (var i = 0; i < value.act; i++) {
+            $('.live-sale__bon_item:nth-last-child(' + i + ')').addClass('past')
+            iPlusOne = i + 1
+          }
+          $('.live-sale__bon_item:nth-last-child(' + iPlusOne + ')').addClass('active')
+          // starts in/ ends in
+          $('.bonusStart').hide()
+          $('.bonusEnd').show()
+        }
+        return false
+      }
     }
-  }, 1000)
+  }
+  loopDates()
+
+  function loopLiveSaleTimeout (nextStepDate) {
+    var countDownDateEnd = nextStepDate
+    var salePageTimeout = setInterval(function () {
+      today = Date.now()
+
+      // Find the distance between now and the count down date
+      var distance = countDownDateEnd - today
+
+      var day = 1000 * 60 * 60 * 24
+      var hour = 1000 * 60 * 60
+      var minute = 1000 * 60
+      var sec = 1000
+
+      // Time calculations for days, hours, minutes
+      var days = Math.floor(distance / day)
+      var hours = padDecimal(Math.floor((distance % day) / hour))
+      var minutes = padDecimal(Math.floor((distance % hour) / minute))
+      var seconds = padDecimal(Math.floor((distance % minute) / sec))
+
+      $('.live-sale__days .live-sale__time_number').html(days)
+      $('.live-sale__hours .live-sale__time_number').html(hours)
+      $('.live-sale__minutes .live-sale__time_number').html(minutes)
+      $('.live-sale__seconds .live-sale__time_number').html(seconds)
+
+      if (distance < 1001) {
+        $('.live-sale__days .live-sale__time_number').html('0')
+        $('.live-sale__hours .live-sale__time_number').html('00')
+        $('.live-sale__minutes .live-sale__time_number').html('00')
+        $('.live-sale__seconds .live-sale__time_number').html('00')
+        clearInterval(salePageTimeout)
+        loopDates()
+      }
+    }, 1000)
+  }
 })
 
 $(document).ready(function () {
