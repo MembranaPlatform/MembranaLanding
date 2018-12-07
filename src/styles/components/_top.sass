@@ -163,6 +163,9 @@
     font-weight: 700
     color: #fff
 
+  &__hot
+    background-color: #fff
+
   &__widgets
     display: -webkit-flex
     display: -moz-flex
@@ -181,8 +184,20 @@
   &__widget
     margin-right: 10px
 
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+
+    justify-content: center
+    align-items: center
+
     @media(max-width: 767px)
       margin-bottom: 10px
+
+    &-height
+      height: 63px
 
   &__widget1_img
     width: 174px

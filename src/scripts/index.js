@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import 'owl.carousel'
 // import * as d3 from 'd3'
 
 const app = window.app = {}
@@ -773,80 +774,10 @@ $(document).ready(function () {
       $(dataHover).toggleClass('hovered')
     })
   }
-  $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
-  // отменяем стандартное действие button
-    e.preventDefault()
-    var poster = $(this)
-    // ищем родителя ближайшего по классу
-    var wrapper = poster.closest('.js-videoWrapper')
-    if ($(window).width() >= 1024) {
-      videoPlay(wrapper)
-    } else {
-      console.log('heh')
-      videoPlayMob2()
-    }
-  })
-  $(document).on('touchend click', '.registr_page__video_wr .video_wrapper', function (e) {
-  // отменяем стандартное действие button
-    e.preventDefault()
-    var poster = $(this)
-    // ищем родителя ближайшего по классу
-    var wrapper = poster.closest('.js-videoWrapper')
-    if ($(window).width() >= 1024) {
-      videoPlay(wrapper)
-    } else {
-      videoPlayMob()
-    }
-  })
-  $('.close_video').click(function (e) {
-    e.preventDefault()
-    e.stopPropagation()
-    $('.video_wrapper').removeClass('video-on')
-    $('.registr_page__video_wr').removeClass('video-on')
-    $('.js-videoIframe').attr('src', '')
-    $('.js-videoWrapper').removeClass('videoWrapperActive')
-    $('html, body').css('overflow', 'auto')
-    player.pause()
-  })
-  // var tag = document.createElement('script')
-  // tag.src = 'https://www.youtube.com/iframe_api'
-  // вопроизводим видео, при этом скрывая постер
-  function videoPlay (wrapper) {
-    var iframe = wrapper.find('.js-videoIframe')
-    // Берем ссылку видео из data
-    var src = iframe.data('src')
-    $('html, body').css('overflow', 'hidden')
-    // скрываем постер
-    wrapper.addClass('videoWrapperActive')
-    // подставляем в src параметр из data
-    iframe.attr('src', src)
-    $('.video_wrapper').addClass('video-on')
-  }
-  // $('<script>var player = new YT.Player("video_wrapper", {videoId: "_XLvCRkjZJY",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
-  const YTPlayer = require('yt-player')
-  const player = new YTPlayer('#video_wrapper', {
-    autoplay: true,
-    controls: false,
-    info: false,
-    annotations: false,
-    modestbranding: false,
-    related: false
-  })
-  function videoPlayMob () {
-    $('.video_wrapper').addClass('video-on')
-    $('.registr_page__video_wr').addClass('video-on')
-    player.load('_XLvCRkjZJY')
-    player.play()
-  }
-  function videoPlayMob2 () {
-    $('.video_wrapper').addClass('video-on')
-    $('.registr_page__video_wr').addClass('video-on')
-    player.load('zFs9AZn27HQ')
-    player.play()
-  }
   var count = 1
   var counter = 0
   if ($('.events__item').length > 3) {
+    console.log('heh')
     var script = document.createElement('script')
     script.src = 'https://code.jquery.com/jquery-3.3.1.min.js'
     document.body.appendChild(script)
@@ -857,13 +788,7 @@ $(document).ready(function () {
       script2.onload = function () {
         $('<script>var owl = $(".possbile_slider_cont").owlCarousel({loop:true,items:1});</script>').appendTo(document.body)
       }
-      // script2.onerror = function () {
-      //   alert('Проблемы с интернетом, попробуйте обновить страницу')
-      // }
     }
-    // script.onerror = function () {
-    //   alert('Проблемы с интернетом, попробуйте обновить страницу')
-    // }
     $.each($('.events__item'), function (i, e) {
       if ((i + 1) % 3 === 0) $('.possbile_slider_cont').append("<div class='events__list'></div>")
       if (i > 2) {
@@ -972,11 +897,83 @@ $(document).ready(function () {
       })
     }
   })
+  $(document).on('touchend click', '.how-we-help .video_wrapper', function (e) {
+  // отменяем стандартное действие button
+    e.preventDefault()
+    var poster = $(this)
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper')
+    if ($(window).width() >= 1024) {
+      videoPlay(wrapper)
+    } else {
+      console.log('heh')
+      videoPlayMob2()
+    }
+  })
+  $(document).on('touchend click', '.registr_page__video_wr .video_wrapper', function (e) {
+  // отменяем стандартное действие button
+    e.preventDefault()
+    var poster = $(this)
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper')
+    if ($(window).width() >= 1024) {
+      videoPlay(wrapper)
+    } else {
+      videoPlayMob()
+    }
+  })
+  $('.close_video').click(function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    $('.video_wrapper').removeClass('video-on')
+    $('.registr_page__video_wr').removeClass('video-on')
+    $('.js-videoIframe').attr('src', '')
+    $('.js-videoWrapper').removeClass('videoWrapperActive')
+    $('html, body').css('overflow', 'auto')
+    player.pause()
+  })
+  // var tag = document.createElement('script')
+  // tag.src = 'https://www.youtube.com/iframe_api'
+  // вопроизводим видео, при этом скрывая постер
+  function videoPlay (wrapper) {
+    var iframe = wrapper.find('.js-videoIframe')
+    // Берем ссылку видео из data
+    var src = iframe.data('src')
+    $('html, body').css('overflow', 'hidden')
+    // скрываем постер
+    wrapper.addClass('videoWrapperActive')
+    // подставляем в src параметр из data
+    iframe.attr('src', src)
+    $('.video_wrapper').addClass('video-on')
+  }
+  // $('<script>var player = new YT.Player("video_wrapper", {videoId: "_XLvCRkjZJY",playerVars: { "autoplay": 1, "controls": 0, "iv_load_policy": 3, "showinfo": 0, "modestbranding": 0, "rel": 0},events: {"onReady": onPlayerReady} });    function onPlayerReady (event) {      player.playVideo()    }</script>').appendTo(document.body)
+  const YTPlayer = require('yt-player')
+  const player = new YTPlayer('#video_wrapper', {
+    autoplay: true,
+    controls: false,
+    info: false,
+    annotations: false,
+    modestbranding: false,
+    related: false
+  })
+  function videoPlayMob () {
+    $('.video_wrapper').addClass('video-on')
+    $('.registr_page__video_wr').addClass('video-on')
+    player.load('_XLvCRkjZJY')
+    player.play()
+  }
+  function videoPlayMob2 () {
+    $('.video_wrapper').addClass('video-on')
+    $('.registr_page__video_wr').addClass('video-on')
+    player.load('zFs9AZn27HQ')
+    player.play()
+  }
 })
 
-// timer
+// timers
 $(document).ready(function () {
-  var countDownDate = new Date('2018-12-10T00:00:00+0000').getTime()
+  var countDownDateStart = new Date('Dec 10, 2018 18:00:00 GMT -0000').getTime()
+
   function padDecimal (number) {
     if (number < 10) number = '0' + number
     return number
@@ -986,7 +983,7 @@ $(document).ready(function () {
     var now = new Date().getTime()
 
     // Find the distance between now and the count down date
-    var distance = countDownDate - now
+    var distance = countDownDateStart - now
 
     var day = 1000 * 60 * 60 * 24
     var hour = 1000 * 60 * 60
@@ -1009,4 +1006,132 @@ $(document).ready(function () {
       $('.top_timer__m .timerJs').html('00')
     }
   }, 1000)
+
+  var dates = {}
+  dates.decTenStart = {
+    date: new Date('Dec 10, 2018 18:00:00 GMT -0000').getTime(),
+    perc: '70% '
+  }
+  dates.decTenEnd = {
+    date: new Date('Dec 11, 2018 00:00:00 GMT -0000').getTime(),
+    perc: '70% ',
+    act: '5'
+  }
+  dates.decEl = {
+    date: new Date('Dec 25, 2018 00:00:00 GMT -0000').getTime(),
+    perc: '50% ',
+    act: '4'
+  }
+  dates.janEig = {
+    date: new Date('Jan 08, 2019 00:00:00 GMT -0000').getTime(),
+    perc: '35% ',
+    act: '3'
+  }
+  dates.janTw = {
+    date: new Date('Jan 22, 2019 00:00:00 GMT -0000').getTime(),
+    perc: '30% ',
+    act: '2'
+  }
+  dates.febFo = {
+    date: new Date('Feb 05, 2019 00:00:00 GMT -0000').getTime(),
+    perc: '25% ',
+    act: '1'
+  }
+  var today = Date.now()
+  var nextStepDate = ''
+
+  function loopDates () {
+    for (const key in dates) {
+      let value = dates[key]
+      if (value.date > today) {
+        // top timer changes
+        nextStepDate = value.date
+        loopLiveSaleTimeout(nextStepDate)
+        $('.bonusHead').text(value.perc)
+        // active positioning
+        if (value.act) {
+          $('.live-sale__bon_item').removeClass('past active')
+          var iPlusOne
+          for (var i = 0; i < value.act; i++) {
+            $('.live-sale__bon_item:nth-last-child(' + i + ')').addClass('past')
+            iPlusOne = i + 1
+          }
+          $('.live-sale__bon_item:nth-last-child(' + iPlusOne + ')').addClass('active')
+          // starts in/ ends in
+          $('.bonusStart').hide()
+          $('.bonusEnd').show()
+        }
+        return false
+      }
+    }
+  }
+  loopDates()
+
+  function loopLiveSaleTimeout (nextStepDate) {
+    var countDownDateEnd = nextStepDate
+    var salePageTimeout = setInterval(function () {
+      today = Date.now()
+
+      // Find the distance between now and the count down date
+      var distance = countDownDateEnd - today
+
+      var day = 1000 * 60 * 60 * 24
+      var hour = 1000 * 60 * 60
+      var minute = 1000 * 60
+      var sec = 1000
+
+      // Time calculations for days, hours, minutes
+      var days = Math.floor(distance / day)
+      var hours = padDecimal(Math.floor((distance % day) / hour))
+      var minutes = padDecimal(Math.floor((distance % hour) / minute))
+      var seconds = padDecimal(Math.floor((distance % minute) / sec))
+
+      $('.live-sale__days .live-sale__time_number').html(days)
+      $('.live-sale__hours .live-sale__time_number').html(hours)
+      $('.live-sale__minutes .live-sale__time_number').html(minutes)
+      $('.live-sale__seconds .live-sale__time_number').html(seconds)
+
+      if (distance < 1001) {
+        $('.live-sale__days .live-sale__time_number').html('0')
+        $('.live-sale__hours .live-sale__time_number').html('00')
+        $('.live-sale__minutes .live-sale__time_number').html('00')
+        $('.live-sale__seconds .live-sale__time_number').html('00')
+        clearInterval(salePageTimeout)
+        loopDates()
+      }
+    }, 1000)
+  }
+})
+
+$(document).ready(function () {
+  // press slider
+  $('.live-sale__pr-owl').owlCarousel({
+    items: 1,
+    loop: true,
+    dots: false,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    autoplaySpeed: 3000,
+    smartSpeed: 500,
+    slideTransition: 'linear',
+    responsive: {
+      1439: {
+        items: 7
+      },
+      1024: {
+        items: 6
+      },
+      767: {
+        items: 3
+      }
+    }
+  })
+
+  // anchor to backed block
+  $('.header__anchor').click(function () {
+    $('html, body').animate({ scrollTop: $('.backed').offset().top }, 3000)
+    return false
+  })
 })
