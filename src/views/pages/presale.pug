@@ -1,8 +1,8 @@
 extends ../layouts/base
 
 block page_variables
-  - var page_class = 'pre-sale';
-  - var page_active = '/pre-sale/';
+  - var page_class = 'live-sale';
+  - var page_active = '/live-sale/';
 
 block append head
   block head_variables
@@ -11,106 +11,193 @@ block append head
 
 block content
   .page-content-pattern
+    .pre-sale.live-sale
+      .page-content-pattern
+        .pre-sale-wrapper
+          .patternsed
+            div.patterned
+              img.js-prevent-inline.grp(src="/static/img/pictures/live-sale/bg1.svg" alt="")
+              .block1
+                img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")                
+                img.js-prevent-inline.triangle_7(src="/static/img/new-page/small_bg.svg" alt="")
+                img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+                img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+                img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_2.triangle_222(src="/static/img/new-page/snall_bg.svg" alt="")
+              img.js-prevent-inline.triangle_44.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+              img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_6.triangle_666(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_67.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_22(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_22.triangle_221(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_22.triangle_223(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_21(src="/static/img/new-page/small_bg.svg" alt="")
+              img.js-prevent-inline.triangle_21.triangle_211(src="/static/img/new-page/small_bg.svg" alt="")
 
-    .pre-sale-wrapper
-      .patternsed
-        div.patterned
-          .block1
-            img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
-            img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
-            //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
-            img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
-          .block2
-            img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_7(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
-            img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
-            img.js-prevent-inline.triangle_8(src="/static/img/new-page/small_bg.svg" alt="")
-            //- img.js-prevent-inline.triangle_2(src="/static/img/new-page/small_bg2.svg" alt="")
-            img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
-          img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
-          img.js-prevent-inline.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
-          img.js-prevent-inline.triangle_22(src="/static/img/new-page/mid_bg2.svg" alt="")
-          img.js-prevent-inline.triangle_21(src="/static/img/new-page/small_bg.svg" alt="")
+    .pre-sale.live-sale
 
-    .pre-sale
-      .h1.title Presale
+      //- h1.live-sale__head tоkеn SALE 
+      //-   span.live-sale__head_span LIVE
+      h1.live-sale__head PRESALE STARTING 
+        span.live-sale__head_span SOON
 
-      .dates
-        //- span.dates__bold Presale Dates will be announced soon! Stay tuned.
-        .dates__date
-          span.dates__bold Presale Dates: 
-          | 10 Dec 2018 – 1 Feb 2019
-        .dates__date
-          span.dates__bold ІСО Dates: 
-          | Q1–Q2 2019
+      .live-sale__soc
+        a(href="https://t.me/membranaplatform", target="_blank").live-sale__soc_wr.live-sale__soc_wr-first
+          img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__social_img_1
+          span 95,000
+        a(href="https://twitter.com/membrana_io", target="_blank").live-sale__soc_wr
+          img(src="/static/img/icons/socials/tw-round.svg", alt="").live-sale__social_img_1
+          span 15,000
+      
+      .live-sale__wr.live-sale__top_wr
+        p.live-sale__bdb
+          span.live-sale-bold.bonusHead 70% 
+          span.live-sale-bold Bonus 
+          span.bonusEnd Ends in:
+          span.bonusStart Starts in:
 
-      .pre-sale__rating
-        a(href="https://icobench.com/ico/membrana" target="_blank" rel="nofollow" title="Membrana on ІСОbench")
-          img(border="0" src="https://icobench.com/rated/membrana?shape=horizontal&size=s" width="206px" height="76px" alt="Membrana ІСО rating")
+        .live-sale__wr1
+          p.live-sale__low_text1 Current Price
+          p.live-sale__bold_text1
+            span.live-sale-bold  1 
+            span.live-sale-bold 
+            span MBN = 
+            span.live-sale-bold 0.02  
+            span USD
 
-      .questions On all questions of cooperation and investments
-        br
-        | please address on 
-        a(href="mailto:invest@membrana.io").colored invest@membrana.io
+      .live-sale__timer.live-sale__wr
+        .live-sale__time_wr.live-sale__days
+          .live-sale__time_number.live-sale-bold 30
+          .live-sale__time_desc Days
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__hours
+          .live-sale__time_number.live-sale-bold 10
+          .live-sale__time_desc Hours
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__minutes
+          .live-sale__time_number.live-sale-bold 30
+          .live-sale__time_desc Minutes
+        span.live-sale__martel :
+        .live-sale__time_wr.live-sale__seconds
+          .live-sale__time_number.live-sale-bold 03
+          .live-sale__time_desc Seconds
 
-      img(src="/static/img/pictures/pre-sale/logo.png" alt="").logo_main
+      a(href="").top__btn.live-sale__btn
+        img(src="/static/img/icons/play2.svg" alt="").top__btn_img
+        //- span.live-sale__pad_r.top__btn_span Buy 
+        //- span.top__btn_span.top-bold Tоkеns
+        span.top__btn_span Registration will open soon
 
-      .top_description
-        .top_description__img
-          img(src="/static/img/pictures/pre-sale/token.svg" alt="").token
-          img(src="/static/img/pictures/pre-sale/corner.svg" alt="").corner
-        .top_description__text
-          span.capital MBN tоkеn 
-          | is an utility tоkеn. It is used on the platform to unlock advanced features, use Membrana external API or to pay platform commission fees. Users can pay in other сurrеnсies or fiat, but paying with MBN tоkеns will be significantly cheaper.
+      p.live-sale__text2 
+        span.live-sale-bold Restricted:
+        span US citizens (institutional participators are allowed) and China citizens
 
-      .documents_btns
-        a(href="/static/pdf/membrana_one_pager.pdf" target="_blank").documents_btns__btn One Pager
-        a(href="/static/pdf/membrana_whitepaper_eng.pdf" target="_blank").documents_btns__btn.colored Whitepaper
-        a(href="/static/pdf/membrana_business_overview.pdf" target="_blank").documents_btns__btn Business Overview
+      .live-sale__wr.live-sale__wr_2
+        .live-sale__doc
+          a(href="/static/pdf/one-pager.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span One Pager
+          a(href="/static/pdf/membrana_whitepaper_eng.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span Whitepaper
+          a(href="/static/pdf/membrana_business_overview.pdf", target="_blank").live-sale__doc_link.live-sale__doc_link-big
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span Business Overview
+        .live-sale__paym
+          p.live-sale__bdb.live-sale__paym_bdb We 
+            span.live-sale-bold Accept:
+          .live-sale__pay_wr
+            img(src="/static/img/pictures/live-sale/bitkoin.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/ethereum.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/litecoin.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/visa.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/mastercard.svg", alt="").live-sale__paym_img
 
-      ul.list
-        li 
-          span.list__left 
-            span.text_wr Softcap
-          span.lift__right US 
-            span.lift__right-colored $3M
-        li 
-          span.list__left 
-            span.text_wr Hardcap
-          span.lift__right US 
-            span.lift__right-colored $8M
-        li 
-          span.list__left 
-            span.text_wr Tоkеn amount
-          span.lift__right
-            span.lift__right-colored 1,000,000,000
-        li 
-          span.list__left 
-            span.text_wr Crowdsale tоkеn price
-          span.lift__right
-            span.lift__right-colored $0,02
+      .top__widgets.live-sale__widgets
 
-      .graph_block
-        h2.graph_block__title Tоkеn distribution:
+        a(href="https://icobench.com/ico/membrana" target="_blank" rel="nofollow" title="Membrana on ІСОbench").top__widget1.top__widget
+          img(border="0" src="https://icobench.com/rated/membrana?shape=horizontal&size=s" width="174px" height="76px" alt="Membrana ІСО rating")
+
+        a(href="https://www.trackico.io/ico/membrana/", target="_blank", title="Membrana on TrackІСО").top__widget1.top__widget
+          img(border="0", src="https://www.trackico.io/widget/horizontal/membrana/300.png", width="230px", height="76px", alt="Membrana TrackІСО rating")
+          
+        a(href="https://www.icohotlist.com/ico/membrana-platform/", target="_blank", title="Membrana on IcoHotList").top__widget1.top__widget.top__hot
+          img(border="0", src="/static/img/icons/HotListed.png", width="76px", height="76px", alt="Membrana IcoHotList rating")
+
+        a(href="https://findico.io/ico/membrana", target="_blank", title="Membrana (MBN) on FindІСО").top__widget1.top__widget
+          img(border="0", src="https://findico.io/widget/horizontal/membrana/300.png", width="auto", height="76px", alt="Membrana (MBN) FindІСО rating").top__widget-height
+
+        a(href="https://icomarks.com/ico/membrana", rel="nofollow", target="_blank", title="Membrana ICO")
+          img(src="/static/img/icons/horizontal.svg", width="auto", height="76px", alt="Membrana ICO Rating").top__widget-height
+
+      .live-sale__wr.live-sale__press
+        h2.live-sale__title.live-sale-grad In The Press
+
+        .live-sale__pr_list.live-sale__wr
+          .live-sale__pr-owl.owl-carousel
+            for item in app.press.items
+              a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
+          a(href="#").live-sale__pr_link See all...
+
+      .live-sale__bonuses
+        h2.live-sale__title.live-sale-grad(data-aos="fade-right") Presale Bonuses
+
+        ul.live-sale__bon_list.live-sale__wr(data-aos="fade-right")
+          li.live-sale__bon_item
+            span.live-sale__bon_text Early Adopters
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 90%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.active
+            span.live-sale__bon_text First 24 Hours
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 70%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 70%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text First and Second Week
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 50%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 50%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text Third and Fourth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 35%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 35%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text Fifth and Sixth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 30%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 30%
+                span.live-sale__bon_active Active
+          li.live-sale__bon_item.past
+            span.live-sale__bon_text  Seventh and Eighth
+            .live-sale__bon_pr_wr
+              .live-sale__bon_pr(style="width: 25%")
+                .live-sale__bon_pr_bar
+                span.live-sale__bon_perc 25%
+                span.live-sale__bon_active Active
+
+      .graph_block.live-sale__graph(data-aos="fade-left")
+        h2.live-sale__title.live-sale-grad Tоkеn distribution:
         .graph__desc_vert
-          .graph__desc1
+          .graph__desc1.live-sale__bordered
+            .bordered_block Tоkеns available for Presale
             .desc__title 40% 
               span.small_text 1 month lockup for bonus
-            .bordered_block Tоkеns
-              br
-              | available
-              br
-              span.bold for Presale
-          .graph__desc2
+          .graph__desc2.live-sale__bordered
+            .bordered_block.small Reserved for Public Sale
             .desc__title 15% 
               span.small_text Not lock up
-            .bordered_block.small Reserved
-              br
-              span.bold for Public Sale
         .js-pie-chart.pie-chart#pieChart
         .graph__desc_hor
           .desc__title Reserved for distribution to
@@ -120,434 +207,179 @@ block content
                 span.left__part_text Private Sale Participators
               span.right__part 12% 
                 span.non_colored Lock up to 6 month
+            li(data-number="4").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana team
+              span.right__part 20% 
+                span.non_colored Lock up to 3 month
             li(data-number="3").percents_block__string 
               span.left__part
                 span.left__part_text Membrana Advisors and Partners
               span.right__part 10% 
                 span.non_colored Lock up to 3 month
-            li(data-number="4").percents_block__string 
-              span.left__part
-                span.left__part_text Membrana team
-              span.right__part 20%
-                span.non_colored Lock up to 3 month
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text Community Airdrop
+                span.left__part_text Private Sale Participators
               span.right__part 3%
 
-      .discounts_block
-        h2.discounts__title Presale bonuses
-        .discounts__description
-          | 1 month 50% lockup of bonus
-        ul.discounts
-          li.discount
-            span.discounts__percents 90%
-            span.discounts__money Early adopters
-              br
-              | (small allocation)
-          li.discount
-            span.discounts__percents 70%
-            span.discounts__money First 24 hours
-          li.discount
-            span.discounts__percents 50%
-            span.discounts__money First and second week
-          li.discount
-            span.discounts__percents 35%
-            span.discounts__money Third and fourth
-          li.discount
-            span.discounts__percents 30%
-            span.discounts__money Fifth and sixth
-          li.discount
-            span.discounts__percents 25%
-            span.discounts__money Seventh and eighth
 
-      span.no_disc *Public Sale 
-        span.colored No Bonuses
+      .live-sale__about
+        h2.live-sale__title.live-sale-grad(data-aos="fade-right") What is 
+          span.live-sale-bold Membrana?
+        p.live-sale__about_title(data-aos="fade-right")
+          span.live-sale__about-colored Membrana 
+          | is a decentralized platform for trust management
+        p(data-aos="fade-right").live-sale__text3 This technology is made for 
+          span.live-sale-bold participators 
+          | and 
+          span.live-sale-bold traders 
+          | to contact directly and conclude a mutually beneficial, secure, and reliable contracts
+        .live-sale__about_wr.live-sale__wr(data-aos="fade-right")
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon1.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Membrana decentralized distributed network platform is currently in MVP stage 
+              span.live-sale__about-op (Open Beta)
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon2.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Can be used from PC or mobile phone, from any point of the world 
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon3.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Has developed unique algorithm to address $50+ billion market opportunity
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon4.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Currently 3000+ customers with more than US $1M dollars in management
+          p.live-sale__about-op.live-sale__about-desc Expected 10,000+ customers till the end of 2020
 
-      .lane_gr_cont
-        h2.lane_gr_cont__title Distribution of funds collected
-        .lane_gr_cont__wr
-          .lane_gr_cont__btn_wr            
-            a(href="#" data-number="0").lane_gr_cont__btn Exchange listings 
-              span.bold - 35%
-            a(href="#" data-number="1").lane_gr_cont__btn Product Development 
-              span.bold - 30%
-            a(href="#" data-number="2").lane_gr_cont__btn Marketing 
-              span.bold - 20%
-            a(href="#" data-number="3").lane_gr_cont__btn Legal 
-              span.bold - 10%
-            a(href="#" data-number="4").lane_gr_cont__btn Customer Events 
-              span.bold - 5%
-          .lane_gr_cont__graph.lane_gr
-            .lane_gr__item(data-number="0")
-            .lane_gr__item(data-number="1")
-            .lane_gr__item(data-number="2")
-            .lane_gr__item(data-number="3")
-            .lane_gr__item(data-number="4")
+      .live-sale__problems
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left")
+          span.live-sale-bold Problems 
+          | that we 
+          span.live-sale-bold Solve
+        p.live-sale__problems_desc We have developed a unique algorithm to solve the following problems:
+        ul.live-sale__problems_wr(data-aos="fade-left")
+          li.live-sale__problems_item
+            p.live-sale__problems_title Loss of control over invested funds
+            p.live-sale__problems_text To get his assets in management, participator need to send them to 3rd party or to a trader.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Middleman issues
+            p.live-sale__problems_text No reliable tool for middleman to work with his customers.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Lack of trust
+            p.live-sale__problems_text Counterparties don’t trust each other and that limits possibilities for gaining prоfіt.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Lack of transparency
+            p.live-sale__problems_text Participator can’t get any proof of traders activities. Trader can send him fake data and get the prоfіt.
 
-      .form_section
-        h2.form_section__title 
-          span.form_section__title_cont Interested in contributing?
-        .document_links_wr
-          a(href="/static/pdf/membrana_investor_deck.pdf" target="_blank").form_section__doc_link
-            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
-            span.link__text Deck.pdf
-          a(href="/static/pdf/membrana_indication_of_interest.pdf" target="_blank").form_section__doc_link
-            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
-            span.link__text Idication of Interest.pdf
-          a(href="/static/pdf/membrana_indicative_summary.pdf" target="_blank").form_section__doc_link
-            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
-            span.link__text Summary.pdf
-          a(href="/static/pdf/Membrana.io_T&C_v2.1.docx.pdf" target="_blank").form_section__doc_link
-            img(src="/static/img/pictures/pre-sale/document_icon_big.svg" alt="")
-            span.link__text Terms & Conditions.pdf
-        form.pre_sale_form
-          .form_grp
-            label(for="name").form__text Full 
-              span.bold Name
-            input(name="name" placeholder="Type Your Full Name Here..." autocomplete="off").text_input
-          .form_grp
-            label(for="mail").form__text Your 
-              span.bold Email
-            input(name="mail" placeholder="Type Your Email Here..." autocomplete="off").text_input
-          .form_grp
-            p.form__text Are you an accredited 
-              span.bold participator:
-            .form__inline
-              label.form__check_label
-                input(type="radio" name="accredited" id="accredited_yes" value="1" checked="checked").form__check_input 
-                .custom_input
-                | Yes
-            .form__inline
-              label.form__check_label
-                input(type="radio" name="accredited" id="accredited_no" value="0").form__check_input
-                .custom_input
-                | No
-          .form_grp
-            p.form__text What type of entity do you 
-              span.bold represent:
-            .form__inline
-              label.form__check_label
-                input(type="radio" name="entity_type" id="individual" value="individual" checked="checked").form__check_input 
-                .custom_input
-                | Individual
-            .form__inline
-              label.form__check_label
-                input(type="radio" name="entity_type" id="syndicate" value="syndicate").form__check_input
-                | Syndicate
-                .custom_input
-            .form__inline
-              label.form__check_label
-                input(type="radio" name="entity_type" id="fund" value="fund").form__check_input
-                | Professional Fund
-                .custom_input
-          .form_grp
-            label(for="sum").form__text Desired  
-              span.bold Allocation:
-            .input_grp
-              input(name="sum" placeholder="25000..." autocomplete="off").text_input
-              .input_grp__btn
-                a.change_money(data-money="USD") USD
-                .drpdwn_menu
-                  .drpdwn_menu__item(data-money="USD") USD
-                  .drpdwn_menu__item(data-money="ETH") ETH
-                  .drpdwn_menu__item(data-money="BTC") BTC
-          .form_grp
-            label(for="citizenship").form__text.citizenship_label
-              span.bold Citizenship :
-            //- select(name="citizenship").citizenship.text_input
-            input(name="citizenship" autocomplete="off").citizenship.text_input.hidden
-            .citizenship.text_input.showed Chose...
-            .hidden_opt
-              //- .option(data-value="NO") Chose...
-              .option(data-value="AF") Afghanistan
-              .option(data-value="AX") Åland Islands
-              .option(data-value="AL") Albania
-              .option(data-value="DZ") Algeria
-              .option(data-value="AS") American Samoa
-              .option(data-value="AD") Andorra
-              .option(data-value="AO") Angola
-              .option(data-value="AI") Anguilla
-              .option(data-value="AQ") Antarctica
-              .option(data-value="AG") Antigua and Barbuda
-              .option(data-value="AR") Argentina
-              .option(data-value="AM") Armenia
-              .option(data-value="AW") Aruba
-              .option(data-value="AU") Australia
-              .option(data-value="AT") Austria
-              .option(data-value="AZ") Azerbaijan
-              .option(data-value="BS") Bahamas
-              .option(data-value="BH") Bahrain
-              .option(data-value="BD") Bangladesh
-              .option(data-value="BB") Barbados
-              .option(data-value="BY") Belarus
-              .option(data-value="BE") Belgium
-              .option(data-value="BZ") Belize
-              .option(data-value="BJ") Benin
-              .option(data-value="BM") Bermuda
-              .option(data-value="BT") Bhutan
-              .option(data-value="BO") Bolivia, Plurinational State of
-              .option(data-value="BQ") Bonaire, Sint Eustatius and Saba
-              .option(data-value="BA") Bosnia and Herzegovina
-              .option(data-value="BW") Botswana
-              .option(data-value="BV") Bouvet Island
-              .option(data-value="BR") Brazil
-              .option(data-value="IO") British Indian Ocean Territory
-              .option(data-value="BN") Brunei Darussalam
-              .option(data-value="BG") Bulgaria
-              .option(data-value="BF") Burkina Faso
-              .option(data-value="BI") Burundi
-              .option(data-value="KH") Cambodia
-              .option(data-value="CM") Cameroon
-              .option(data-value="CA") Canada
-              .option(data-value="CV") Cape Verde
-              .option(data-value="KY") Cayman Islands
-              .option(data-value="CF") Central African Republic
-              .option(data-value="TD") Chad
-              .option(data-value="CL") Chile
-              .option(data-value="CN") China
-              .option(data-value="CX") Christmas Island
-              .option(data-value="CC") Cocos (Keeling) Islands
-              .option(data-value="CO") Colombia
-              .option(data-value="KM") Comoros
-              .option(data-value="CG") Congo
-              .option(data-value="CD") Congo, the Democratic Republic of the
-              .option(data-value="CK") Cook Islands
-              .option(data-value="CR") Costa Rica
-              .option(data-value="CI") Côte d'Ivoire
-              .option(data-value="HR") Croatia
-              .option(data-value="CU") Cuba
-              .option(data-value="CW") Curaçao
-              .option(data-value="CY") Cyprus
-              .option(data-value="CZ") Czech Republic
-              .option(data-value="DK") Denmark
-              .option(data-value="DJ") Djibouti
-              .option(data-value="DM") Dominica
-              .option(data-value="DO") Dominican Republic
-              .option(data-value="EC") Ecuador
-              .option(data-value="EG") Egypt
-              .option(data-value="SV") El Salvador
-              .option(data-value="GQ") Equatorial Guinea
-              .option(data-value="ER") Eritrea
-              .option(data-value="EE") Estonia
-              .option(data-value="ET") Ethiopia
-              .option(data-value="FK") Falkland Islands (Malvinas)
-              .option(data-value="FO") Faroe Islands
-              .option(data-value="FJ") Fiji
-              .option(data-value="FI") Finland
-              .option(data-value="FR") France
-              .option(data-value="GF") French Guiana
-              .option(data-value="PF") French Polynesia
-              .option(data-value="TF") French Southern Territories
-              .option(data-value="GA") Gabon
-              .option(data-value="GM") Gambia
-              .option(data-value="GE") Georgia
-              .option(data-value="DE") Germany
-              .option(data-value="GH") Ghana
-              .option(data-value="GI") Gibraltar
-              .option(data-value="GR") Greece
-              .option(data-value="GL") Greenland
-              .option(data-value="GD") Grenada
-              .option(data-value="GP") Guadeloupe
-              .option(data-value="GU") Guam
-              .option(data-value="GT") Guatemala
-              .option(data-value="GG") Guernsey
-              .option(data-value="GN") Guinea
-              .option(data-value="GW") Guinea-Bissau
-              .option(data-value="GY") Guyana
-              .option(data-value="HT") Haiti
-              .option(data-value="HM") Heard Island and McDonald Islands
-              .option(data-value="VA") Holy See (Vatican City State)
-              .option(data-value="HN") Honduras
-              .option(data-value="HK") Hong Kong
-              .option(data-value="HU") Hungary
-              .option(data-value="IS") Iceland
-              .option(data-value="IN") India
-              .option(data-value="ID") Indonesia
-              .option(data-value="IR") Iran, Islamic Republic of
-              .option(data-value="IQ") Iraq
-              .option(data-value="IE") Ireland
-              .option(data-value="IM") Isle of Man
-              .option(data-value="IL") Israel
-              .option(data-value="IT") Italy
-              .option(data-value="JM") Jamaica
-              .option(data-value="JP") Japan
-              .option(data-value="JE") Jersey
-              .option(data-value="JO") Jordan
-              .option(data-value="KZ") Kazakhstan
-              .option(data-value="KE") Kenya
-              .option(data-value="KI") Kiribati
-              .option(data-value="KP") Korea, Democratic People's Republic of
-              .option(data-value="KR") Korea, Republic of
-              .option(data-value="KW") Kuwait
-              .option(data-value="KG") Kyrgyzstan
-              .option(data-value="LA") Lao People's Democratic Republic
-              .option(data-value="LV") Latvia
-              .option(data-value="LB") Lebanon
-              .option(data-value="LS") Lesotho
-              .option(data-value="LR") Liberia
-              .option(data-value="LY") Libya
-              .option(data-value="LI") Liechtenstein
-              .option(data-value="LT") Lithuania
-              .option(data-value="LU") Luxembourg
-              .option(data-value="MO") Macao
-              .option(data-value="MK") Macedonia, the former Yugoslav Republic of
-              .option(data-value="MG") Madagascar
-              .option(data-value="MW") Malawi
-              .option(data-value="MY") Malaysia
-              .option(data-value="MV") Maldives
-              .option(data-value="ML") Mali
-              .option(data-value="MT") Malta
-              .option(data-value="MH") Marshall Islands
-              .option(data-value="MQ") Martinique
-              .option(data-value="MR") Mauritania
-              .option(data-value="MU") Mauritius
-              .option(data-value="YT") Mayotte
-              .option(data-value="MX") Mexico
-              .option(data-value="FM") Micronesia, Federated States of
-              .option(data-value="MD") Moldova, Republic of
-              .option(data-value="MC") Monaco
-              .option(data-value="MN") Mongolia
-              .option(data-value="ME") Montenegro
-              .option(data-value="MS") Montserrat
-              .option(data-value="MA") Morocco
-              .option(data-value="MZ") Mozambique
-              .option(data-value="MM") Myanmar
-              .option(data-value="NA") Namibia
-              .option(data-value="NR") Nauru
-              .option(data-value="NP") Nepal
-              .option(data-value="NL") Netherlands
-              .option(data-value="NC") New Caledonia
-              .option(data-value="NZ") New Zealand
-              .option(data-value="NI") Nicaragua
-              .option(data-value="NE") Niger
-              .option(data-value="NG") Nigeria
-              .option(data-value="NU") Niue
-              .option(data-value="NF") Norfolk Island
-              .option(data-value="MP") Northern Mariana Islands
-              .option(data-value="NO") Norway
-              .option(data-value="OM") Oman
-              .option(data-value="PK") Pakistan
-              .option(data-value="PW") Palau
-              .option(data-value="PS") Palestinian Territory, Occupied
-              .option(data-value="PA") Panama
-              .option(data-value="PG") Papua New Guinea
-              .option(data-value="PY") Paraguay
-              .option(data-value="PE") Peru
-              .option(data-value="PH") Philippines
-              .option(data-value="PN") Pitcairn
-              .option(data-value="PL") Poland
-              .option(data-value="PT") Portugal
-              .option(data-value="PR") Puerto Rico
-              .option(data-value="QA") Qatar
-              .option(data-value="RE") Réunion
-              .option(data-value="RO") Romania
-              .option(data-value="RU") Russian Federation
-              .option(data-value="RW") Rwanda
-              .option(data-value="BL") Saint Barthélemy
-              .option(data-value="SH") Saint Helena, Ascension and Tristan da Cunha
-              .option(data-value="KN") Saint Kitts and Nevis
-              .option(data-value="LC") Saint Lucia
-              .option(data-value="MF") Saint Martin (French part)
-              .option(data-value="PM") Saint Pierre and Miquelon
-              .option(data-value="VC") Saint Vincent and the Grenadines
-              .option(data-value="WS") Samoa
-              .option(data-value="SM") San Marino
-              .option(data-value="ST") Sao Tome and Principe
-              .option(data-value="SA") Saudi Arabia
-              .option(data-value="SN") Senegal
-              .option(data-value="RS") Serbia
-              .option(data-value="SC") Seychelles
-              .option(data-value="SL") Sierra Leone
-              .option(data-value="SG") Singapore
-              .option(data-value="SX") Sint Maarten (Dutch part)
-              .option(data-value="SK") Slovakia
-              .option(data-value="SI") Slovenia
-              .option(data-value="SB") Solomon Islands
-              .option(data-value="SO") Somalia
-              .option(data-value="ZA") South Africa
-              .option(data-value="GS") South Georgia and the South Sandwich Islands
-              .option(data-value="SS") South Sudan
-              .option(data-value="ES") Spain
-              .option(data-value="LK") Sri Lanka
-              .option(data-value="SD") Sudan
-              .option(data-value="SR") Suriname
-              .option(data-value="SJ") Svalbard and Jan Mayen
-              .option(data-value="SZ") Swaziland
-              .option(data-value="SE") Sweden
-              .option(data-value="CH") Switzerland
-              .option(data-value="SY") Syrian Arab Republic
-              .option(data-value="TW") Taiwan, Province of China
-              .option(data-value="TJ") Tajikistan
-              .option(data-value="TZ") Tanzania, United Republic of
-              .option(data-value="TH") Thailand
-              .option(data-value="TL") Timor-Leste
-              .option(data-value="TG") Togo
-              .option(data-value="TK") Tokelau
-              .option(data-value="TO") Tonga
-              .option(data-value="TT") Trinidad and Tobago
-              .option(data-value="TN") Tunisia
-              .option(data-value="TR") Turkey
-              .option(data-value="TM") Turkmenistan
-              .option(data-value="TC") Turks and Caicos Islands
-              .option(data-value="TV") Tuvalu
-              .option(data-value="UG") Uganda
-              .option(data-value="UA") Ukraine
-              .option(data-value="AE") United Arab Emirates
-              .option(data-value="GB") United Kingdom
-              .option(data-value="US") United States
-              .option(data-value="UM") United States Minor Outlying Islands
-              .option(data-value="UY") Uruguay
-              .option(data-value="UZ") Uzbekistan
-              .option(data-value="VU") Vanuatu
-              .option(data-value="VE") Venezuela, Bolivarian Republic of
-              .option(data-value="VN") Viet Nam
-              .option(data-value="VG") Virgin Islands, British
-              .option(data-value="VI") Virgin Islands, U.S.
-              .option(data-value="WF") Wallis and Futuna
-              .option(data-value="EH") Western Sahara
-              .option(data-value="YE") Yemen
-              .option(data-value="ZM") Zambia
-              .option(data-value="ZW") Zimbabwe
-          .form_grp
-            label(for="adress").form__text 
-              span.bold ETH 
-              | or 
-              span.bold BTC 
-              | address you plan to send from? 
-              span.thin (optional):
-            input(name="adress" placeholder="Ox..." autocomplete="off").text_input
-          .form_grp
-            label(for="addInfo").form__text 
-              span.bold Anything else 
-              | we should know? 
-              span.thin (optional):
-            input(name="addInfo" autocomplete="off").text_input
-            input(name="whatMoney" value="USD" autocomplete="off").text_input.what_money.hidden
-          .form_grp
-            p.form__text.bold Important notice:
-            .form__inline
-              label.form__check_label.me_understand
-                input(type="checkbox" name="iagree" id="iagree" value="iagree").form__check_input 
-                | I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.
-                .custom_input
-          .sm-form__submit
-            button.sm-form-btn(type="submit")
-              img.sm-form-btn__icon(src="/static/img/pictures/pre-sale/plus.svg" alt="")
-              span.sm-form-btn__text Submit
+      .live-sale__why
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") Why are we doing this?
+        .live-sale__why_bg(data-aos="fade-right")
+          p.live-sale__why_text We believe in 
+            span.live-sale__why-col trustable
+            | , 
+            span.live-sale__why-col safe 
+            | and 
+            span.live-sale__why-col open cryptoworld
+            | , without 
+            span.live-sale__why-col any barriers
+            | . This world allows business opportunities and financial freedom for everyone
 
+      .backed.live-sale__backed
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") Venture Funds on Board
+        .backed__wr(data-aos="fade-left")
+          .backed__coin
+            a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
+              img(src="/static/img/pictures/backed/ld.png" alt="")
+            a(href="https://coinbargroup.com/ " target="blank").logo
+              img(src="/static/img/pictures/backed/logo_coinbar.svg" alt="")
+          .line
+          .backed__coin.backed__FBC
+            a(href="https://www.linkedin.com/company/firstblockv/" target="blank").link
+              img(src="/static/img/pictures/backed/ld.png" alt="")
+            a(href="https://firstblock.io/" target="blank").logo
+              img(src="/static/img/pictures/backed/firstblock.svg" alt="")
 
+      .live-sale__economy
+         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") Tоkеn Economy
+         .live-sale__economy_wr(data-aos="fade-right")        
+          img(src="/static/img/pictures/live-sale/token_bg.svg", alt="").live-sale__economy_image
+          ul.live-sale__economy_list
+            li.live-sale__economy_item.ec_item1
+              p.live-sale__economy_tit Pay less commission
+              p.live-sale__economy_text When concluding contracts for trust management, users can pay platform comission fee with supported cryptoсurrеnсies or Membrana tоkеns. When paying with Membrana tоkеns you receive a discount.
+            li.live-sale__economy_item.ec_item2
+              p.live-sale__economy_tit Use advanced features
+              p.live-sale__economy_text There are some paid features available on Membrana platform. User can receive access to those features by not only paying monthly fee, but also by holding certain amount of Membrana tоkеns on thieir wallet.
+            li.live-sale__economy_item.ec_item3
+              p.live-sale__economy_tit External API
+              p.live-sale__economy_text Customer can use Membrana external API protocol for connecting their software to any exchange and using the platform custodianship. This feature can be unlocked with monthly payments which can be done with Ethereum, fiat сurrеnсies or Membrana tоkеns. Paying with Membrana tоkеns is cheaper.
+            li.live-sale__economy_item.ec_item4
+              p.live-sale__economy_tit ІСО pools
+              p.live-sale__economy_text You can join ІСО pools using Membrana tоkеns and receive additional discounts for your investments.
 
+      .live-sale__adv
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left") Advantages of Technology
+        table.live-sale__table(frame="below", data-aos="fade-left")
+          tr.live-sale__str
+            td.live-sale__col 
+            td.live-sale__col 
+              img(src="/static/img/logo.svg")
+            td.live-sale__col Iconomi, Melonport, Genesis V
+            td.live-sale__col Blockport, Covesting, Caspian
+          tr.live-sale__str
+            td.live-sale__col Technology
+            td.live-sale__col Contract system
+            td.live-sale__col Tоkеnized fund
+            td.live-sale__col Social trading
+          tr.live-sale__str
+            td.live-sale__col Asset control
+            td.live-sale__col Assets are always on participator’s exchange wallets, access for trading is provided only through Membrana platform
+            td.live-sale__col Assets are send to smart-contract address of the fund, where trader possess them
+            td.live-sale__col Assets are send to smart contract, or trader has direct access via API
+          tr.live-sale__str
+            td.live-sale__col Risk management
+            td.live-sale__col All terms of deal are put in the smart-contract, everything executes automatically
+            td.live-sale__col No risk-management system
+            td.live-sale__col No risk-management system
+          tr.live-sale__str
+            td.live-sale__col Portfolio management
+            td.live-sale__col Users can trust their assets directly to trader or to portfolio managers, who pick up traders
+            td.live-sale__col User trust their assets to only one fund manager
+            td.live-sale__col User chose one trader and assets are used to copy his trading activity
 
+      .live-sale__done
+        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") What has already been done?
+        p.live-sale__done_desc(data-aos="fade-right") We have 
+          span.live-sale__done-bold designed 
+          | technology to work with 
+          br
+          span.live-sale__done-bold decentralized 
+          | and 
+          span.live-sale__done-bold centralized 
+          | exchanges
+        .live-sale__done_wr.live-sale__wr(data-aos="fade-right")
+          img(src="/static/img/pictures/live-sale/grid.svg", alt="").live-sale__done_img
+          .live-sale__done_right
+            p.live-sale__done_text On the website, 
+              span.live-sale__done-bold Participator 
+              | and 
+              span.live-sale__done-bold Trader 
+              | can conclude a deal between each other with Smart-Contract.
+            p.live-sale__done_text Smart-Contract holds all the information about the deal and allows autonomous and safe workflow for users.
+            p.live-sale__bdb.live-sale__done_bdb We’re already working with:
+            .live-sale__done_wr2
+              img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
+              img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
+              img(src="/static/img/pictures/live-sale/bittrex.svg", alt="").live-sale__done_icon
 
-
-
-  .pop_up-image.non_displayed
-    .close_pop_up
-    img(src="/static/img/new-page/climbing.svg" alt="")
-    a(href='#').close_pop_up_cross
-    //- .close_pop_up.close_pop_up_2
-
+      h2.live-sale__bon_title(data-aos="fade-left") 70% Bonus
+      a(href="").top__btn.live-sale__btn(data-aos="fade-left")
+        img(src="/static/img/icons/play2.svg" alt="").top__btn_img
+        //- span.live-sale__pad_r.top__btn_span Buy 
+        //- span.top__btn_span.top-bold Tokens
+        span.top__btn_span Registration will open soon
+      p.live-sale__text2(data-aos="fade-left")
+        span.live-sale-bold Restricted:
+        span US citizens (institutional participators are allowed) and China citizens
 
 
   .join-us-wrapper
