@@ -972,7 +972,7 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Dec 10, 2018 00:00:00 GMT -0000').getTime()
+  var countDownDateStart = new Date('Dec 10, 2018 18:00:00 GMT -0000').getTime()
   function padDecimal (number) {
     if (number < 10) number = '0' + number
     return number
@@ -1008,7 +1008,7 @@ $(document).ready(function () {
 
   var dates = {}
   dates.decTenStart = {
-    date: new Date('Dec 10, 2018 00:00:00 GMT -0000').getTime(),
+    date: new Date('Dec 10, 2018 18:00:00 GMT -0000').getTime(),
     perc: '70% '
   }
   dates.decTenEnd = {
