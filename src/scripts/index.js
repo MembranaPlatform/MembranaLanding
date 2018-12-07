@@ -177,7 +177,7 @@ app.setPatternsSize()
     const currentIndex = scrolledIndexes.reverse()[0]
     $nextSection = $sections.eq(currentIndex + 1)
 
-    $('html, body').animate({scrollTop: $nextSection.offset().top})
+    $('html, body').animate({ scrollTop: $nextSection.offset().top })
   })
 })()
 
@@ -191,7 +191,7 @@ app.setPatternsSize()
   if (!$btnNext.length) return false
 
   $btnNext.on('click', () => {
-    $('html, body').animate({scrollTop: $sectionNext.offset().top})
+    $('html, body').animate({ scrollTop: $sectionNext.offset().top })
   })
 })()
 
@@ -205,7 +205,7 @@ app.setPatternsSize()
   if (!$btnForm.length) return false
 
   $btnForm.on('click', () => {
-    $('html, body').animate({scrollTop: $formSection.offset().top}); return false
+    $('html, body').animate({ scrollTop: $formSection.offset().top }); return false
   })
 })()
 
@@ -535,7 +535,7 @@ $('.roadmap-item__read-more').on('click', function () {
   toggleHiddenText()
 
   if ($(window).scrollTop() >= itemPositionTop - 30) {
-    $('html').animate({scrollTop: itemPositionTop - 30}, 400)
+    $('html').animate({ scrollTop: itemPositionTop - 30 }, 400)
   }
 })
 
@@ -834,7 +834,7 @@ $(document).ready(function () {
   $('.registr_page__btn').click(function (e) {
     $('.item__check').removeClass('not_done')
     if (!$('.registr_page').hasClass('socials_done')) {
-      $('html, body').animate({scrollTop: $('.registr_page__social_check').offset().top})
+      $('html, body').animate({ scrollTop: $('.registr_page__social_check').offset().top })
       $('.item__check:not(.active)').addClass('not_done')
       return false
     } else {
@@ -972,7 +972,8 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Dec 10, 2018 18:00:00 GMT -0000').getTime()
+  var countDownDateStart = new Date('Dec 10, 2018 00:00:00 GMT -0000').getTime()
+
   function padDecimal (number) {
     if (number < 10) number = '0' + number
     return number
