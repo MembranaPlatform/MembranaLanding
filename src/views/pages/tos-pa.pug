@@ -1,0 +1,26 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'terms_of_sale';
+	- var page_active = '/terms_of_sale/';
+
+block append head
+	block head_variables
+		- var title = 'Terms of sale';
+		- var description = 'Terms of sale';
+
+block content
+	.page-content-pattern
+		.page-content
+			h2.page-content__subtitle Documents for participating in Membrana Token Sale:
+			.languages-list
+				a.languages-list-item(href="/static/pdf/terms_of_sale.pdf" target="_blank")
+					h2.languages-list-item__title Terms of Sale (non US)
+					.languages-list__item-flag: img(style="margin: auto" src="/static/img/icons/dock.svg" alt="")
+				a.languages-list-item(href="/static/pdf/usa-sale/purchase_agreement.pdf" target="_blank")
+					h2.languages-list-item__title Purchase Agreement (US Accredited Investors)
+					.languages-list__item-flag: img(style="margin: auto" src="/static/img/icons/dock.svg" alt="")
+
+			include ../components/get-in-touch
+
+	include ../components/join-us
