@@ -4,7 +4,6 @@ import 'aos/dist/aos.css'
 import 'owl.carousel'
 // import * as d3 from 'd3'
 
-var moment = require('moment')
 const app = window.app = {}
 
 window.$ = $
@@ -1006,8 +1005,6 @@ $(document).ready(function () {
       $('.top_timer__m .timerJs').html('00')
     }
   }, 1000)
-
-  console.log(moment('Dec 10, 2018 18:00:00 GMT+0000'))
 
   var dates = {}
   dates.decTenStart = {
