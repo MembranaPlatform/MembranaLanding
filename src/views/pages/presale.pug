@@ -112,7 +112,7 @@ block content
             img(src="/static/img/pictures/live-sale/ethereum.svg", alt="").live-sale__paym_img
             img(src="/static/img/pictures/live-sale/litecoin.svg", alt="").live-sale__paym_img
             img(src="/static/img/pictures/live-sale/visa.svg", alt="").live-sale__paym_img
-            img(src="/static/img/pictures/live-sale/mastercard.svg", alt="").live-sale__paym_img
+            img(src="/static/img/pictures/live-sale/mastercard.svg", alt="").live-sale__paym_img.live-sale-trsp
 
       .top__widgets.live-sale__widgets
 
@@ -192,11 +192,11 @@ block content
           .graph__desc1.live-sale__bordered
             .bordered_block Tоkеns available for Presale
             .desc__title 40% 
-              span.small_text 1 month lockup for bonus
+              span.small_text 1 month lockup for half bonus
           .graph__desc2.live-sale__bordered
             .bordered_block.small Reserved for Public Sale
             .desc__title 15% 
-              span.small_text Not lock up
+              span.small_text Lockup
         .js-pie-chart.pie-chart#pieChart
         .graph__desc_hor
           .desc__title Reserved for distribution to
@@ -205,20 +205,20 @@ block content
               span.left__part
                 span.left__part_text Private Sale Participators
               span.right__part 12% 
-                span.non_colored Lock up to 6 month
+                span.non_colored Lockup to 6 months
             li(data-number="4").percents_block__string 
               span.left__part
                 span.left__part_text Membrana team
               span.right__part 20% 
-                span.non_colored Lock up to 3 month
+                span.non_colored Lockup to 3 months
             li(data-number="3").percents_block__string 
               span.left__part
                 span.left__part_text Membrana Advisors and Partners
               span.right__part 10% 
-                span.non_colored Lock up to 3 month
+                span.non_colored Lockup to 3 months
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text Private Sale Participators
+                span.left__part_text Community Events
               span.right__part 3%
 
 
@@ -347,31 +347,48 @@ block content
 
       .live-sale__done
         h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") What has already been done?
-        p.live-sale__done_desc(data-aos="fade-right") We have 
-          span.live-sale__done-bold designed 
-          | technology to work with 
-          br
-          span.live-sale__done-bold decentralized 
-          | and 
-          span.live-sale__done-bold centralized 
-          | exchanges
+        //- p.live-sale__done_desc(data-aos="fade-right") We have 
+        //-   span.live-sale__done-bold designed 
+        //-   | technology to work with 
+        //-   br
+        //-   span.live-sale__done-bold decentralized 
+        //-   | and 
+        //-   span.live-sale__done-bold centralized 
+        //-   | exchanges
+        p.live-sale__done_desc(data-aos="fade-right") We have designed and released the platform using most reliable and progressive technologies. 
         .live-sale__done_wr.live-sale__wr(data-aos="fade-right")
           img(src="/static/img/pictures/live-sale/grid.svg", alt="").live-sale__done_img
           .live-sale__done_right
-            p.live-sale__done_text On the website, 
-              span.live-sale__done-bold Participator 
-              | and 
-              span.live-sale__done-bold Trader 
-              | can conclude a deal between each other with Smart-Contract.
-            p.live-sale__done_text Smart-Contract holds all the information about the deal and allows autonomous and safe workflow for users.
-            p.live-sale__bdb.live-sale__done_bdb We’re already working with:
+            p.live-sale__done_text Product in   
+              span.live-sale__done-bold public beta stage 
+              | with 3000+ customers. More than 1,000 of them passed KYC and are actively using the technology.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Desktop and Mobile 
+              | version of the platform are already released. 
+            p.live-sale__done_text Successfully passed 
+              span.live-sale__done-bold security audit 
+              | from Hacken.io company.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Risk management 
+              |  tools with usage of Smart-Contract technology.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Portfolio management
+              | by dividing single API key between multiple traders.
+            p.live-sale__done_text 
+              span.live-sale__done-bold External API
+              | , which allows connection of algorithmic trading bots and custom software to the platform. 
+            p.live-sale__done_text Hashlog feature to provide 
+              span.live-sale__done-bold verification of traders activity
+            p.live-sale__bdb.live-sale__done_bdb Platform is working with most popular exchanges 
+            .live-sale__done-bold - Binance, Huobi, Bittrex
             .live-sale__done_wr2
               img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/bittrex.svg", alt="").live-sale__done_icon
 
       h2.live-sale__bon_title(data-aos="fade-left") 70% Bonus
-      a(href="https://sale.membrana.io").top__btn.live-sale__btn(data-aos="fade-left")
+
+      a(href="https://sale.membrana.io/cabinet/home").top__btn.live-sale__btn(data-aos="fade-left")
         img(src="/static/img/icons/play2.svg" alt="").top__btn_img
         //- span.live-sale__pad_r.top__btn_span Buy 
         //- span.top__btn_span.top-bold Tokens
