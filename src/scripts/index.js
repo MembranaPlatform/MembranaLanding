@@ -1134,3 +1134,36 @@ $(document).ready(function () {
     return false
   })
 })
+$(document).ready(function () {
+  var search = window.location.search.substring(1)
+  var params = parseQueryString(search)
+  if (params.izzzio_ref) {
+    window.localStorage.setItem('izzzio_ref', params.izzzio_ref)
+  }
+  $('a.live-sale__btn').click(function (e) {
+    var ref = window.localStorage.getItem('izzzio_ref')
+    if (ref) {
+      var anchor = $(this)
+      anchor.attr('href', 'https://sale.membrana.io/cabinet/ref/' + ref)
+      window.localStorage.removeItem('izzzio_ref')
+    }
+  })
+})
+function parseQueryString (query) {
+  var vars = query.split('&')
+  var queryString = {}
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=')
+    var key = decodeURIComponent(pair[0])
+    var value = decodeURIComponent(pair[1])
+    if (typeof queryString[key] === 'undefined') {
+      queryString[key] = decodeURIComponent(value)
+    } else if (typeof queryString[key] === 'string') {
+      var arr = [queryString[key], decodeURIComponent(value)]
+      queryString[key] = arr
+    } else {
+      queryString[key].push(decodeURIComponent(value))
+    }
+  }
+  return queryString
+}
