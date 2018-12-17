@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1008" height="284" fill="none" viewBox="0 0 1008 284">
-    <path fill="url(#a)" d="M987 109h21v22h-21z"/>
-    <path fill="url(#b)" d="M111 252h33v32h-33z"/>
-    <path fill="url(#c)" d="M876 235h26v19h-26z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1008" height="584" fill="none" viewBox="0 0 1008 584">
+    <path fill="url(#a)" d="M987 509h21v22h-21z"/>
+    <path fill="url(#b)" d="M111 552h33v32h-33z"/>
+    <path fill="url(#c)" d="M876 435h26v19h-26z"/>
     <path fill="url(#d)" d="M853 0h97v86h-97z"/>
-    <path fill="url(#e)" d="M0 258h28v23H0z"/>
+    <path fill="url(#e)" d="M0 558h28v23H0z"/>
     <path fill="url(#f)" d="M35 0h128v100H35z"/>
     <defs>
         <pattern id="a" width="1" height="1" patternContentUnits="objectBoundingBox">
