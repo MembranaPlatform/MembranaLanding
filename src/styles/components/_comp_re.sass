@@ -6,7 +6,7 @@
     transform: translateY(-10px) translateX(-50%) rotate(90deg)
 
 .comp_re__bg
-  top: 240px
+  top: 125px
   position: absolute
   @media(max-width: 1180px)
     display: none
@@ -19,11 +19,26 @@
   overflow: hidden
   text-align: center
   font-weight: normal
+
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+  justify-content: center
+
   @media(max-width: 1180px)
     padding-top: 100px
 
+  @media(max-width: 1024px)
+    flex-wrap: wrap
+
+  @media(max-width: 767px)
+    padding-top: 0
+
   &-colored 
-    font-weight: bold
+    color: #29d9e3
     // padding: 0 5px
 
   &-colored_yell
@@ -36,7 +51,7 @@
   &__side
     font-size: px-to-rem(25px)
     color: #fff
-    margin-top: 280px
+    margin-top: 30px
     width: 30%
     width: calc(30% + 50px)
     position: relative
@@ -44,6 +59,7 @@
     text-align: left
     min-height: 40px
     line-height: 40px
+    width: 100%
     @media(max-width: 1180px)
       width: 100%
       max-width: 400px
@@ -55,15 +71,25 @@
     top: 50%
     transform: translateY(-50%)
 
-  &__side-left
-    float: left
-    @media(max-width: 1180px)
-      float: none
-    
-  &__side-right
-    float: right
-    @media(max-width: 1180px)
-      float: none
+  &__wrap
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+
+    flex-wrap: wrap
+
+    height: 100px
+    margin-top: 200px
+    width: 29%
+
+    @media(max-width: 1024px)
+      width: 40%
+
+    @media(max-width: 767px)
+      width: 100%
+      margin: 50px 0 0
 
   &__center
     float: left
@@ -81,9 +107,13 @@
       width: 90%
       max-width: 500px
       float: none
-      @media(max-width: 767px)
-        height: 540px
-        max-width: 450px
+
+    @media(max-width: 1024px)
+      order: 3
+
+    @media(max-width: 767px)
+      height: 540px
+      max-width: 450px
       
     &::after
       content: ''
@@ -101,8 +131,8 @@
     font-size: px-to-rem(164px)
     font-weight: bold
     text-transform: uppercase
-    line-height: .85
-    padding-top: 140px
+    line-height: 1
+    padding-top: 120px
     margin: 0
     @media(max-width: 767px)
       font-size: 80px
@@ -122,7 +152,7 @@
     margin: 30px auto 14px
     color: #000
     text-decoration: none
-    font-size: 26px
+    font-size: 23px
     transition: all ease .4s
     position: relative
     @media(max-width: 767px)
@@ -155,4 +185,34 @@
   &__desc
     color: #fff
     opacity: .7
+
+  &__one
+    font-size: 7.7rem
+    font-weight: bold
+
+    @media(max-width: 767px)
+      font-size: 5rem
+
+  &__two
+    font-size: 6.2rem
+
+    margin: 0
+
+    @media(max-width: 767px)
+      font-size: 5rem
+
+  &__three
+    font-size: 7.6rem
+    font-weight: bold
+
+    @media(max-width: 767px)
+      font-size: 5rem
+
+  &__four
+    font-size: 8.5rem
+    font-weight: bold
+
+    @media(max-width: 767px)
+      font-size: 5rem
+
        
