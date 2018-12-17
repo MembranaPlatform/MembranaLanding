@@ -18,7 +18,7 @@ html(lang=app.lang)
     .app(class=page_class)
       .header-wrapper
         a(href="#").header__anchor
-          p.header__anchor-desc Already rised  $600,000 from Venture Funds / MVP in Beta stage with 3000+ registrations
+          p.header__anchor-desc Already raised  $600,000 from Venture Funds / MVP in Beta stage with 3000+ registrations
         header.header
           .logo
             if page_class === 'index' 
@@ -86,4 +86,7 @@ html(lang=app.lang)
         a.youtube-modal__close(href='javascript:void(0)', data-close-modal='')
         .youtube-modal__iframe.js-youtube-iframe(data-src=app.youtube_video, data-allow="autoplay; encrypted-media", data-allowfullscreen) 
 
-      //- script(defer async src="some metric uri")
+  script(type="text/javascript")!=`_linkedin_partner_id = "592436";window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];window._linkedin_data_partner_ids.push(_linkedin_partner_id);`
+  script(type="text/javascript")!=`(function(){var s = document.getElementsByTagName("script")[0];var b = document.createElement("script");b.type = "text/javascript";b.async = true;b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b, s);})();`
+  noscript
+    img(height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=592436&fmt=gif")

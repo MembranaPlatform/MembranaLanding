@@ -6,8 +6,8 @@ block page_variables
 
 block append head
   block head_variables
-    - var title = app.head.competition.title;
-    - var description = app.head.competition.description;
+    - var title = app.head.presale.title;
+    - var description = app.head.presale.description;
 
 block content
   .page-content-pattern
@@ -39,8 +39,8 @@ block content
 
       //- h1.live-sale__head tоkеn SALE 
       //-   span.live-sale__head_span LIVE
-      h1.live-sale__head PRESALE STARTING 
-        span.live-sale__head_span SOON
+      h1.live-sale__head PRESALE 
+        span.live-sale__head_span LIVE NOW
 
       .live-sale__soc
         a(href="https://t.me/membranaplatform", target="_blank").live-sale__soc_wr.live-sale__soc_wr-first
@@ -83,11 +83,11 @@ block content
           .live-sale__time_number.live-sale-bold 03
           .live-sale__time_desc Seconds
 
-      a(href="https://sale.membrana.io").top__btn.live-sale__btn
+      a(href="https://sale.membrana.io/app/register").top__btn.live-sale__btn
         img(src="/static/img/icons/play2.svg" alt="").top__btn_img
         //- span.live-sale__pad_r.top__btn_span Buy 
         //- span.top__btn_span.top-bold Tоkеns
-        span.top__btn_span Register in presale now!
+        span.top__btn_span Buy Membrana Tokens
 
       p.live-sale__text2 
         span.live-sale-bold Restricted:
@@ -385,13 +385,13 @@ block content
               img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/bittrex.svg", alt="").live-sale__done_icon
 
-      h2.live-sale__bon_title(data-aos="fade-left") 70% Bonus
+      h2.live-sale__bon_title(data-aos="fade-left") 50% Bonus
 
-      a(href="https://sale.membrana.io/cabinet/home").top__btn.live-sale__btn(data-aos="fade-left")
+      a(href="https://sale.membrana.io/app/register" data-aos="fade-left").top__btn.live-sale__btn
         img(src="/static/img/icons/play2.svg" alt="").top__btn_img
         //- span.live-sale__pad_r.top__btn_span Buy 
         //- span.top__btn_span.top-bold Tokens
-        span.top__btn_span Register in presale now!
+        span.top__btn_span Buy Membrana Tokens
       p.live-sale__text2(data-aos="fade-left")
         span.live-sale-bold Restricted:
         span US citizens (institutional participators are allowed) and China citizens
