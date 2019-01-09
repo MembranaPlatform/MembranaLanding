@@ -971,7 +971,7 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Jan 08, 2019 18:00:00 GMT+0000').getTime()
+  var countDownDateStart = new Date('Jan 22, 2019 18:00:00 GMT+0000').getTime()
 
   function padDecimal (number) {
     if (number < 10) number = '0' + number
