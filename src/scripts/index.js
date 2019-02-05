@@ -971,7 +971,7 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Feb 05, 2019 18:00:00 GMT+0000').getTime()
+  var countDownDateStart = new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime()
 
   function padDecimal (number) {
     if (number < 10) number = '0' + number
@@ -1027,7 +1027,7 @@ $(document).ready(function () {
     act: '3'
   }
   dates.janTw = {
-    date: new Date('Feb 05, 2019 18:00:00 GMT+0000').getTime(),
+    date: new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime(),
     perc: '30% ',
     act: '2'
   }
