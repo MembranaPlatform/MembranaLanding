@@ -971,7 +971,7 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Feb 19, 2019 18:00:00 GMT+0000').getTime()
+  var countDownDateStart = new Date('Feb 27, 2019 18:00:00 GMT+0000').getTime()
 
   function padDecimal (number) {
     if (number < 10) number = '0' + number
@@ -1014,26 +1014,31 @@ $(document).ready(function () {
   dates.decTenEnd = {
     date: new Date('Dec 11, 2018 18:00:00 GMT+0000').getTime(),
     perc: '70% ',
-    act: '5'
+    act: '6'
   }
   dates.decEl = {
     date: new Date('Dec 25, 2018 18:00:00 GMT+0000').getTime(),
     perc: '50% ',
-    act: '4'
+    act: '5'
   }
   dates.janEig = {
     date: new Date('Jan 08, 2019 18:00:00 GMT+0000').getTime(),
     perc: '35% ',
-    act: '3'
+    act: '4'
   }
   dates.janTw = {
     date: new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime(),
     perc: '30% ',
-    act: '2'
+    act: '3'
   }
   dates.febFo = {
-    date: new Date('Feb 19, 2019 18:00:00 GMT+0000').getTime(),
+    date: new Date('Feb 27, 2019 18:00:00 GMT+0000').getTime(),
     perc: '25% ',
+    act: '2'
+  }
+  dates.march = {
+    date: new Date('Mar 27, 2019 18:00:00 GMT+0000').getTime(),
+    perc: '20% ',
     act: '1'
   }
   var today = Date.now()
