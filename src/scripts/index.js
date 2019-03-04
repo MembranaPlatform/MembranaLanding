@@ -1133,10 +1133,9 @@ $(document).ready(function () {
     }
   })
 
-  // anchor to backed block
-  $('.header__anchor').click(function () {
-    $('html, body').animate({ scrollTop: $('.backed').offset().top }, 3000)
-    return false
+  $('a.close_banner').click(function (e) {
+    $('a.close_banner').hide()
+    $('a.header__anchor').hide()
   })
 })
 $(document).ready(function () {
