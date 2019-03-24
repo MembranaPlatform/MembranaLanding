@@ -971,7 +971,7 @@ $(document).ready(function () {
 
 // timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Mar 27, 2019 18:00:00 GMT+0000').getTime()
+  var countDownDateStart = new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime()
 
   function padDecimal (number) {
     if (number < 10) number = '0' + number
@@ -1037,7 +1037,7 @@ $(document).ready(function () {
     act: '2'
   }
   dates.march = {
-    date: new Date('Mar 27, 2019 18:00:00 GMT+0000').getTime(),
+    date: new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime(),
     perc: '20% ',
     act: '1'
   }
