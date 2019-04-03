@@ -81,6 +81,12 @@ app.svgToInline = ($ctx = $('body')) => {
         $(window).trigger('imagesReady')
       }
     })
+      .fail((e) => {
+        imagesToLoad--
+        if (imagesToLoad === 0) {
+          $(window).trigger('imagesReady')
+        }
+      })
   })
 }
 app.svgToInline()
