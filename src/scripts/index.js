@@ -975,9 +975,48 @@ $(document).ready(function () {
   }
 })
 
-// timers
 $(document).ready(function () {
-  var countDownDateStart = new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime()
+  var stages = [
+    {
+      date: new Date('Dec 10, 2018 18:00:00 GMT+0000').getTime(),
+      perc: '70% '
+    },
+    {
+      date: new Date('Dec 11, 2018 18:00:00 GMT+0000').getTime(),
+      perc: '70% '
+    },
+    {
+      date: new Date('Dec 25, 2018 18:00:00 GMT+0000').getTime(),
+      perc: '50% '
+    },
+    {
+      date: new Date('Jan 08, 2019 18:00:00 GMT+0000').getTime(),
+      perc: '35% '
+    },
+    {
+      date: new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime(),
+      perc: '30% '
+    },
+    {
+      date: new Date('Feb 27, 2019 18:00:00 GMT+0000').getTime(),
+      perc: '25% '
+    },
+    {
+      date: new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime(),
+      perc: '20% '
+    },
+    {
+      date: new Date('Apr 12, 2019 18:00:00 GMT+0000').getTime(),
+      perc: '15% '
+    }
+  ]
+  function getCurrentStage (date) {
+    for (var stage of stages) {
+      if (stage.date > date) {
+        return stage
+      }
+    }
+  }
 
   function padDecimal (number) {
     if (number < 10) number = '0' + number
@@ -985,7 +1024,11 @@ $(document).ready(function () {
   }
   var mainPageTimeout = setInterval(function () {
     // Get todays date and time
-    var now = new Date().getTime()
+    var today = new Date()
+    var now = today.getTime()
+    var stage = getCurrentStage(today)
+    var countDownDateStart = stage.date
+    $('.top-bold').text(stage.perc + 'bonus ')
 
     // Find the distance between now and the count down date
     var distance = countDownDateStart - now
@@ -1012,69 +1055,19 @@ $(document).ready(function () {
     }
   }, 1000)
 
-  var dates = {}
-  dates.decTenStart = {
-    date: new Date('Dec 10, 2018 18:00:00 GMT+0000').getTime(),
-    perc: '70% '
-  }
-  dates.decTenEnd = {
-    date: new Date('Dec 11, 2018 18:00:00 GMT+0000').getTime(),
-    perc: '70% ',
-    act: '6'
-  }
-  dates.decEl = {
-    date: new Date('Dec 25, 2018 18:00:00 GMT+0000').getTime(),
-    perc: '50% ',
-    act: '5'
-  }
-  dates.janEig = {
-    date: new Date('Jan 08, 2019 18:00:00 GMT+0000').getTime(),
-    perc: '35% ',
-    act: '4'
-  }
-  dates.janTw = {
-    date: new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime(),
-    perc: '30% ',
-    act: '3'
-  }
-  dates.febFo = {
-    date: new Date('Feb 27, 2019 18:00:00 GMT+0000').getTime(),
-    perc: '25% ',
-    act: '2'
-  }
-  dates.march = {
-    date: new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime(),
-    perc: '20% ',
-    act: '1'
-  }
   var today = Date.now()
   var nextStepDate = ''
-
   function loopDates () {
-    for (const key in dates) {
-      let value = dates[key]
-      if (value.date > today) {
-        // top timer changes
-        nextStepDate = value.date
-        loopLiveSaleTimeout(nextStepDate)
-        $('.bonusHead').text(value.perc)
-        // active positioning
-        if (value.act) {
-          $('.live-sale__bon_item').removeClass('past active')
-          var iPlusOne
-          for (var i = 0; i < value.act; i++) {
-            $('.live-sale__bon_item:nth-last-child(' + i + ')').addClass('past')
-            iPlusOne = i + 1
-          }
-          $('.live-sale__bon_item:nth-last-child(' + iPlusOne + ')').addClass('active')
-          // starts in/ ends in
-          $('.bonusStart').hide()
-          $('.bonusEnd').show()
-        }
-        return false
-      }
-    }
+    var stage = getCurrentStage(today)
+    nextStepDate = stage.date
+    loopLiveSaleTimeout(nextStepDate)
+    $('.bonusHead').text(stage.perc)
+    $('.live-sale__bon_title').text(stage.perc + ' Bonus')
+    var index = stages.indexOf(stage)
+    $('.live-sale__bon_item.active').removeClass('active')
+    $('.live-sale__bon_item').eq(index).addClass('active')
   }
+
   loopDates()
 
   function loopLiveSaleTimeout (nextStepDate) {
