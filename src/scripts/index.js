@@ -766,7 +766,7 @@ $(document).ready(function () {
   script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'
   document.body.appendChild(script4)
   script4.onload = function () {
-    $('<script>var datasPie = [  {"label":"Label1","number":"40","color":"#32ba94" },  {"label":"Label4","number":"15","color":"#32ba94" },  {"label":"Label5","number":"12","color":"#32ba94" },  {"label":"Label2","number":"10","color":"#32ba94" },  {"label":"Label3","number":"20","color":"#32ba94" },  {"label":"Label9","number":"3","color":"#32ba94" }];drawPie(datasPie);console.log(d3);function drawPie(data) {  var $container = $(".js-pie-chart"),      width = 452,      height = width,      r = width/2,      ir = r/32,      pi = Math.PI;  var pie = d3.layout.pie();      pie.padAngle(.02)        .sort(null)        .value(function (d) {            return d.number;        })        .startAngle(-270 * (pi / 180))        .endAngle(90 * (pi / 180));  var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5),      arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir - 5);  var object = d3.select("#pieChart").append("object")      .attr("width","100%")      .attr("height","auto")      .style("display", "block")      .style("position", "relative")      .style("padding-top", height+"px");  var vis = object.append("svg")              .data([data])                  .attr("width", "100%")                  .attr("height", "100%")                  .attr("viewBox","0 0 "+width +" "+height )                  .attr("preserveAspectRatio","xMinYMin")                  .style("position","absolute")                  .style("top","0")                  .style("left","0")                  .append("g")                    .attr("transform", "translate(" + r + "," + r + ")");  var arcs = vis.selectAll("g.slice")      .data(pie)      .enter()      .append("g")      .attr("class", "slice");  arcs.on("mouseover", function (d) {      })      .on("mouseout", function (d) {      });  arcs      .append("path")          .attr("fill", "#3e4053")          .attr("d", arc)          .on("mouseover", function (d, i) {              d3.select(this)                   .attr("fill", data[i].color)                  .attr("d", arcHover);          })          .on("mouseout", function (d) {              d3.select(this)                                 .attr("fill", "#3e4053")                  .attr("d", arc);          });$(".graph__desc1").on("mouseover", function () {$($(".slice path")[0]).attr("fill", "#32ba94");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][0];arr1[0][1] = a[0][0];arr1[0][2] = a[0][0];arr1[0][3] = a[0][0];arr1[0][4] = a[0][0];arr1[0][5] = a[0][0]; arr1.attr("d", arcHover);}).on("mouseout", function (){$($(".slice path")[0]).attr("fill", "#3e4053");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][0];arr1[0][1] = a[0][0];arr1[0][2] = a[0][0];arr1[0][3] = a[0][0];arr1[0][4] = a[0][0];arr1[0][5] = a[0][0]; arr1.attr("d", arc);});$(".graph__desc2").on("mouseover", function () {$($(".slice path")[1]).attr("fill", "#32ba94");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][1];arr1[0][1] = a[0][1];arr1[0][2] = a[0][1];arr1[0][3] = a[0][1];arr1[0][4] = a[0][1];arr1[0][5] = a[0][1]; arr1.attr("d", arcHover);}).on("mouseout", function (){$($(".slice path")[1]).attr("fill", "#3e4053");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][1];arr1[0][1] = a[0][1];arr1[0][2] = a[0][1];arr1[0][3] = a[0][1];arr1[0][4] = a[0][1];arr1[0][5] = a[0][1]; arr1.attr("d", arc);});$(".percents_block__string").on("mouseover", function () {var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#32ba94");var b = d3.selectAll(".slice path");var arr1 = b;arr1[0][0] = b[0][a];arr1[0][1] = b[0][a];arr1[0][2] = b[0][a];arr1[0][3] = b[0][a];arr1[0][4] = b[0][a];arr1[0][5] = b[0][a]; arr1.attr("d", arcHover);}).on("mouseout", function (){var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#3e4053");var b = d3.selectAll(".slice path");var arr1 = b;arr1[0][0] = b[0][a];arr1[0][1] = b[0][a];arr1[0][2] = b[0][a];arr1[0][3] = b[0][a];arr1[0][4] = b[0][a];arr1[0][5] = b[0][a]; arr1.attr("d", arc);});}</script>').appendTo(document.body)
+    $('<script>var datasPie = [  {"label":"Label1","number":"25","color":"#32ba94" },  {"label":"Label4","number":"15","color":"#32ba94" },  {"label":"Label5","number":"12","color":"#32ba94" },  {"label":"Label2","number":"10","color":"#32ba94" },  {"label":"Label3","number":"22","color":"#32ba94" },  {"label":"Label9","number":"8","color":"#32ba94" }];drawPie(datasPie);console.log(d3);function drawPie(data) {  var $container = $(".js-pie-chart"),      width = 452,      height = width,      r = width/2,      ir = r/32,      pi = Math.PI;  var pie = d3.layout.pie();      pie.padAngle(.02)        .sort(null)        .value(function (d) {            return d.number;        })        .startAngle(-270 * (pi / 180))        .endAngle(90 * (pi / 180));  var arc = d3.svg.arc().outerRadius(r - 10).innerRadius(ir - 5),      arcHover = d3.svg.arc().outerRadius(r).innerRadius(ir - 5);  var object = d3.select("#pieChart").append("object")      .attr("width","100%")      .attr("height","auto")      .style("display", "block")      .style("position", "relative")      .style("padding-top", height+"px");  var vis = object.append("svg")              .data([data])                  .attr("width", "100%")                  .attr("height", "100%")                  .attr("viewBox","0 0 "+width +" "+height )                  .attr("preserveAspectRatio","xMinYMin")                  .style("position","absolute")                  .style("top","0")                  .style("left","0")                  .append("g")                    .attr("transform", "translate(" + r + "," + r + ")");  var arcs = vis.selectAll("g.slice")      .data(pie)      .enter()      .append("g")      .attr("class", "slice");  arcs.on("mouseover", function (d) {      })      .on("mouseout", function (d) {      });  arcs      .append("path")          .attr("fill", "#3e4053")          .attr("d", arc)          .on("mouseover", function (d, i) {              d3.select(this)                   .attr("fill", data[i].color)                  .attr("d", arcHover);          })          .on("mouseout", function (d) {              d3.select(this)                                 .attr("fill", "#3e4053")                  .attr("d", arc);          });$(".graph__desc1").on("mouseover", function () {$($(".slice path")[0]).attr("fill", "#32ba94");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][0];arr1[0][1] = a[0][0];arr1[0][2] = a[0][0];arr1[0][3] = a[0][0];arr1[0][4] = a[0][0];arr1[0][5] = a[0][0]; arr1.attr("d", arcHover);}).on("mouseout", function (){$($(".slice path")[0]).attr("fill", "#3e4053");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][0];arr1[0][1] = a[0][0];arr1[0][2] = a[0][0];arr1[0][3] = a[0][0];arr1[0][4] = a[0][0];arr1[0][5] = a[0][0]; arr1.attr("d", arc);});$(".graph__desc2").on("mouseover", function () {$($(".slice path")[1]).attr("fill", "#32ba94");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][1];arr1[0][1] = a[0][1];arr1[0][2] = a[0][1];arr1[0][3] = a[0][1];arr1[0][4] = a[0][1];arr1[0][5] = a[0][1]; arr1.attr("d", arcHover);}).on("mouseout", function (){$($(".slice path")[1]).attr("fill", "#3e4053");var a = d3.selectAll(".slice path");var arr1 = a;arr1[0][0] = a[0][1];arr1[0][1] = a[0][1];arr1[0][2] = a[0][1];arr1[0][3] = a[0][1];arr1[0][4] = a[0][1];arr1[0][5] = a[0][1]; arr1.attr("d", arc);});$(".percents_block__string").on("mouseover", function () {var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#32ba94");var b = d3.selectAll(".slice path");var arr1 = b;arr1[0][0] = b[0][a];arr1[0][1] = b[0][a];arr1[0][2] = b[0][a];arr1[0][3] = b[0][a];arr1[0][4] = b[0][a];arr1[0][5] = b[0][a]; arr1.attr("d", arcHover);}).on("mouseout", function (){var a = $(this).data("number");$($(".slice path")[a]).attr("fill", "#3e4053");var b = d3.selectAll(".slice path");var arr1 = b;arr1[0][0] = b[0][a];arr1[0][1] = b[0][a];arr1[0][2] = b[0][a];arr1[0][3] = b[0][a];arr1[0][4] = b[0][a];arr1[0][5] = b[0][a]; arr1.attr("d", arc);});}</script>').appendTo(document.body)
     for (var k = 0; k < $('.slice').length; k++) {
       var p = k - 2
       $('.slice').eq(k).attr('data-hover', '.percents_block__string:eq(' + p + ')')
@@ -978,36 +978,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   var stages = [
     {
-      date: new Date('Dec 10, 2018 18:00:00 GMT+0000').getTime(),
-      perc: '70% '
-    },
-    {
-      date: new Date('Dec 11, 2018 18:00:00 GMT+0000').getTime(),
-      perc: '70% '
-    },
-    {
-      date: new Date('Dec 25, 2018 18:00:00 GMT+0000').getTime(),
-      perc: '50% '
-    },
-    {
-      date: new Date('Jan 08, 2019 18:00:00 GMT+0000').getTime(),
-      perc: '35% '
-    },
-    {
-      date: new Date('Feb 13, 2019 18:00:00 GMT+0000').getTime(),
-      perc: '30% '
-    },
-    {
-      date: new Date('Feb 27, 2019 18:00:00 GMT+0000').getTime(),
-      perc: '25% '
-    },
-    {
-      date: new Date('Apr 04, 2019 18:00:00 GMT+0000').getTime(),
-      perc: '20% '
-    },
-    {
-      date: new Date('Apr 12, 2019 21:00:00 GMT+0000').getTime(),
-      perc: '15% '
+      date: new Date('Apr 15, 2019 03:00:00 GMT+0000').getTime(),
+      perc: '10% '
     }
   ]
   function getCurrentStage (date) {

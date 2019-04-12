@@ -80,6 +80,12 @@
 	&-trsp
 		opacity: 0
 
+	h3.top__title2
+		@media(max-width:1601px)
+			padding: 12rem 0px 2rem
+		padding: px-to-rem(200px) 0 5rem
+		margin: 0
+
 	&__head
 		font-size: px-to-rem(64px)
 		font-weight: 500
@@ -87,31 +93,15 @@
 		padding: px-to-rem(200px) 0 5rem
 		margin: 0
 
-		@media(max-width:1601px)
-			padding: 12rem 0px 2rem
 
-		@media(max-width:767px)
-			padding: 85px 20px 20px
 
-			font-size: 5.4rem
 
 		&_span
 			color: #00E8D8
 
 			position: relative
 
-			margin-left: 10px
-
-			&::after
-				content: ''
-				position: absolute
-
-				left: 0
-				right: 0
-				bottom: 6px
-				height: 3px
-
-				background-color: #00E8D8
+			padding-left: 10px
 
 			&::before
 				content: ''
@@ -126,6 +116,14 @@
 				border-radius: 50%
 
 				background-color: #00E8D8
+		@media(max-width:767px)
+
+			padding: 85px 10px 20px
+			font-size: 2.3rem
+			&_span::before
+				left: -1px;
+				width: 8px;
+				height: 10px;
 
 	&__soc
 		display: flex
@@ -1153,29 +1151,12 @@
 
 
 	&__done
-		padding-bottom: 23rem
 		margin-bottom: 6rem
 
 		position: relative
 
 		@media(max-width:1023px)
-			padding: 0 40px 20rem
-
-		&::after
-			content: ''
-			position: absolute
-
-			bottom: 0
-			left: 50%
-			-webkit-transform: translateX(-50%)
-			-moz-transform: translateX(-50%)
-			-ms-transform: translateX(-50%)
-			-o-transform: translateX(-50%)
-			transform: translateX(-50%)
-			width: 37px
-			height: 167px			
-
-			background-image: url(/static/img/pictures/live-sale/arr_down.svg)
+			padding: 0 40px
 
 		&_title
 			padding-bottom: 4.3rem
