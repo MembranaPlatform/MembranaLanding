@@ -1006,7 +1006,7 @@ $(document).ready(function () {
       perc: '20% '
     },
     {
-      date: new Date('Apr 12, 2019 18:00:00 GMT+0000').getTime(),
+      date: new Date('Apr 12, 2019 21:00:00 GMT+0000').getTime(),
       perc: '15% '
     }
   ]
