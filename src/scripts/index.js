@@ -980,6 +980,11 @@ $(document).ready(function () {
     {
       date: new Date('Apr 15, 2019 03:00:00 GMT+0000').getTime(),
       perc: '10% '
+    },
+    {
+      date: new Date('Apr 16, 2019 03:00:00 GMT+0000').getTime(),
+      perc: '10% ',
+      end: true
     }
   ]
   function getCurrentStage (date) {
@@ -1001,6 +1006,11 @@ $(document).ready(function () {
     var stage = getCurrentStage(today)
     var countDownDateStart = stage.date
     $('.top-bold').text(stage.perc + 'bonus ')
+    if (stage.end) {
+      $('span.top__title2-col').text('ProBit LIVE')
+      $('span.bonusEnd').text('Ends in')
+      $('.top_timer__desc').text(stage.perc + 'bonus ends in')
+    }
 
     // Find the distance between now and the count down date
     var distance = countDownDateStart - now
