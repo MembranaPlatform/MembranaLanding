@@ -978,11 +978,11 @@ $(document).ready(function () {
 $(document).ready(function () {
   var stages = [
     {
-      date: new Date('Apr 15, 2019 03:00:00 GMT+0000').getTime(),
+      date: new Date('Apr 17, 2019 03:00:00 GMT+0000').getTime(),
       perc: '10% '
     },
     {
-      date: new Date('Apr 16, 2019 03:00:00 GMT+0000').getTime(),
+      date: new Date('Apr 21, 2019 03:00:00 GMT+0000').getTime(),
       perc: '10% ',
       end: true
     }
