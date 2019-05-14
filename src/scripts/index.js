@@ -1002,10 +1002,6 @@ $(document).ready(function () {
   })
 
   // anchor to backed block
-  $('.header__anchor').click(function () {
-    $('html, body').animate({ scrollTop: $('.backed').offset().top }, 3000)
-    return false
-  })
 })
 $(document).ready(function () {
   var search = window.location.search.substring(1)
