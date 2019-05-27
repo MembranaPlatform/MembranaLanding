@@ -1038,17 +1038,17 @@ function parseQueryString (query) {
 }
 
 $(document).ready(function () {
-  var root = 'https://beta.membrana.io/api/v2/stat'
+  var root = 'https://beta.membrana.io'
   var elem = $('.stat-wrapper.js-section')[0]
   if (!elem) {
     return
   }
-  $.get(root, (res) => {
+  $.get(root + '/api/v2/stat', (res) => {
     var elements = $('.stat-table .text-stat')
     elements.each((index, e) => {
       switch (index) {
         case 0:
-          e.innerText = '~ ' + (res.volume / 1000000).toFixed(1) + 'M USDT'
+          e.innerText = parseInt(res.volume) + ' USDT'
           break
         case 1:
           e.innerText = res.contracts
@@ -1065,12 +1065,15 @@ $(document).ready(function () {
       }
     })
   })
-  $.get(root + '/top', (res) => {
+  $.get(root + '/api/v2/stat/top', (res) => {
     $('.best-traders tbody tr').each((index, e) => {
       var data = res[index]
       e.children[0].innerText = data.name
       e.children[1].innerText = data.last
       e.children[2].innerText = data.average
+      var row = $(e)
+      var button = row.find('a')
+      button.attr('href', root + '/' + data.name)
     })
   })
 })

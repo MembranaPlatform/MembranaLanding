@@ -7,7 +7,6 @@ block page_variables
     |  is live now in
     b  Beta
     |  version
-  
   .all-stat
     .image
       img(src="/static/img/pictures/stat/stat_1.png" alt="")
@@ -40,9 +39,11 @@ block page_variables
       table
         thead
           tr
-            th Nickname
-            th.profit Profit in last contract
-            th.profit Average profit
+            th Username
+            th.profit
+              span.big Profit in last contract, %
+              span.small Last profit, %
+            th.profit(title="Average profit in last 3 contracts") Average profit, %
         tbody
           each _ in Array(5)
             tr
@@ -50,7 +51,9 @@ block page_variables
               td.profit
               td.profit
               td.send
-                button.send-request Send request
+                a(target="_blank")
+                  button.send-request
+                    span.big Send 
+                    | Request
     .image
       img(src="/static/img/pictures/stat/stat_2.svg" alt="")
-         

@@ -71,6 +71,15 @@
       width: 100%
       border-collapse: separate
       border-spacing: 0 10px
+      span.big
+        display: inline
+      span.small
+        display: none
+      @media(max-width: 650px)
+        span.big
+          display: none
+        span.small
+          display: inline
       th
         text-align: left
         padding-left: 10px
@@ -103,6 +112,9 @@
         &:hover
           color: #0F5549
           background-color: #00FBCF
+        @media(max-width: 650px)
+          font-size: 70%
+          width: auto
       td
         padding-left: 10px
         &:first-child
@@ -112,10 +124,3 @@
         &:last-child
           border-top-right-radius: 5px
           border-bottom-right-radius: 5px
-        &:nth-child(3)
-          @media(max-width: 650px)
-            border-top-right-radius: 5px
-            border-bottom-right-radius: 5px
-        &.send
-          @media(max-width: 650px)
-            display: none
