@@ -1,0 +1,56 @@
+block page_variables
+  - var n = 0;
+
+.stat-wrapper.js-section
+  h2.stat__header
+    b Membrana Platform
+    |  is live now in
+    b  Beta
+    |  version
+  
+  .all-stat
+    .image
+      img(src="/static/img/pictures/stat/stat_1.png" alt="")
+    .stat-table
+      .section
+        .text Total trade volume
+        .text-stat.h-text-gradient
+      .x-sep
+      .section
+        .text Total Contracts were in management
+        .text-stat.h-text-gradient
+      .x-sep
+      .section
+        .text Total balance were in management
+        .text-stat.h-text-gradient
+      .x-sep
+      .section
+        .text Traders
+        .text-stat.h-text-gradient
+      .x-sep
+      .section
+        .text Payment for traders
+        .text-stat.h-text-gradient
+      .y-sep
+    img.membrana-logo(src="/static/img/pictures/stat/logo.svg" alt="")
+  .best-traders
+    .best-traders-table
+      .head The best
+        b  Membrana Traders
+      table
+        thead
+          tr
+            th Nickname
+            th.profit Profit in last contract
+            th.profit Average profit
+        tbody
+          each _ in Array(5)
+            tr
+              td
+              td.profit
+              td.profit
+              td.send
+                button.send-request Send request
+    .image
+      img(src="/static/img/pictures/stat/stat_2.svg" alt="")
+         

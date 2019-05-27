@@ -1038,6 +1038,44 @@ function parseQueryString (query) {
 }
 
 $(document).ready(function () {
+  var root = 'https://beta.membrana.io/api/v2/stat'
+  var elem = $('.stat-wrapper.js-section')[0]
+  if (!elem) {
+    return
+  }
+  $.get(root, (res) => {
+    var elements = $('.stat-table .text-stat')
+    elements.each((index, e) => {
+      switch (index) {
+        case 0:
+          e.innerText = '~ ' + (res.volume / 1000000).toFixed(1) + 'M USDT'
+          break
+        case 1:
+          e.innerText = res.contracts
+          break
+        case 2:
+          e.innerText = res.amount + ' USDT'
+          break
+        case 3:
+          e.innerText = res.traders
+          break
+        case 4:
+          e.innerText = parseInt(res.payments, 0) + ' USDT'
+          break
+      }
+    })
+  })
+  $.get(root + '/top', (res) => {
+    $('.best-traders tbody tr').each((index, e) => {
+      var data = res[index]
+      e.children[0].innerText = data.name
+      e.children[1].innerText = data.last
+      e.children[2].innerText = data.average
+    })
+  })
+})
+
+$(document).ready(function () {
   var stages = [
     {
       date: new Date('Jun 03, 2019 04:00:00 GMT+0000').getTime(),

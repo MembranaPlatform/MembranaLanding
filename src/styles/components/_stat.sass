@@ -1,0 +1,121 @@
+.stat-wrapper
+  .stat__header
+    color: white
+    font-size: 34px
+    font-weight: normal
+    text-align: center
+    margin-bottom: 80px
+  .all-stat
+    margin: 0 auto
+    align-items: center
+    justify-content: center
+    display: flex
+    flex-wrap: wrap
+    .stat-table
+      position: relative
+      color: white
+      font-size: 24px
+      .section
+        padding-left: 20px
+        display: table
+        width: 100%
+        padding: 16px 0
+        div
+          display: table-cell
+          vertical-align: middle
+          width: 50%
+        .text
+          text-align: center
+        .text-stat
+          padding-left: 20px
+          font-size: 28px
+      .x-sep
+        height: 2px
+        background-image: linear-gradient(to right, rgba(0,251,207,1), rgba(0,251,207,0))
+        width: 100%
+      .y-sep
+        position: absolute
+        left: 50%
+        top: 0
+        height: 458px
+        background-image: linear-gradient(to bottom, rgba(0,251,207,1), rgba(0,251,207,0))
+        width: 2px
+    .membrana-logo
+      position: absolute
+      margin-left: auto
+      margin-right: auto
+      left: 0
+      right: 0
+      @media(max-width: 940px)
+        display: none
+  .best-traders
+    .best-traders-table
+      margin-right: 30px
+      margin-bottom: 10px
+      @media(max-width: 1200px)
+        margin-left: 10px
+        margin-right: 10px
+    margin: 0 auto
+    justify-content: center
+    display: flex
+    flex-wrap: wrap
+    .head
+      color: white
+      margin-top: 100px
+      margin-bottom: 60px
+      font-size: 34px
+      @media(max-width: 940px)
+        text-align: center
+    font-size: 22px
+    table
+      width: 100%
+      border-collapse: separate
+      border-spacing: 0 10px
+      th
+        text-align: left
+        padding-left: 10px
+        font-size: 18px
+        font-weight: normal
+        color: rgba(255, 255, 255, 0.5)
+        &.profit
+          max-width: 150px
+        @media(max-width: 650px)
+          font-size: 70%
+      th:first-child
+        padding-left: 23px
+    tbody tr
+      @media(max-width: 650px)
+        font-size: 70%
+      color: white
+      line-height: 56px
+      background-color: #35364F
+      .send-request
+        width: 152px
+        margin-right: 10px
+        font-size: 18px
+        font-weight: 300
+        cursor: pointer
+        color: white
+        border: solid 2px #00FBCF
+        border-radius: 20px
+        height: 40px
+        background: none
+        &:hover
+          color: #0F5549
+          background-color: #00FBCF
+      td
+        padding-left: 10px
+        &:first-child
+          padding-left: 23px
+          border-top-left-radius: 5px
+          border-bottom-left-radius: 5px
+        &:last-child
+          border-top-right-radius: 5px
+          border-bottom-right-radius: 5px
+        &:nth-child(3)
+          @media(max-width: 650px)
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
+        &.send
+          @media(max-width: 650px)
+            display: none
