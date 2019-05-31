@@ -10,10 +10,10 @@
 			img.js-prevent-inline.triangle_5(src="/static/img/new-page/small_bg2.svg" alt="")
 			img.js-prevent-inline.triangle_7(src="/static/img/new-page/small_bg2.svg" alt="")
 
-	h2.how-we-help__title How does 
-		span.h-text-gradient Membrana 
-		| help 
-		span.h-text-gradient Traders
+	h2.how-we-help__title #[!=app.howWeHelp.title]
+		//- span.h-text-gradient Membrana 
+		//- | help 
+		//- span.h-text-gradient Traders
 
 	
 
@@ -29,6 +29,7 @@
 
 	a(href="https://www.youtube.com/channel/UCZvglEWUXnggQ-lxkw9rFlA" target="_blank").how-we-help__link
 		i.arrow.right
-		| Check out other videos on our 
+		| #[!=app.howWeHelp.btnTitle1] 
 		img.link-youtube(src="/static/img/icons/youtube2.svg" alt="" width="22" height="22")
-		|  channel 
+		if app.howWeHelp.btnsubTitle2
+			| #[!=app.howWeHelp.btnsubTitle2] 

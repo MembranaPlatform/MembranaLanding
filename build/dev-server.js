@@ -11,6 +11,7 @@ var express = require('express')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
+// var i18n = require('i18n')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -22,6 +23,7 @@ var proxyTable = config.dev.proxyTable
 
 var app = express()
 var compiler = webpack(webpackConfig)
+// Configuration
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
@@ -55,6 +57,9 @@ app.use(require('connect-history-api-fallback')({
     // { from: /\/whitepaper_language\/$/, to: '/whitepaper_language/index.html'},
     // { from: /\/business_overview_language\/$/, to: '/business_overview_language/index.html'},
     { from: /\/roadmap\/$/, to: '/roadmap/index.html'},
+    { from: /\/jpn.roadmap\//, to: '/jpn/roadmap/index.html'},
+    { from: /\/chn.roadmap\/$/, to: '/chn/roadmap/index.html'},
+    { from: /\/kor.roadmap\/$/, to: '/kor/roadmap/index.html'},
     { from: /\/contacts\/$/, to: '/contacts/index.html'},
     { from: /\/faq\/$/, to: '/faq/index.html'},
     { from: /\/referral\/$/, to: '/referral/index.html'},
