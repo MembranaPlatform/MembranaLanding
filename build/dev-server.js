@@ -57,7 +57,6 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/roadmap\/$/, to: '/roadmap/index.html'},
     { from: /\/contacts\/$/, to: '/contacts/index.html'},
     { from: /\/faq\/$/, to: '/faq/index.html'},
-    { from: /\/referral\/$/, to: '/referral/index.html'},
     { from: /\/binance-exchange\/$/, to: '/binance-exchange/index.html'},
     { from: /\/competition\/$/, to: '/competition/index.html'},
     { from: /\/idnow-success\/$/, to: '/idnow-success/index.html'},
