@@ -8,30 +8,37 @@
       .comp_wr__wrap
         .comp_wr__side.comp_wr__side-left
           img(src="/static/img/pictures/competition/plus.svg" alt="").comp_wr__icon
-          span.comp_wr-colored Beta version 
-          | is 
-          span.comp_wr-colored live
+          //- span.comp_wr-colored Beta version 
+          //- | is 
+          //- span.comp_wr-colored live
+          !=app.compRe.leftTop
+          
         .comp_wr__side.comp_wr__side-left
           img(src="/static/img/pictures/competition/plus.svg" alt="").comp_wr__icon
-          span.comp_wr-colored 3000+ 
-          | registrations
+          !=app.compRe.leftBottom
       .comp_wr__center
-        h2.comp_wr__title.comp_wr__one BECOME A
-          p.comp_wr__two PART OF THE
-          p.comp_wr-colored_yell.comp_wr__three FINANCIAL
-          p.comp_wr-colored_yell.comp_wr__four FREEDOM
-        a(href="/ieo/" target="blank").comp_wr__btn Learn more about
-          span.comp_wr-bold Membrana
+        if app.lang === 'kor'
+          h2.comp_wr__title.comp_wr__one.comp_wr__title-short #[!=app.compRe.title]
+        else if app.lang === 'chn'
+          h2.comp_wr__title.comp_wr__one.comp_wr__title-marg #[!=app.compRe.title]
+        else
+          h2.comp_wr__title.comp_wr__one #[!=app.compRe.title]
+        
+          //- p.comp_wr__two PART OF THE
+          //- p.comp_wr-colored_yell.comp_wr__three FINANCIAL
+          //- p.comp_wr-colored_yell.comp_wr__four FREEDOM
+        if app.lang === 'kor'
+          a(href="/ieo/" target="blank").comp_wr__btn.comp_wr__btn-long #[!=app.compRe.buttonTitle]
+        else
+          a(href="/ieo/" target="blank").comp_wr__btn #[!=app.compRe.buttonTitle]
+          //- span.comp_wr-bold Membrana
       .comp_wr__wrap
         .comp_wr__side.comp_wr__side-right
           img(src="/static/img/pictures/competition/plus.svg" alt="").comp_wr__icon
-          span.comp_wr-colored $600,000 
-          | already raised
+          !=app.compRe.right
         .comp_wr__side.comp_wr__side-right
           img(src="/static/img/pictures/competition/plus.svg" alt="").comp_wr__icon
-          | Over 
-          span.comp_wr-colored 100k 
-          | community
+          !=app.compRe.rightBottom
 
 
     //- img.competition__image.js-prevent-inline(src="/static/img/pictures/competition/competition.svg" alt="")

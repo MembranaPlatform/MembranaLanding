@@ -136,6 +136,14 @@
     margin: 0
     @media(max-width: 767px)
       font-size: 80px
+    &-short
+      width: 90%
+      @media(max-width: 767px)
+        width: 100%
+    &-marg
+      margin-bottom: 19%
+      @media(max-width: 1024px)
+        margin-bottom: 0
 
   &__btn
     border-radius: 44px
@@ -178,6 +186,12 @@
       right: auto
       left: -250px
       transform: translateY(-50%) rotate(180deg)
+
+    &-long
+      width: 400px
+      @media(max-width: 767px)
+        width: 100%
+        max-width: 350px
 
     .comp_wr-bold
       padding-left: 5px

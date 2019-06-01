@@ -23,7 +23,7 @@
       },
       roadmap: {
         title: 'Roadmap', // inserts before default
-        description: 'Roadmap of Membrana: the first trust management platform fully based on Ethereum smart contracts.' // overides default
+        description: 'Roadmap of Membrana: the first trust management platform fully based on Ethereum smart contracts.', // overides default
       },
       faq: {
         title: 'FAQ', // inserts before default
@@ -49,7 +49,7 @@
       link: '/business_overview_language/'
     },{
       title: 'Roadmap',
-      link: '/roadmap/'
+      link: '/kor/roadmap/'
     },{
       title: 'FAQ',
       link: '/faq/'
@@ -102,7 +102,8 @@
     }],
 
     top: {
-      title: '디지털 자산 신탁 관리',
+      title: '신뢰할 수 있는 디지털 자산 관리',
+      subTitle: '가 곧 시작됩니다',
       beta_text: 'Try beta',
       description: `완전히 블록체인 기술을 통해 제작된 최초의 신탁 관리 플랫폼에 가입하고, 얼리 <br>어답터로서 수수료 없이 거래를 진행하세요`.replace(/\n/g, '')
     },
@@ -285,6 +286,14 @@
         icon: '/static/img/pictures/partners/hacken.svg',
         description: `저희의 보안 파트너 - Hacken은 Membrana 플랫폼의 Smart Contract Audit 및 Penetration Testing을 진행했습니다. Hacken은 전 세계의 사이버 보안 전문가들 및 선량한 해커들로 구성되어 있는 단체로 블록체인 프로젝트에 한 단계 더 발전된 안전을 가져옵니다.`,
         link: 'https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d'
+      },{
+        icon: '/static/img/pictures/partners/herdius.svg',
+        description: `Herdius는 차세대 분산형 어플리케이션을 구동할 수 있는 강력한 분산형 금융 플랫폼입니다. 또한 Herdius는 개인 키 처리를 해결할 수 있는 차세대 DEX 입니다`,
+        link: 'https://www.herdius.com/'
+      },{
+        icon: '/static/img/pictures/partners/credits.png',
+        description: `Credits는 분산형 네트워크/레저 기반의 금융 서비스 생성 및 관리를 위한 탈중앙화 플랫폼입니다`,
+        link: 'https://credits.com/'
       }]
     },
 
@@ -441,6 +450,16 @@
         facebook: '',
         bitcointalk: ''
       },{
+        avatar: '/static/img/pictures/team/abunassar_anthony.jpg',
+        occupation: 'Financial Advisor',
+        full_name: 'Abunassar Anthony',
+        description: '암호화폐의 거래와 ICO 투자를 진행하기 전에 PWC와 Rotschild & Co, Goldman Sachs, JPMorgan에서 시작하여 가장 유명한 기업들 내에서 경험을 지니고 있습니다',
+        github: '',
+        linkedin: 'http://linkedin.com/in/anthonyitauditcouk',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
         avatar: '/static/img/pictures/team/marie_noel.jpg',
         occupation: 'Financial Advisor',
         full_name: 'Marie-Noel Nsana',
@@ -561,144 +580,189 @@
       items: [{
         date: 'Q1 2017',
         icon: '/static/img/pictures/roadmap/1.svg',
-        title: 'Concept generation',
+        title: '개념 도출',
         content: [{
-          text: 'Defining the idea of trust management for cryptocurrency assets.',
+          text: '암호화폐 자산에 대한 신뢰 관리 개념 정리',
         },{
-          text: 'Finding solutions to main problems in trust management market, such as:',
+          text: '신탁 관리 시장의 주요 문제에 대한 해결책 제시:',
         },{
           list: [
-            'losing control of investment capital',
-            'middleman and counterparty risks',
-            'lack of trust',
-            'risk of fraud management results'
+            '참여 된 자본의 통제력 상실',
+            '중개자 및 상대방에 대한 리스크',
+            '신뢰성 부족',
+            '부정 행위 관리 결과에 대한 위험'
           ]
         },{
-          test: 'Finding the best way to implement the solutions. Generation of Membrana platform concept.'
+          test: ''
         }]
       },{
         date: 'Q2 2017',
         icon: '/static/img/pictures/roadmap/2.svg',
-        title: 'Performance audit',
+        title: '성능 평가',
         content: [{
-          text: 'Taking the concept to full performance audit.'
+          text: '전체 성능 개념 적용에 대한 평가'
         },{
-          text: `Discovering its survivability in all kind of scenarios. Additional security audits performed to ensure the safety of investor’s capital.
-                <br>Researching and analyzing all potential risks, adjusting or changing the operational process to eliminate them.`.replace(/\n/g, '')
+          text: `모든 종류의 시나리오를 통해 가능성을 발견하고, 참여자의 자본을 안전하게 보장하기 위하여 보안 감사를 추가적으로 수행
+                <br>모든 잠재적 위험의 조사 및 분석, 이에 대응하기 위한 운영 프로세스 조정 및 변경`.replace(/\n/g, '')
         }]
       },{
         date: 'Q3 2017',
         icon: '/static/img/pictures/roadmap/3.svg',
-        title: 'Interface creation',
+        title: '인터페이스 제작',
         content: [{
-          text: 'Creating a platform architecture and shaping a fully-functional user interface.'
+          text: '플랫폼 아키텍처 생성 및 전체 기능 사용자 인터페이스 구성'
         },{
-          text: `Forming a professional full-time work team, with specialists in design, UI/UX, front/back-end, solidity language, marketing and security.
-                <br>Fabricating the current version of design.`.replace(/\n/g, '')
+          text: `설계 및 UI/UX, 프런트/백엔드, 솔리디티 언어, 마케팅 및 보안 전문가와 함께 전문 정규 작업팀 구성
+                <br>디자인의 최신 버전 제작`.replace(/\n/g, '')
         }]
       },{
         date: 'Q1 2018',
         icon: '/static/img/pictures/roadmap/4.svg',
-        title: 'Alpha version',
+        title: '알파 버전',
         content: [{
-          text: 'Private testing of Membrana alpha version with incomplete functions:'
+          text: 'Membrana 알파 버전이 비공개로 테스트 되는 기능:'
         },{
           list: [
-            'Allowing access for trading through API key',
-            'Authorizing with Metamask',
-            'Inner trading terminal',
-            'Adding Bittrex API keys',
-            'Sending and receiving requests',
-            'Sending Ethereum to a smart contract’s address',
-            'Showing terms of a smart contract on Etherscan',
+            'API key 키를 통한 거래 액세스 허용',
+            '메타마스크 인증',
+            '내부 거래 터미널',
+            '비트렉스 API keys 추가',
+            '요청 전송 및 수신',
+            '스마트 컨트렉트 주소로 이더리움 전송',
+            'Etherscan에 스마트 컨트렉트 조건 표시',
           ]
         }]
       },{
         date: 'Q2 2018',
         icon: '/static/img/pictures/roadmap/5.svg',
-        title: 'Beta version',
+        title: '베타 버전',
         content: [{
-          text: 'Open testing of Membrana beta version with updated functions:'
+          text: 'Membrana 베타 버전을 업데이트하여 공개 테스트되는 기능:'
         },{
           list: [
-            'Fixing bugs',
-            'Placing orders on exchange via inner trading platform',
-            'Writing results of trades in blockchain',
-            'Performing smart oracle work adjustment',
-            'Executing smart contracts with different scenarios',
-            'Examining all systems and working algorithms',
-            'Updating rating system with the result of a smart contract',
+            '버그 수정',
+            '내부 거래 플랫폼을 통한 거래소 주문',
+            '탈중앙화 분산 네트워크에서 거래 결과 작성',
+            '스마트 오라클 작업 조정 수행',
+            '다양한 시나리오로 스마트 컨트렉트 실행',
+            '모든 시스템 및 작동 알고리즘 검사',
+            '스마트 컨트렉트를 통한 등급 시스템 업데이트',
+          ]
+        }]
+      },{
+        date: 'Q3 2018',
+        icon: '/static/img/pictures/roadmap/13.svg',
+        title: '주요 업데이트',
+        content: [{
+          text: ''
+        },{
+          list: [
+            'Membrana 플랫폼의 기능에 대한 액세스를 제공하는 API (Application Programming Interface)',
+            '자동 모드에서 지원되는 거래소에서 거래가 가능하도록 하는 기능',
+            '최대 손실 - 최대 손실에 도달 시, 신탁 관리 계약이 중지되고 자금에 대한 액세스가 거부 됨',
+            '신뢰 로그 - 모든 거래가 투명성과 ROI 증명을 제공하기 위하여 블록체인에 저장됨',
           ]
         }]
       },{
         date: 'Q4 2018',
         icon: '/static/img/pictures/roadmap/7.svg',
-        title: 'Major update',
+        title: '퍼블릭 프리 세일',
         content: [{
-          text: 'Creating our own united API protocol.'
+          text: ''
         },{
           list: [
-            'A possibility to connect to Membrana platform with own software using API protocol',
-            'One united Membrana API that provides an access to all exchanges',
-            'Remote control for all Membrana platform functions',
+            '퍼블릭 투자자에게 보너스로 MBN 토큰 제공',
           ]
         }]
       },{
         date: 'Q1 2019',
         icon: '/static/img/pictures/roadmap/10.svg',
-        title: 'Dex implementation',
+        title: '상태 확인 및 UI 업데이트',
         content: [{
-          text: 'Adding decentralized exchanges to Membrana platform.'
+          text: ''
         },{          
           list: [
-            'Trading on DEX through inner trading terminal',
-            'Ability to give assets from DEX for trust management',
-            'Trust manamegent is executed with special smart-contract that allows traders to place orders on exchange using investor\'s funds. Remote work on DEX with Membrana API protocol',
+            '향상된 터미널 UI/UX 업데이트',
+            '조건부 주문 (한계, 시장, 타겟, 정지)',
+            '잔고에 락을 걸지 않고 주문 설정 허용',
           ]
         }]
       },{
         date: 'Q2 2019',
         icon: '/static/img/pictures/roadmap/8.svg',
-        title: 'Advanced features & ROI prediction system',
+        title: 'IEO',
         content: [{
-          text: 'Adding advanced trading features to Membrana platform.'
+          text: ''
         },{
           list: [
-            'Contracts with security - additional contract type in which trader reserves HIS funds to compensate part of investor\'s loss, if contract is failed',
-            'Algorithmic trading orders - adding advanced order type such as iceberg orders, peg orders, trailing orders and others',
-            'News feed workshop - enable an option to upload all news related to selected currency. Users can see correlation between price and news on price chart in terminal',
-            'ROI prediction system',
+            'TOP10 거래소에 IEO(Initial Exchange Offering) 진행',
+            'TOP10 거래소에 상장',
           ]
         }]
       },{
         date: 'Q3 2019',
         icon: '/static/img/pictures/roadmap/9.svg',
-        title: 'Trust management with ethereum wallet',
+        title: '기능 추가',
         content: [{
-          text: 'Creating new smart-contract for trust management.'
+          text: '분석 기능, 포트폴리오 매니저, MBN 펀드'
         },{
           list: [
-            'Investor have an option to create a trust management contract without having an exchange account',
-            'Deal is concluded by investor from his Ethereum wallet. Investor sends his money to smart-contract to start a deal. He has an option to close a deal, and recieve his money back',
-            'Trading funds on exchange are provided by Membrana platform with usage of API protocol',
+            '보안성이 강화된 계약. 트레이더는 투자자의 손실 가능성을 부분적으로 회복하기 위하여 계약에 자신의 자금을 비축한다',
+            '화폐 뉴스 정보. 가격 변동 차트와 동시에 특정 통화에 관한 거래 터미널 뉴스 검토 기능',
+            '분석기 - 특정 코인의 양을 추적하고 정보를 통해 알림 시스템 제공',
+            '포트폴리오 관리 - 여러 거래소와 함께 작업하며 포트폴리오를 활용할 수 있는 편리한 도구',
+            'Membrana 펀드 관리 - MBN 토큰을 활용하여 마진 계약 액세스',
           ]
         }]
       },{
         date: 'Q4 2019',
         icon: '/static/img/pictures/roadmap/11.svg',
-        title: 'Otc/dark pool',
+        title: '최종 배포',
         content: [{
-          text: 'Creating decentralized interbourse trading pools.'
+          text: 'Membrana.io 플랫폼은 모든 기능을 갖추어 시장에 진입할 준비를 마치고 출시됩니다'
         },{
           list: [
-            'Creating off the chain (OTC) trading pool - deals are happening with p2p transactions, not involving exchange trading platform.',
-            'Creating anonymous dark pool',
-            'Hidden order book in dark pool',
-            'Secured deal execution with escrow smart-contracts',
-            'Ability to trade big volumes without impacting the price',
+            'API keys를 통한 주요 암호화폐 거래소 지원',
+            '투자자와 거래자 간의 문자 메세지 교환',
+            'DEX 거래소 연결',
+            '거래소에서 자동 모드에서 지원되는 Membrana API 배포 (트레이딩 봇)',
+            '알고리즘 주문 : iceberg order, peg order, trailing order 등',
           ]
         }]
-      }]
+      },{
+        date: 'Q2 2020',
+        icon: '/static/img/pictures/roadmap/9.svg',
+        title: '기능 추가',
+        content: [{
+          text: ''
+        },{
+          list: [
+            '투자자가 이더리움 지갑에서 관리자에게 자금을 암호화폐 거래소에 대한 계좌 보유 요건 없이',
+            '이전할 수 있도록 진행',
+            '관리자 계약: 투자자와 최고의 거래자를 찾는 일을 돕는 포트폴리오 관리자간의 계약',
+            'API 프로토콜을 통해 상위 50개 거래소와 연결',
+            '플랫폼에서 구현된 알고리즘 구축',
+            '마진 거래 지원을 위한 거래소 거래',
+            '분산형 거래소 거래 지원',
+          ]
+        }]
+      },{
+        date: 'Q1 2021',
+        icon: '/static/img/pictures/roadmap/11.svg',
+        title: '주식시장 확대',
+        content: [{
+          text: ''
+        },{
+          list: [
+            '브로커 및 카운터패치에 대한 정보',
+            '평가 시스템, ROI, 위험 요소',
+            '브로커 시스템에 대하여 API 연결',
+
+            '주식, 채권, 보증, 선물 지원',
+            '디지털 공유 시장 및 보안 토큰',
+          ]
+        }]
+      },]
     },
 
     faq_page: {
@@ -910,4 +974,22 @@
       success_title: 'Thank you for submitting your document. You will receive e-mail message with the identification result.'
     },
     
+    compRe: {
+      title: `자유로운 금융 방식이 찾아옵니다`,
+      buttonTitle: `<span class="comp_wr-bold">Membrana</span> 에 대해 자세히 알아보기 `,
+      leftTop: `베타 버전 진행 중`,
+      leftBottom: `<span class="comp_wr-colored">3000명</span> 이상 등록`,
+      right: `<span class="comp_wr-colored">80달러 </span> 모금 달성`, 
+      rightBottom: `<span class="comp_wr-colored">100,000명 </span> 이상의 커뮤니티 참여자`,
+    },
+
+    howWeHelp: {
+      title: `<span class="h-text-gradient">Membrana </span>가 어떻게 트레이더들을 도울까요?`,
+      btnTitle1: ` 우리 채널에서 제공되는 영상을 확인하세요 `,
+    },
+
+    backed: {
+      title: '벤처 자금 투자사'
+    },
+
   }

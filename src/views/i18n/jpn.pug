@@ -49,7 +49,8 @@
       link: '/business_overview_language/'
     },{
       title: 'Roadmap',
-      link: '/roadmap/'
+      //- link: '/roadmap_jpn/'
+      link: '/jpn/roadmap/'
     },{
       title: 'FAQ',
       link: '/faq/'
@@ -102,7 +103,8 @@
     }],
 
     top: {
-      title: 'デジタル資産の信託管理',
+      title: '信頼できるデジタル資産管理',
+      subTitle: 'が間もなく開始',
       beta_text: 'Try beta',
       description: `十分に構築された随一の信託管理プラットフォームに参加する。 <br>早期入札者には手数料不要のブロックチェーン技術と取引を提供します。`.replace(/\n/g, '')
     },
@@ -289,6 +291,14 @@
         icon: '/static/img/pictures/partners/hacken.svg',
         description: `当社のセキュリティパートナーであるHackenは、Membranaプラットフォームのスマートコントラクト監査と侵入テストを実施しました。サイバーセキュリティの専門家であり、ブロックチェーンのプロジェクトに、明日の安全をもたらすため世界中から集結した善玉ハッカーです。`,
         link: 'https://medium.com/@membrana/the-partnership-between-membrana-and-hacken-exploring-new-opportunities-of-trust-management-655d07b61f1d'
+      },{
+        icon: '/static/img/pictures/partners/herdius.svg',
+        description: `Herdiusは,次世代の分散型アプリケーションに対応できる強力な 分散型金融プラットフォームです。 また,Herdiusは秘密キーの 処理を解決する次世代のDEXです。`,
+        link: 'https://www.herdius.com/'
+      },{
+        icon: '/static/img/pictures/partners/credits.png',
+        description: `Creditsは分散型ネットワーク/レジャー基盤の金融サービスの 生成および管理のための脱中央化プラットフォームです。`,
+        link: 'https://credits.com/'
       }]
     },
 
@@ -445,6 +455,16 @@
         facebook: '',
         bitcointalk: ''
       },{
+        avatar: '/static/img/pictures/team/abunassar_anthony.jpg',
+        occupation: 'Financial Advisor',
+        full_name: 'Abunassar Anthony',
+        description: '暗号取引とICO投資の世界に取り組む前に,PWCから Rotschild & Co,Goldman Sachs,JPMorganからスタートし, 最も著名な企業で経験を積んでいる',
+        github: '',
+        linkedin: 'http://linkedin.com/in/anthonyitauditcouk',
+        twitter: '',
+        facebook: '',
+        bitcointalk: ''
+      },{
         avatar: '/static/img/pictures/team/marie_noel.jpg',
         occupation: 'Financial Advisor',
         full_name: 'Marie-Noel Nsana',
@@ -565,144 +585,187 @@
       items: [{
         date: 'Q1 2017',
         icon: '/static/img/pictures/roadmap/1.svg',
-        title: 'Concept generation',
+        title: '概念導出',
         content: [{
-          text: 'Defining the idea of trust management for cryptocurrency assets.',
+          text: '暗号化肺資産に対する信頼管理概念整理。',
         },{
-          text: 'Finding solutions to main problems in trust management market, such as:',
+          text: '信託管理における主要な問題の解決策提示:',
         },{
           list: [
-            'losing control of investment capital',
-            'middleman and counterparty risks',
-            'lack of trust',
-            'risk of fraud management results'
+            '参加した資本の統制力喪失',
+            '仲介者と相手に対するリスク',
+            '信頼性不足',
+            '不正行為に対するリスク'
           ]
         },{
-          test: 'Finding the best way to implement the solutions. Generation of Membrana platform concept.'
+          test: ''
         }]
       },{
         date: 'Q2 2017',
         icon: '/static/img/pictures/roadmap/2.svg',
-        title: 'Performance audit',
+        title: '性能評価',
         content: [{
-          text: 'Taking the concept to full performance audit.'
+          text: '性能概念の全体適用についての評価'
         },{
-          text: `Discovering its survivability in all kind of scenarios. Additional security audits performed to ensure the safety of investor’s capital.
-                <br>Researching and analyzing all potential risks, adjusting or changing the operational process to eliminate them.`.replace(/\n/g, '')
+          text: `あらゆる種類のシナリオを通じて可能性を発見し,参加者の資本を安全に保障するために,セ キュリティ監査を追加的に行う。
+                <br>あらゆる潜在的危険の調査及び分析,それに対応するための運営プロセスの調整及び変更`.replace(/\n/g, '')
         }]
       },{
         date: 'Q3 2017',
         icon: '/static/img/pictures/roadmap/3.svg',
-        title: 'Interface creation',
+        title: 'インターフェース製作',
         content: [{
-          text: 'Creating a platform architecture and shaping a fully-functional user interface.'
+          text: 'プラットフォームアーキテクチャ生成および全機能ユーザインタフェース構成'
         },{
-          text: `Forming a professional full-time work team, with specialists in design, UI/UX, front/back-end, solidity language, marketing and security.
-                <br>Fabricating the current version of design.`.replace(/\n/g, '')
+          text: `設計及びUI/UX,フロント/バックエンド,Solidity言語,マーケティング及びセキュリティ専門家とともに専門正規作業チームを構成。
+                <br>デザインの最新バージョン`.replace(/\n/g, '')
         }]
       },{
         date: 'Q1 2018',
         icon: '/static/img/pictures/roadmap/4.svg',
-        title: 'Alpha version',
+        title: 'アルファバージョン',
         content: [{
-          text: 'Private testing of Membrana alpha version with incomplete functions:'
+          text: 'Membrana アルファバージョンが非公開でテストされる機能:'
         },{
           list: [
-            'Allowing access for trading through API key',
-            'Authorizing with Metamask',
-            'Inner trading terminal',
-            'Adding Bittrex API keys',
-            'Sending and receiving requests',
-            'Sending Ethereum to a smart contract’s address',
-            'Showing terms of a smart contract on Etherscan',
+            'API キーによる取引アクセスを許可',
+            'メタマスク認証',
+            '内部取引ターミナル',
+            'ビットレックスAPI keys 追加',
+            '要請伝送と受信',
+            'スマート·コントラクト·アドレスにETH転送',
+            'Etherscanにスマートコントラクト条件表示',
           ]
         }]
       },{
         date: 'Q2 2018',
         icon: '/static/img/pictures/roadmap/5.svg',
-        title: 'Beta version',
+        title: 'ベータバージョン',
         content: [{
-          text: 'Open testing of Membrana beta version with updated functions:'
+          text: 'Membrana ベータバージョンをアップデートして公開テストされる機能:'
         },{
           list: [
-            'Fixing bugs',
-            'Placing orders on exchange via inner trading platform',
-            'Writing results of trades in blockchain',
-            'Performing smart oracle work adjustment',
-            'Executing smart contracts with different scenarios',
-            'Examining all systems and working algorithms',
-            'Updating rating system with the result of a smart contract',
+            'バグ修正',
+            '内部取引プラットフォームによる取引先の注文',
+            '●脱中央化·分散ネットワークで取り引き結果作成',
+            'スマートオラクル作業調整',
+            '●多様なシナリオでスマートコントラクトの実行',
+            'すべてのシステムおよび動作アルゴリズムのチェック',
+            'スマート·コントレクトによる等級システム·アップデート',
+          ]
+        }]
+      },{
+        date: 'Q3 2018',
+        icon: '/static/img/pictures/roadmap/13.svg',
+        title: 'メーンアップデート',
+        content: [{
+          text: ''
+        },{
+          list: [
+            'Membranaプラットフォームの機能に対するアクセスを提供するAPI (Application Programming Interface)',
+            '自動モードでサポートされる取引所で取引ができるようにする機能',
+            '最大損失 - 最大損失に到達した場合,信託管理契約が中止され,資金へのアクセスが拒否される。',
+            '信頼ログ - 全ての取引が透明性とROI証明を提供するためにブロック鎖に保存される',
           ]
         }]
       },{
         date: 'Q4 2018',
         icon: '/static/img/pictures/roadmap/7.svg',
-        title: 'United API',
+        title: '',
         content: [{
-          text: 'Creating our own united API protocol.'
+          text: 'パブリック投資者にボーナスでMBNトークン提供'
         },{
           list: [
-            'A possibility to connect to Membrana platform with own software using API protocol',
-            'One united Membrana API that provides an access to all exchanges',
-            'Remote control for all Membrana platform functions',
+            '퍼블릭 투자자에게 보너스로 MBN 토큰 제공',
           ]
         }]
       },{
         date: 'Q1 2019',
         icon: '/static/img/pictures/roadmap/10.svg',
-        title: 'Dex implementation',
+        title: '状態確認およびUIアップデート',
         content: [{
-          text: 'Adding decentralized exchanges to Membrana platform.'
+          text: ''
         },{          
           list: [
-            'Trading on DEX through inner trading terminal',
-            'Ability to give assets from DEX for trust management',
-            'Trust manamegent is executed with special smart-contract that allows traders to place orders on exchange using investor\'s funds. Remote work on DEX with Membrana API protocol',
+            '向上したターミナルUI/UXアップデート',
+            '条件付き注文(限界,市場,ターゲット,停止)',
+            '残高にロックをかけることなく注文設定を許容',
           ]
         }]
       },{
         date: 'Q2 2019',
         icon: '/static/img/pictures/roadmap/8.svg',
-        title: 'Advanced features & ROI prediction system',
+        title: 'IEO',
         content: [{
-          text: 'Adding advanced trading features to Membrana platform.'
+          text: ''
         },{
           list: [
-            'Contracts with security - additional contract type in which trader reserves HIS funds to compensate part of investor\'s loss, if contract is failed',
-            'Algorithmic trading orders - adding advanced order type such as iceberg orders, peg orders, trailing orders and others',
-            'News feed workshop - enable an option to upload all news related to selected currency. Users can see correlation between price and news on price chart in terminal',
-            'ROI prediction system',
+            'TOP10取引所にIEO(Initial Exchange Offering)を進行',
+            'TOP10取引所に上場',
           ]
         }]
       },{
         date: 'Q3 2019',
         icon: '/static/img/pictures/roadmap/9.svg',
-        title: 'Trust management with ethereum wallet',
+        title: '機能追加',
         content: [{
-          text: 'Creating new smart-contract for trust management.'
+          text: '分析機能,ポートフォリオマネジャー,MBNファンド'
         },{
           list: [
-            'Investor have an option to create a trust management contract without having an exchange account',
-            'Deal is concluded by investor from his Ethereum wallet. Investor sends his money to smart-contract to start a deal. He has an option to close a deal, and recieve his money back',
-            'Trading funds on exchange are provided by Membrana platform with usage of API protocol',
+            'セキュリティー性が強化された契約。トレーダーは投資家の損失の可能性を部分的に回復するため,契約に自分の資金を備蓄する。',
+            '貨幣ニュース情報. 価格変動チャートと同時に特定通話に関する取引ターミナルニュース検討機能',
+            '分析器 - 特定コインの量を追跡し,情報によりお知らせシステムを提供',
+            'ポートフォリオ管理 - いろいろな取引所と一緒に作業してポートフォリオを活用できる便利な道具',
+            'Membrana ファンド管理 - MBN トークンを活用してマージン契約アクセス',
           ]
         }]
       },{
         date: 'Q4 2019',
         icon: '/static/img/pictures/roadmap/11.svg',
-        title: 'Otc/dark pool',
+        title: '最終配布',
         content: [{
-          text: 'Creating decentralized interbourse trading pools.'
+          text: 'Membrana.io プラットフォームは,すべての機能を備え,市場参入の準備を終え,発売されます。'
         },{
           list: [
-            'Creating off the chain (OTC) trading pool - deals are happening with p2p transactions, not involving exchange trading platform.',
-            'Creating anonymous dark pool',
-            'Hidden order book in dark pool',
-            'Secured deal execution with escrow smart-contracts',
-            'Ability to trade big volumes without impacting the price',
+            'API keys を通じての主な暗号化肺取引所へ支援',
+            '投資家と取引者の間でメール交換',
+            'DEX取引所連結',
+            '取引所で自動モードで支援されるMembrana API配布(トレーディングボット)',
+            'アルゴリズム注文: iceberg order, peg order, trailing orderなど',
           ]
         }]
-      }]
+      },{
+        date: 'Q2 2020',
+        icon: '/static/img/pictures/roadmap/9.svg',
+        title: '機能追加',
+        content: [{
+          text: ''
+        },{
+          list: [
+            '投資家がETHの財布から管理者に資金を暗号化肺取引所に対する口座保有条件なしで移転できるようにしている。',
+            '管理者契約: 投資家と最高取引者を探すためのポートフォリオマネージメント',
+            'APIプロトコルを通じて上位50取引所と連結',
+            'プラットフォームで実装されたアルゴリズムの構築',
+            'マージン取引を支援するための取引所の取引',
+            '●分散型取引所での取引支援',
+          ]
+        }]
+      },{
+        date: 'Q1 2021',
+        icon: '/static/img/pictures/roadmap/11.svg',
+        title: '株式市場拡大',
+        content: [{
+          text: ''
+        },{
+          list: [
+            'ブローカーやカウンターパッチに関する情報',
+            '評価システム,ROI,危険要素',
+            'ブローカーシステムについてAPI接続',
+            '株式,債券,保証,先物支援',
+            'デジタル共有市場やセキュリティ·トークン',
+          ]
+        }]
+      },]
     },
 
     faq_page: {
@@ -912,6 +975,24 @@
       invite_text: `We invite all traders to participate in this competition! Pass the KYC and follow the updates!`.replace(/\n/g, ''),
 
       success_title: 'Thank you for submitting your document. You will receive e-mail message with the identification result.'
+    },
+
+    compRe: {
+      title: `経済的自由の一部になる`,
+      buttonTitle: `<span class="comp_wr-bold">Membrana</span> についてもっと知る `,
+      leftTop: `ベータバージョン進行中`,
+      leftBottom: `<span class="comp_wr-colored">3000</span> 人以上登録`,
+      right: `<span class="comp_wr-colored">80 </span>ドルの募金達成`, 
+      rightBottom: `<span class="comp_wr-colored">100,000 </span> 人以上のコミュニティへの参加者`,
+    },
+
+    howWeHelp: {
+      title: `<span class="h-text-gradient">Membrana </span>はトレーダーにどのように役立つか?`,
+      btnTitle1: ` 私たちのチャンネルでビデオをご覧ください。 `,
+    },
+
+    backed: {
+      title: 'ベンチャー投資会社'
     },
     
   }
