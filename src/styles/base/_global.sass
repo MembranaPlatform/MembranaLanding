@@ -493,3 +493,35 @@ b
 
 footer a
   color: #8f92b8
+
+.success__icon
+  position: relative
+
+  &::before
+    content: ''
+
+    width: 20px
+    height: 20px
+
+    background: url(/static/img/icons/success.svg) no-repeat center / cover
+
+    position: absolute
+
+    bottom: -4px
+    right: -4px
+
+.error__icon
+  position: relative
+
+  &::before
+    content: ''
+
+    width: 20px
+    height: 20px
+
+    background: url(/static/img/icons/error.svg) no-repeat center / cover
+
+    position: absolute
+
+    bottom: -4px
+    right: -4px

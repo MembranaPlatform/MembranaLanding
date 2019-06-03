@@ -1,4 +1,4 @@
-extends ../layouts/base
+extends ../../layouts/base_kor
 
 block page_variables
   - var page_class = 'live-sale';
@@ -40,17 +40,16 @@ block content
       //- h1.live-sale__head tоkеn SALE 
       //-   span.live-sale__head_span LIVE
       h3.top__title2
-        span.top__title2-white IEO  
-        span.top__title2-col ABCC LIVE SOON
+        span.top__title2-col ABCC에서 
+        span.top__title2-white IEO
+        span.top__title2-col.top__title2-col-nopoint 가 진행됩니다
+          
 
       .live-sale__wr.live-sale__top_wr
-        p.live-sale__bdb
-          span.live-sale-bold.bonusHead 70% 
-          span.live-sale-bold Bonus 
-          span.bonusEnd Starts in:
+        p.live-sale__bdb 12% 보너스가 시작됩니다 :
 
         .live-sale__wr1
-          p.live-sale__low_text1 Current Price
+          p.live-sale__low_text1 현재 가격
           p.live-sale__bold_text1
             span.live-sale-bold  1 
             span.live-sale-bold 
@@ -106,8 +105,8 @@ block content
             img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
             span Tokenomics
         .live-sale__paym
-          p.live-sale__bdb.live-sale__paym_bdb We 
-            span.live-sale-bold Accept:
+          p.live-sale__bdb.live-sale__paym_bdb 
+            span.live-sale-bold 이것 또한 허용됩니다 :
           .live-sale__pay_wr
             img(src="/static/img/pictures/live-sale/tether.svg", alt="").live-sale__paym_img
       .top__widgets.live-sale__widgets
@@ -128,7 +127,7 @@ block content
           img(src="/static/img/icons/horizontal.svg", width="auto", height="76px", alt="Membrana ICO Rating").top__widget-height
 
       .live-sale__wr.live-sale__press
-        h2.live-sale__title.live-sale-grad In The Press
+        h2.live-sale__title.live-sale-grad 관련 미디어사
 
         .live-sale__pr_list.live-sale__wr
           .live-sale__pr-owl.owl-carousel
@@ -136,103 +135,89 @@ block content
               a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
 
       .graph_block.live-sale__graph(data-aos="fade-left")
-        h2.live-sale__title.live-sale-grad Tоkеn distribution:
+        h2.live-sale__title.live-sale-grad 토큰 분배:
         .graph__desc_vert
           .graph__desc1.live-sale__bordered
-            .bordered_block Tokens allocated for public sales:
+            .bordered_block 공개 판매에 할당된 토큰 :
             .desc__title 40% 
-              span.small_text 1 month lockup for bonus
+              span.small_text 
           .graph__desc2.live-sale__bordered
-            .bordered_block.small Locked for early investors:
+            .bordered_block.small 프리 세일 분량 :
             .desc__title 12% 
-              span.small_text  Lockup 6 months
+              span.small_text
         .js-pie-chart.pie-chart#pieChart
         .graph__desc_hor
-          .desc__title Reserved for distribution to
+          .desc__title 다음과 같이 분배될 예정입니다
           ul.percents_block
             li(data-number="2").percents_block__string 
               span.left__part
-                span.left__part_text Membrana Operated Fund:
+                span.left__part_text Membrana 운용 펀드 :
               span.right__part 20% 
                 span.non_colored 
             li(data-number="4").percents_block__string 
               span.left__part
-                span.left__part_text Membrana team:
+                span.left__part_text Membrana 팀 :
               span.right__part 15% 
-                span.non_colored Lockup 6 months
+                span.non_colored 6개월 락업
             li(data-number="3").percents_block__string 
               span.left__part
-                span.left__part_text Membrana Advisors and Partners:
+                span.left__part_text Membrana 어드바이저 및 파트너 : 
               span.right__part 5% 
-                span.non_colored Lockup 6 months
+                span.non_colored 6개월 락업
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text Community Events:
+                span.left__part_text 커뮤니티 이벤트
               span.right__part 8%
 
 
       .live-sale__about
-        h2.live-sale__title.live-sale-grad(data-aos="fade-right") What is 
-          span.live-sale-bold Membrana?
+        h2.live-sale__title.live-sale-grad(data-aos="fade-right") Membrana는?
+          //- span.live-sale-bold Membrana?
         p.live-sale__about_title(data-aos="fade-right")
-          span.live-sale__about-colored Membrana 
-          | is a decentralized platform for trust management
-        p(data-aos="fade-right").live-sale__text3 This technology is made for 
-          span.live-sale-bold market participants 
-          | and 
-          span.live-sale-bold traders 
-          | to contact directly and conclude a mutually beneficial, secure, and reliable contracts
+          span.live-sale__about-colored Membrana는  
+          | 신뢰 관리를 위한 분산형 플랫폼입니다
+        p(data-aos="fade-right").live-sale__text3 이 기술은 시장 참여자와 트레이더가 직접 연결되어 상호 유익하고 안전하며 신뢰할 수 있는 계약을 체결할 수 있도록 제작되었습니다
         .live-sale__about_wr.live-sale__wr(data-aos="fade-right")
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon1.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text Membrana decentralized distributed network platform is currently in MVP stage 
-              a(href="https://beta.membrana.io/", target="_blank").live-sale__about-op.live-sale-grad (Open Beta)
+            p.live-sale__about_text Membrana 탈중앙화 분산 네트워크 플랫폼이 현재 MVP 단계에 있음. 
+              a(href="https://beta.membrana.io/", target="_blank").live-sale__about-op.live-sale-grad  (오픈 베타)
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon2.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text Can be used from PC or mobile phone, from any point of the world 
+            p.live-sale__about_text PC나 휴대폰으로 세계 어디서나 사용할 수 있음
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon3.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text Has developed unique algorithm to address $50+ billion market opportunity
+            p.live-sale__about_text 500억 달러 이상의 시장 기회를 처리할 수 있는 고유한 알고리즘을 개발
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon4.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text Currently 3000+ customers with more than US $1M dollars in management
-          p.live-sale__about-op.live-sale__about-desc Expected 50,000+ customers till the end of 2020
+            p.live-sale__about_text 현재 1백만 달러 이상의 관리 비용을 가진 3000명 이상의 고객 보유
+          p.live-sale__about-op.live-sale__about-desc 2020년말까지 50,000명 이상의 고객 유치 예상
 
       .live-sale__problems
         h2.live-sale__title.live-sale-grad(data-aos="fade-left")
-          span.live-sale-bold Problems 
-          | that we 
-          span.live-sale-bold Solve
-        p.live-sale__problems_desc We have developed a unique algorithm to solve the following problems:
+          span.live-sale-bold 우리가 해결한 문제 
+        p.live-sale__problems_desc 다음과 같은 문제를 해결하기 위한 독특한 알고리즘을 개발하였습니다:
         ul.live-sale__problems_wr(data-aos="fade-left")
           li.live-sale__problems_item
-            p.live-sale__problems_title Loss of control over invested funds
-            p.live-sale__problems_text To get his assets in management, participator need to send them to 3rd party or to a trader.
+            p.live-sale__problems_title 참여 된 자본의 통제력 상실
+            p.live-sale__problems_text 자산 관리를 위해, 참여자는 자산을 제 3자 또는 트레이더에게 보내야 함
           li.live-sale__problems_item
-            p.live-sale__problems_title Middleman issues
-            p.live-sale__problems_text No reliable tool for middleman to work with his customers.
+            p.live-sale__problems_title 중개자 문제
+            p.live-sale__problems_text 중간 트레이더들이 고객들과 협력할 수 있는 신뢰할 만한 도구가 없음
           li.live-sale__problems_item
-            p.live-sale__problems_title Lack of trust
-            p.live-sale__problems_text Counterparties don’t trust each other and that limits possibilities for gaining prоfіt.
+            p.live-sale__problems_title 신뢰도 부족
+            p.live-sale__problems_text 거래에 있어 상대방이 서로 신뢰를 하지 않기 때문에 이를 통해 얻을수 있는 가능성 제한
           li.live-sale__problems_item
-            p.live-sale__problems_title Lack of transparency
-            p.live-sale__problems_text Participator can’t get any proof of traders activities. Trader can send him fake data and get the prоfіt.
+            p.live-sale__problems_title 투명성 부족
+            p.live-sale__problems_text 참가자는 트레이더들의 활동에 대한 어떠한 증명을 얻을 수 없음, 트레이더는 그에게 가짜 데이터와 증명을 보낼 가능성도 있음
 
       .live-sale__why
-        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") Why are we doing this?
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") 왜 우리가 이것을 진행하는걸까요?
         .live-sale__why_bg(data-aos="fade-right")
-          p.live-sale__why_text We believe in 
-            span.live-sale__why-col trustable
-            | , 
-            span.live-sale__why-col safe 
-            | and 
-            span.live-sale__why-col open cryptoworld
-            | , without 
-            span.live-sale__why-col any barriers
-            | . This world allows business opportunities and financial freedom for everyone
-
+          p.live-sale__why_text 우리는 어떠한 장벽도 없이 신뢰할 수 있고, 안전하고, 오픈된 암호화 세계를 믿습니다. 이 세상은 모든 사람들에게 사업의 기회와 재정적 자유를 제공합니다
+            
       .backed.live-sale__backed
-        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") Venture Funds on Board
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") 우리의 투자사
         .backed__wr(data-aos="fade-left")
           .backed__coin
             a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
@@ -247,18 +232,17 @@ block content
               img(src="/static/img/pictures/backed/firstblock.svg" alt="")
 
       .live-sale__economy
-         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") Tоkеn Economy
+         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") 토큰 이코노미
          .live-sale__economy_new_block
           p.live-sale__economy_text
-            b.live-sale__economy_tit The Membrana token (MBN) 
-            | is an ERC-20 compliant token to be issued on the Ethereum blockchain. The MBN token model is giving different kind of utilities, which offers interacting with the platform and directly with other users. 
-          p.live-sale__economy_text Additionally, there are multiple staking features, which allows users to receive rewards, benefits and governance of community operated fund. Customers are encouraged to stack tokens or use tokens as a payment method providing organic growth of token ecosystem.
-          a(href="https://membrana.io/static/pdf/membrana_tokenomics.pdf").live-sale__economy_text You can read detailed tokenomics in English with full information about stacking rewards here:
-          img(src="/static/img/pictures/live-sale/tokenusage_english.png", alt="")
-       
-
+            b.live-sale__economy_tit Membrana 토큰(MBN)
+            | 은 이더리움 블록체인에서 발행되는 ERC-20 준수 토큰입니다. MBN 토큰 모델은 다른 종류의 유틸리티를 제공하고 있는데, 이 유틸리티는 플랫폼과 상호작용하며 다른 사용자와 직접 상호작용 할 수 있습니다
+          p.live-sale__economy_text 또한 여러가지 스택 기능이 있어 사용자가 커뮤니티 운영 펀드의 보상, 편익 및 거버넌스를 받을 수 있습니다. 고객들은 토큰을 축적하거나 토큰을 토큰 생태계의 유기적인 성장을 제공하는 결제 방법으로 사용하도록 권장됩니다
+          a(href="https://membrana.io/static/pdf/membrana_tokenomics.pdf").live-sale__economy_text 스태킹 보상에 대한 전체 정보가있는 영어로 상세한 토폴로지를 읽을 수 있습니다
+          img(src="/static/img/pictures/live-sale/tokenusage_korean.png", alt="")
+        
       .live-sale__adv
-        h2.live-sale__title.live-sale-grad(data-aos="fade-left") Advantages of Technology
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left") 기술의 장점
         table.live-sale__table(frame="below", data-aos="fade-left")
           tr.live-sale__str
             td.live-sale__col 
@@ -267,61 +251,40 @@ block content
             td.live-sale__col Iconomi, Melonport, Genesis V
             td.live-sale__col Blockport, Covesting, Caspian
           tr.live-sale__str
-            td.live-sale__col Technology
-            td.live-sale__col Contract system
-            td.live-sale__col Tоkеnized fund
-            td.live-sale__col Social trading
+            td.live-sale__col 기술력
+            td.live-sale__col 컨트렉트 시스템
+            td.live-sale__col 토크니제이션 펀드
+            td.live-sale__col 소셜 트레이딩
           tr.live-sale__str
-            td.live-sale__col Asset control
-            td.live-sale__col.success__icon Assets are always on participator’s exchange wallets, access for trading is provided only through Membrana platform
-            td.live-sale__col.success__icon Assets are send to smart-contract address of the fund, where trader possess them
-            td.live-sale__col.error__icon Assets are send to smart contract, or trader has direct access via API
+            td.live-sale__col 자산 제어
+            td.live-sale__col.success__icon 자산은 항상 참여자의 거래소 월렛에 있으며, 거래를 위한 접근은 Membrana 플랫폼을 통해서만 제공됨
+            td.live-sale__col.success__icon 자산은 거래자가 보유하는 펀드의 스마트 컨트렉트 주소로 전송됨
+            td.live-sale__col.error__icon 자산은 스마트 컨트렉트로 전송되거나 거래자가 API를 통해 직접 액세스 가능함
           tr.live-sale__str
-            td.live-sale__col Risk management
-            td.live-sale__col.success__icon All terms of deal are put in the smart-contract, everything executes automatically
-            td.live-sale__col.error__icon No risk-management system
-            td.live-sale__col.error__icon No risk-management system
+            td.live-sale__col 리스크 관리
+            td.live-sale__col.success__icon 모든 거래 조건은 스마트 컨트렉트에 포함되며, 모든것이 자동으로 실행됨
+            td.live-sale__col.error__icon 리스크 관리 시스템이 없음
+            td.live-sale__col.error__icon 리스크 관리 시스템이 없음
           tr.live-sale__str
-            td.live-sale__col Portfolio management
-            td.live-sale__col.success__icon Users can trust their assets directly to trader or to portfolio managers, who pick up traders
-            td.live-sale__col.error__icon User trust their assets to only one fund manager
-            td.live-sale__col.error__icon User chose one trader and assets are used to copy his trading activity
+            td.live-sale__col 포트폴리오 관리
+            td.live-sale__col.success__icon 사용자는 자신의 자산에 대하여 트레이더 또는 트레이더를 픽업하는 포트폴리오 관리자를 직접 신뢰할 수 있음
+            td.live-sale__col.error__icon 사용자는 자신의 자산에 대하여 단 한명의 펀드 매니저에게만 신뢰할 수 있음
+            td.live-sale__col.error__icon 사용자가 한명의 트레이더를 선택했으며 자산은 그의 거래 활동을 모방하는데 활용됨
 
       .live-sale__done
-        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") What has already been done?
-        //- p.live-sale__done_desc(data-aos="fade-right") We have 
-        //-   span.live-sale__done-bold designed 
-        //-   | technology to work with 
-        //-   br
-        //-   span.live-sale__done-bold decentralized 
-        //-   | and 
-        //-   span.live-sale__done-bold centralized 
-        //-   | exchanges
-        p.live-sale__done_desc(data-aos="fade-right") We have designed and released the platform using most reliable and progressive technologies. 
+        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") 현재 진행 상황은?
+        p.live-sale__done_desc(data-aos="fade-right") 우리는 가장 신뢰할 수 있고, 진보적인 기술을 활용하여 플랫폼을 설계하고 출시하였습니다
         .live-sale__done_wr.live-sale__wr(data-aos="fade-right")
           img(src="/static/img/pictures/live-sale/grid.svg", alt="").live-sale__done_img
           .live-sale__done_right
-            p.live-sale__done_text Product in   
-              span.live-sale__done-bold public beta stage 
-              | with 3000+ customers. More than 1,000 of them passed KYC and are actively using the technology.
-            p.live-sale__done_text 
-              span.live-sale__done-bold Desktop and Mobile 
-              | version of the platform are already released. 
-            p.live-sale__done_text Successfully passed 
-              span.live-sale__done-bold security audit 
-              | from Hacken.io company.
-            p.live-sale__done_text 
-              span.live-sale__done-bold Risk management 
-              |  tools with usage of Smart-Contract technology.
-            p.live-sale__done_text 
-              span.live-sale__done-bold Portfolio management
-              | by dividing single API key between multiple traders.
-            p.live-sale__done_text 
-              span.live-sale__done-bold External API
-              | , which allows connection of algorithmic trading bots and custom software to the platform. 
-            p.live-sale__done_text Hashlog feature to provide 
-              span.live-sale__done-bold verification of traders activity
-            p.live-sale__bdb.live-sale__done_bdb Platform is working with most popular exchanges 
+            p.live-sale__done_text 3000명 이상의 고객을 보유한 퍼블렉 베타 단계의 제품, 이중 1000여명이 KYC를 통과하여 적극적으로 기술을 활용하고 있음. 이미 2888건의 신탁관리 계약이 1.6M달러의 거래량으로 체결되었습니다. 2019년 4분기에 최종 출시 됨
+            p.live-sale__done_text 플랫폼의 데스크톱 및 모바일 버전이 이미 출시 됨
+            p.live-sale__done_text Hacken.io로부터 보안감사를 성공적으로 통과
+            p.live-sale__done_text 스마트 컨트렉트 기술을 활용한 리스크 관리 도구
+            p.live-sale__done_text 단일 API 키를 여러 트레이더로 구분하여 포트폴리오 관리
+            p.live-sale__done_text 외부 API : 플랫폼에 알고리즘 트레이딩 봇과 사용자 지정 소프트웨어 연결 가능
+            p.live-sale__done_text 트레이더 활동 확인을 위한 해쉬로그 기능
+            p.live-sale__bdb.live-sale__done_bdb 플랫폼은 유명한 거래소와 함께 하고 있습니다
             .live-sale__done_wr2
               img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
