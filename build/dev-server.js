@@ -62,6 +62,7 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/kor\/roadmap\//, to: '/kor/roadmap/index.html'},
     { from: /\/kor\/ieo\//, to: '/kor/ieo/index.html'},
     { from: /\/jpn\/ieo\//, to: '/jpn/ieo/index.html'},
+    { from: /\/chn\/ieo\//, to: '/chn/ieo/index.html'},
     { from: /\/contacts\/$/, to: '/contacts/index.html'},
     { from: /\/faq\/$/, to: '/faq/index.html'},
     { from: /\/binance-exchange\/$/, to: '/binance-exchange/index.html'},

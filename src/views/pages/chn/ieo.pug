@@ -1,4 +1,4 @@
-extends ../../layouts/base_kor
+extends ../../layouts/base_chn
 
 block page_variables
   - var page_class = 'live-sale';
@@ -39,16 +39,15 @@ block content
 
       //- h1.live-sale__head tоkеn SALE 
       //-   span.live-sale__head_span LIVE
-      h3.top__title2 
+      h3.top__title2
         span.top__title2-white IEO 
-        span.top__title2-col 는 ABCC에서 라이브입니다
-          
+        span.top__title2-col 在ABCC上现场直播
 
       .live-sale__wr.live-sale__top_wr
-        p.live-sale__bdb 12% 보너스 종료 :
+        p.live-sale__bdb 12%的奖金结束: 
 
         .live-sale__wr1
-          p.live-sale__low_text1 현재 가격
+          p.live-sale__low_text1 时价
           p.live-sale__bold_text1
             span.live-sale-bold  1 
             span.live-sale-bold 
@@ -105,7 +104,7 @@ block content
             span Tokenomics
         .live-sale__paym
           p.live-sale__bdb.live-sale__paym_bdb 
-            span.live-sale-bold 이것 또한 허용됩니다 :
+            span.live-sale-bold 可接受货币:
           .live-sale__pay_wr
             img(src="/static/img/pictures/live-sale/tether.svg", alt="").live-sale__paym_img
       .top__widgets.live-sale__widgets
@@ -126,7 +125,7 @@ block content
           img(src="/static/img/icons/horizontal.svg", width="auto", height="76px", alt="Membrana ICO Rating").top__widget-height
 
       .live-sale__wr.live-sale__press
-        h2.live-sale__title.live-sale-grad 관련 미디어사
+        h2.live-sale__title.live-sale-grad 媒体报道
 
         .live-sale__pr_list.live-sale__wr
           .live-sale__pr-owl.owl-carousel
@@ -134,89 +133,89 @@ block content
               a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
 
       .graph_block.live-sale__graph(data-aos="fade-left")
-        h2.live-sale__title.live-sale-grad 토큰 분배:
+        h2.live-sale__title.live-sale-grad 代币的分配:
         .graph__desc_vert
           .graph__desc1.live-sale__bordered
-            .bordered_block 공개 판매에 할당된 토큰 :
+            .bordered_block T公开发售的代币占:
             .desc__title 40% 
-              span.small_text 
+              //- span.small_text 1 month lockup for bonus
           .graph__desc2.live-sale__bordered
-            .bordered_block.small 프리 세일 분량 :
+            .bordered_block.small 为早期投资者保留的代币占/预售代币占:
             .desc__title 12% 
-              span.small_text
+              //- span.small_text  Lockup 6 months
         .js-pie-chart.pie-chart#pieChart
         .graph__desc_hor
-          .desc__title 다음과 같이 분배될 예정입니다
+          .desc__title 预售代币的分配如下
           ul.percents_block
             li(data-number="2").percents_block__string 
               span.left__part
-                span.left__part_text Membrana 운용 펀드 :
+                span.left__part_text Membrana的运营基金
               span.right__part 20% 
                 span.non_colored 
             li(data-number="4").percents_block__string 
               span.left__part
-                span.left__part_text Membrana 팀 :
+                span.left__part_text Membrana团队
               span.right__part 15% 
-                span.non_colored 6개월 락업
+                span.non_colored 且锁定6个月
             li(data-number="3").percents_block__string 
               span.left__part
-                span.left__part_text Membrana 어드바이저 및 파트너 : 
+                span.left__part_text Membrana的顾问及合伙人:
               span.right__part 5% 
-                span.non_colored 6개월 락업
+                span.non_colored （锁定6个月）
             li(data-number="5").percents_block__string 
               span.left__part
-                span.left__part_text 커뮤니티 이벤트
+                span.left__part_text 用于社区活动:
               span.right__part 8%
 
 
       .live-sale__about
-        h2.live-sale__title.live-sale-grad(data-aos="fade-right") Membrana는?
-          //- span.live-sale-bold Membrana?
+        h2.live-sale__title.live-sale-grad(data-aos="fade-right") 什么是
+          span.live-sale-bold Membrana？
         p.live-sale__about_title(data-aos="fade-right")
-          span.live-sale__about-colored Membrana는  
-          | 신뢰 관리를 위한 분산형 플랫폼입니다
-        p(data-aos="fade-right").live-sale__text3 이 기술은 시장 참여자와 트레이더가 직접 연결되어 상호 유익하고 안전하며 신뢰할 수 있는 계약을 체결할 수 있도록 제작되었습니다
+          span.live-sale__about-colored Membrana 
+          | 是一个去中心化的信托管理平台
+        p(data-aos="fade-right").live-sale__text3 该技术旨在使市场参与者和交易者能直接联系，并签订互利、安全和可靠的合同
         .live-sale__about_wr.live-sale__wr(data-aos="fade-right")
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon1.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text Membrana 탈중앙화 분산 네트워크 플랫폼이 현재 MVP 단계에 있음. 
-              a(href="https://beta.membrana.io/", target="_blank").live-sale__about-op.live-sale-grad  (오픈 베타)
+            p.live-sale__about_text 去中心化、分布式网络平台Membrana目前处于MVP阶段
+              a(href="https://beta.membrana.io/", target="_blank").live-sale__about-op.live-sale-grad (公开测试）。
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon2.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text PC나 휴대폰으로 세계 어디서나 사용할 수 있음
+            p.live-sale__about_text 可应用于PC端或手机端，在世界任何角落都能使用。
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon3.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text 500억 달러 이상의 시장 기회를 처리할 수 있는 고유한 알고리즘을 개발
+            p.live-sale__about_text 开发出的独特算法足以应对价值超过500亿美元的市场机会。
           .live-sale__about_item
             img(src="/static/img/pictures/live-sale/icon4.svg", alt="").live-sale__about_icon
-            p.live-sale__about_text 현재 1백만 달러 이상의 관리 비용을 가진 3000명 이상의 고객 보유
-          p.live-sale__about-op.live-sale__about-desc 2020년말까지 50,000명 이상의 고객 유치 예상
+            p.live-sale__about_text 目前有3,000多位客户，运作资产超过100万美元。
+          p.live-sale__about-op.live-sale__about-desc 预计到2020年底客户量将达50,000名以上
 
       .live-sale__problems
         h2.live-sale__title.live-sale-grad(data-aos="fade-left")
-          span.live-sale-bold 우리가 해결한 문제 
-        p.live-sale__problems_desc 다음과 같은 문제를 해결하기 위한 독특한 알고리즘을 개발하였습니다:
+          span.live-sale-bold 解决痛点
+        p.live-sale__problems_desc 我们开发出了独特的演算法来解决以下问题:
         ul.live-sale__problems_wr(data-aos="fade-left")
           li.live-sale__problems_item
-            p.live-sale__problems_title 참여 된 자본의 통제력 상실
-            p.live-sale__problems_text 자산 관리를 위해, 참여자는 자산을 제 3자 또는 트레이더에게 보내야 함
+            p.live-sale__problems_title 失去投资金的控制权
+            p.live-sale__problems_text 参与者若要令其资产得到管理，需将资金发送给第三方或交易者。
           li.live-sale__problems_item
-            p.live-sale__problems_title 중개자 문제
-            p.live-sale__problems_text 중간 트레이더들이 고객들과 협력할 수 있는 신뢰할 만한 도구가 없음
+            p.live-sale__problems_title 中间人问题
+            p.live-sale__problems_text 中间人与其客户合作时没有信得过的工具。
           li.live-sale__problems_item
-            p.live-sale__problems_title 신뢰도 부족
-            p.live-sale__problems_text 거래에 있어 상대방이 서로 신뢰를 하지 않기 때문에 이를 통해 얻을수 있는 가능성 제한
+            p.live-sale__problems_title 信任缺失
+            p.live-sale__problems_text 交易对象互不信任，限制了获得利益的可能性。
           li.live-sale__problems_item
-            p.live-sale__problems_title 투명성 부족
-            p.live-sale__problems_text 참가자는 트레이더들의 활동에 대한 어떠한 증명을 얻을 수 없음, 트레이더는 그에게 가짜 데이터와 증명을 보낼 가능성도 있음
+            p.live-sale__problems_title 欠缺透明度
+            p.live-sale__problems_text 参与者无从获得交易者活动的证明，交易者可能发送虚假数据牟利。
 
       .live-sale__why
-        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") 왜 우리가 이것을 진행하는걸까요?
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") 理念宗旨
         .live-sale__why_bg(data-aos="fade-right")
-          p.live-sale__why_text 우리는 어떠한 장벽도 없이 신뢰할 수 있고, 안전하고, 오픈된 암호화 세계를 믿습니다. 이 세상은 모든 사람들에게 사업의 기회와 재정적 자유를 제공합니다
-            
+          p.live-sale__why_text 我们相信可靠、安全和开放的加密世界没有障碍，在这个世界，每个人都有享有无限的商机和金融自由。
+
       .backed.live-sale__backed
-        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") 우리의 투자사
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") 投资我们的公司
         .backed__wr(data-aos="fade-left")
           .backed__coin
             a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
@@ -231,17 +230,17 @@ block content
               img(src="/static/img/pictures/backed/firstblock.svg" alt="")
 
       .live-sale__economy
-         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") 토큰 이코노미
+         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") 代币经济
          .live-sale__economy_new_block
           p.live-sale__economy_text
-            b.live-sale__economy_tit Membrana 토큰(MBN)
-            | 은 이더리움 블록체인에서 발행되는 ERC-20 준수 토큰입니다. MBN 토큰 모델은 다른 종류의 유틸리티를 제공하고 있는데, 이 유틸리티는 플랫폼과 상호작용하며 다른 사용자와 직접 상호작용 할 수 있습니다
-          p.live-sale__economy_text 또한 여러가지 스택 기능이 있어 사용자가 커뮤니티 운영 펀드의 보상, 편익 및 거버넌스를 받을 수 있습니다. 고객들은 토큰을 축적하거나 토큰을 토큰 생태계의 유기적인 성장을 제공하는 결제 방법으로 사용하도록 권장됩니다
-          a(href="https://membrana.io/static/pdf/membrana_tokenomics.pdf").live-sale__economy_text 스태킹 보상에 대한 전체 정보가있는 영어로 상세한 토폴로지를 읽을 수 있습니다
-          img(src="/static/img/pictures/live-sale/tokenusage_korean.png", alt="")
-        
+            b.live-sale__economy_tit Membrana代币（MBN）
+            | 是将在以太坊区块链上发行的、符合ERC-20标准的代币。 MBN代币模型提供了多种类型的实用工具，可实现与平台的交互，并直接与其他用户沟通。 此外，MBN还集多功能于一身：用户可获得社区运营资金的奖励、福利和其管理权；鼓励客户累积代币或以代币作为支付方式，让代币生态系统有机增长。
+          a(href="https://membrana.io/static/pdf/membrana_tokenomics.pdf").live-sale__economy_text 您可以阅读详细的英语令牌经济学，其中包含有关堆叠奖励的完整信息：
+          img(src="https://membrana.io/static/pdf/membrana_tokenomics.pdf", alt="")
+       
+
       .live-sale__adv
-        h2.live-sale__title.live-sale-grad(data-aos="fade-left") 기술의 장점
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left") 技术优势
         table.live-sale__table(frame="below", data-aos="fade-left")
           tr.live-sale__str
             td.live-sale__col 
@@ -250,40 +249,49 @@ block content
             td.live-sale__col Iconomi, Melonport, Genesis V
             td.live-sale__col Blockport, Covesting, Caspian
           tr.live-sale__str
-            td.live-sale__col 기술력
-            td.live-sale__col 컨트렉트 시스템
-            td.live-sale__col 토크니제이션 펀드
-            td.live-sale__col 소셜 트레이딩
+            td.live-sale__col 技术
+            td.live-sale__col 契约制
+            td.live-sale__col 代币化基金
+            td.live-sale__col 社交交易
           tr.live-sale__str
-            td.live-sale__col 자산 제어
-            td.live-sale__col.success__icon 자산은 항상 참여자의 거래소 월렛에 있으며, 거래를 위한 접근은 Membrana 플랫폼을 통해서만 제공됨
-            td.live-sale__col.success__icon 자산은 거래자가 보유하는 펀드의 스마트 컨트렉트 주소로 전송됨
-            td.live-sale__col.error__icon 자산은 스마트 컨트렉트로 전송되거나 거래자가 API를 통해 직접 액세스 가능함
+            td.live-sale__col 资金控制
+            td.live-sale__col.success__icon 资金始终处于参与者的交易所钱包中，交易访问仅通过Membrana平台进行
+            td.live-sale__col.success__icon 资金转移到交易者持有的基金的智能合约地址
+            td.live-sale__col.error__icon 资金被传输至智能合约，交易者亦可通过API直接访问。
           tr.live-sale__str
-            td.live-sale__col 리스크 관리
-            td.live-sale__col.success__icon 모든 거래 조건은 스마트 컨트렉트에 포함되며, 모든것이 자동으로 실행됨
-            td.live-sale__col.error__icon 리스크 관리 시스템이 없음
-            td.live-sale__col.error__icon 리스크 관리 시스템이 없음
+            td.live-sale__col 风险管理
+            td.live-sale__col.success__icon 所有交易条款都包含在智能合约中，一切都自动执行
+            td.live-sale__col.error__icon 没有风险管理系统
+            td.live-sale__col.error__icon 没有风险管理系统
           tr.live-sale__str
-            td.live-sale__col 포트폴리오 관리
-            td.live-sale__col.success__icon 사용자는 자신의 자산에 대하여 트레이더 또는 트레이더를 픽업하는 포트폴리오 관리자를 직접 신뢰할 수 있음
-            td.live-sale__col.error__icon 사용자는 자신의 자산에 대하여 단 한명의 펀드 매니저에게만 신뢰할 수 있음
-            td.live-sale__col.error__icon 사용자가 한명의 트레이더를 선택했으며 자산은 그의 거래 활동을 모방하는데 활용됨
+            td.live-sale__col 投资组合管理
+            td.live-sale__col.success__icon 用户可以直接将其资金委托给交易者或投资组合经理，后者会挑选交易对象。
+            td.live-sale__col.error__icon 用户仅能将其资金委托给一位基金经理。
+            td.live-sale__col.error__icon 用户选定了某位交易者，则资金将用于复制其交易和利润。
+
 
       .live-sale__done
-        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") 현재 진행 상황은?
-        p.live-sale__done_desc(data-aos="fade-right") 우리는 가장 신뢰할 수 있고, 진보적인 기술을 활용하여 플랫폼을 설계하고 출시하였습니다
+        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") 目前进展
+        //- p.live-sale__done_desc(data-aos="fade-right") We have 
+        //-   span.live-sale__done-bold designed 
+        //-   | technology to work with 
+        //-   br
+        //-   span.live-sale__done-bold decentralized 
+        //-   | and 
+        //-   span.live-sale__done-bold centralized 
+        //-   | exchanges
+        p.live-sale__done_desc(data-aos="fade-right") 用最可靠先进的科技，设计出的平台上线啦！
         .live-sale__done_wr.live-sale__wr(data-aos="fade-right")
           img(src="/static/img/pictures/live-sale/grid.svg", alt="").live-sale__done_img
           .live-sale__done_right
-            p.live-sale__done_text 3000명 이상의 고객을 보유한 퍼블렉 베타 단계의 제품, 이중 1000여명이 KYC를 통과하여 적극적으로 기술을 활용하고 있음. 이미 2888건의 신탁관리 계약이 1.6M달러의 거래량으로 체결되었습니다. 2019년 4분기에 최종 출시 됨
-            p.live-sale__done_text 플랫폼의 데스크톱 및 모바일 버전이 이미 출시 됨
-            p.live-sale__done_text Hacken.io로부터 보안감사를 성공적으로 통과
-            p.live-sale__done_text 스마트 컨트렉트 기술을 활용한 리스크 관리 도구
-            p.live-sale__done_text 단일 API 키를 여러 트레이더로 구분하여 포트폴리오 관리
-            p.live-sale__done_text 외부 API : 플랫폼에 알고리즘 트레이딩 봇과 사용자 지정 소프트웨어 연결 가능
-            p.live-sale__done_text 트레이더 활동 확인을 위한 해쉬로그 기능
-            p.live-sale__bdb.live-sale__done_bdb 플랫폼은 유명한 거래소와 함께 하고 있습니다
+            p.live-sale__done_text 产品正在公测阶段，现有3000多位用户，其中超过1000人通过了KYC并活跃使用。已签订2888份信托管理合同，交易额达160万美元。预计将于2019年第4季度发布。
+            p.live-sale__done_text 已发布平台的桌面和移动版本。
+            p.live-sale__done_text 成功通过了Hacken.io公司的安全审计。
+            p.live-sale__done_text 使用智能合约作为风险管理工具。
+            p.live-sale__done_text 通过在多个交易者之间划分独立API密钥进行投资组合管理。
+            p.live-sale__done_text 外部API，允许将算法交易机器人程序和定制软件连接到平台上。
+            p.live-sale__done_text 哈希日志功能作为交易者活动的验证。
+            p.live-sale__bdb.live-sale__done_bdb 平台正与最热门的交易所进行合作
             .live-sale__done_wr2
               img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
               img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
