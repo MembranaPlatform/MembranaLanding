@@ -1107,7 +1107,7 @@ $(document).ready(function () {
     var now = today.getTime()
     var stage = getCurrentStage(today)
     var countDownDateStart = stage.date
-    $('.top-bold').text(stage.perc + 'bonus ')
+    $('.top-bold').text(stage.perc + ' ')
     if (stage.end) {
       $('span.top__title2-col').text('ProBit LIVE')
       $('span.bonusEnd').text('Ends in')
