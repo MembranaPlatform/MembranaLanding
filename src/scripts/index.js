@@ -1085,7 +1085,7 @@ $(document).ready(function () {
       perc: '12% '
     },
     {
-      date: new Date('Jun 09, 2019 04:00:00 GMT+0000').getTime(),
+      date: new Date('Jun 12, 2019 04:00:00 GMT+0000').getTime(),
       perc: '12% '
     }
   ]
