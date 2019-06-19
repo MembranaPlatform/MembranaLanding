@@ -1036,6 +1036,19 @@ function parseQueryString (query) {
   }
   return queryString
 }
+$(document).ready(function () {
+  var root = 'https://beta.membrana.io/api/v2/price'
+  $.get(root, (res) => {
+    if (res && res.price) {
+      const title = $('head title')
+      const text = title.text()
+      if (text.match('\\(MBN\\)')) {
+        const newTitle = text.replace('(MBN)', '(MBN, $' + res.price + ')')
+        title.text(newTitle)
+      }
+    }
+  })
+})
 
 $(document).ready(function () {
   var root = 'https://beta.membrana.io'
