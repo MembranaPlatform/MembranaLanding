@@ -305,3 +305,112 @@
 	@media(max-width: 768px)
 		position: static
 		font-size: 24px
+
+
+// form
+
+.trust_form
+  color: #fff
+  
+  width: 895px
+  margin: 0 auto
+
+  &__header
+    font-size: 48px
+    color: #fff
+
+    text-align: center
+
+    margin: 0
+
+  &__star
+    color: #ff3131
+    font-weight: bold
+    font-size: 24px
+
+    &-bottom
+      transform: translateY(8px)
+
+      display: inline-block
+
+      padding-right: 3px
+
+  &__label,
+  &__input
+    display: block
+
+  &__inp_grp
+    width: 585px
+    padding-bottom: 27px
+
+  &__label
+    font-size: 24px
+
+    padding-bottom: 5px
+
+  &__input
+    background: none
+    border: 0
+    outline: 0
+
+    border-bottom: 4px solid #474966
+
+    width: 100%
+    padding: 10px 0
+
+    font-size: 18px
+    font-weight: 500
+    opacity: 0.9
+    color: #fff
+
+  &__container 
+    display: block
+    position: relative
+    padding-left: 35px
+    margin-bottom: 12px
+    cursor: pointer
+    font-size: 22px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    .hid_input 
+      position: absolute
+      opacity: 0
+      cursor: pointer
+      height: 0
+      width: 0
+
+      &:checked ~ .trust_form__checkmark:after 
+        opacity: 1
+
+  &__checkmark 
+    position: absolute
+    top: 0
+    left: 0
+    height: 28px
+    width: 28px
+    background-color: transparent
+    border: 1px solid  #5d5e79
+    border-radius: 50%
+    transition: all ease .3s
+
+    &:hover .hid_input ~ .trust_form__checkmark 
+      border-color: #ccc
+    
+    &:after 
+      content: ""
+      position: absolute
+      opacity: 0
+      transition: all ease .3s
+        
+  &__container .trust_form__checkmark:after 
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 12px
+    height: 12px
+
+    background-color: #26e1a1
+    border-radius: 50%
