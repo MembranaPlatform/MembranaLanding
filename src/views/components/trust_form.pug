@@ -8,22 +8,22 @@ form.trust_form
 		.trust_form__inp_grp
 			label.trust_form__label Your e-mail
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="email")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="email")
 
 		.trust_form__inp_grp
 			label.trust_form__label Your first name
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="name")
 
 		.trust_form__inp_grp
 			label.trust_form__label Experience in trading, years
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="number")
 
 		.trust_form__inp_grp
 			label.trust_form__label Traded markets
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="text")
 
 		.trust_form__inp_grp
 			label.trust_form__label.trust_form__marg Average profit last 6 months, per month in USD
@@ -49,7 +49,7 @@ form.trust_form
 			label.trust_form__container 1%
 				input(type="radio" name="average_profit").hid_input
 				span.trust_form__checkmark
-			label.trust_form__container 
+			label.trust_form__container.trust_form__label-text 
 				input.trust_form__input(placeholder="Type answer..." data-type="text")
 				input(type="radio" name="average_profit").hid_input
 				span.trust_form__checkmark
@@ -57,36 +57,36 @@ form.trust_form
 		.trust_form__inp_grp
 			label.trust_form__label Capital in management
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="text")
 
 		.trust_form__inp_grp
 			label.trust_form__label Preferred exchange
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="text")
 
 		.trust_form__inp_grp
 			label.trust_form__label Minimal contract amount
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="text")
 
 		.trust_form__inp_grp
 			label.trust_form__label.trust_form__label-no_wrap.trust_form__marg I can share my trades (*xls) in last 6 month and make the proof for profit
 				span.trust_form__star *
 			label.trust_form__container 1%
-				input(type="radio" name="average_profit").hid_input
+				input(type="radio" name="profit_proof").hid_input
 				span.trust_form__checkmark
 			label.trust_form__container 1%
-				input(type="radio" name="average_profit").hid_input
+				input(type="radio" name="profit_proof").hid_input
 				span.trust_form__checkmark
-			label.trust_form__container 
+			label.trust_form__container.trust_form__label-text  
 				input.trust_form__input(placeholder="Type answer..." data-type="text")
-				input(type="radio" name="average_profit").hid_input
+				input(type="radio" name="profit_proof").hid_input
 				span.trust_form__checkmark
 
 		.trust_form__inp_grp
 			label.trust_form__label How we can contact with you
 				span.trust_form__star *
-			input.trust_form__input(placeholder="Type answer..." data-type="text")
+			input.trust_form__input.trust_form__input-nes(placeholder="Type answer..." data-type="text")
 
 		//- .trust_form__button-marg
 

@@ -975,6 +975,66 @@ $(document).ready(function () {
   }
 })
 
+function validate (_this, trigger) {
+  var ckName = /^[А-Яа-яA-Za-z\s]{1,20}$/
+  var ckText = /^[А-Яа-яA-Za-z0-9,.!?\s]{1,5000}$/
+  var ckNumber = /^\d+$/
+  var ckEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+
+  var type = $(_this).attr('data-type')
+  if (type === 'number') {
+    if (!ckNumber.test($(_this).val())) {
+      return false
+    } else {
+      return true
+    }
+  } if (type === 'text') {
+    if (!ckText.test($(_this).val())) {
+      return false
+    } else {
+      return true
+    }
+  } if (type === 'email') {
+    if (!ckEmail.test($(_this).val())) {
+      return false
+    } else {
+      return true
+    }
+  } if (type === 'name') {
+    if (!ckName.test($(_this).val())) {
+      return false
+    } else {
+      return true
+    }
+  } else {
+    return true
+  }
+}
+
+$(document).ready(function () {
+  $('.trust_form__label-text').click(function () {
+    $(this).closest('.trust_form__inp_grp').find('.hid_input').prop('checked', false)
+    $(this).closest('.trust_form__container').find('.hid_input').prop('checked', true)
+  })
+  $('.trust_form__button').click(function () {
+    $('.trust_form__label').removeClass('danger')
+    var trigger = true
+    $(this).closest('form').find('.trust_form__input-nes').each(function (i) {
+      var _this = this
+      if (!validate(_this, trigger)) {
+        $(this).closest('.trust_form__inp_grp').find('.trust_form__label').addClass('danger')
+        trigger = false
+      }
+    })
+    if ($('.hid_input:checked').length < 2) {
+      $('.trust_form__marg').addClass('danger')
+      $('.hid_input:checked').closest('.trust_form__inp_grp').find('.trust_form__label').removeClass('danger')
+      return false
+    }
+    if (!trigger) return false
+  })
+})
+
 $(document).ready(function () {
   // press slider
   $('.live-sale__pr-owl').owlCarousel({
