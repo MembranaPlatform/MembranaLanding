@@ -314,7 +314,9 @@
   @media(max-width: 1366px)
     margin-top: 90px
   @media(max-width: 1024px)
-    margin-top: 0px
+    margin-top: 50px
+  @media(max-width: 768px)
+    margin-top: 70px
 
 // ***CONCLUSSION***
 .block_5__title
@@ -325,7 +327,10 @@
   @media(max-width: 1366px)
     bottom: 127px
   @media(max-width: 1024px)
-    position: static
+    bottom: 92%
+  //   bottom: 89px
+  // @media(max-width: 768px)
+  //   bottom: 67px
 
 .title__img
   margin: 0px auto 9.7px
@@ -348,7 +353,9 @@
   color: #634a1e
   max-width: 182px
   @media(max-width: 1024px)
-    font-size: 24px
+    font-size: 32px
+  @media(max-width: 768px)
+    font-size: 26px
 
 // ***LINES***
 
@@ -420,7 +427,7 @@
   font-size: 48px
   color: #ffffff
   @media(max-width: 1024px)
-    font-size: 40px
+    font-size: 32px
   @media(max-width: 768px)
     font-size: 24px
 
@@ -522,14 +529,15 @@
 
 .page-content-2
   margin: 0
-  height: 769px
+  // height: auto
+  height: 770px
+  @media(max-width: 1024px)
+    height: auto
+    padding-bottom: 20px
   background-image: url(/static/img/pictures/trust/Background.svg)
   background-position-x: 50%
   margin: 0 auto
-  @media(max-width: 1024px)
-    height: 530px
-  @media(max-width: 768px)
-    height: 300px
+
 
 .section_2__middle
   margin: 0px
@@ -541,28 +549,44 @@
 // ---------------------------------------
 //                FORM
 // ---------------------------------------
+
+.page-content-3
+  margin: 0 auto
+  max-width: 124rem
+  padding: 0 3rem 0
+
 .trust_form
   color: #fff
   
   max-width: 895px
   margin: 0 auto
+  margin: 0 auto 0
+  // @media(max-width: 768px)
+  //   margin: 46px auto
 
   &__desc 
     margin: 0 auto 34px
+    @media(max-width: 1024px)
+      max-width: 585px
+    @media(max-width: 768px)
+      padding-left: 20px
+      padding-right: 20px
+      margin-bottom: 18px
 
   &__header
     font-size: 48px
     color: #fff
     @media(max-width: 1024px)
-      font-size: 30px
+      font-size: 32px
+    @media(max-width: 768px)
+      font-size: 24px
 
     text-align: center
-
-    margin: 48px auto 76px
+    margin: 46px auto 76px
     @media(max-width: 1024px)
-       margin: 28px auto 56px
+      margin: 40px auto 28px
     @media(max-width: 768px)
-      margin: 50px auto 36px
+      margin: 38px auto 28px
 
   &__star
     color: #ff3131
@@ -581,16 +605,28 @@
     display: block
 
   &__inp_grp
-    width: 585px
+    max-width: 585px
     padding-bottom: 27px
+    @media(max-width: 1024px)
+      margin: 0 auto
+    @media(max-width: 768px)
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 18px
+
 
   &__label
     font-size: 24px
+    @media(max-width: 768px)
+      font-size: 16px
 
     padding-bottom: 4px
     
     &-no_wrap
-      white-space: nowrap
+      @media(min-width: 1024px)
+        white-space: nowrap
+      // @media(max-width:1024px)
+        // white-space: initial
 
   &__marg
     margin-bottom: 25px
@@ -607,6 +643,9 @@
     padding: 10px 0
 
     font-size: 18px
+    @media(max-width: 768px)
+      font-size: 14px
+
     font-weight: 500
     opacity: 0.9
     color: #fff
@@ -615,10 +654,17 @@
     display: block
     position: relative
     padding-left: 35px
+    @media(max-width: 768px)
+      padding-left: 25px
+
     margin-bottom: 12px
     cursor: pointer
     font-size: 22px
+    @media(max-width: 768px)
+      font-size: 16px
+
     -webkit-user-select: none
+    -webkit-tap-highlight-color: transparent
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
@@ -639,6 +685,10 @@
     left: 0
     height: 28px
     width: 28px
+    @media(max-width: 768px)
+      height: 18px
+      width: 18px
+
     background-color: transparent
     border: 1px solid  #5d5e79
     border-radius: 50%
@@ -677,7 +727,11 @@
   background-color: transparent
   border: 5px solid #00dbdf
   border-radius: 29.5px
-
+  @media(max-width: 768px)
+    font-size: 16px
+    width: 105px
+    height: 42px
+    margin-top: 26px
 // ---------------------------------------
 //                TRIANGLES
 // ---------------------------------------
