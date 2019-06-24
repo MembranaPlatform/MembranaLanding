@@ -341,10 +341,10 @@
   background-color: #fbbd51
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25)
   max-width: 285px
-  padding: 10px 52px 17px
+  padding: 10px 52px 10px
   border-radius: 5px
   @media(max-width: 1024px)
-    padding: 0px 0px
+    padding: 4px 0px
     max-width: auto
 
 .text_bg__text5
@@ -365,9 +365,9 @@
   margin: 0
   background-color: #febf51 
   padding-top: 48px
-  padding-left: auto 
+  padding-left: 0 
   padding-bottom: 31px
-  padding-right: auto
+  padding-right: 0
   max-width: 2550px
   text-align: center
   margin-left: -685px
@@ -460,7 +460,7 @@
     max-width: 205px
     margin: 30px auto
   @media(max-width: 768px)
-    max-width: 186px
+    max-width: 194px
     margin: 30px auto
 
 .section_2__block_2-left
@@ -486,12 +486,17 @@
 
 .section_2__block_2-mg-b-r
   margin-bottom: 4px
+  @media(max-width: 1024px)
+    margin-bottom: 10px
+    white-space: nowrap
+  @media(max-width: 768px)
+    margin-bottom: 4px
 
 
 .section_2__block_4
   margin: 0
   position: relative
-  max-width: 825px
+  max-width: 826px
   padding: 11px 13px
   background-color: rgba(48, 49, 70, 0.6)
   border-radius: 5px
@@ -545,6 +550,8 @@
   max-width: 1180px
   padding: 0 30px
   margin: 0 auto
+  @media(max-width: 1278px)
+    margin-bottom: 30px
 
 // ---------------------------------------
 //                FORM
@@ -627,10 +634,8 @@
       color: red
     
     &-no_wrap
-      @media(min-width: 1024px)
+      @media(min-width: 1025px)
         white-space: nowrap
-      // @media(max-width:1024px)
-        // white-space: initial
 
   &__marg
     margin-bottom: 25px
@@ -654,10 +659,17 @@
     opacity: 0.9
     color: #fff
 
+  &__input-1
+    padding: 0 0 10px
+
+    .trust_form__input
+      margin-top: -12px
+
   &__container 
     display: block
     position: relative
     padding-left: 35px
+    // max-height: 18.4px
     @media(max-width: 768px)
       padding-left: 25px
 
@@ -683,15 +695,24 @@
       &:checked ~ .trust_form__checkmark:after 
         opacity: 1
 
+  &__checkmark-1
+    margin-top: 12px
+
   &__checkmark 
     position: absolute
     top: 0
     left: 0
-    height: 28px
-    width: 28px
+
+    // height: 28px
+    // width: 28px
+    height: 24.8px
+    width: 24.8px
+    @media(max-width: 1024px)
+      height: 22.8px
+      width: 22.8px
     @media(max-width: 768px)
-      height: 18px
-      width: 18px
+      height: 18.4px
+      width: 18.4px
 
     background-color: transparent
     border: 1px solid  #5d5e79
