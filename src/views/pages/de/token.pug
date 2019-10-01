@@ -1,0 +1,294 @@
+extends ../../layouts/base_de
+
+block page_variables
+  - var page_class = 'live-sale';
+  - var page_active = '/live-sale/';
+
+block append head
+  block head_variables
+    - var title = app.head.ieo.title;
+    - var description = app.head.ieo.description;
+
+block content
+  .page-content-pattern
+    .pre-sale.live-sale
+      .page-content-pattern
+        .pre-sale-wrapper
+          .patternsed
+            div.patterned
+              img.js-prevent-inline.grp(src="/static/img/pictures/live-sale/bg1.svg" alt="")
+              .block1
+                img.js-prevent-inline.triangle_1(src="/static/img/new-page/snall_bg.svg" alt="")                
+                img.js-prevent-inline.triangle_7(src="/static/img/new-page/small_bg.svg" alt="")
+                img.js-prevent-inline.triangle_2(src="/static/img/new-page/snall_bg.svg" alt="")
+                img.js-prevent-inline.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+                img.js-prevent-inline.triangle_3(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_2.triangle_222(src="/static/img/new-page/snall_bg.svg" alt="")
+              img.js-prevent-inline.triangle_44.triangle_4(src="/static/img/pictures/pre-sale/triangle.png" alt="")
+              img.js-prevent-inline.triangle_6(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_6.triangle_666(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_67.triangle_66(src="/static/img/new-page/big_bg.svg" alt="")
+              img.js-prevent-inline.triangle_22(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_22.triangle_221(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_22.triangle_223(src="/static/img/new-page/mid_bg2.svg" alt="")
+              img.js-prevent-inline.triangle_21(src="/static/img/new-page/small_bg.svg" alt="")
+              img.js-prevent-inline.triangle_21.triangle_211(src="/static/img/new-page/small_bg.svg" alt="")
+
+    .pre-sale.live-sale
+
+      //- h1.live-sale__head tоkеn SALE 
+      //-   span.live-sale__head_span LIVE
+
+      .live-sale__soc
+        a(href="https://t.me/membranaplatform", target="_blank").live-sale__soc_wr.live-sale__soc_wr-first
+          img(src="/static/img/icons/socials/tel-round.svg", alt="").live-sale__social_img_1
+          span 83,000
+        a(href="https://twitter.com/membrana_io", target="_blank").live-sale__soc_wr
+          img(src="/static/img/icons/socials/tw-round.svg", alt="").live-sale__social_img_1
+          span 11,000
+      
+      a(href="https://beta.membrana.io/terminal").top__btn.live-sale__btn
+        img(src="/static/img/icons/play2.svg" alt="").top__btn_img
+        //- span.live-sale__pad_r.top__btn_span Buy 
+        //- span.top__btn_span.top-bold Tоkеns
+        span.top__btn_span Mit dem Handel beginnen
+
+
+      .live-sale__wr.live-sale__wr_2
+        .live-sale__doc
+          a(href="/static/pdf/one-pager.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span One Pager
+          a(href="/static/pdf/membrana_whitepaper_eng.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span Whitepaper
+          a(href="/static/pdf/membrana_business_overview.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span Geschäftsüberblick
+          a(href="/static/pdf/membrana_tokenomics.pdf", target="_blank").live-sale__doc_link
+            img(src="/static/img/pictures/live-sale/icon5.svg", alt="").live-sale__doc_img
+            span Tokenomics
+      .top__widgets.live-sale__widgets
+
+        a(href="https://icobench.com/ico/membrana" target="_blank" rel="nofollow" title="Membrana on ІСОbench").top__widget1.top__widget
+          img(border="0" src="https://icobench.com/rated/membrana?shape=horizontal&size=s" width="174px" height="76px" alt="Membrana ІСО rating")
+
+        a(href="https://www.trackico.io/ico/membrana/", target="_blank", title="Membrana on TrackІСО").top__widget1.top__widget
+          img(border="0", src="https://www.trackico.io/widget/horizontal/membrana/300.png", width="230px", height="76px", alt="Membrana TrackІСО rating")
+          
+        a(href="https://www.icohotlist.com/ico/membrana-platform/", target="_blank", title="Membrana on IcoHotList").top__widget1.top__widget.top__hot
+          img(border="0", src="/static/img/icons/HotListed.png", width="76px", height="76px", alt="Membrana IcoHotList rating")
+
+        a(href="https://findico.io/ico/membrana", target="_blank", title="Membrana (MBN) on FindІСО").top__widget1.top__widget
+          img(border="0", src="https://findico.io/widget/horizontal/membrana/300.png", width="auto", height="76px", alt="Membrana (MBN) FindІСО rating").top__widget-height
+
+        a(href="https://icomarks.com/ico/membrana", rel="nofollow", target="_blank", title="Membrana ICO")
+          img(src="/static/img/icons/horizontal.svg", width="auto", height="76px", alt="Membrana ICO Rating").top__widget-height
+
+      .live-sale__wr.live-sale__press
+        h2.live-sale__title.live-sale-grad In der Presse
+
+        .live-sale__pr_list.live-sale__wr
+          .live-sale__pr-owl.owl-carousel
+            for item in app.press.items
+              a.live-sale__pr_item(href=item.link target="_blank"): img.live-sale__pr_image(src=item.image alt="")
+
+      .graph_block.live-sale__graph(data-aos="fade-left")
+        h2.live-sale__title.live-sale-grad Token-Verteilung
+        .graph__desc_vert
+          .graph__desc1.live-sale__bordered
+            .bordered_block Für öffentliche Verkäufe zugeteilte Token:
+            .desc__title 40% 
+              span.small_text 1-monatige Sperre für Bonus
+          .graph__desc2.live-sale__bordered
+            .bordered_block.small Für frühe Investoren gesperrt:
+            .desc__title 12% 
+              span.small_text  Sperre für 6 Monate
+        .js-pie-chart.pie-chart#pieChart
+        .graph__desc_hor
+          .desc__title Reserviert für
+          ul.percents_block
+            li(data-number="2").percents_block__string 
+              span.left__part
+                span.left__part_text den Membrana betriebenen Fond:
+              span.right__part 20% 
+                span.non_colored 
+            li(data-number="4").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana Team:
+              span.right__part 15% 
+                span.non_colored Sperre für 6 Monate
+            li(data-number="3").percents_block__string 
+              span.left__part
+                span.left__part_text Membrana Berater und Partner:
+              span.right__part 5% 
+                span.non_colored Sperre für 6 Monate
+            li(data-number="5").percents_block__string 
+              span.left__part
+                span.left__part_text Community Events:
+              span.right__part 8%
+
+
+      .live-sale__about
+        h2.live-sale__title.live-sale-grad(data-aos="fade-right") Was ist 
+          span.live-sale-bold Membrana?
+        p.live-sale__about_title(data-aos="fade-right")
+          span.live-sale__about-colored Membrana 
+          | ist eine dezentralisierte Plattform für Fondsverwaltung
+        p(data-aos="fade-right").live-sale__text3 Diese Technologie wurde entwickelt, damit
+          span.live-sale-bold Marktteilnehmer
+          | und 
+          span.live-sale-bold Händler 
+          | direkt Kontakt aufnehmen und einen für beide Seiten vorteilhaften, sicheren und zuverlässigen Vertrag abschließen können
+        .live-sale__about_wr.live-sale__wr(data-aos="fade-right")
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon1.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Die dezentral verteilte Netzwerkplattform von Membrana befindet sich derzeit im MVP-Stadium
+              a(href="https://beta.membrana.io/", target="_blank").live-sale__about-op.live-sale-grad (Open Beta)
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon2.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Kann von jedem Ort der Welt aus über einen PC oder ein Mobiltelefon verwendet werden
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon3.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Hat einen einzigartigen Algorithmus entwickelt, um Marktchancen von über 50 Milliarden US-Dollar anzugehen
+          .live-sale__about_item
+            img(src="/static/img/pictures/live-sale/icon4.svg", alt="").live-sale__about_icon
+            p.live-sale__about_text Derzeit über 3000 Kunden mit einem Management von mehr als 1 Million US-Dollar
+          p.live-sale__about-op.live-sale__about-desc Voraussichtlich mehr als 50.000 Kunden bis Ende 2020
+
+      .live-sale__problems
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left")
+          span.live-sale-bold Probleme 
+          | die wir  
+          span.live-sale-bold lösen
+        p.live-sale__problems_desc Wir haben einen einzigartigen Algorithmus entwickelt, um die folgenden Probleme zu lösen:
+        ul.live-sale__problems_wr(data-aos="fade-left")
+          li.live-sale__problems_item
+            p.live-sale__problems_title Kontrollverlust über investierte Mittel
+            p.live-sale__problems_text Um sein Vermögen in der Verwaltung zu erhalten, muss der Teilnehmer es an Dritte oder an einen Händler senden.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Mittelsmann Probleme
+            p.live-sale__problems_text Kein zuverlässiges Werkzeug für den Vermittler, um mit seinen Kunden zu arbeiten.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Mangel an Vertrauen
+            p.live-sale__problems_text Die Gegenparteien vertrauen sich nicht und dies schränkt die Gewinnmöglichkeiten ein.
+          li.live-sale__problems_item
+            p.live-sale__problems_title Mangel an Transparenz
+            p.live-sale__problems_text Der Teilnehmer kann keinen Nachweis über die Händleraktivitäten erhalten. Der Händler kann ihm gefälschte Daten senden und den Gewinn erhalten.
+
+      .live-sale__why
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-right") Warum tun wir das?
+        .live-sale__why_bg(data-aos="fade-right")
+          p.live-sale__why_text Wir glauben an eine vertrauenswürdige, sichere und offene Kryptowelt, ohne Barrieren. Diese Welt ermöglicht Geschäftsmöglichkeiten und finanzielle Freiheit für alle
+            //- span.live-sale__why-col 
+
+      .backed.live-sale__backed
+        h2.live-sale__title.live-sale-grad.live-sale__why_title(data-aos="fade-left") Risikofonds an Bord
+        .backed__wr(data-aos="fade-left")
+          .backed__coin
+            a(href="https://www.linkedin.com/company/coinbar-group/" target="blank").link
+              img(src="/static/img/pictures/backed/ld.png" alt="")
+            a(href="https://coinbargroup.com/ " target="blank").logo
+              img(src="/static/img/pictures/backed/logo_coinbar.svg" alt="")
+
+      .live-sale__economy
+         h2.live-sale__title.live-sale-grad.live-sale__economy_title(data-aos="fade-right") Tоkеn Wirtschaft
+         .live-sale__economy_new_block
+          p.live-sale__economy_text
+            b.live-sale__economy_tit Der Membrana-Token (MBN)
+            | ist ein ERC-20-konformer Token, der auf der Ethereum-Blockchain ausgegeben wird. Das MBN-Token-Modell bietet verschiedene Arten von Hilfsmitteln, die die Interaktion mit der Plattform und direkt mit anderen Benutzern ermöglichen.
+          p.live-sale__economy_text Zusätzlich gibt es mehrere Staking-Funktionen, die es den Nutzern ermöglichen, Belohnungen, Vorteile und die Verwaltung von Fonds zu erhalten, die von der Community verwaltet werden. Kunden werden ermutigt, Token zu stapeln oder Token als Zahlungsmethode zu verwenden, die ein organisches Wachstum des Token-Ökosystems ermöglicht.
+          a(href="https://membrana.io/static/pdf/membrana_tokenomics.pdf").live-sale__economy_text Sie können detaillierte Tokenomics mit vollständigen Informationen über das Stapeln von Belohnungen hier auf Englisch lesen:
+          img(src="/static/img/pictures/live-sale/tokenusage_english.png", alt="")
+       
+
+      .live-sale__adv
+        h2.live-sale__title.live-sale-grad(data-aos="fade-left") Vorteile der Technologie
+        table.live-sale__table(frame="below", data-aos="fade-left")
+          tr.live-sale__str
+            td.live-sale__col 
+            td.live-sale__col 
+              img(src="/static/img/logo.svg")
+            td.live-sale__col Iconomi, Melonport, Genesis V
+            td.live-sale__col Blockport, Covesting, Caspian
+          tr.live-sale__str
+            td.live-sale__col Technologie
+            td.live-sale__col Vertragssystem
+            td.live-sale__col Tоkеnized Fonds
+            td.live-sale__col Sozialer Handel
+          tr.live-sale__str
+            td.live-sale__col Vermögenskontrolle
+            td.live-sale__col.success__icon Die Vermögenswerte befinden sich immer in den Wallets der Teilnehmer, der Zugang zum Handel erfolgt ausschließlich über die Membrana-Plattform
+            td.live-sale__col.success__icon Vermögenswerte werden an die Smart-Contract-Adresse des Fonds gesendet, wenn der Händler sie besitzt
+            td.live-sale__col.error__icon Assets werden an Smart Contract gesendet oder der Trader hat direkten Zugriff über die API
+          tr.live-sale__str
+            td.live-sale__col Risikomanagement
+            td.live-sale__col.success__icon Alle Geschäftsbedingungen werden in den Smart-Contract aufgenommen, alles läuft automatisch ab
+            td.live-sale__col.error__icon Kein Risikomanagementsystem
+            td.live-sale__col.error__icon Kein Risikomanagementsystem
+          tr.live-sale__str
+            td.live-sale__col Portfoliomanagement
+            td.live-sale__col.success__icon Benutzer können ihre Vermögenswerte direkt dem Händler oder Portfoliomanagern anvertrauen, die Händler aufnehmen
+            td.live-sale__col.error__icon Benutzer vertrauen ihr Vermögen nur einem einzigen Fondsmanager an
+            td.live-sale__col.error__icon Der Benutzer hat einen Händler ausgewählt und die Vermögenswerte werden verwendet, um seine Handelsaktivitäten zu kopieren
+
+      .live-sale__done
+        h2.live-sale__title.live-sale-grad.live-sale__done_title(data-aos="fade-right") Was wurde bereits getan?
+        //- p.live-sale__done_desc(data-aos="fade-right") We have 
+        //-   span.live-sale__done-bold designed 
+        //-   | technology to work with 
+        //-   br
+        //-   span.live-sale__done-bold decentralized 
+        //-   | and 
+        //-   span.live-sale__done-bold centralized 
+        //-   | exchanges
+        p.live-sale__done_desc(data-aos="fade-right") Wir haben die Plattform mit den zuverlässigsten und fortschrittlichsten Technologien entwickelt und veröffentlicht.
+        .live-sale__done_wr.live-sale__wr(data-aos="fade-right")
+          img(src="/static/img/pictures/live-sale/grid.svg", alt="").live-sale__done_img
+          .live-sale__done_right
+            p.live-sale__done_text Produkt im
+              span.live-sale__done-bold öffentlichen Beta-Stadium
+              | mit über 3000 Kunden. Mehr als 1. 000 von ihnen haben KYC bestanden und nutzen die Technologie aktiv.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Desktop- und Mobile-Version
+              | der Plattform sind bereits freigegeben.
+            p.live-sale__done_text Erfolgreich bestandenes Sicherheitsaudit 
+              //- span.live-sale__done-bold  
+              | der Firma Hacken. io.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Risikomanagement-Tools
+              |  unter Verwendung der Smart-Contract-Technologie.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Portfoliomanagement
+              | durch Aufteilung eines einzelnen API-Schlüssels auf mehrere Trader.
+            p.live-sale__done_text 
+              span.live-sale__done-bold Externe API
+              | , die die Anbindung von algorithmischen Trading-Bots und kundenspezifischer Software an die Plattform ermöglicht.
+            p.live-sale__done_text Hashlog-Funktion
+              span.live-sale__done-bold zur Überprüfung der Händleraktivitäten
+            p.live-sale__bdb.live-sale__done_bdb Die Plattform arbeitet mit den beliebtesten Börsen zusammen.
+            .live-sale__done_wr2
+              img(src="/static/img/pictures/live-sale/binance.svg", alt="").live-sale__done_icon
+              img(src="/static/img/pictures/live-sale/huobi.svg", alt="").live-sale__done_icon
+              img(src="/static/img/pictures/live-sale/bittrex.svg", alt="").live-sale__done_icon
+
+  .join-us-wrapper
+    .join-us
+      .join-us__subscribe-check
+        .subscribe-check
+          h2.subscribe-check__title!=app.join_us.title_check
+          .subscribe-check__description!=app.join_us.subscription_check
+          .subscribe-check__join-telegram
+            a.subscribe-check__btn(href="https://t.me/membranaplatform" target="_blank")!=app.join_us.join
+              .subscribe-check__telegram 
+                .subscribe-check__telegram-icon
+                  img(src="/static/img/icons/socials/telegram.svg" all="")
+                | Telegram
+
+          form.subscribe-check-form.js-subscribe-form
+            input.subscribe-check-form__email.input(type="email" placeholder=app.join_us.email data-error=app.join_us.email_error required)
+            button.subscribe-check-form__submit.subscribe-check__btn(type="submit")!=app.join_us.subscribe
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js")

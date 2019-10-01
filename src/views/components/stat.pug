@@ -1,49 +1,45 @@
 block page_variables
   - var n = 0;
-
 .stat-wrapper.js-section
-  h2.stat__header
-    b Membrana Platform
-    |  is live now in
-    b  Beta
-    |  version
+  h2.stat__header!=app.stat.title
+ 
+  
   .all-stat
     .image
       img(src="/static/img/pictures/stat/stat_1.png" alt="")
     .stat-table
       .section
-        .text(title="Volume depends on BTC price") Total trade volume (*)
+        .text(title="Volume depends on BTC price")!=app.stat.namePlatformTableRow[0]
         .text-stat.h-text-gradient
       .x-sep
       .section
-        .text Total Contracts were in management
+        .text!=app.stat.namePlatformTableRow[1]
         .text-stat.h-text-gradient
       .x-sep
       .section
-        .text Total balance were in management
+        .text!=app.stat.namePlatformTableRow[2]
         .text-stat.h-text-gradient
       .x-sep
       .section
-        .text Traders
+        .text!=app.stat.namePlatformTableRow[3]
         .text-stat.h-text-gradient
       .x-sep
       .section
-        .text Payment for traders
+        .text!=app.stat.namePlatformTableRow[4]
         .text-stat.h-text-gradient
       .y-sep
     img.membrana-logo(src="/static/img/pictures/stat/logo.svg" alt="")
   .best-traders
     .best-traders-table
-      .head The best
-        b  Membrana Traders
+      .head!=app.stat.bestTraders
       table
         thead
           tr
-            th Username
+            th!=app.stat.nameTradersTableRow[0]
             th.profit
-              span.big Profit in last contract, %
-              span.small Last profit, %
-            th.profit(title="Average profit in last 3 contracts") Average profit, %
+              span.big!=app.stat.nameTradersTableRow[1]
+              span.small!=app.stat.nameTradersTableRow[2]
+            th.profit(title="Average profit in last 3 contracts")!=app.stat.nameTradersTableRow[3]
         tbody
           each _ in Array(5)
             tr
@@ -52,8 +48,6 @@ block page_variables
               td.profit
               td.send
                 a(target="_blank")
-                  button.send-request
-                    span.big Send 
-                    | Request
+                  button.send-request!=app.stat.btnText
     .image
       img(src="/static/img/pictures/stat/stat_2.svg" alt="")

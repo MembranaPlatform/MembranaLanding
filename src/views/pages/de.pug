@@ -1,4 +1,4 @@
-extends ../layouts/base
+extends ../layouts/base_de
 
 block page_variables
 	- var page_class = 'index';
@@ -13,13 +13,13 @@ block content
 	.dot-pattern-wrapper
 		include ../components/top
 		include ../components/stat
-		if global.process.argv[2] !== ( 'ru' && 'jpn' && 'kor' && 'chn' && 'de')
-			//- include ../components/cases
-			//- include ../components/competition
-			include ../components/comp_re
-			include ../components/how-we-help
-		//- include ../components/vision
+		//- if global.process.argv[2] !== ( 'ru' && 'jpn' && 'kor' && 'chn') 
+		//- 	include ../components/competition
+		//- 	include ../components/how-we-help
+		include ../components/comp_re
+		include ../components/how-we-help
 		include ../components/backed
+		//- include ../components/vision
 		include ../components/components
 		.cylinder-gradient-pattern-wrapper
 			include ../components/layers
@@ -27,8 +27,10 @@ block content
 			include ../components/technology
 			include ../components/partners
 			include ../components/press
-			include ../components/join-us
+			//- include ../components/team
+			.de-page-join
+				include ../components/join-us
 
 	a.scroll-btn.scroll-btn--fixed(href="javascript:void(0)"): img.scroll-btn__icon(src="/static/img/icons/scroll-arrow.svg" alt="")
 
-	script(src="https://www.youtube.com/iframe_api")
+	//- script.heh(src="https://www.youtube.com/iframe_api")

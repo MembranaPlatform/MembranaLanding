@@ -47,6 +47,8 @@ html(lang=app.lang)
                 img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="")
               if app.lang === 'kor'
                 img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="")
+              if app.lang === 'de'
+                img.js-prevent-inline(src="/static/img/icons/de.svg" alt="")
             .select-language__list
               a.select-language__item(href="/" class={'active': app.lang === 'en'})
                 img.js-prevent-inline(src="/static/img/icons/eng.svg" alt="")
@@ -58,6 +60,8 @@ html(lang=app.lang)
                 img.js-prevent-inline(src="/static/img/icons/chn.svg" alt="")
               a.select-language__item(href="/kor/" class={'active': app.lang === 'kor'})
                 img.js-prevent-inline(src="/static/img/icons/kor.svg" alt="")
+              a.select-language__item(href="/de/" class={'active': app.lang === 'de'})
+                img.js-prevent-inline(src="/static/img/icons/de.svg" alt="")
           a.hamburger.js-hamburger(href="javascript:void(0)") 
             span.hamburger__line
             span.hamburger__line
@@ -75,12 +79,12 @@ html(lang=app.lang)
           .footer__email: a(href="mailto:info@membrana.io") info@membrana.io
           .footer__copyright Membrana LTD © 2018
             br 
-            | Willow House, Cricket Square, PO Box 709, Grand Cayman KY1-1107, Cayman Islands
+            | Willow House, Cricket Square, Postfach 709, Grand Cayman KY1-1107, Kaimaninseln
             br
-            a(href="https://www.registry.gov.ky/verify/" target="blank") Check residence here
-            | . Code is: G18241849750. Number is: 339391
+            a(href="https://www.registry.gov.ky/verify/" target="blank") Überprüfen Sie hier den Wohnort.
+            | . Der Code ist: G18241849750. Nummer ist: 339391
             br
-            a(href="https://etherscan.io/token/0x4eeea7b48b9c3ac8f70a9c932a8b1e8a5cb624c7" target="_blank") MBN token Smart-Contract address
+            a(href="https://etherscan.io/token/0x4eeea7b48b9c3ac8f70a9c932a8b1e8a5cb624c7" target="_blank") MBN-Token Smart-Contract-Adresse 
 
       //- a(href="https://t.me/membranaplatform" target="_blank").telegram-fixed-icon: img(src="/static/img/icons/socials/telegram.svg" alt="")
 
