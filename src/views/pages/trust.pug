@@ -1,0 +1,23 @@
+extends ../layouts/base
+
+block page_variables
+	- var page_class = 'trust';
+	- var page_active = '/trust/';
+
+block append head
+	block head_variables
+		//- var title = app.head.trust.title;
+		//- var description = app.head.trust.description;
+
+block content
+	.page-content-pattern
+		.page-content
+			include ../components/trust_head	
+			include ../components/trust_middle	
+			//- include ../components/trust_form
+		.page-content-2
+			include ../components/trust_middle-2
+		.page-content-3
+			include ../components/trust_form
+	include ../components/join-us
+	

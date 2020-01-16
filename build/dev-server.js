@@ -84,6 +84,7 @@ app.use(require('connect-history-api-fallback')({
     { from: /\/team\/$/, to: '/team/index.html'},
     { from: /\/docs\/$/, to: '/docs/index.html'},
     { from: /\/career\/$/, to: '/career/index.html'},
+    { from: /\/trust\/$/, to: '/trust/index.html'},
     { from: /\/career__node\/$/, to: '/career__node/index.html'},
     { from: /\/career__front\/$/, to: '/career__front/index.html'},
     { from: /\/career__design\/$/, to: '/career__design/index.html'},
